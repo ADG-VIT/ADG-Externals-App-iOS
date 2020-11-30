@@ -10,6 +10,8 @@
 		553B59B1257540EE004A9C64 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B59B0257540EE004A9C64 /* IntroViewController.swift */; };
 		553B59B4257540FD004A9C64 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B59B3257540FD004A9C64 /* signUpViewController.swift */; };
 		553B59B72575410F004A9C64 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B59B62575410F004A9C64 /* LogInViewController.swift */; };
+		553B59BA25756973004A9C64 /* editProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B59B925756973004A9C64 /* editProfileVC.swift */; };
+		553B59BD25756B8F004A9C64 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B59BC25756B8F004A9C64 /* ProfileViewController.swift */; };
 		910B3DB4257133E900BD0F29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B3DB3257133E900BD0F29 /* AppDelegate.swift */; };
 		910B3DB6257133E900BD0F29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B3DB5257133E900BD0F29 /* SceneDelegate.swift */; };
 		910B3DB8257133E900BD0F29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B3DB7257133E900BD0F29 /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 		553B59B0257540EE004A9C64 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		553B59B3257540FD004A9C64 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		553B59B62575410F004A9C64 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		553B59B925756973004A9C64 /* editProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editProfileVC.swift; sourceTree = "<group>"; };
+		553B59BC25756B8F004A9C64 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		910B3DB0257133E900BD0F29 /* ADG-Externals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ADG-Externals.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		910B3DB3257133E900BD0F29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		910B3DB5257133E900BD0F29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				910B3DB5257133E900BD0F29 /* SceneDelegate.swift */,
 				910B3DB7257133E900BD0F29 /* ViewController.swift */,
 				910B3DB9257133E900BD0F29 /* Main.storyboard */,
+				553B59BC25756B8F004A9C64 /* ProfileViewController.swift */,
+				553B59B925756973004A9C64 /* editProfileVC.swift */,
 				553B59B62575410F004A9C64 /* LogInViewController.swift */,
 				553B59B3257540FD004A9C64 /* signUpViewController.swift */,
 				553B59B0257540EE004A9C64 /* IntroViewController.swift */,
@@ -150,7 +156,9 @@
 				910B3DB8257133E900BD0F29 /* ViewController.swift in Sources */,
 				553B59B72575410F004A9C64 /* LogInViewController.swift in Sources */,
 				910B3DB4257133E900BD0F29 /* AppDelegate.swift in Sources */,
+				553B59BA25756973004A9C64 /* editProfileVC.swift in Sources */,
 				910B3DB6257133E900BD0F29 /* SceneDelegate.swift in Sources */,
+				553B59BD25756B8F004A9C64 /* ProfileViewController.swift in Sources */,
 				553B59B1257540EE004A9C64 /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
