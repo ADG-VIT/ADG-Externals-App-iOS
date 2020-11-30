@@ -11,9 +11,29 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        //MARK:- Onboarding Stuffs
+        if core.shared.isNewUser() {
+            let vc = storyboard?.instantiateViewController(identifier: "onboarding") as! OnboardingFirstVC
+            present(vc, animated: true)
+        }
     }
 
-
 }
+
+//MARK:-  Onboarding Code
+
+class core{
+    
+    static let shared = core()
+    
+    func isNewUser()->Bool {
+        return !UserDefaults.standard.bool(forKey: "onboarding")
+    }
+    
+    func setIsNotNewUser() {
+        UserDefaults.standard.set(true, forKey: "onboarding")
+    }
+}
+
 

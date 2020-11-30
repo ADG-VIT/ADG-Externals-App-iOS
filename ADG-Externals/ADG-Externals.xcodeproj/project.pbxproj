@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55FF652C2574D34D00BF2B5D /* OnboardingFirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF652B2574D34D00BF2B5D /* OnboardingFirstVC.swift */; };
 		910B3DB4257133E900BD0F29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B3DB3257133E900BD0F29 /* AppDelegate.swift */; };
 		910B3DB6257133E900BD0F29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B3DB5257133E900BD0F29 /* SceneDelegate.swift */; };
 		910B3DB8257133E900BD0F29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B3DB7257133E900BD0F29 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55FF652B2574D34D00BF2B5D /* OnboardingFirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFirstVC.swift; sourceTree = "<group>"; };
 		910B3DB0257133E900BD0F29 /* ADG-Externals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ADG-Externals.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		910B3DB3257133E900BD0F29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		910B3DB5257133E900BD0F29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				910B3DB5257133E900BD0F29 /* SceneDelegate.swift */,
 				910B3DB7257133E900BD0F29 /* ViewController.swift */,
 				910B3DB9257133E900BD0F29 /* Main.storyboard */,
+				55FF652B2574D34D00BF2B5D /* OnboardingFirstVC.swift */,
 				910B3DBC257133F100BD0F29 /* Assets.xcassets */,
 				910B3DBE257133F100BD0F29 /* LaunchScreen.storyboard */,
 				910B3DC1257133F100BD0F29 /* Info.plist */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55FF652C2574D34D00BF2B5D /* OnboardingFirstVC.swift in Sources */,
 				910B3DB8257133E900BD0F29 /* ViewController.swift in Sources */,
 				910B3DB4257133E900BD0F29 /* AppDelegate.swift in Sources */,
 				910B3DB6257133E900BD0F29 /* SceneDelegate.swift in Sources */,
