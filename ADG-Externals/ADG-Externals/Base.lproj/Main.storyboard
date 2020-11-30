@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ADG_Externals" customModuleProvider="target" sceneMemberID="viewController">
@@ -39,7 +39,7 @@
                                 <state key="normal" title="See All"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHS-Lp-RJh">
-                                <rect key="frame" x="10" y="406" width="374" height="36"/>
+                                <rect key="frame" x="10" y="357" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -61,11 +61,12 @@
                             <constraint firstItem="kIi-TU-r6x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="zA9-U2-SRV"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="house.fill" catalog="system" id="r6z-EG-goU"/>
                     <navigationItem key="navigationItem" id="4CL-x9-BbS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.98550724637687" y="76.339285714285708"/>
+            <point key="canvasLocation" x="1839.1304347826087" y="76.339285714285708"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4lf-kh-8uP">
@@ -78,15 +79,34 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TLQ-YC-6Or"/>
+                        <segue destination="aXi-5o-tEH" kind="relationship" relationship="rootViewController" id="TLQ-YC-6Or"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sd8-2d-Bmi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="76.339285714285708"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Lbc-KF-NpM">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="aXi-5o-tEH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="i7R-dD-EGd"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="etW-Kq-sOX">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Y9O-YF-f1P"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C3X-7g-3rq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="76.339285714285708"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
