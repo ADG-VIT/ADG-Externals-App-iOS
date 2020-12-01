@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		552C365D25760FD3004CE028 /* QandAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552C365C25760FD3004CE028 /* QandAViewController.swift */; };
+		552C366125761171004CE028 /* chatSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552C366025761171004CE028 /* chatSectionViewController.swift */; };
+		552C368525764D06004CE028 /* GeneralTopicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552C368425764D06004CE028 /* GeneralTopicVC.swift */; };
+		552C368825764D23004CE028 /* TechnialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552C368725764D23004CE028 /* TechnialVC.swift */; };
+		552C368B25764D2F004CE028 /* DesignVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552C368A25764D2F004CE028 /* DesignVC.swift */; };
+		552C368E25764D43004CE028 /* EditorialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552C368D25764D43004CE028 /* EditorialVC.swift */; };
+		552C369125765777004CE028 /* GeneralTopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552C369025765777004CE028 /* GeneralTopicTableViewCell.swift */; };
 		553B59B1257540EE004A9C64 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B59B0257540EE004A9C64 /* IntroViewController.swift */; };
 		553B59B4257540FD004A9C64 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B59B3257540FD004A9C64 /* signUpViewController.swift */; };
 		553B59B72575410F004A9C64 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B59B62575410F004A9C64 /* LogInViewController.swift */; };
@@ -21,6 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		552C365C25760FD3004CE028 /* QandAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QandAViewController.swift; sourceTree = "<group>"; };
+		552C366025761171004CE028 /* chatSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatSectionViewController.swift; sourceTree = "<group>"; };
+		552C368425764D06004CE028 /* GeneralTopicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTopicVC.swift; sourceTree = "<group>"; };
+		552C368725764D23004CE028 /* TechnialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnialVC.swift; sourceTree = "<group>"; };
+		552C368A25764D2F004CE028 /* DesignVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignVC.swift; sourceTree = "<group>"; };
+		552C368D25764D43004CE028 /* EditorialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorialVC.swift; sourceTree = "<group>"; };
+		552C369025765777004CE028 /* GeneralTopicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTopicTableViewCell.swift; sourceTree = "<group>"; };
 		553B59B0257540EE004A9C64 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		553B59B3257540FD004A9C64 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		553B59B62575410F004A9C64 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +61,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		552C369325765780004CE028 /* TableView Cells */ = {
+			isa = PBXGroup;
+			children = (
+				552C369025765777004CE028 /* GeneralTopicTableViewCell.swift */,
+			);
+			path = "TableView Cells";
+			sourceTree = "<group>";
+		};
+		552C36942576578E004CE028 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				552C369825765818004CE028 /* QandA Section */,
+				552C3697257657F6004CE028 /* ProfileView */,
+				552C3696257657DA004CE028 /* Authentication */,
+				910B3DB7257133E900BD0F29 /* ViewController.swift */,
+				552C369325765780004CE028 /* TableView Cells */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		552C3695257657A4004CE028 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				910B3DB9257133E900BD0F29 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		552C3696257657DA004CE028 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				553B59B62575410F004A9C64 /* LogInViewController.swift */,
+				553B59B3257540FD004A9C64 /* signUpViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		552C3697257657F6004CE028 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				553B59BC25756B8F004A9C64 /* ProfileViewController.swift */,
+				553B59B925756973004A9C64 /* editProfileVC.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		552C369825765818004CE028 /* QandA Section */ = {
+			isa = PBXGroup;
+			children = (
+				552C368D25764D43004CE028 /* EditorialVC.swift */,
+				552C368725764D23004CE028 /* TechnialVC.swift */,
+				552C368A25764D2F004CE028 /* DesignVC.swift */,
+				552C368425764D06004CE028 /* GeneralTopicVC.swift */,
+				552C366025761171004CE028 /* chatSectionViewController.swift */,
+				552C365C25760FD3004CE028 /* QandAViewController.swift */,
+			);
+			path = "QandA Section";
+			sourceTree = "<group>";
+		};
 		910B3DA7257133E900BD0F29 = {
 			isa = PBXGroup;
 			children = (
@@ -68,13 +141,9 @@
 			children = (
 				910B3DB3257133E900BD0F29 /* AppDelegate.swift */,
 				910B3DB5257133E900BD0F29 /* SceneDelegate.swift */,
-				910B3DB7257133E900BD0F29 /* ViewController.swift */,
-				910B3DB9257133E900BD0F29 /* Main.storyboard */,
-				553B59BC25756B8F004A9C64 /* ProfileViewController.swift */,
-				553B59B925756973004A9C64 /* editProfileVC.swift */,
-				553B59B62575410F004A9C64 /* LogInViewController.swift */,
-				553B59B3257540FD004A9C64 /* signUpViewController.swift */,
 				553B59B0257540EE004A9C64 /* IntroViewController.swift */,
+				552C36942576578E004CE028 /* Controllers */,
+				552C3695257657A4004CE028 /* View */,
 				910B3DBC257133F100BD0F29 /* Assets.xcassets */,
 				910B3DBE257133F100BD0F29 /* LaunchScreen.storyboard */,
 				910B3DC1257133F100BD0F29 /* Info.plist */,
@@ -152,13 +221,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				552C368B25764D2F004CE028 /* DesignVC.swift in Sources */,
 				553B59B4257540FD004A9C64 /* signUpViewController.swift in Sources */,
+				552C368E25764D43004CE028 /* EditorialVC.swift in Sources */,
+				552C368525764D06004CE028 /* GeneralTopicVC.swift in Sources */,
 				910B3DB8257133E900BD0F29 /* ViewController.swift in Sources */,
 				553B59B72575410F004A9C64 /* LogInViewController.swift in Sources */,
 				910B3DB4257133E900BD0F29 /* AppDelegate.swift in Sources */,
 				553B59BA25756973004A9C64 /* editProfileVC.swift in Sources */,
 				910B3DB6257133E900BD0F29 /* SceneDelegate.swift in Sources */,
+				552C365D25760FD3004CE028 /* QandAViewController.swift in Sources */,
+				552C369125765777004CE028 /* GeneralTopicTableViewCell.swift in Sources */,
+				552C368825764D23004CE028 /* TechnialVC.swift in Sources */,
 				553B59BD25756B8F004A9C64 /* ProfileViewController.swift in Sources */,
+				552C366125761171004CE028 /* chatSectionViewController.swift in Sources */,
 				553B59B1257540EE004A9C64 /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
