@@ -689,6 +689,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fa0-vo-Dus">
+                                <rect key="frame" x="20" y="428" width="364" height="359"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -711,7 +715,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1780" y="1061"/>
+            <point key="canvasLocation" x="1779.7101449275365" y="1060.7142857142858"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="G0B-Aa-Fcv">
@@ -722,19 +726,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1J-Oz-8kG">
-                                <rect key="frame" x="120" y="767" width="175" height="60"/>
+                                <rect key="frame" x="41" y="767" width="328" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="loginBtn:" destination="Zxu-5i-9B2" eventType="touchUpInside" id="jTO-Cb-Hih"/>
+                                    <segue destination="gKG-uD-Y0y" kind="show" id="EJR-HX-sXO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvk-os-7aC">
-                                <rect key="frame" x="120" y="655" width="175" height="60"/>
+                                <rect key="frame" x="41" y="681" width="328" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign Up"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
-                                    <action selector="signUpBtn:" destination="Zxu-5i-9B2" eventType="touchUpInside" id="kOE-Nh-nTk"/>
+                                    <action selector="signUpBtn:" destination="Zxu-5i-9B2" eventType="touchUpInside" id="gGN-jb-oVK"/>
+                                    <segue destination="odB-Xy-kPk" kind="show" id="VLk-H3-PX2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -743,7 +756,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ajy-KZ-f6X"/>
                     <connections>
-                        <segue destination="odB-Xy-kPk" kind="show" identifier="signupsegue" id="7iG-tA-849"/>
+                        <outlet property="logInBtnLabel" destination="A1J-Oz-8kG" id="Vel-fu-FCL"/>
+                        <outlet property="signUpBtnLabel" destination="zvk-os-7aC" id="N4a-NR-53Z"/>
                         <segue destination="gKG-uD-Y0y" kind="show" identifier="loginSegue" id="eOe-zC-hdx"/>
                     </connections>
                 </viewController>
@@ -754,7 +768,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="jx9-N0-KKD">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="odB-Xy-kPk" customClass="signUpViewController" customModule="ADG_Externals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="odB-Xy-kPk" customClass="SignUpViewController" customModule="ADG_Externals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bpg-Vi-6Pd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -812,9 +826,10 @@
         <!--Navigation Controller-->
         <scene sceneID="3XS-mD-Hna">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ENh-ZS-LIM" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ENh-ZS-LIM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="L0Z-zH-exy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -933,6 +948,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="EJR-HX-sXO"/>
         <segue reference="RR4-xt-Jiz"/>
     </inferredMetricsTieBreakers>
     <resources>
