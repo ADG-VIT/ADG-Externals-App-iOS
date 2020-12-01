@@ -19,6 +19,9 @@
 		553B59B72575410F004A9C64 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B59B62575410F004A9C64 /* LogInViewController.swift */; };
 		553B59BA25756973004A9C64 /* editProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B59B925756973004A9C64 /* editProfileVC.swift */; };
 		553B59BD25756B8F004A9C64 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B59BC25756B8F004A9C64 /* ProfileViewController.swift */; };
+		558EEF6C2576845A0052DE9E /* TechnicalVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EEF6B2576845A0052DE9E /* TechnicalVCTableViewCell.swift */; };
+		558EEF6F257686200052DE9E /* DesignVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EEF6E257686200052DE9E /* DesignVCTableViewCell.swift */; };
+		558EEF72257686290052DE9E /* editorialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EEF71257686290052DE9E /* editorialTableViewCell.swift */; };
 		910B3DB4257133E900BD0F29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B3DB3257133E900BD0F29 /* AppDelegate.swift */; };
 		910B3DB6257133E900BD0F29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B3DB5257133E900BD0F29 /* SceneDelegate.swift */; };
 		910B3DB8257133E900BD0F29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B3DB7257133E900BD0F29 /* ViewController.swift */; };
@@ -40,6 +43,9 @@
 		553B59B62575410F004A9C64 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		553B59B925756973004A9C64 /* editProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editProfileVC.swift; sourceTree = "<group>"; };
 		553B59BC25756B8F004A9C64 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		558EEF6B2576845A0052DE9E /* TechnicalVCTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnicalVCTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		558EEF6E257686200052DE9E /* DesignVCTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DesignVCTableViewCell.swift; path = "ADG-Externals/View/DesignVCTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		558EEF71257686290052DE9E /* editorialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editorialTableViewCell.swift; sourceTree = "<group>"; };
 		910B3DB0257133E900BD0F29 /* ADG-Externals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ADG-Externals.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		910B3DB3257133E900BD0F29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		910B3DB5257133E900BD0F29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +70,9 @@
 		552C369325765780004CE028 /* TableView Cells */ = {
 			isa = PBXGroup;
 			children = (
+				558EEF6E257686200052DE9E /* DesignVCTableViewCell.swift */,
+				558EEF71257686290052DE9E /* editorialTableViewCell.swift */,
+				558EEF6B2576845A0052DE9E /* TechnicalVCTableViewCell.swift */,
 				552C369025765777004CE028 /* GeneralTopicTableViewCell.swift */,
 			);
 			path = "TableView Cells";
@@ -221,18 +230,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				558EEF6C2576845A0052DE9E /* TechnicalVCTableViewCell.swift in Sources */,
 				552C368B25764D2F004CE028 /* DesignVC.swift in Sources */,
 				553B59B4257540FD004A9C64 /* signUpViewController.swift in Sources */,
 				552C368E25764D43004CE028 /* EditorialVC.swift in Sources */,
 				552C368525764D06004CE028 /* GeneralTopicVC.swift in Sources */,
 				910B3DB8257133E900BD0F29 /* ViewController.swift in Sources */,
 				553B59B72575410F004A9C64 /* LogInViewController.swift in Sources */,
+				558EEF72257686290052DE9E /* editorialTableViewCell.swift in Sources */,
 				910B3DB4257133E900BD0F29 /* AppDelegate.swift in Sources */,
 				553B59BA25756973004A9C64 /* editProfileVC.swift in Sources */,
 				910B3DB6257133E900BD0F29 /* SceneDelegate.swift in Sources */,
 				552C365D25760FD3004CE028 /* QandAViewController.swift in Sources */,
 				552C369125765777004CE028 /* GeneralTopicTableViewCell.swift in Sources */,
 				552C368825764D23004CE028 /* TechnialVC.swift in Sources */,
+				558EEF6F257686200052DE9E /* DesignVCTableViewCell.swift in Sources */,
 				553B59BD25756B8F004A9C64 /* ProfileViewController.swift in Sources */,
 				552C366125761171004CE028 /* chatSectionViewController.swift in Sources */,
 				553B59B1257540EE004A9C64 /* IntroViewController.swift in Sources */,
