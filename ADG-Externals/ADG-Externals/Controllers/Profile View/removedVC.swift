@@ -7,7 +7,7 @@
 
 import UIKit
 
-class editProfileVC: UIViewController {
+class removedVC: UIViewController {
 
     @IBOutlet weak var saveBtn: UIButton!
     
@@ -21,4 +21,7 @@ class editProfileVC: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func editButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "editProfile", sender: nil)
+    }
 }

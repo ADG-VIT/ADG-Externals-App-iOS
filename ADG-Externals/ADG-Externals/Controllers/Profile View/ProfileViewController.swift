@@ -10,10 +10,19 @@ import MessageUI
 
 class ProfileViewController: UIViewController, MFMailComposeViewControllerDelegate  {
 
+    
+    @IBOutlet weak var editBtn: UIButton!
+    @IBOutlet weak var profileImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+        editBtn.layer.cornerRadius = 15
+        editBtn.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        editBtn.layer.borderWidth = 0.5
+        
+        profileImageView.layer.cornerRadius = profileImageView.frame.size.height/2
+         profileImageView.clipsToBounds = true
     }
     
     @IBAction func editProfileBtn(_ sender: Any) {
@@ -25,10 +34,10 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
     }
     
     @IBAction func bugReportBtn(_ sender: Any) {
-        bugReport()
+       
     }
-    @IBAction func featureRequestBtn(_ sender: Any) {
-        featureRequest()
+    @IBAction func aboutUsButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "aboutUS", sender: nil)
     }
     
 }
@@ -49,37 +58,6 @@ extension ProfileViewController{
         composer.setToRecipients(["gokulnair.2001@gmail.com"])
         composer.setSubject("Suggestion For ADG Recruitment App")
         composer.setMessageBody("To whomsoever it concern, I want to give you a suggestion ", isHTML: false)
-        
-        present(composer, animated: true)
-    }
-    
-    // Feature request mail method
-    
-    func featureRequest() {
-        guard MFMailComposeViewController.canSendMail() else {
-                   return
-               }
-               let composer = MFMailComposeViewController()
-               composer.mailComposeDelegate = self
-               composer.setToRecipients(["gokulnair.2001@gmail.com"])
-               composer.setSubject("Feature Request For ADG Recruitment App")
-               composer.setMessageBody("To whomsoever it concern,I want to request you a feature", isHTML: false)
-               
-               present(composer, animated: true)
-    }
-    
-    // Bugreport mail method
-    
-    func bugReport() {
-        guard MFMailComposeViewController.canSendMail() else {
-            
-            return
-        }
-        let composer = MFMailComposeViewController()
-        composer.mailComposeDelegate = self
-        composer.setToRecipients(["gokulnair.2001@gmail.com"])
-        composer.setSubject("Bug Report in ADG Recruitment App")
-        composer.setMessageBody("To whomsoever it concern, Want to inform you a bug ", isHTML: false)
         
         present(composer, animated: true)
     }
