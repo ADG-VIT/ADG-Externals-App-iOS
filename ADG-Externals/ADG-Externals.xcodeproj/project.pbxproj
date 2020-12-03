@@ -25,6 +25,8 @@
 		558EEF72257686290052DE9E /* editorialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EEF71257686290052DE9E /* editorialTableViewCell.swift */; };
 		55C457BA2579183E00D7CB88 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C457B92579183E00D7CB88 /* OnboardingViewController.swift */; };
 		55C457BF25791BE600D7CB88 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C457BE25791BE600D7CB88 /* AuthenticationViewController.swift */; };
+		55C457C225791DB000D7CB88 /* RecruitmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C457C125791DB000D7CB88 /* RecruitmentViewController.swift */; };
+		55C457C525791DDB00D7CB88 /* TestCompletionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C457C425791DDB00D7CB88 /* TestCompletionVC.swift */; };
 		55C53E552576C9F0009CABFD /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C53E542576C9F0009CABFD /* EditProfileViewController.swift */; };
 		910B3DB4257133E900BD0F29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B3DB3257133E900BD0F29 /* AppDelegate.swift */; };
 		910B3DB6257133E900BD0F29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B3DB5257133E900BD0F29 /* SceneDelegate.swift */; };
@@ -53,6 +55,8 @@
 		558EEF71257686290052DE9E /* editorialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editorialTableViewCell.swift; sourceTree = "<group>"; };
 		55C457B92579183E00D7CB88 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = "ADG-Externals/Controllers/OnBoarding/OnboardingViewController.swift"; sourceTree = SOURCE_ROOT; };
 		55C457BE25791BE600D7CB88 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationViewController.swift; path = "ADG-Externals/View/AuthenticationViewController.swift"; sourceTree = SOURCE_ROOT; };
+		55C457C125791DB000D7CB88 /* RecruitmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecruitmentViewController.swift; path = "ADG-Externals/View/RecruitmentViewController.swift"; sourceTree = SOURCE_ROOT; };
+		55C457C425791DDB00D7CB88 /* TestCompletionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestCompletionVC.swift; path = "ADG-Externals/View/TestCompletionVC.swift"; sourceTree = SOURCE_ROOT; };
 		55C53E542576C9F0009CABFD /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditProfileViewController.swift; path = "ADG-Externals/View/EditProfileViewController.swift"; sourceTree = SOURCE_ROOT; };
 		910B3DB0257133E900BD0F29 /* ADG-Externals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ADG-Externals.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		910B3DB3257133E900BD0F29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,11 +93,13 @@
 		552C36942576578E004CE028 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				55C457C425791DDB00D7CB88 /* TestCompletionVC.swift */,
+				55C457C125791DB000D7CB88 /* RecruitmentViewController.swift */,
+				910B3DB7257133E900BD0F29 /* ViewController.swift */,
 				55C457BC2579184600D7CB88 /* OnBoarding */,
 				552C369825765818004CE028 /* QandA Section */,
 				552C3697257657F6004CE028 /* Profile View */,
 				552C3696257657DA004CE028 /* Authentication */,
-				910B3DB7257133E900BD0F29 /* ViewController.swift */,
 				552C369325765780004CE028 /* TableView Cells */,
 			);
 			path = Controllers;
@@ -270,6 +276,8 @@
 				55C53E552576C9F0009CABFD /* EditProfileViewController.swift in Sources */,
 				558EEF6F257686200052DE9E /* DesignVCTableViewCell.swift in Sources */,
 				553B59BD25756B8F004A9C64 /* ProfileViewController.swift in Sources */,
+				55C457C525791DDB00D7CB88 /* TestCompletionVC.swift in Sources */,
+				55C457C225791DB000D7CB88 /* RecruitmentViewController.swift in Sources */,
 				552C366125761171004CE028 /* chatSectionViewController.swift in Sources */,
 				553B59B1257540EE004A9C64 /* IntroViewController.swift in Sources */,
 			);
