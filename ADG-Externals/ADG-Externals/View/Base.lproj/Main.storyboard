@@ -1060,18 +1060,84 @@
                     <view key="view" contentMode="scaleToFill" id="fx0-di-SjI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="1jP-84-42r">
+                                <rect key="frame" x="60" y="649" width="294" height="125"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kn9-XB-umV">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="50"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.37647058820000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="LZA-3w-Jpg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signUpButton:" destination="ykg-u0-hoO" eventType="touchUpInside" id="dKu-PU-Qv5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXg-7F-gbZ">
+                                        <rect key="frame" x="0.0" y="75" width="294" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Ywf-ZY-8B1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <state key="normal" title="Log In">
+                                            <color key="titleColor" red="0.93725490199999995" green="0.37647058820000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logInButton:" destination="ykg-u0-hoO" eventType="touchUpInside" id="wu3-a6-ZwR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="GXg-7F-gbZ" firstAttribute="top" secondItem="kn9-XB-umV" secondAttribute="bottom" constant="25" id="Kl8-vC-SqV"/>
+                                    <constraint firstItem="GXg-7F-gbZ" firstAttribute="height" secondItem="kn9-XB-umV" secondAttribute="height" id="jKt-HG-RUz"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Like Never Before" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="su8-5C-VrM">
+                                <rect key="frame" x="60" y="322" width="299" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interview." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RE8-Tu-fEB">
+                                <rect key="frame" x="60" y="266" width="294" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vI3-sD-bre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="su8-5C-VrM" firstAttribute="top" secondItem="RE8-Tu-fEB" secondAttribute="bottom" constant="8" symbolic="YES" id="6Bh-3h-bR5"/>
+                            <constraint firstItem="su8-5C-VrM" firstAttribute="top" secondItem="RE8-Tu-fEB" secondAttribute="bottom" constant="8" symbolic="YES" id="7OH-8e-R1c"/>
+                            <constraint firstItem="RE8-Tu-fEB" firstAttribute="top" secondItem="vI3-sD-bre" secondAttribute="top" constant="222" id="7tK-Xa-LiL"/>
+                            <constraint firstItem="vI3-sD-bre" firstAttribute="bottom" secondItem="1jP-84-42r" secondAttribute="bottom" constant="40" id="FYA-ys-fDn"/>
+                            <constraint firstItem="vI3-sD-bre" firstAttribute="trailing" secondItem="1jP-84-42r" secondAttribute="trailing" constant="60" id="GsF-ii-PJ2"/>
+                            <constraint firstItem="vI3-sD-bre" firstAttribute="trailing" secondItem="RE8-Tu-fEB" secondAttribute="trailing" constant="60" id="JwA-fL-jBD"/>
+                            <constraint firstItem="1jP-84-42r" firstAttribute="top" secondItem="vI3-sD-bre" secondAttribute="top" constant="605" id="LOg-s1-8OE"/>
+                            <constraint firstItem="RE8-Tu-fEB" firstAttribute="leading" secondItem="vI3-sD-bre" secondAttribute="leading" constant="60" id="e9U-Ue-tpu"/>
+                            <constraint firstItem="1jP-84-42r" firstAttribute="top" secondItem="su8-5C-VrM" secondAttribute="bottom" constant="279" id="lpc-8a-4wH"/>
+                            <constraint firstItem="1jP-84-42r" firstAttribute="leading" secondItem="vI3-sD-bre" secondAttribute="leading" constant="60" id="mfw-x4-MnU"/>
+                            <constraint firstItem="su8-5C-VrM" firstAttribute="leading" secondItem="vI3-sD-bre" secondAttribute="leading" constant="60" id="nFF-JP-Uwq"/>
+                            <constraint firstItem="vI3-sD-bre" firstAttribute="trailing" secondItem="su8-5C-VrM" secondAttribute="trailing" constant="55" id="r3p-Nd-sXb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bG9-Yu-hZz"/>
                     <connections>
-                        <segue destination="Xpg-aj-AXd" kind="show" id="xUC-EQ-hLZ"/>
-                        <segue destination="KbQ-wJ-cdR" kind="show" id="cjd-Bg-bWL"/>
+                        <outlet property="logInLabel" destination="GXg-7F-gbZ" id="RHW-uc-EKC"/>
+                        <outlet property="signUpLabel" destination="kn9-XB-umV" id="vsG-Pk-U33"/>
+                        <segue destination="Xpg-aj-AXd" kind="show" identifier="introToLoginSegue" id="xUC-EQ-hLZ"/>
+                        <segue destination="KbQ-wJ-cdR" kind="show" identifier="introToSignUpSegue" id="cjd-Bg-bWL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D40-HP-akO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1826" y="477"/>
+            <point key="canvasLocation" x="1824.6376811594205" y="476.78571428571428"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="tgs-O0-ysd">
