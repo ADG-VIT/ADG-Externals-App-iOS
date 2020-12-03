@@ -12,7 +12,7 @@ class IntroViewController: UIViewController {
 
     //MARK:-Connections
     @IBAction func signUpBtn(_ sender: Any) {
-        self.performSegue(withIdentifier: "signupsegue", sender: nil)
+//        self.performSegue(withIdentifier: "signUpSegue", sender: nil)
     }
     
     @IBAction func loginBtn(_ sender: Any) {
@@ -28,7 +28,7 @@ class IntroViewController: UIViewController {
         // Do any additional setup after loading the view.
         signUpBtnLabel.layer.cornerRadius = 15
         logInBtnLabel.layer.cornerRadius = 15
-        logInBtnLabel.layer.borderWidth = 1
+        logInBtnLabel.layer.borderWidth = 2
         logInBtnLabel.layer.borderColor = UIColor.orange.cgColor
     }
     
