@@ -1017,8 +1017,32 @@
                     <view key="view" contentMode="scaleToFill" id="NP5-P6-gID">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytY-iW-mqb">
+                                <rect key="frame" x="40" y="224" width="334" height="399"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIH-qc-4Ra">
+                                <rect key="frame" x="20" y="134" width="374" height="137"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="XIR-Ws-Fsd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XIR-Ws-Fsd" firstAttribute="trailing" secondItem="EIH-qc-4Ra" secondAttribute="trailing" constant="20" id="7xh-1C-T6n"/>
+                            <constraint firstItem="XIR-Ws-Fsd" firstAttribute="bottom" secondItem="EIH-qc-4Ra" secondAttribute="bottom" constant="542" id="IZ3-Lc-Jwp"/>
+                            <constraint firstItem="XIR-Ws-Fsd" firstAttribute="bottom" secondItem="ytY-iW-mqb" secondAttribute="bottom" constant="190" id="Nsr-j2-YrX"/>
+                            <constraint firstItem="EIH-qc-4Ra" firstAttribute="top" secondItem="XIR-Ws-Fsd" secondAttribute="top" constant="90" id="PZZ-JE-O2z"/>
+                            <constraint firstItem="XIR-Ws-Fsd" firstAttribute="trailing" secondItem="ytY-iW-mqb" secondAttribute="trailing" constant="40" id="VIu-dd-Aar"/>
+                            <constraint firstItem="ytY-iW-mqb" firstAttribute="leading" secondItem="XIR-Ws-Fsd" secondAttribute="leading" constant="40" id="WS1-id-LFb"/>
+                            <constraint firstItem="EIH-qc-4Ra" firstAttribute="leading" secondItem="XIR-Ws-Fsd" secondAttribute="leading" constant="20" id="b1m-ys-iT0"/>
+                            <constraint firstItem="ytY-iW-mqb" firstAttribute="top" secondItem="XIR-Ws-Fsd" secondAttribute="top" constant="180" id="wbU-0G-9dD"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZIy-fm-lI6"/>
                     <connections>
@@ -1204,13 +1228,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Playground" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIi-TU-r6x">
-                                <rect key="frame" x="10" y="49" width="374" height="36"/>
+                                <rect key="frame" x="10" y="93" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Courses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URh-kf-CUj">
-                                <rect key="frame" x="10" y="93" width="204" height="22"/>
+                                <rect key="frame" x="10" y="137" width="204" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="956-2J-1xo"/>
                                 </constraints>
@@ -1219,7 +1243,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0j-NF-o3g">
-                                <rect key="frame" x="347" y="93" width="47" height="20"/>
+                                <rect key="frame" x="347" y="137" width="47" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="PxJ-T1-7qa"/>
                                 </constraints>
@@ -1501,13 +1525,16 @@
         <!--Recruitment-->
         <scene sceneID="GAM-Z6-5gn">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="6Iw-cw-5rn" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" hidesBarsOnSwipe="YES" hidesBarsOnTap="YES" hidesBarsWhenKeyboardAppears="YES" id="6Iw-cw-5rn" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Recruitment" image="star" catalog="system" id="qw2-ES-35F"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3MA-NB-O9X">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PVp-d7-cGN">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="meo-l1-G8f" kind="relationship" relationship="rootViewController" id="ZG3-Dd-bBx"/>
                     </connections>
@@ -1538,10 +1565,11 @@
         <!--Item-->
         <scene sceneID="PMu-eb-lMU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="iIU-Zv-EsI" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iIU-Zv-EsI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" image="house.fill" catalog="system" selectedImage="house.fill" id="r6z-EG-goU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8ww-Hy-fux">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
