@@ -32,8 +32,9 @@ class OnboardingViewController: UIViewController {
     
     @IBAction func startButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-        //core.shared.setIsNotNewUser()
+        ViewController.core.shared.setIsNotNewUser()
     }
+    
     @IBAction func segmentControl(_ sender: UISegmentedControl) {
         if segmentBar.selectedSegmentIndex == 0 {
             imageView.image = UIImage(imageLiteralResourceName: "1Image")

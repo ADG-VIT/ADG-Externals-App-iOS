@@ -112,9 +112,10 @@ class CustomCell: UICollectionViewCell {
     }
 }
 
-extension ViewController {
-    //MARK:-  Onboarding Code
+//MARK:-  Onboarding Code
 
+extension ViewController {
+    
     class core{
         
         static let shared = core()

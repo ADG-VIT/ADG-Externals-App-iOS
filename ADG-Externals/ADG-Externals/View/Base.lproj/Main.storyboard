@@ -1029,10 +1029,10 @@
             </objects>
             <point key="canvasLocation" x="900.00000000000011" y="476.78571428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Authentication View Controller-->
         <scene sceneID="jwu-NK-1iv">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="ykg-u0-hoO" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ykg-u0-hoO" customClass="AuthenticationViewController" customModule="ADG_Externals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fx0-di-SjI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1049,10 +1049,10 @@
             </objects>
             <point key="canvasLocation" x="1826" y="477"/>
         </scene>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="tgs-O0-ysd">
             <objects>
-                <viewController id="Xpg-aj-AXd" sceneMemberID="viewController">
+                <viewController id="Xpg-aj-AXd" customClass="LogInViewController" customModule="ADG_Externals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WfO-jQ-IXV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1066,7 +1066,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2WM-XK-5uC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3615.9420289855075" y="105.80357142857143"/>
+            <point key="canvasLocation" x="2706" y="-41"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hVG-zD-wxp">
@@ -1516,10 +1516,10 @@
             </objects>
             <point key="canvasLocation" x="-10.144927536231885" y="476.78571428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="zey-NB-wJz">
             <objects>
-                <viewController id="KbQ-wJ-cdR" sceneMemberID="viewController">
+                <viewController id="KbQ-wJ-cdR" customClass="signUpViewController" customModule="ADG_Externals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wUI-EP-RQ9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1555,7 +1555,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OHp-mI-ILh"/>
+        <segue reference="Hi2-W6-QiA"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1Image" width="628" height="278"/>
