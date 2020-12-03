@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KbQ-wJ-cdR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DaK-ar-rkN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -1681,7 +1681,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ux-uP-tHl">
-                                <rect key="frame" x="70" y="744" width="274" height="50"/>
+                                <rect key="frame" x="80" y="744" width="254" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="rQw-AD-TmZ"/>
                                 </constraints>
@@ -1700,11 +1700,11 @@
                             <constraint firstItem="gTr-NC-ILL" firstAttribute="trailing" secondItem="zC5-Md-Kiy" secondAttribute="trailing" constant="20" id="4JK-P7-MYH"/>
                             <constraint firstItem="Kxz-93-Ivu" firstAttribute="top" secondItem="zC5-Md-Kiy" secondAttribute="bottom" id="70j-BY-8y7"/>
                             <constraint firstItem="zC5-Md-Kiy" firstAttribute="top" secondItem="gTr-NC-ILL" secondAttribute="top" constant="35" id="8rE-tp-GTk"/>
-                            <constraint firstItem="gTr-NC-ILL" firstAttribute="trailing" secondItem="9Ux-uP-tHl" secondAttribute="trailing" constant="70" id="95d-dM-T9x"/>
+                            <constraint firstItem="gTr-NC-ILL" firstAttribute="trailing" secondItem="9Ux-uP-tHl" secondAttribute="trailing" constant="80" id="95d-dM-T9x"/>
                             <constraint firstItem="Kxz-93-Ivu" firstAttribute="leading" secondItem="gTr-NC-ILL" secondAttribute="leading" constant="20" id="HKe-3I-y8Z"/>
                             <constraint firstItem="gTr-NC-ILL" firstAttribute="trailing" secondItem="4Jo-qq-FBm" secondAttribute="trailing" constant="20" id="diM-Aa-iuj"/>
                             <constraint firstItem="gTr-NC-ILL" firstAttribute="trailing" secondItem="Kxz-93-Ivu" secondAttribute="trailing" constant="70" id="iNR-0V-682"/>
-                            <constraint firstItem="9Ux-uP-tHl" firstAttribute="leading" secondItem="gTr-NC-ILL" secondAttribute="leading" constant="70" id="iec-gU-xQk"/>
+                            <constraint firstItem="9Ux-uP-tHl" firstAttribute="leading" secondItem="gTr-NC-ILL" secondAttribute="leading" constant="80" id="iec-gU-xQk"/>
                             <constraint firstItem="4Jo-qq-FBm" firstAttribute="leading" secondItem="gTr-NC-ILL" secondAttribute="leading" constant="20" id="mXM-4M-ULG"/>
                             <constraint firstItem="zC5-Md-Kiy" firstAttribute="leading" secondItem="gTr-NC-ILL" secondAttribute="leading" constant="20" id="n3d-yc-Vlo"/>
                             <constraint firstItem="4Jo-qq-FBm" firstAttribute="top" secondItem="Kxz-93-Ivu" secondAttribute="bottom" constant="28" id="nCe-Dk-VlD"/>
