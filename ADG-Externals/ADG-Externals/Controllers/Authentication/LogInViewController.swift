@@ -16,9 +16,5 @@ class LogInViewController: UIViewController {
     }
     
 
-    @IBAction func logInBtn(_ sender: Any) {
-        self.performSegue(withIdentifier: "toMainVC", sender: nil)
-    }
-   
 
 }

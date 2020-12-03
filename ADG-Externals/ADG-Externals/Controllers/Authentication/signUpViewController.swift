@@ -15,10 +15,5 @@ class signUpViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func signinBtn(_ sender: Any) {
-        self.performSegue(withIdentifier: "toMainVC", sender: nil)
-    }
-    
-   
 
 }
