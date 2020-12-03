@@ -42,6 +42,12 @@ class ViewController: UIViewController {
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
         collectionView.heightAnchor.constraint(equalToConstant: view.frame.width/2).isActive = true
+        
+        //MARK:- Onboarding Stuffs
+        if core.shared.isNewUser() {
+            let vc = storyboard?.instantiateViewController(identifier: "onboarding") as! OnboardingViewController
+            present(vc, animated: true)
+        }
     }
 
 }
@@ -104,4 +110,24 @@ class CustomCell: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+extension ViewController {
+    //MARK:-  Onboarding Code
+
+    class core{
+        
+        static let shared = core()
+        
+        func isNewUser()->Bool {
+            return !UserDefaults.standard.bool(forKey: "onboarding")
+        }
+        
+        func setIsNotNewUser() {
+            UserDefaults.standard.set(true, forKey: "onboarding")
+        }
+    }
+
+
+
 }
