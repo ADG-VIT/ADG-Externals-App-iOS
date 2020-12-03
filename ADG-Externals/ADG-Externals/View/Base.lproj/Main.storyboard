@@ -1103,6 +1103,78 @@
             </objects>
             <point key="canvasLocation" x="4635" y="468"/>
         </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="PBd-M7-lGy">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="UwO-TR-Awf" customClass="OnboardingViewController" customModule="ADG_Externals" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oqs-DB-LXe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ADG's official Interview &amp; Roadmap guidance oriented app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVc-YN-Lzb">
+                                <rect key="frame" x="55" y="626" width="305" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ADG Interview Ground" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIM-0M-bSf">
+                                <rect key="frame" x="20" y="536" width="374" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
+                                <color key="textColor" red="0.017715148619999999" green="0.069832844510000006" blue="0.41222427830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1Image" translatesAutoresizingMaskIntoConstraints="NO" id="29T-xd-aDP">
+                                <rect key="frame" x="66" y="323" width="283" height="185"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRO-jD-W2d">
+                                <rect key="frame" x="125" y="811" width="153" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="28"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="1" green="0.44009968640000002" blue="0.1797010601" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButton:" destination="UwO-TR-Awf" eventType="touchUpInside" id="Gek-cY-hhp"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ebb-UV-F5P">
+                                <rect key="frame" x="66" y="738" width="276" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="1" green="0.64923787119999998" blue="0.20010784270000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="segmentControl:" destination="UwO-TR-Awf" eventType="valueChanged" id="NDT-vK-JOS"/>
+                                </connections>
+                            </segmentedControl>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ou-iB-VSK">
+                                <rect key="frame" x="110" y="119" width="195" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" red="1" green="0.36712807419999999" blue="0.25578287240000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </progressView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a3l-nU-CKF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7bC-qp-TW6"/>
+                    <connections>
+                        <outlet property="imageView" destination="29T-xd-aDP" id="95C-ZZ-kvo"/>
+                        <outlet property="label1" destination="QIM-0M-bSf" id="xpA-Bt-Afg"/>
+                        <outlet property="label2" destination="LVc-YN-Lzb" id="L6f-Oy-rBT"/>
+                        <outlet property="progressBar" destination="9ou-iB-VSK" id="iHP-0N-826"/>
+                        <outlet property="segmentBar" destination="Ebb-UV-F5P" id="nHo-7k-DCV"/>
+                        <outlet property="startBtn" destination="GRO-jD-W2d" id="7rR-kA-ik6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ja3-tI-aYB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3599" y="881"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hDy-1C-THz">
             <objects>
@@ -1117,6 +1189,7 @@
                         <segue destination="6Iw-cw-5rn" kind="relationship" relationship="viewControllers" id="Ebe-7P-gR5"/>
                         <segue destination="JwR-T5-mWk" kind="relationship" relationship="viewControllers" id="BRP-mK-Ypw"/>
                         <segue destination="kkw-J9-W9G" kind="relationship" relationship="viewControllers" id="Vjc-nM-2wf"/>
+                        <segue destination="UwO-TR-Awf" kind="show" id="hoY-OW-Nar"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ijZ-5A-H0Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1466,6 +1539,7 @@
         <segue reference="OHp-mI-ILh"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="1Image" width="628" height="278"/>
         <image name="Gmail-logo" width="1400" height="1055"/>
         <image name="IMG_6903" width="1242" height="1232"/>
         <image name="Screenshot 2020-11-30 at 10.12.18 PM" width="318" height="276"/>
