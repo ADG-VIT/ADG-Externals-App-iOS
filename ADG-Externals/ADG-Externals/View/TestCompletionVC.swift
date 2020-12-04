@@ -9,21 +9,16 @@ import UIKit
 
 class TestCompletionVC: UIViewController {
 
+    @IBOutlet weak var homeBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        homeBtn.layer.cornerRadius = 10
+        homeBtn.layer.borderColor = #colorLiteral(red: 0.2856856287, green: 0.4605719447, blue: 1, alpha: 1)
+        homeBtn.layer.borderWidth = 2
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func homeButton(_ sender: Any) {
     }
-    */
-
+    
 }
