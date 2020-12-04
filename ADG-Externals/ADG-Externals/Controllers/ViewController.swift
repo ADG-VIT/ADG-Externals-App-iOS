@@ -13,7 +13,11 @@ struct CustomData {
     var backgroundImage: UIImage
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    
+    var dates:[String] = ["25","26","27"]
+    
+    @IBOutlet weak var tableView: UITableView!
     
         fileprivate let data = [
             CustomData(title: "Basics of ML", url: "https://www.udemy.com", backgroundImage:#imageLiteral(resourceName: "juan-carlos-gomez-rt2_-5PI2UU-unsplash")),
@@ -43,6 +47,9 @@ class ViewController: UIViewController {
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
         collectionView.heightAnchor.constraint(equalToConstant: view.frame.width/2).isActive = true
         
+        tableView.dataSource = self
+        tableView.delegate = self
+        
         //MARK:- Onboarding Stuffs
         if core.shared.isNewUser() {
             let vc = storyboard?.instantiateViewController(identifier: "onboarding") as! OnboardingViewController
@@ -70,6 +77,16 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
     func buttonTappedInCollectionViewCell(sender: UIButton) {
            self.performSegue(withIdentifier: "toStoreFromMyDiscounts", sender: nil)
        }
+    //MARK:-TableView methods
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dates.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeTableViewCell
+        cell.dateLabel.text = dates[indexPath.row]
+        return cell
+        
+    }
 }
 
 
@@ -128,6 +145,7 @@ extension ViewController {
             UserDefaults.standard.set(true, forKey: "onboarding")
         }
     }
+  
 
 
 
