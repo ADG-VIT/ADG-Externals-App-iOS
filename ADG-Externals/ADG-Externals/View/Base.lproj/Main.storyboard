@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DaK-ar-rkN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ODO-wU-aVi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -1252,15 +1252,117 @@
                                 <color key="textColor" systemColor="systemIndigoColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jic-uf-J4N">
+                                <rect key="frame" x="25" y="186" width="364" height="203"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="applelogo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QoF-4a-mlT">
+                                        <rect key="frame" x="17" y="24" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mr0-bf-cO6">
+                                        <rect key="frame" x="22" y="148" width="302" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nyp-nO-Oov">
+                                        <rect key="frame" x="287" y="62" width="69" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="Button" image="arrow.right" catalog="system"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Technical" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWx-oo-MzC">
+                                        <rect key="frame" x="17" y="108" width="262" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vjb-4p-wVF">
+                                <rect key="frame" x="25" y="397" width="364" height="198"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="applelogo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3bn-pO-WuT">
+                                        <rect key="frame" x="17" y="24" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGa-hs-8vb">
+                                        <rect key="frame" x="22" y="148" width="302" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1W-8G-iZt">
+                                        <rect key="frame" x="287" y="62" width="69" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="Button" image="arrow.right" catalog="system"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Management" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8as-hQ-inl">
+                                        <rect key="frame" x="17" y="108" width="262" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4u1-k6-RBd">
+                                <rect key="frame" x="25" y="603" width="364" height="198"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="applelogo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Xgd-wz-6nZ">
+                                        <rect key="frame" x="17" y="24" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wi8-rj-diP">
+                                        <rect key="frame" x="22" y="148" width="302" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mk1-mK-mtB">
+                                        <rect key="frame" x="287" y="62" width="69" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="Button" image="arrow.right" catalog="system"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Design" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ly6-D9-FWP">
+                                        <rect key="frame" x="17" y="108" width="262" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JVv-Wf-ZMv"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="oxP-cs-XY6" firstAttribute="leading" secondItem="JVv-Wf-ZMv" secondAttribute="leading" constant="20" id="12a-7y-CCP"/>
                             <constraint firstItem="6kB-Rb-JJ9" firstAttribute="leading" secondItem="JVv-Wf-ZMv" secondAttribute="leading" constant="20" id="2f5-T9-Yez"/>
+                            <constraint firstItem="JVv-Wf-ZMv" firstAttribute="trailing" secondItem="vjb-4p-wVF" secondAttribute="trailing" constant="25" id="39T-7h-GjE"/>
+                            <constraint firstItem="4u1-k6-RBd" firstAttribute="top" secondItem="vjb-4p-wVF" secondAttribute="bottom" constant="8" symbolic="YES" id="48Q-IM-7SC"/>
+                            <constraint firstItem="Jic-uf-J4N" firstAttribute="top" secondItem="oxP-cs-XY6" secondAttribute="bottom" constant="15" id="7np-K5-UDK"/>
+                            <constraint firstItem="4u1-k6-RBd" firstAttribute="top" secondItem="dmO-oX-03G" secondAttribute="top" constant="603" id="GfS-Kk-T1m"/>
+                            <constraint firstItem="JVv-Wf-ZMv" firstAttribute="bottom" secondItem="4u1-k6-RBd" secondAttribute="bottom" constant="12" id="NOO-EV-vu9"/>
+                            <constraint firstItem="4u1-k6-RBd" firstAttribute="leading" secondItem="JVv-Wf-ZMv" secondAttribute="leading" constant="25" id="Nnh-wc-hxc"/>
+                            <constraint firstItem="Jic-uf-J4N" firstAttribute="leading" secondItem="JVv-Wf-ZMv" secondAttribute="leading" constant="25" id="Pcd-5J-jCD"/>
+                            <constraint firstItem="vjb-4p-wVF" firstAttribute="leading" secondItem="JVv-Wf-ZMv" secondAttribute="leading" constant="25" id="QAz-oi-WjR"/>
                             <constraint firstItem="VX2-jH-ZUq" firstAttribute="leading" secondItem="6kB-Rb-JJ9" secondAttribute="trailing" constant="8" symbolic="YES" id="Vwn-Sn-zzS"/>
                             <constraint firstItem="6kB-Rb-JJ9" firstAttribute="top" secondItem="JVv-Wf-ZMv" secondAttribute="top" constant="30" id="WC0-EV-wea"/>
+                            <constraint firstItem="JVv-Wf-ZMv" firstAttribute="bottom" secondItem="Jic-uf-J4N" secondAttribute="bottom" constant="424" id="Wah-9a-O4a"/>
                             <constraint firstItem="VX2-jH-ZUq" firstAttribute="top" secondItem="JVv-Wf-ZMv" secondAttribute="top" constant="26" id="XTr-mf-Tzd"/>
+                            <constraint firstItem="vjb-4p-wVF" firstAttribute="top" secondItem="Jic-uf-J4N" secondAttribute="bottom" constant="8" symbolic="YES" id="Zkq-FK-RW0"/>
+                            <constraint firstItem="JVv-Wf-ZMv" firstAttribute="trailing" secondItem="4u1-k6-RBd" secondAttribute="trailing" constant="25" id="ab2-Cp-9tv"/>
+                            <constraint firstItem="JVv-Wf-ZMv" firstAttribute="trailing" secondItem="Jic-uf-J4N" secondAttribute="trailing" constant="25" id="dHY-h9-pVv"/>
                             <constraint firstItem="JVv-Wf-ZMv" firstAttribute="trailing" secondItem="oxP-cs-XY6" secondAttribute="trailing" constant="95" id="fJV-3I-Uw8"/>
                             <constraint firstItem="oxP-cs-XY6" firstAttribute="top" secondItem="VX2-jH-ZUq" secondAttribute="bottom" constant="8" symbolic="YES" id="hai-rJ-Muo"/>
                             <constraint firstItem="JVv-Wf-ZMv" firstAttribute="trailing" secondItem="VX2-jH-ZUq" secondAttribute="trailing" constant="20" id="iQX-v9-9kd"/>
@@ -1269,6 +1371,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="u4V-Yg-ABe"/>
                     <connections>
+                        <outlet property="designView" destination="4u1-k6-RBd" id="PAq-lC-sv3"/>
+                        <outlet property="managementView" destination="vjb-4p-wVF" id="nW8-GH-ToC"/>
+                        <outlet property="techView" destination="Jic-uf-J4N" id="QjR-FA-9dc"/>
                         <segue destination="twa-xP-bBa" kind="show" id="bU5-9A-raV"/>
                     </connections>
                 </viewController>
@@ -1905,6 +2010,7 @@
         <image name="Gmail-logo" width="1400" height="1055"/>
         <image name="IMG_6903" width="1242" height="1232"/>
         <image name="Screenshot 2020-11-30 at 10.12.18 PM" width="318" height="276"/>
+        <image name="applelogo" catalog="system" width="103" height="128"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="book" catalog="system" width="128" height="102"/>
@@ -1922,11 +2028,17 @@
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
