@@ -71,6 +71,7 @@ Carthage/Build/
 # Accio dependency management
 Dependencies/
 .accio/
+**/.DS_Store
 
 # fastlane
 #
