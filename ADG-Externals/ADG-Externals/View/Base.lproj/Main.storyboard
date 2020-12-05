@@ -1374,12 +1374,33 @@
                         <outlet property="designView" destination="4u1-k6-RBd" id="PAq-lC-sv3"/>
                         <outlet property="managementView" destination="vjb-4p-wVF" id="nW8-GH-ToC"/>
                         <outlet property="techView" destination="Jic-uf-J4N" id="QjR-FA-9dc"/>
-                        <segue destination="twa-xP-bBa" kind="show" id="bU5-9A-raV"/>
+                        <segue destination="pwp-8f-dZI" kind="show" id="aRB-0j-fq1"/>
+                        <segue destination="Hxr-lk-VIA" kind="show" id="pJD-oh-pgq"/>
+                        <segue destination="gUr-a4-whp" kind="show" id="3zq-Zg-f75"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iVl-d9-ZiW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3792.753623188406" y="450"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kO0-yy-Zlo">
+            <objects>
+                <viewController id="pwp-8f-dZI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j8X-Od-xiO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ZbY-3C-stC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6HF-gR-1cB"/>
+                    <connections>
+                        <segue destination="twa-xP-bBa" kind="show" id="wvJ-Or-ppZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dXh-iz-own" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4572" y="-59"/>
         </scene>
         <!--Test CompletionVC-->
         <scene sceneID="VFf-cT-dGG">
@@ -1502,7 +1523,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfS-kH-JWH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4647.826086956522" y="450"/>
+            <point key="canvasLocation" x="5358" y="450"/>
         </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="PBd-M7-lGy">
@@ -2107,8 +2128,47 @@
             </objects>
             <point key="canvasLocation" x="-10.144927536231885" y="-500.22321428571428"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="fX1-Q1-LId">
+            <objects>
+                <viewController id="Hxr-lk-VIA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yno-hX-Ppd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="c75-jj-E3V"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hCZ-Sl-9pg"/>
+                    <connections>
+                        <segue destination="twa-xP-bBa" kind="show" id="rzM-xM-hG4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QsJ-fk-zVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4571" y="593"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ejc-oF-FZb">
+            <objects>
+                <viewController id="gUr-a4-whp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y02-sn-khs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6hI-qu-XLu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5S4-x3-ta0"/>
+                    <connections>
+                        <segue destination="twa-xP-bBa" kind="show" id="RDd-bc-iRi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mC7-81-0cD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4571" y="1271"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="rzM-xM-hG4"/>
         <segue reference="Hi2-W6-QiA"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -2117,6 +2177,9 @@
         <image name="Gmail-logo" width="1400" height="1055"/>
         <image name="IMG_6903" width="1242" height="1232"/>
         <image name="Screenshot 2020-11-30 at 10.12.18 PM" width="318" height="276"/>
+        <image name="Screenshot 2020-12-04 at 12.46.18 PM" width="564" height="426"/>
+        <image name="applelogo" catalog="system" width="103" height="128"/>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="book" catalog="system" width="128" height="102"/>
         <image name="chevron.down" catalog="system" width="128" height="72"/>
