@@ -19,6 +19,12 @@ class TechnicalQuizVC: UIViewController {
     
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+
+    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    let maxtime:Float = 10.0 //600(10 min)
+    var currentTime:Float = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +36,9 @@ class TechnicalQuizVC: UIViewController {
        
         applyBorder(button: skipButton, RadiusSize: 5, widthSize: 2, color: UIColor.systemOrange.cgColor)
         applyBorder(button: nextButton, RadiusSize: 5, widthSize: 2, color: UIColor.systemOrange.cgColor)
+        
+        progressBar.setProgress(currentTime, animated: true)
+        perform(#selector(startTimer), with: nil, afterDelay: 0.0)
     }
     
 
@@ -45,5 +54,19 @@ extension TechnicalQuizVC{
         button.layer.cornerRadius = RadiusSize
         button.layer.borderWidth = widthSize
         button.layer.borderColor = color
+    }
+    
+    @objc func startTimer() {
+       
+        currentTime += 1
+        progressBar.progress = currentTime/maxtime
+        timeLabel.text = "Timer: \(String(currentTime))"
+        
+        if currentTime < maxtime {
+            perform(#selector(startTimer), with: nil, afterDelay: 1.0)
+        }else{
+            //self.performSegue(withIdentifier: "completetech", sender: nil)
+            print("test completed")
+        }
     }
 }
