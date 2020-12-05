@@ -24,6 +24,8 @@ DerivedData/
 
 ## Obj-C/Swift specific
 *.hmap
+*.DS_Store
+**/.DS_Store
 
 ## App packaging
 *.ipa
@@ -69,6 +71,7 @@ Carthage/Build/
 # Accio dependency management
 Dependencies/
 .accio/
+**/.DS_Store
 
 # fastlane
 #
