@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DaK-ar-rkN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KbQ-wJ-cdR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -2085,9 +2085,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="fullNameField:" destination="KbQ-wJ-cdR" eventType="editingDidEnd" id="UDA-1s-AsD"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="VIT Registration Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bFk-ul-enS">
                                         <rect key="frame" x="0.0" y="112" width="374" height="50"/>
@@ -2151,6 +2148,11 @@
                     <navigationItem key="navigationItem" id="efs-BX-41W"/>
                     <connections>
                         <outlet property="continueButtonLabel" destination="9Ux-uP-tHl" id="GvT-dT-e4T"/>
+                        <outlet property="emailField" destination="c4P-Vq-pcM" id="hu0-OL-Ufe"/>
+                        <outlet property="fullNameField" destination="Ahg-3m-jMD" id="mEZ-hJ-rP2"/>
+                        <outlet property="githubLinkField" destination="jHd-B6-z6f" id="xAG-Fz-ReD"/>
+                        <outlet property="passwordField" destination="ZaJ-ns-Eg9" id="onR-fy-28F"/>
+                        <outlet property="regNumberField" destination="bFk-ul-enS" id="sJ4-zd-yE5"/>
                         <segue destination="ODO-wU-aVi" kind="show" identifier="signUpToRecruitmentVC" id="OHp-mI-ILh"/>
                     </connections>
                 </viewController>
@@ -2368,8 +2370,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rzM-xM-hG4"/>
-        <segue reference="Hi2-W6-QiA"/>
+        <segue reference="wvJ-Or-ppZ"/>
+        <segue reference="OHp-mI-ILh"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1Image" width="628" height="278"/>

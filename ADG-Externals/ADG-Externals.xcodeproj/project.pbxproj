@@ -112,6 +112,7 @@
 		552C36942576578E004CE028 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				553B59B0257540EE004A9C64 /* IntroViewController.swift */,
 				551B4354257BD7BD00E0BC52 /* Test Controllers */,
 				55C457C425791DDB00D7CB88 /* TestCompletionVC.swift */,
 				55C457C125791DB000D7CB88 /* RecruitmentViewController.swift */,
@@ -129,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				910B3DB9257133E900BD0F29 /* Main.storyboard */,
+				910B3DBE257133F100BD0F29 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,16 +196,22 @@
 		910B3DB2257133E900BD0F29 /* ADG-Externals */ = {
 			isa = PBXGroup;
 			children = (
+				914C796C257CB6D9003AD8F0 /* Model */,
 				910B3DB3257133E900BD0F29 /* AppDelegate.swift */,
 				910B3DB5257133E900BD0F29 /* SceneDelegate.swift */,
-				553B59B0257540EE004A9C64 /* IntroViewController.swift */,
 				552C36942576578E004CE028 /* Controllers */,
 				552C3695257657A4004CE028 /* View */,
 				910B3DBC257133F100BD0F29 /* Assets.xcassets */,
-				910B3DBE257133F100BD0F29 /* LaunchScreen.storyboard */,
 				910B3DC1257133F100BD0F29 /* Info.plist */,
 			);
 			path = "ADG-Externals";
+			sourceTree = "<group>";
+		};
+		914C796C257CB6D9003AD8F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
