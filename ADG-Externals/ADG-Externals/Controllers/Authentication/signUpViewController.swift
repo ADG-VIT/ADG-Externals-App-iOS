@@ -110,7 +110,7 @@ extension signUpViewController{
             print(message)
             
         }catch{
-            print("error!!!!")
+            print(error.localizedDescription)
         }
     }
 

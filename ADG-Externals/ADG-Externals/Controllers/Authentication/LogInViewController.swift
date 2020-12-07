@@ -18,7 +18,8 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var continueBtnLabel: UIButton!
     
     @IBAction func continueButton(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "logInToRecruitmentVC", sender: self)
+        //self.performSegue(withIdentifier: "logInToRecruitmentVC", sender: self)
+        self.setupPostMethod()
     }
     @IBAction func regNumberField(_ sender: UITextField) {
     }
@@ -96,7 +97,7 @@ extension LogInViewController{
             print(message)
             
         }catch{
-            print("error!!!!")
+            print(error.localizedDescription)
         }
     }
 
