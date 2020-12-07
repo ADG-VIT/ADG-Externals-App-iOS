@@ -37,6 +37,7 @@
 		910B3DBB257133E900BD0F29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 910B3DB9257133E900BD0F29 /* Main.storyboard */; };
 		910B3DBD257133F100BD0F29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 910B3DBC257133F100BD0F29 /* Assets.xcassets */; };
 		910B3DC0257133F100BD0F29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 910B3DBE257133F100BD0F29 /* LaunchScreen.storyboard */; };
+		914C7979257E3A8E003AD8F0 /* Auth-Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914C7978257E3A8E003AD8F0 /* Auth-Key.swift */; };
 		91C12465257A4467008117F6 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C12464257A4467008117F6 /* HomeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		910B3DBC257133F100BD0F29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		910B3DBF257133F100BD0F29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		910B3DC1257133F100BD0F29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		914C7978257E3A8E003AD8F0 /* Auth-Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Auth-Key.swift"; sourceTree = "<group>"; };
 		91C12464257A4467008117F6 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -210,6 +212,7 @@
 		914C796C257CB6D9003AD8F0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				914C7978257E3A8E003AD8F0 /* Auth-Key.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				552C369125765777004CE028 /* GeneralTopicTableViewCell.swift in Sources */,
 				551B4356257BD7F700E0BC52 /* ManagementQuizVC.swift in Sources */,
 				552C368825764D23004CE028 /* TechnialVC.swift in Sources */,
+				914C7979257E3A8E003AD8F0 /* Auth-Key.swift in Sources */,
 				55C53E552576C9F0009CABFD /* EditProfileViewController.swift in Sources */,
 				558EEF6F257686200052DE9E /* DesignVCTableViewCell.swift in Sources */,
 				553B59BD25756B8F004A9C64 /* ProfileViewController.swift in Sources */,
