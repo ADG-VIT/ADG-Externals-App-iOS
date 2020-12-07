@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KbQ-wJ-cdR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DaK-ar-rkN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -1168,6 +1168,8 @@
                     <navigationItem key="navigationItem" id="Vja-M3-IKj"/>
                     <connections>
                         <outlet property="continueBtnLabel" destination="cHn-cx-6RT" id="cBj-9R-TY2"/>
+                        <outlet property="passwordFieldOutlet" destination="bsI-z7-z1v" id="ZvC-pY-lSy"/>
+                        <outlet property="regNumberFieldOutlet" destination="3wY-iX-Hsp" id="LwP-pD-bvi"/>
                         <segue destination="ODO-wU-aVi" kind="show" identifier="logInToRecruitmentVC" id="Hi2-W6-QiA"/>
                     </connections>
                 </viewController>
@@ -2371,7 +2373,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="wvJ-Or-ppZ"/>
-        <segue reference="OHp-mI-ILh"/>
+        <segue reference="Hi2-W6-QiA"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1Image" width="628" height="278"/>
