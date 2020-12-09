@@ -55,7 +55,7 @@ extension ManagementQuizVC{
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/management/get-quiz-questions")!,timeoutInterval: Double.infinity)
        
-        request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQwNjQ3NzZmYWZhMjAwMTdkNWRkZDYiLCJpYXQiOjE2MDc0OTI3Mjd9.uD2ffmIf913q_N8u-FydOiYZr43d0zne59-GWmTyKmU", forHTTPHeaderField: "auth-token")
+        request.addValue(signUpInst.authKey, forHTTPHeaderField: "auth-token")
 
         request.httpMethod = "GET"
         

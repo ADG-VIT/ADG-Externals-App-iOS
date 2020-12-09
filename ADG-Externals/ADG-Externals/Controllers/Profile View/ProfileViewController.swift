@@ -8,11 +8,15 @@
 import UIKit
 import MessageUI
 
+
 class ProfileViewController: UIViewController, MFMailComposeViewControllerDelegate  {
 
+    var signUpInst = signUpViewController()
     
     @IBOutlet weak var editBtn: UIButton!
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var userEmailLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +27,10 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
         
         profileImageView.layer.cornerRadius = profileImageView.frame.size.height/2
          profileImageView.clipsToBounds = true
+        
+        get()
+        
+        
     }
     
     @IBAction func editProfileBtn(_ sender: Any) {
@@ -82,6 +90,58 @@ extension ProfileViewController{
         }
         controller.dismiss(animated: true, completion: nil)
         }
+    //MARK:-API CALL
+    
+    func get(){
+        var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/user/getuser")!,timeoutInterval: Double.infinity)
+       
+      //  request.addValue(signUpInst.authKey, forHTTPHeaderField: "auth-token")
+        request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQwNjQ3NzZmYWZhMjAwMTdkNWRkZDYiLCJpYXQiOjE2MDc0OTI3Mjd9.uD2ffmIf913q_N8u-FydOiYZr43d0zne59-GWmTyKmU", forHTTPHeaderField: "auth-token")
+
+        request.httpMethod = "GET"
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+          guard let data = data else {
+            print(String(describing: error))
+            
+            return
+          }
+            
+            if let response = response as? HTTPURLResponse{
+                guard (200 ... 299) ~= response.statusCode else {
+                    print("Status code :- \(response.statusCode)")
+                    
+                    //if error == 400 then applied for test again
+                    return
+                }
+            }
+            
+            do{
+//                if error == nil{
+                let decodedData = try JSONDecoder().decode(UserProfile.self, from: data)
+                    let userName = decodedData.name
+                    let userEmail = decodedData.email
+                    print(userName)
+                    print(decodedData.name)
+//                print("HELLO \(decodedData.userProfile)")
+                    
+                    DispatchQueue.main.async{
+                        self.nameLabel.text = userName
+                        self.userEmailLabel.text = userEmail
+                        
+                    }
+       
+//                }
+        }catch{
+            print(error.localizedDescription)
+        }
+          
+           print(String(data: data, encoding: .utf8)!)
+            
+        }
+        task.resume()
+
+    }
 }
 
 

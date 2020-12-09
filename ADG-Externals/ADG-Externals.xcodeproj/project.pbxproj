@@ -37,6 +37,7 @@
 		910B3DBB257133E900BD0F29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 910B3DB9257133E900BD0F29 /* Main.storyboard */; };
 		910B3DBD257133F100BD0F29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 910B3DBC257133F100BD0F29 /* Assets.xcassets */; };
 		910B3DC0257133F100BD0F29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 910B3DBE257133F100BD0F29 /* LaunchScreen.storyboard */; };
+		910C7E232580CC73003FF973 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910C7E222580CC73003FF973 /* UserProfile.swift */; };
 		914C7979257E3A8E003AD8F0 /* Auth-Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914C7978257E3A8E003AD8F0 /* Auth-Key.swift */; };
 		914C797D257F5BA9003AD8F0 /* managementQues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914C797C257F5BA9003AD8F0 /* managementQues.swift */; };
 		91C12465257A4467008117F6 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C12464257A4467008117F6 /* HomeTableViewCell.swift */; };
@@ -75,6 +76,7 @@
 		910B3DBC257133F100BD0F29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		910B3DBF257133F100BD0F29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		910B3DC1257133F100BD0F29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		910C7E222580CC73003FF973 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		914C7978257E3A8E003AD8F0 /* Auth-Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Auth-Key.swift"; sourceTree = "<group>"; };
 		914C797C257F5BA9003AD8F0 /* managementQues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = managementQues.swift; sourceTree = "<group>"; };
 		91C12464257A4467008117F6 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 			children = (
 				914C7978257E3A8E003AD8F0 /* Auth-Key.swift */,
 				914C797C257F5BA9003AD8F0 /* managementQues.swift */,
+				910C7E222580CC73003FF973 /* UserProfile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				551B4352257BD7AC00E0BC52 /* TechnicalQuizVC.swift in Sources */,
 				91C12465257A4467008117F6 /* HomeTableViewCell.swift in Sources */,
 				910B3DB4257133E900BD0F29 /* AppDelegate.swift in Sources */,
+				910C7E232580CC73003FF973 /* UserProfile.swift in Sources */,
 				553B59BA25756973004A9C64 /* removedVC.swift in Sources */,
 				910B3DB6257133E900BD0F29 /* SceneDelegate.swift in Sources */,
 				552C365D25760FD3004CE028 /* QandAViewController.swift in Sources */,

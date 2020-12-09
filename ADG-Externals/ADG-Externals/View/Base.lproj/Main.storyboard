@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KbQ-wJ-cdR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RFy-gP-DSB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -366,7 +366,9 @@
                     <navigationItem key="navigationItem" id="yWy-fO-gBv"/>
                     <connections>
                         <outlet property="editBtn" destination="Xey-jg-hKN" id="Aeb-oU-4t3"/>
+                        <outlet property="nameLabel" destination="NV2-q5-hcl" id="N6A-Ia-u1x"/>
                         <outlet property="profileImageView" destination="Atb-kD-1EX" id="r1l-CM-1NX"/>
+                        <outlet property="userEmailLabel" destination="egi-Nx-iNp" id="o8r-78-H8T"/>
                         <segue destination="VfL-tQ-0jl" kind="show" identifier="editProfile" id="vTa-Nu-zVa"/>
                         <segue destination="3g6-yP-dc8" kind="show" identifier="aboutUS" id="Fkc-bb-eN3"/>
                     </connections>
