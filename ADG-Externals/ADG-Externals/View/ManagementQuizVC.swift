@@ -63,8 +63,8 @@ extension ManagementQuizVC{
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/management/get-quiz-questions")!,timeoutInterval: Double.infinity)
        
+        request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQxMGJmNDZmYWZhMjAwMTdkNWRmMGIiLCJpYXQiOjE2MDc1MzU2MDR9.rNjF6gCcyXmAnUQT2Vo9UcEGZTZa2of_X9i0Fc-qCLQ", forHTTPHeaderField: "auth-token")
 //        request.addValue(signUpInst.authKey, forHTTPHeaderField: "auth-token")
-        request.addValue(signUpInst.authKey, forHTTPHeaderField: "auth-token")
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -117,11 +117,11 @@ extension ManagementQuizVC{
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
             
-           request.addValue(signUpInst.authKey, forHTTPHeaderField: "auth-token")
-//           request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQwZGE2ODZmYWZhMjAwMTdkNWRlMmUiLCJpYXQiOjE2MDc1MjI5MjB9.P1mvp2z8x_P-QT7cpvmd8G6FFtTXt5hDRi6habcXF0Q", forHTTPHeaderField: "auth-key")
+//           request.addValue(signUpInst.authKey, forHTTPHeaderField: "auth-token")
+           request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQxMGJmNDZmYWZhMjAwMTdkNWRmMGIiLCJpYXQiOjE2MDc1MzU2MDR9.rNjF6gCcyXmAnUQT2Vo9UcEGZTZa2of_X9i0Fc-qCLQ", forHTTPHeaderField: "auth-key")
             let parameters: [String : Any] = [
                 "qid": qid,
-                "response": answer,
+                "response": answer
             ]
 
            request.httpBody = parameters.percentEscaped().data(using: .utf8)
@@ -165,7 +165,6 @@ extension ManagementQuizVC{
             let message = decodedData.message
             print(message)
             print(self.qid)
-            print("cassini")
          
             
         }catch{
