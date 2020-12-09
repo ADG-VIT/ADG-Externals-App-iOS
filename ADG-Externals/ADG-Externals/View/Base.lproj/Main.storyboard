@@ -1359,14 +1359,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Technical Round" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIN-fx-Xpp">
-                                <rect key="frame" x="109" y="78" width="196" height="36"/>
+                                <rect key="frame" x="109" y="83" width="196" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="26"/>
                                 <color key="textColor" red="0.047058823529411764" green="0.13725490196078433" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqK-b6-qzq">
-                                <rect key="frame" x="109" y="114" width="196" height="22"/>
+                                <rect key="frame" x="109" y="119" width="196" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
@@ -1439,6 +1439,19 @@
                                 <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yWE-59-Mxz">
+                                <rect key="frame" x="319" y="50" width="75" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" red="1" green="0.68235294120000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXv-tF-L3s">
+                                <rect key="frame" x="319" y="62" width="75" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZbY-3C-stC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1450,10 +1463,12 @@
                         <outlet property="choice3" destination="v45-OP-B57" id="azO-Gc-pWL"/>
                         <outlet property="choice4" destination="gik-Hw-fFZ" id="noX-wv-AX1"/>
                         <outlet property="nextButton" destination="B9v-HL-jOs" id="CvL-ha-ppE"/>
+                        <outlet property="progressBar" destination="yWE-59-Mxz" id="mkD-a2-XtR"/>
                         <outlet property="questionLabel" destination="skS-6p-gvO" id="khU-1a-Tlg"/>
                         <outlet property="questionNumberLbl" destination="fqK-b6-qzq" id="07s-Ri-r94"/>
                         <outlet property="skipButton" destination="cOD-qW-oc2" id="y5O-jq-80e"/>
-                        <segue destination="twa-xP-bBa" kind="show" id="wvJ-Or-ppZ"/>
+                        <outlet property="timeLabel" destination="dXv-tF-L3s" id="am6-K4-PNp"/>
+                        <segue destination="twa-xP-bBa" kind="show" identifier="completetech" id="wvJ-Or-ppZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dXh-iz-own" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1581,7 +1596,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfS-kH-JWH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5358" y="450"/>
+            <point key="canvasLocation" x="5438" y="468"/>
         </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="PBd-M7-lGy">
@@ -2208,8 +2223,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCf-qt-Z3G">
-                                <rect key="frame" x="109" y="114" width="196" height="22"/>
+                                <rect key="frame" x="109" y="119" width="196" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
@@ -2258,11 +2274,6 @@
                                 <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Management Round" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqh-Tf-TSg">
-                                <rect key="frame" x="84" y="79" width="247" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="26"/>
-                                <color key="textColor" red="0.047058823530000002" green="0.13725490200000001" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -2273,10 +2284,12 @@
                     <connections>
                         <outlet property="answerTextView" destination="yhP-cp-XJs" id="Ppl-3o-j2r"/>
                         <outlet property="nextButton" destination="2wV-kF-xu1" id="6iv-p8-JVR"/>
+                        <outlet property="progressBar" destination="6m5-Z2-C0V" id="2cJ-lg-fKz"/>
                         <outlet property="questionLabel" destination="0rR-LP-x9N" id="jf1-9P-ldr"/>
                         <outlet property="questionNumber" destination="JCf-qt-Z3G" id="9Ib-dy-krl"/>
                         <outlet property="skipButton" destination="Xz7-PW-pcU" id="2fR-8w-LPx"/>
-                        <segue destination="twa-xP-bBa" kind="show" id="rzM-xM-hG4"/>
+                        <outlet property="timeLabel" destination="HeR-4U-Of9" id="8Op-sr-Rca"/>
+                        <segue destination="twa-xP-bBa" kind="show" identifier="completeManagement" id="rzM-xM-hG4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QsJ-fk-zVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2292,14 +2305,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Design Round" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nn1-St-YZ4">
-                                <rect key="frame" x="121" y="78" width="171" height="36"/>
+                                <rect key="frame" x="121" y="83" width="171" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="26"/>
                                 <color key="textColor" red="0.047058823530000002" green="0.13725490200000001" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yb2-tr-hAr">
-                                <rect key="frame" x="109" y="114" width="196" height="22"/>
+                                <rect key="frame" x="109" y="119" width="196" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
@@ -2372,6 +2385,19 @@
                                 <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vuN-rG-ca1">
+                                <rect key="frame" x="319" y="44" width="75" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" red="1" green="0.68235294120000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeS-jI-HiX">
+                                <rect key="frame" x="319" y="56" width="75" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6hI-qu-XLu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2383,10 +2409,12 @@
                         <outlet property="choice3" destination="6DX-sK-DaJ" id="6l2-c9-GR5"/>
                         <outlet property="choice4" destination="WHC-Qy-pyi" id="VG6-Lu-hof"/>
                         <outlet property="nextButton" destination="09b-Yc-KcE" id="lgy-tK-saV"/>
+                        <outlet property="progressBar" destination="vuN-rG-ca1" id="AGf-Xg-1EG"/>
                         <outlet property="questionLabel" destination="dt9-lV-SK0" id="UlN-FU-RS8"/>
                         <outlet property="questionNumber" destination="yb2-tr-hAr" id="bWJ-97-hzj"/>
                         <outlet property="skipButton" destination="RJa-bo-TCP" id="cBO-nY-Ty0"/>
-                        <segue destination="twa-xP-bBa" kind="show" id="RDd-bc-iRi"/>
+                        <outlet property="timeLabel" destination="qeS-jI-HiX" id="He5-ER-Xnr"/>
+                        <segue destination="twa-xP-bBa" kind="show" identifier="completedesign" id="RDd-bc-iRi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mC7-81-0cD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2395,8 +2423,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rzM-xM-hG4"/>
-        <segue reference="OHp-mI-ILh"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1Image" width="628" height="278"/>

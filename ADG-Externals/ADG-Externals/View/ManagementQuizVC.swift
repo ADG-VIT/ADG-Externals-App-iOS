@@ -21,6 +21,12 @@ class ManagementQuizVC: UIViewController {
     @IBOutlet weak var answerTextView: UITextView!
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    let maxtime:Float = 10.0 //600(10 min)
+    var currentTime:Float = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,19 +35,10 @@ class ManagementQuizVC: UIViewController {
         answerTextView.layer.cornerRadius = 5
         
         applyBorder(button: skipButton, RadiusSize: 5, widthSize: 2, color: UIColor.systemOrange.cgColor)
-        applyBorder(button: nextButton, RadiusSize: 5, widthSize: 2, color: UIColor.systemOrange.cgColor)
-        get()
+        applyBorder(button: nextButton, RadiusSize: 5, widthSize: 2, color: UIColor.systemOrange.cgColor)    
+        progressBar.setProgress(currentTime, animated: true)
+        perform(#selector(startTimer), with: nil, afterDelay: 0.0)
     }
-    
-    @IBAction func nextButton(_ sender: UIButton) {
-       // self.setupPostMethod()
-        updateUI()
-        setupPostMethod()
-        self.answerTextView.text = " "
-
-    }
-    
-    
 
 }
 
@@ -54,6 +51,20 @@ extension ManagementQuizVC{
         button.layer.cornerRadius = RadiusSize
         button.layer.borderWidth = widthSize
         button.layer.borderColor = color
+    }
+    
+    @objc func startTimer() {
+       
+        currentTime += 1
+        progressBar.progress = currentTime/maxtime
+        timeLabel.text = "Timer: \(String(currentTime))"
+        
+        if currentTime < maxtime {
+            perform(#selector(startTimer), with: nil, afterDelay: 1.0)
+        }else{
+            //self.performSegue(withIdentifier: "completeManagement", sender: nil)
+            print("test completed")
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
