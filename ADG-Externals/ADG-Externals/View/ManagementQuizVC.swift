@@ -79,9 +79,11 @@ extension ManagementQuizVC{
                 if error == nil{
                 self.quesArr = try JSONDecoder().decode([managementQues].self, from: data)
                 for mainarr in self.quesArr{
-                    print(mainarr.question)
-                    self.questionLabel.text = mainarr.question
+                    print(mainarr.description)
                 }
+                    DispatchQueue.main.async {
+                        self.updateUI()
+                    }
             }
         }catch{
             print(error.localizedDescription)
@@ -91,5 +93,8 @@ extension ManagementQuizVC{
         }
         task.resume()
 
+    }
+    func updateUI(){
+        self.questionLabel.text = quesArr.description
     }
 }

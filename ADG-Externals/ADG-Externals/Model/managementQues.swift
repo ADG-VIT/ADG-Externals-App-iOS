@@ -6,25 +6,29 @@
 //
 
 import Foundation
+struct managementQuesArr:Decodable{
+    var ques:[managementQues]
+}
 struct managementQues:Decodable{
-    var qid:String
-    var question:String
-    var quesImage:String?
+    var id:String
+    var description:String
+    var questionImage:String?
+    var v:Int?
     
      enum CodingKeys: String, CodingKey {
-         
-         case qid
-         case question
-         case quesImage = "url"
-       
-         
+
+         case id = "_id"
+         case description
+         case questionImage
+
+
      }
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        qid = try container.decode(String.self, forKey: .qid)
-        question = try container.decode(String.self, forKey: .question)
-        quesImage = try? container.decode(String?.self, forKey: .quesImage)
-        
-    }
+//    init(from decoder: Decoder) throws {
+//        let container = try decoder.container(keyedBy: CodingKeys.self)
+//        qid = try container.decode(String.self, forKey: .qid)
+//        question = try container.decode(String.self, forKey: .question)
+//        quesImage = try? container.decode(String?.self, forKey: .quesImage)
+//
+//    }
    
 }

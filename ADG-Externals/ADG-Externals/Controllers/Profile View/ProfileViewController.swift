@@ -12,6 +12,8 @@ import MessageUI
 class ProfileViewController: UIViewController, MFMailComposeViewControllerDelegate  {
 
     var signUpInst = signUpViewController()
+    var name:String = ""
+    var emailID:String = ""
     
     @IBOutlet weak var editBtn: UIButton!
     @IBOutlet weak var profileImageView: UIImageView!
@@ -95,8 +97,8 @@ extension ProfileViewController{
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/user/getuser")!,timeoutInterval: Double.infinity)
        
-      //  request.addValue(signUpInst.authKey, forHTTPHeaderField: "auth-token")
-        request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQwNjQ3NzZmYWZhMjAwMTdkNWRkZDYiLCJpYXQiOjE2MDc0OTI3Mjd9.uD2ffmIf913q_N8u-FydOiYZr43d0zne59-GWmTyKmU", forHTTPHeaderField: "auth-token")
+        request.addValue(signUpInst.authKey, forHTTPHeaderField: "auth-token")
+//        request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQwNjQ3NzZmYWZhMjAwMTdkNWRkZDYiLCJpYXQiOjE2MDc0OTI3Mjd9.uD2ffmIf913q_N8u-FydOiYZr43d0zne59-GWmTyKmU", forHTTPHeaderField: "auth-token")
 
         request.httpMethod = "GET"
         
@@ -118,16 +120,15 @@ extension ProfileViewController{
             
             do{
 //                if error == nil{
-                let decodedData = try JSONDecoder().decode(UserProfile.self, from: data)
-                    let userName = decodedData.name
-                    let userEmail = decodedData.email
-                    print(userName)
-                    print(decodedData.name)
+                let result = try JSONDecoder().decode(model.self, from: data)
+                self.name.append(result.userDetails.name)
+                self.emailID.append(result.userDetails.email)
+                
+                print(result.userDetails.name)
 //                print("HELLO \(decodedData.userProfile)")
                     
                     DispatchQueue.main.async{
-                        self.nameLabel.text = userName
-                        self.userEmailLabel.text = userEmail
+                        self.updateUI()
                         
                     }
        
@@ -152,6 +153,11 @@ extension ProfileViewController{
         let activityController = UIActivityViewController(activityItems: ["hello", UIImage(imageLiteralResourceName:"claudia-lam-BPy_w7rG6bk-unsplash")], applicationActivities: nil)
            
         present(activityController, animated: true, completion: nil)
+    }
+    
+    func updateUI(){
+        self.nameLabel.text = name
+        self.userEmailLabel.text = emailID
     }
     
 }
