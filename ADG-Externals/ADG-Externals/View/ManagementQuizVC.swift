@@ -63,7 +63,7 @@ extension ManagementQuizVC{
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/management/get-quiz-questions")!,timeoutInterval: Double.infinity)
        
-        request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQxMGJmNDZmYWZhMjAwMTdkNWRmMGIiLCJpYXQiOjE2MDc1MzU2MDR9.rNjF6gCcyXmAnUQT2Vo9UcEGZTZa2of_X9i0Fc-qCLQ", forHTTPHeaderField: "auth-token")
+        request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQxMWE5NDZmYWZhMjAwMTdkNWRmM2MiLCJpYXQiOjE2MDc1MzkzNDh9.xS7nly-3gtNPHsnf4fAFkx86b7ALS5IGdzMRNQLr_h0", forHTTPHeaderField: "auth-token")
 //        request.addValue(signUpInst.authKey, forHTTPHeaderField: "auth-token")
         request.httpMethod = "GET"
         
@@ -118,7 +118,7 @@ extension ManagementQuizVC{
             request.httpMethod = "POST"
             
 //           request.addValue(signUpInst.authKey, forHTTPHeaderField: "auth-token")
-           request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQxMGJmNDZmYWZhMjAwMTdkNWRmMGIiLCJpYXQiOjE2MDc1MzU2MDR9.rNjF6gCcyXmAnUQT2Vo9UcEGZTZa2of_X9i0Fc-qCLQ", forHTTPHeaderField: "auth-key")
+           request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQxMWE5NDZmYWZhMjAwMTdkNWRmM2MiLCJpYXQiOjE2MDc1MzkzNDh9.xS7nly-3gtNPHsnf4fAFkx86b7ALS5IGdzMRNQLr_h0", forHTTPHeaderField: "auth-token")
             let parameters: [String : Any] = [
                 "qid": qid,
                 "response": answer
