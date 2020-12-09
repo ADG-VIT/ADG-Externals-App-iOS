@@ -56,7 +56,7 @@ extension ManagementQuizVC{
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/management/get-quiz-questions")!,timeoutInterval: Double.infinity)
        
         request.addValue(signUpInst.authKey, forHTTPHeaderField: "auth-token")
-
+      //  request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQwYzFiNjZmYWZhMjAwMTdkNWRlMGMiLCJpYXQiOjE2MDc1MTY1OTh9.nkUeYT0Y6cu_3wZ-b4QfemEXg3UkJTn2xWk3VH-MQck", forHTTPHeaderField: "auth-token")
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -95,6 +95,6 @@ extension ManagementQuizVC{
 
     }
     func updateUI(){
-        self.questionLabel.text = quesArr.description
+        self.questionLabel.text = quesArr.randomElement()?.description
     }
 }
