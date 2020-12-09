@@ -23,6 +23,9 @@ struct managementQues:Decodable{
 
 
      }
+    
+    
+   
 //    init(from decoder: Decoder) throws {
 //        let container = try decoder.container(keyedBy: CodingKeys.self)
 //        qid = try container.decode(String.self, forKey: .qid)

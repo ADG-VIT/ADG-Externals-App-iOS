@@ -1141,7 +1141,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="PBV-Rq-ySg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" red="0.93725490199999995" green="0.37647058820000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -2126,7 +2126,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="rQw-AD-TmZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" red="0.93725490199999995" green="0.37647058820000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -2381,7 +2381,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="rzM-xM-hG4"/>
-        <segue reference="OHp-mI-ILh"/>
+        <segue reference="Hi2-W6-QiA"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1Image" width="628" height="278"/>

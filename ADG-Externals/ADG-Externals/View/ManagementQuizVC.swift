@@ -6,11 +6,15 @@
 //
 
 import UIKit
+struct submission:Decodable{
+    let message:String
+}
 
 class ManagementQuizVC: UIViewController {
     
     var signUpInst = signUpViewController()
     var quesArr = [managementQues]()
+    var qid:[String] = []
 
     @IBOutlet weak var questionNumber: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
@@ -31,6 +35,10 @@ class ManagementQuizVC: UIViewController {
     
     @IBAction func nextButton(_ sender: UIButton) {
        // self.setupPostMethod()
+        updateUI()
+        setupPostMethod()
+        self.answerTextView.text = " "
+
     }
     
     
@@ -51,12 +59,12 @@ extension ManagementQuizVC{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
            self.view.endEditing(false)
        }
-    //MARK:-API CALL
+    //MARK:- GET Ques API CALL
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/management/get-quiz-questions")!,timeoutInterval: Double.infinity)
        
-        request.addValue(signUpInst.authKey, forHTTPHeaderField: "auth-token")
-      //  request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQwYzFiNjZmYWZhMjAwMTdkNWRlMGMiLCJpYXQiOjE2MDc1MTY1OTh9.nkUeYT0Y6cu_3wZ-b4QfemEXg3UkJTn2xWk3VH-MQck", forHTTPHeaderField: "auth-token")
+//        request.addValue(signUpInst.authKey, forHTTPHeaderField: "auth-token")
+        request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQwZDUzYjZmYWZhMjAwMTdkNWRlMmQiLCJpYXQiOjE2MDc1MjE1OTV9.xglBIFSWdmdlhH8wMRaXDXnr-rsTcdz46Kcw0fNLtMA", forHTTPHeaderField: "auth-token")
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -80,7 +88,10 @@ extension ManagementQuizVC{
                 self.quesArr = try JSONDecoder().decode([managementQues].self, from: data)
                 for mainarr in self.quesArr{
                     print(mainarr.description)
+                    self.qid.append(mainarr.id)
+                    
                 }
+                    
                     DispatchQueue.main.async {
                         self.updateUI()
                     }
@@ -94,7 +105,71 @@ extension ManagementQuizVC{
         task.resume()
 
     }
+    
     func updateUI(){
         self.questionLabel.text = quesArr.randomElement()?.description
     }
+    //MARK:-POST Answers
+    func setupPostMethod(){
+        guard let answer = self.answerTextView.text else { return }
+        
+        if let url = URL(string: "https://adgrecruitments.herokuapp.com/user/management/submit"){
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            
+//           request.addValue(signUpInst.authKey, forHTTPHeaderField: "auth-token")
+           request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQwZDUzYjZmYWZhMjAwMTdkNWRlMmQiLCJpYXQiOjE2MDc1MjE1OTV9.xglBIFSWdmdlhH8wMRaXDXnr-rsTcdz46Kcw0fNLtMA", forHTTPHeaderField: "auth-key")
+            let parameters: [String : Any] = [
+                "qid": qid,
+                "response": answer,
+            ]
+
+           request.httpBody = parameters.percentEscaped().data(using: .utf8)
+//            let postData = try! JSONSerialization.data(withJSONObject: parameters,options: [])
+//            request.httpBody = postData
+            URLSession.shared.dataTask(with: request){(data, response, error) in
+                guard let data = data else{
+                    if error == nil{
+                        print(error?.localizedDescription ?? "Unknown Error")
+                    }
+                    return
+                }
+                if let response = response as? HTTPURLResponse{
+                    guard (200 ... 299) ~= response.statusCode else {
+                        print("Status code :- \(response.statusCode)")
+                        //print(response)
+                        return
+                    }
+                }
+                
+                do{
+                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    print(json)
+//                    self.token.append(json)
+//                    print(self.token)
+//                    print(self.token[1])
+                    self.parseJSON(data)
+                }catch let error{
+                    print(error.localizedDescription)
+                }
+            }.resume()
+        }
+    }
+    func parseJSON(_ data: Data){
+        
+        let decoder = JSONDecoder()
+        do {
+            let decodedData = try decoder.decode(submission.self, from: data)
+            
+            let message = decodedData.message
+            print(message)
+            print(self.qid)
+            print("cassini")
+         
+            
+        }catch{
+            print(error.localizedDescription)
+        }
+    }
+    
 }
