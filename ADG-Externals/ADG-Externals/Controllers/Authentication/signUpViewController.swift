@@ -110,6 +110,7 @@ extension signUpViewController{
             print(key)
             print(message)
             authKey = token[0]
+            print("TRIAL \(authKey)")
          
             
         }catch{
