@@ -28,4 +28,7 @@ class RecruitmentViewController: UIViewController {
         //self.performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
     }
     
+    @IBAction func managementBtn(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "recruitmentToManagementQuiz", sender: self)
+    }
 }

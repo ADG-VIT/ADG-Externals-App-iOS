@@ -6,13 +6,13 @@
 //
 
 import UIKit
-struct submission:Decodable{
-    let message:String
-}
+import Foundation
+
 
 class ManagementQuizVC: UIViewController {
     
     var signUpInst = signUpViewController()
+    var loginInst = LogInViewController()
     var quesArr = [managementQues]()
     var qid:[String] = []
 
@@ -64,7 +64,7 @@ extension ManagementQuizVC{
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/management/get-quiz-questions")!,timeoutInterval: Double.infinity)
        
 //        request.addValue(signUpInst.authKey, forHTTPHeaderField: "auth-token")
-        request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQwZDUzYjZmYWZhMjAwMTdkNWRlMmQiLCJpYXQiOjE2MDc1MjE1OTV9.xglBIFSWdmdlhH8wMRaXDXnr-rsTcdz46Kcw0fNLtMA", forHTTPHeaderField: "auth-token")
+        request.addValue(signUpInst.authKey, forHTTPHeaderField: "auth-token")
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -117,8 +117,8 @@ extension ManagementQuizVC{
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
             
-//           request.addValue(signUpInst.authKey, forHTTPHeaderField: "auth-token")
-           request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQwZDUzYjZmYWZhMjAwMTdkNWRlMmQiLCJpYXQiOjE2MDc1MjE1OTV9.xglBIFSWdmdlhH8wMRaXDXnr-rsTcdz46Kcw0fNLtMA", forHTTPHeaderField: "auth-key")
+           request.addValue(signUpInst.authKey, forHTTPHeaderField: "auth-token")
+//           request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQwZGE2ODZmYWZhMjAwMTdkNWRlMmUiLCJpYXQiOjE2MDc1MjI5MjB9.P1mvp2z8x_P-QT7cpvmd8G6FFtTXt5hDRi6habcXF0Q", forHTTPHeaderField: "auth-key")
             let parameters: [String : Any] = [
                 "qid": qid,
                 "response": answer,
@@ -149,6 +149,7 @@ extension ManagementQuizVC{
 //                    print(self.token)
 //                    print(self.token[1])
                     self.parseJSON(data)
+                   
                 }catch let error{
                     print(error.localizedDescription)
                 }

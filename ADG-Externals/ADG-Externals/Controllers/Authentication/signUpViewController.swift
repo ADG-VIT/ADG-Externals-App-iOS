@@ -10,7 +10,7 @@ import Foundation
 
 class signUpViewController: UIViewController {
     
-    var token:[String] = []
+//    var token:[String] = []
     var authKey:String = ""
 
     //MARK:- ViewLifeCycle
@@ -33,6 +33,7 @@ class signUpViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var githubLinkField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var yearOfStudyField: UITextField!
     
     @IBAction func continueButton(_ sender: UIButton) {
         //self.performSegue(withIdentifier: "signUpToRecruitmentVC", sender: self)
@@ -53,17 +54,17 @@ extension signUpViewController{
         guard let regNumber = self.regNumberField.text else { return }
         guard let email = self.emailField.text else { return }
         guard let password = self.passwordField.text else { return }
+        guard let yos = self.yearOfStudyField.text else { return }
         
         if let url = URL(string: "https://adgrecruitments.herokuapp.com/user/signup"){
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
-//            request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmJmODQ0OGVmZWM4NzNjMzA5NTNjOGQiLCJpYXQiOjE2MDY3MzIzMDF9.ktJmM_bWMl_Qb9kkCi3zNq2uxo9-to4F4PZxYNSzL5c", forHTTPHeaderField: "auth-key")
             let parameters: [String : Any] = [
                 "name": fullName,
                 "regno": regNumber,
                 "email": email,
                 "password": password,
-                "yearofstudy": 1
+                "yearofstudy": yos
             ]
 
            request.httpBody = parameters.percentEscaped().data(using: .utf8)
@@ -91,6 +92,10 @@ extension signUpViewController{
 //                    print(self.token)
 //                    print(self.token[1])
                     self.parseJSON(data)
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "signUpToRecruitmentVC", sender: self)
+                    }
+                    
                 }catch let error{
                     print(error.localizedDescription)
                 }
@@ -106,11 +111,11 @@ extension signUpViewController{
             let key = decodedData.token
             let message = decodedData.message
           
-            token.append(key)
+            authKey.append(key)
             print(key)
             print(message)
-            authKey = token[0]
             print("TRIAL \(authKey)")
+            
          
             
         }catch{

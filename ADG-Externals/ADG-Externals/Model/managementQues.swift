@@ -6,6 +6,10 @@
 //
 
 import Foundation
+
+struct submission:Decodable{
+    let message:String
+}
 struct managementQuesArr:Decodable{
     var ques:[managementQues]
 }
@@ -23,6 +27,7 @@ struct managementQues:Decodable{
 
 
      }
+    
     
     
    

@@ -9,7 +9,7 @@ import UIKit
 
 class LogInViewController: UIViewController {
     
-    var token:[Any] = []
+    var token:String = ""
     
     //MARK:- IBConnections
     
@@ -79,6 +79,9 @@ extension LogInViewController{
 //                    print(self.token)
 //                    print(self.token[1])
                     self.parseJSON(data)
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "logInToRecruitmentVC", sender: self)
+                    }
                     
                 }catch let error{
                     print(error.localizedDescription)

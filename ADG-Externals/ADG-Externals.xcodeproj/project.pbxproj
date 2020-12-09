@@ -118,7 +118,6 @@
 		552C36942576578E004CE028 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				553B59B0257540EE004A9C64 /* IntroViewController.swift */,
 				551B4354257BD7BD00E0BC52 /* Test Controllers */,
 				914C79812580AE61003AD8F0 /* Ambiguous */,
 				55C457BC2579184600D7CB88 /* OnBoarding */,
@@ -224,6 +223,7 @@
 		914C79812580AE61003AD8F0 /* Ambiguous */ = {
 			isa = PBXGroup;
 			children = (
+				553B59B0257540EE004A9C64 /* IntroViewController.swift */,
 				55C457C425791DDB00D7CB88 /* TestCompletionVC.swift */,
 				55C457C125791DB000D7CB88 /* RecruitmentViewController.swift */,
 				910B3DB7257133E900BD0F29 /* ViewController.swift */,
