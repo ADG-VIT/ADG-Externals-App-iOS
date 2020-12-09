@@ -24,5 +24,8 @@ class RecruitmentViewController: UIViewController {
     @IBOutlet weak var techView: UIView!
     @IBOutlet weak var managementView: UIView!
     @IBOutlet weak var designView: UIView!
+    @IBAction func techButton(_ sender: UIButton) {
+        //self.performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+    }
     
 }

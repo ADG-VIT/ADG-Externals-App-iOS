@@ -59,7 +59,9 @@ extension LogInViewController{
                 guard let data = data else{
                     if error == nil{
                         print(error?.localizedDescription ?? "Unknown Error")
+                       
                     }
+                    
                     return
                 }
                 if let response = response as? HTTPURLResponse{
@@ -77,6 +79,7 @@ extension LogInViewController{
 //                    print(self.token)
 //                    print(self.token[1])
                     self.parseJSON(data)
+                    
                 }catch let error{
                     print(error.localizedDescription)
                 }
@@ -95,6 +98,7 @@ extension LogInViewController{
             token.append(key)
             print(key)
             print(message)
+            
             
         }catch{
             print(error.localizedDescription)

@@ -8,6 +8,9 @@
 import UIKit
 
 class ManagementQuizVC: UIViewController {
+    
+    var signUpInst = signUpViewController()
+    var quesArr = [managementQues]()
 
     @IBOutlet weak var questionNumber: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
@@ -23,6 +26,11 @@ class ManagementQuizVC: UIViewController {
         
         applyBorder(button: skipButton, RadiusSize: 5, widthSize: 2, color: UIColor.systemOrange.cgColor)
         applyBorder(button: nextButton, RadiusSize: 5, widthSize: 2, color: UIColor.systemOrange.cgColor)
+        get()
+    }
+    
+    @IBAction func nextButton(_ sender: UIButton) {
+       // self.setupPostMethod()
     }
     
     
@@ -43,4 +51,45 @@ extension ManagementQuizVC{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
            self.view.endEditing(false)
        }
+    //MARK:-API CALL
+    func get(){
+        var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/management/get-quiz-questions")!,timeoutInterval: Double.infinity)
+       
+        request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQwNjQ3NzZmYWZhMjAwMTdkNWRkZDYiLCJpYXQiOjE2MDc0OTI3Mjd9.uD2ffmIf913q_N8u-FydOiYZr43d0zne59-GWmTyKmU", forHTTPHeaderField: "auth-token")
+
+        request.httpMethod = "GET"
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+          guard let data = data else {
+            print(String(describing: error))
+            
+            return
+          }
+            
+            if let response = response as? HTTPURLResponse{
+                guard (200 ... 299) ~= response.statusCode else {
+                    print("Status code :- \(response.statusCode)")
+                    
+                    //if error == 400 then applied for test again
+                    return
+                }
+            }
+            
+            do{
+                if error == nil{
+                self.quesArr = try JSONDecoder().decode([managementQues].self, from: data)
+                for mainarr in self.quesArr{
+                    print(mainarr.question)
+                    self.questionLabel.text = mainarr.question
+                }
+            }
+        }catch{
+            print(error.localizedDescription)
+        }
+          
+           print(String(data: data, encoding: .utf8)!)
+        }
+        task.resume()
+
+    }
 }

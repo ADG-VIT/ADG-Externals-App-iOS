@@ -38,6 +38,7 @@
 		910B3DBD257133F100BD0F29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 910B3DBC257133F100BD0F29 /* Assets.xcassets */; };
 		910B3DC0257133F100BD0F29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 910B3DBE257133F100BD0F29 /* LaunchScreen.storyboard */; };
 		914C7979257E3A8E003AD8F0 /* Auth-Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914C7978257E3A8E003AD8F0 /* Auth-Key.swift */; };
+		914C797D257F5BA9003AD8F0 /* managementQues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914C797C257F5BA9003AD8F0 /* managementQues.swift */; };
 		91C12465257A4467008117F6 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C12464257A4467008117F6 /* HomeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,8 +64,8 @@
 		558EEF71257686290052DE9E /* editorialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editorialTableViewCell.swift; sourceTree = "<group>"; };
 		55C457B92579183E00D7CB88 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = "ADG-Externals/Controllers/OnBoarding/OnboardingViewController.swift"; sourceTree = SOURCE_ROOT; };
 		55C457BE25791BE600D7CB88 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationViewController.swift; path = "ADG-Externals/View/AuthenticationViewController.swift"; sourceTree = SOURCE_ROOT; };
-		55C457C125791DB000D7CB88 /* RecruitmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecruitmentViewController.swift; path = "ADG-Externals/View/RecruitmentViewController.swift"; sourceTree = SOURCE_ROOT; };
-		55C457C425791DDB00D7CB88 /* TestCompletionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestCompletionVC.swift; path = "ADG-Externals/View/TestCompletionVC.swift"; sourceTree = SOURCE_ROOT; };
+		55C457C125791DB000D7CB88 /* RecruitmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecruitmentViewController.swift; path = "ADG-Externals/Controllers/Ambiguous/RecruitmentViewController.swift"; sourceTree = SOURCE_ROOT; };
+		55C457C425791DDB00D7CB88 /* TestCompletionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestCompletionVC.swift; path = "ADG-Externals/Controllers/Ambiguous/TestCompletionVC.swift"; sourceTree = SOURCE_ROOT; };
 		55C53E542576C9F0009CABFD /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditProfileViewController.swift; path = "ADG-Externals/View/EditProfileViewController.swift"; sourceTree = SOURCE_ROOT; };
 		910B3DB0257133E900BD0F29 /* ADG-Externals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ADG-Externals.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		910B3DB3257133E900BD0F29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 		910B3DBF257133F100BD0F29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		910B3DC1257133F100BD0F29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		914C7978257E3A8E003AD8F0 /* Auth-Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Auth-Key.swift"; sourceTree = "<group>"; };
+		914C797C257F5BA9003AD8F0 /* managementQues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = managementQues.swift; sourceTree = "<group>"; };
 		91C12464257A4467008117F6 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,9 +118,7 @@
 			children = (
 				553B59B0257540EE004A9C64 /* IntroViewController.swift */,
 				551B4354257BD7BD00E0BC52 /* Test Controllers */,
-				55C457C425791DDB00D7CB88 /* TestCompletionVC.swift */,
-				55C457C125791DB000D7CB88 /* RecruitmentViewController.swift */,
-				910B3DB7257133E900BD0F29 /* ViewController.swift */,
+				914C79812580AE61003AD8F0 /* Ambiguous */,
 				55C457BC2579184600D7CB88 /* OnBoarding */,
 				552C369825765818004CE028 /* QandA Section */,
 				552C3697257657F6004CE028 /* Profile View */,
@@ -213,8 +213,19 @@
 			isa = PBXGroup;
 			children = (
 				914C7978257E3A8E003AD8F0 /* Auth-Key.swift */,
+				914C797C257F5BA9003AD8F0 /* managementQues.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		914C79812580AE61003AD8F0 /* Ambiguous */ = {
+			isa = PBXGroup;
+			children = (
+				55C457C425791DDB00D7CB88 /* TestCompletionVC.swift */,
+				55C457C125791DB000D7CB88 /* RecruitmentViewController.swift */,
+				910B3DB7257133E900BD0F29 /* ViewController.swift */,
+			);
+			path = Ambiguous;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +324,7 @@
 				558EEF6F257686200052DE9E /* DesignVCTableViewCell.swift in Sources */,
 				553B59BD25756B8F004A9C64 /* ProfileViewController.swift in Sources */,
 				55C457C525791DDB00D7CB88 /* TestCompletionVC.swift in Sources */,
+				914C797D257F5BA9003AD8F0 /* managementQues.swift in Sources */,
 				55C457C225791DB000D7CB88 /* RecruitmentViewController.swift in Sources */,
 				552C366125761171004CE028 /* chatSectionViewController.swift in Sources */,
 				553B59B1257540EE004A9C64 /* IntroViewController.swift in Sources */,

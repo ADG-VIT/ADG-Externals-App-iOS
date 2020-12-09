@@ -10,7 +10,8 @@ import Foundation
 
 class signUpViewController: UIViewController {
     
-    var token:[Any] = []
+    var token:[String] = []
+    var authKey:String = ""
 
     //MARK:- ViewLifeCycle
     override func viewDidLoad() {
@@ -108,6 +109,8 @@ extension signUpViewController{
             token.append(key)
             print(key)
             print(message)
+            authKey = token[0]
+         
             
         }catch{
             print(error.localizedDescription)
