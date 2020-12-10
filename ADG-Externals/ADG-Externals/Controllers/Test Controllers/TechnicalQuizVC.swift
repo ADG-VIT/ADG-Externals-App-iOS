@@ -21,7 +21,7 @@ class TechnicalQuizVC: UIViewController {
     
     var selectedAnswer:[String] = ["","","","","","","","","",""]
 
-    let maxtime:Float = 10.0 //600(10 min)
+    let maxtime:Float = 600.0 //600(10 min)
     var currentTime:Float = 0.0
     
     @IBOutlet weak var questionNumberLbl: UILabel!
