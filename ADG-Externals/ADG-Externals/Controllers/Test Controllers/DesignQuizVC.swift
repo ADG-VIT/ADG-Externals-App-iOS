@@ -120,8 +120,8 @@ extension DesignQuizVC{
     //MARK:- UI Implementation Methods
         
         func get(){
-            var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/technical/get-quiz-questions")!,timeoutInterval: Double.infinity)
-            //Change technical to design as it is design test VC
+            var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/technical/get-quiz-questions/1")!,timeoutInterval: Double.infinity)
+            //Change technical to design as it is design test VC as well as dont mention 1 and 2 year in design
             
             request.addValue(signUpViewController.authKey, forHTTPHeaderField: "auth-token")
             

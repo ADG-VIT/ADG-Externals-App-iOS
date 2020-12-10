@@ -2410,7 +2410,7 @@
                                                 <rect key="frame" x="159" y="3501" width="96" height="48"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
-                                                <state key="normal" title="Skip">
+                                                <state key="normal" title="Submit">
                                                     <color key="titleColor" systemColor="systemOrangeColor"/>
                                                 </state>
                                                 <connections>

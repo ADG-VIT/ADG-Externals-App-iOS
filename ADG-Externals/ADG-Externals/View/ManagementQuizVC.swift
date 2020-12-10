@@ -82,6 +82,9 @@ extension ManagementQuizVC{
     
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/management/get-quiz-questions")!,timeoutInterval: Double.infinity)
+        
+        request.addValue(signUpViewController.authKey, forHTTPHeaderField: "auth-token")
+        
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in

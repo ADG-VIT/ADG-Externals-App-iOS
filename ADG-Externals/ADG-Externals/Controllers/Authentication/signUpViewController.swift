@@ -11,6 +11,8 @@ import Foundation
 class signUpViewController: UIViewController {
     
 //    var token:[String] = []
+    
+    static var authKey:String = ""
     //MARK:- ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
