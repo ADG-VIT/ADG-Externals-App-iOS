@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		551B4352257BD7AC00E0BC52 /* TechnicalQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551B4351257BD7AC00E0BC52 /* TechnicalQuizVC.swift */; };
-		551B4356257BD7F700E0BC52 /* ManagementQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551B4355257BD7F700E0BC52 /* ManagementQuizVC.swift */; };
 		551B4359257BD80600E0BC52 /* DesignQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551B4358257BD80600E0BC52 /* DesignQuizVC.swift */; };
 		552C365D25760FD3004CE028 /* QandAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552C365C25760FD3004CE028 /* QandAViewController.swift */; };
 		552C366125761171004CE028 /* chatSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552C366025761171004CE028 /* chatSectionViewController.swift */; };
@@ -26,10 +25,14 @@
 		558EEF6C2576845A0052DE9E /* TechnicalVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EEF6B2576845A0052DE9E /* TechnicalVCTableViewCell.swift */; };
 		558EEF6F257686200052DE9E /* DesignVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EEF6E257686200052DE9E /* DesignVCTableViewCell.swift */; };
 		558EEF72257686290052DE9E /* editorialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EEF71257686290052DE9E /* editorialTableViewCell.swift */; };
+		55A9F5232581614B00A91CDA /* SecondYearTechQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A9F5222581614B00A91CDA /* SecondYearTechQuizVC.swift */; };
+		55A9F5262581615F00A91CDA /* SecondYearDesignQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A9F5252581615F00A91CDA /* SecondYearDesignQuizVC.swift */; };
+		55A9F529258161D700A91CDA /* TechQuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A9F528258161D700A91CDA /* TechQuizModel.swift */; };
+		55A9F52D2582011C00A91CDA /* ManagementQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A9F52C2582011C00A91CDA /* ManagementQuizVC.swift */; };
+		55A9F531258218AD00A91CDA /* TestEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A9F530258218AD00A91CDA /* TestEndViewController.swift */; };
 		55C457BA2579183E00D7CB88 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C457B92579183E00D7CB88 /* OnboardingViewController.swift */; };
 		55C457BF25791BE600D7CB88 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C457BE25791BE600D7CB88 /* AuthenticationViewController.swift */; };
 		55C457C225791DB000D7CB88 /* RecruitmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C457C125791DB000D7CB88 /* RecruitmentViewController.swift */; };
-		55C457C525791DDB00D7CB88 /* TestCompletionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C457C425791DDB00D7CB88 /* TestCompletionVC.swift */; };
 		55C53E552576C9F0009CABFD /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C53E542576C9F0009CABFD /* EditProfileViewController.swift */; };
 		910B3DB4257133E900BD0F29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B3DB3257133E900BD0F29 /* AppDelegate.swift */; };
 		910B3DB6257133E900BD0F29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B3DB5257133E900BD0F29 /* SceneDelegate.swift */; };
@@ -45,7 +48,6 @@
 
 /* Begin PBXFileReference section */
 		551B4351257BD7AC00E0BC52 /* TechnicalQuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TechnicalQuizVC.swift; path = "ADG-Externals/Controllers/Test Controllers/TechnicalQuizVC.swift"; sourceTree = SOURCE_ROOT; };
-		551B4355257BD7F700E0BC52 /* ManagementQuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagementQuizVC.swift; path = "ADG-Externals/View/ManagementQuizVC.swift"; sourceTree = SOURCE_ROOT; };
 		551B4358257BD80600E0BC52 /* DesignQuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignQuizVC.swift; sourceTree = "<group>"; };
 		552C365C25760FD3004CE028 /* QandAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QandAViewController.swift; sourceTree = "<group>"; };
 		552C366025761171004CE028 /* chatSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatSectionViewController.swift; sourceTree = "<group>"; };
@@ -63,10 +65,14 @@
 		558EEF6B2576845A0052DE9E /* TechnicalVCTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnicalVCTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		558EEF6E257686200052DE9E /* DesignVCTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DesignVCTableViewCell.swift; path = "ADG-Externals/View/DesignVCTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		558EEF71257686290052DE9E /* editorialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editorialTableViewCell.swift; sourceTree = "<group>"; };
+		55A9F5222581614B00A91CDA /* SecondYearTechQuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SecondYearTechQuizVC.swift; path = "ADG-Externals/View/SecondYearTechQuizVC.swift"; sourceTree = SOURCE_ROOT; };
+		55A9F5252581615F00A91CDA /* SecondYearDesignQuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondYearDesignQuizVC.swift; sourceTree = "<group>"; };
+		55A9F528258161D700A91CDA /* TechQuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechQuizModel.swift; sourceTree = "<group>"; };
+		55A9F52C2582011C00A91CDA /* ManagementQuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagementQuizVC.swift; path = "ADG-Externals/View/ManagementQuizVC.swift"; sourceTree = SOURCE_ROOT; };
+		55A9F530258218AD00A91CDA /* TestEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestEndViewController.swift; path = "ADG-Externals/View/TestEndViewController.swift"; sourceTree = SOURCE_ROOT; };
 		55C457B92579183E00D7CB88 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = "ADG-Externals/Controllers/OnBoarding/OnboardingViewController.swift"; sourceTree = SOURCE_ROOT; };
 		55C457BE25791BE600D7CB88 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationViewController.swift; path = "ADG-Externals/View/AuthenticationViewController.swift"; sourceTree = SOURCE_ROOT; };
 		55C457C125791DB000D7CB88 /* RecruitmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecruitmentViewController.swift; path = "ADG-Externals/Controllers/Ambiguous/RecruitmentViewController.swift"; sourceTree = SOURCE_ROOT; };
-		55C457C425791DDB00D7CB88 /* TestCompletionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestCompletionVC.swift; path = "ADG-Externals/Controllers/Ambiguous/TestCompletionVC.swift"; sourceTree = SOURCE_ROOT; };
 		55C53E542576C9F0009CABFD /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditProfileViewController.swift; path = "ADG-Externals/View/EditProfileViewController.swift"; sourceTree = SOURCE_ROOT; };
 		910B3DB0257133E900BD0F29 /* ADG-Externals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ADG-Externals.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		910B3DB3257133E900BD0F29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,7 +102,10 @@
 		551B4354257BD7BD00E0BC52 /* Test Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				551B4355257BD7F700E0BC52 /* ManagementQuizVC.swift */,
+				55A9F530258218AD00A91CDA /* TestEndViewController.swift */,
+				55A9F52C2582011C00A91CDA /* ManagementQuizVC.swift */,
+				55A9F5222581614B00A91CDA /* SecondYearTechQuizVC.swift */,
+				55A9F5252581615F00A91CDA /* SecondYearDesignQuizVC.swift */,
 				551B4358257BD80600E0BC52 /* DesignQuizVC.swift */,
 				551B4351257BD7AC00E0BC52 /* TechnicalQuizVC.swift */,
 			);
@@ -216,6 +225,7 @@
 				914C7978257E3A8E003AD8F0 /* Auth-Key.swift */,
 				914C797C257F5BA9003AD8F0 /* managementQues.swift */,
 				910C7E222580CC73003FF973 /* UserProfile.swift */,
+				55A9F528258161D700A91CDA /* TechQuizModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -224,7 +234,6 @@
 			isa = PBXGroup;
 			children = (
 				553B59B0257540EE004A9C64 /* IntroViewController.swift */,
-				55C457C425791DDB00D7CB88 /* TestCompletionVC.swift */,
 				55C457C125791DB000D7CB88 /* RecruitmentViewController.swift */,
 				910B3DB7257133E900BD0F29 /* ViewController.swift */,
 			);
@@ -309,6 +318,7 @@
 				55C457BA2579183E00D7CB88 /* OnboardingViewController.swift in Sources */,
 				552C368E25764D43004CE028 /* EditorialVC.swift in Sources */,
 				55C457BF25791BE600D7CB88 /* AuthenticationViewController.swift in Sources */,
+				55A9F5232581614B00A91CDA /* SecondYearTechQuizVC.swift in Sources */,
 				552C368525764D06004CE028 /* GeneralTopicVC.swift in Sources */,
 				910B3DB8257133E900BD0F29 /* ViewController.swift in Sources */,
 				553B59B72575410F004A9C64 /* LogInViewController.swift in Sources */,
@@ -320,17 +330,19 @@
 				553B59BA25756973004A9C64 /* removedVC.swift in Sources */,
 				910B3DB6257133E900BD0F29 /* SceneDelegate.swift in Sources */,
 				552C365D25760FD3004CE028 /* QandAViewController.swift in Sources */,
+				55A9F5262581615F00A91CDA /* SecondYearDesignQuizVC.swift in Sources */,
+				55A9F531258218AD00A91CDA /* TestEndViewController.swift in Sources */,
 				552C369125765777004CE028 /* GeneralTopicTableViewCell.swift in Sources */,
-				551B4356257BD7F700E0BC52 /* ManagementQuizVC.swift in Sources */,
 				552C368825764D23004CE028 /* TechnialVC.swift in Sources */,
 				914C7979257E3A8E003AD8F0 /* Auth-Key.swift in Sources */,
 				55C53E552576C9F0009CABFD /* EditProfileViewController.swift in Sources */,
 				558EEF6F257686200052DE9E /* DesignVCTableViewCell.swift in Sources */,
 				553B59BD25756B8F004A9C64 /* ProfileViewController.swift in Sources */,
-				55C457C525791DDB00D7CB88 /* TestCompletionVC.swift in Sources */,
 				914C797D257F5BA9003AD8F0 /* managementQues.swift in Sources */,
 				55C457C225791DB000D7CB88 /* RecruitmentViewController.swift in Sources */,
 				552C366125761171004CE028 /* chatSectionViewController.swift in Sources */,
+				55A9F529258161D700A91CDA /* TechQuizModel.swift in Sources */,
+				55A9F52D2582011C00A91CDA /* ManagementQuizVC.swift in Sources */,
 				553B59B1257540EE004A9C64 /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

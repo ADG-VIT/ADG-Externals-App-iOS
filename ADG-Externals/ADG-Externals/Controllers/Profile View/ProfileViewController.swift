@@ -32,7 +32,7 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
         
         get()
         
-        
+        editBtn.isHidden = true
     }
     
     @IBAction func editProfileBtn(_ sender: Any) {
@@ -48,6 +48,15 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
     }
     @IBAction func aboutUsButton(_ sender: Any) {
         self.performSegue(withIdentifier: "aboutUS", sender: nil)
+    }
+    
+    
+    //Necessary because if user gets into profile first then performs signin thus profile view have no auth token previously. So the page crashes. thus to avoid it added this function such that as soon as the screen apperas it have to perform this functions
+    override func viewDidAppear(_ animated: Bool) {
+        get()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        get()
     }
     
 }
@@ -98,8 +107,6 @@ extension ProfileViewController{
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/user/getuser")!,timeoutInterval: Double.infinity)
        
         request.addValue(signUpViewController.authKey, forHTTPHeaderField: "auth-token")
-//        request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQwNjQ3NzZmYWZhMjAwMTdkNWRkZDYiLCJpYXQiOjE2MDc0OTI3Mjd9.uD2ffmIf913q_N8u-FydOiYZr43d0zne59-GWmTyKmU", forHTTPHeaderField: "auth-token")
-
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in

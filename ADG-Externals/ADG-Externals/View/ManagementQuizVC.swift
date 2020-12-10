@@ -2,77 +2,94 @@
 //  ManagementQuizVC.swift
 //  ADG-Externals
 //
-//  Created by Gokul Nair on 05/12/20.
+//  Created by Gokul Nair on 10/12/20.
 //
 
 import UIKit
-import Foundation
 
-
-class ManagementQuizVC: UIViewController {
+class ManagementQuizVC: UIViewController, UITextViewDelegate {
     
-    var signUpInst = signUpViewController()
-    var loginInst = LogInViewController()
-    var quesArr = [managementQues]()
+    @IBOutlet weak var question1: UILabel!
+    @IBOutlet weak var question2: UILabel!
+    @IBOutlet weak var question3: UILabel!
+    @IBOutlet weak var question4: UILabel!
+    @IBOutlet weak var question5: UILabel!
+    @IBOutlet weak var question6: UILabel!
+    @IBOutlet weak var question7: UILabel!
+    @IBOutlet weak var question8: UILabel!
+    @IBOutlet weak var question9: UILabel!
+    @IBOutlet weak var question10: UILabel!
+    
+    @IBOutlet weak var answer1: UITextView!
+    @IBOutlet weak var answer2: UITextView!
+    @IBOutlet weak var answer3: UITextView!
+    @IBOutlet weak var answer4: UITextView!
+    @IBOutlet weak var answer5: UITextView!
+    @IBOutlet weak var answer6: UITextView!
+    @IBOutlet weak var answer7: UITextView!
+    @IBOutlet weak var answer8: UITextView!
+    @IBOutlet weak var answer9: UITextView!
+    @IBOutlet weak var answer10: UITextView!
+    @IBOutlet weak var submitBtn: UIButton!
+    
+    var questions:[String] = []
     var qid:[String] = []
-
-    @IBOutlet weak var questionNumber: UILabel!
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var answerTextView: UITextView!
-    @IBOutlet weak var skipButton: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
+    var answers:[String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        answerTextView.layer.borderWidth = 1
-        answerTextView.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-        answerTextView.layer.cornerRadius = 5
         
-        applyBorder(button: skipButton, RadiusSize: 5, widthSize: 2, color: UIColor.systemOrange.cgColor)
-        applyBorder(button: nextButton, RadiusSize: 5, widthSize: 2, color: UIColor.systemOrange.cgColor)
         get()
+    
+        applyBorder(submitBtn!, 5, 2, UIColor.systemOrange.cgColor)
+        applyBorder(answer1!, 5, 1, #colorLiteral(red: 0.2458204627, green: 0.2760057449, blue: 0.3021731377, alpha: 1))
+        applyBorder(answer2!, 5, 1, #colorLiteral(red: 0.2458204627, green: 0.2760057449, blue: 0.3021731377, alpha: 1))
+        applyBorder(answer3!, 5, 1, #colorLiteral(red: 0.2458204627, green: 0.2760057449, blue: 0.3021731377, alpha: 1))
+        applyBorder(answer4!, 5, 1, #colorLiteral(red: 0.2458204627, green: 0.2760057449, blue: 0.3021731377, alpha: 1))
+        applyBorder(answer5!, 5, 1, #colorLiteral(red: 0.2458204627, green: 0.2760057449, blue: 0.3021731377, alpha: 1))
+        applyBorder(answer6!, 5, 1, #colorLiteral(red: 0.2458204627, green: 0.2760057449, blue: 0.3021731377, alpha: 1))
+        applyBorder(answer7!, 5, 1, #colorLiteral(red: 0.2458204627, green: 0.2760057449, blue: 0.3021731377, alpha: 1))
+        applyBorder(answer8!, 5, 1, #colorLiteral(red: 0.2458204627, green: 0.2760057449, blue: 0.3021731377, alpha: 1))
+        applyBorder(answer9!, 5, 1, #colorLiteral(red: 0.2458204627, green: 0.2760057449, blue: 0.3021731377, alpha: 1))
+        applyBorder(answer10!, 5, 1, #colorLiteral(red: 0.2458204627, green: 0.2760057449, blue: 0.3021731377, alpha: 1))
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ManagementQuizVC.keyBoardDismiss))
+        
+        view.addGestureRecognizer(tap)
     }
     
-    @IBAction func nextButton(_ sender: UIButton) {
-       // self.setupPostMethod()
-        updateUI()
-        setupPostMethod()
-        self.answerTextView.text = " "
-
+    @objc func keyBoardDismiss(){
+        view.endEditing(true)
     }
     
-    
-
+    func applyBorder(_ button: Any, _ RadiusSize: CGFloat,_ widthSize: CGFloat, _ color: CGColor){
+        
+        (button as AnyObject).layer.cornerRadius = RadiusSize
+        (button as AnyObject).layer.borderWidth = widthSize
+        (button as AnyObject).layer.borderColor = color
+    }
+    @IBAction func submitButton(_ sender: Any) {
+        setupPOSTMethod()
+        self.performSegue(withIdentifier: "completed", sender: nil)
+    }
 }
 
 
-//MARK:- UI Implementation Methods
+//MARK:- GET Method
 
 extension ManagementQuizVC{
-    func applyBorder(button: UIButton, RadiusSize: CGFloat,widthSize: CGFloat, color: CGColor){
-        
-        button.layer.cornerRadius = RadiusSize
-        button.layer.borderWidth = widthSize
-        button.layer.borderColor = color
-    }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-           self.view.endEditing(false)
-       }
-    //MARK:- GET Ques API CALL
+    
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/management/get-quiz-questions")!,timeoutInterval: Double.infinity)
-       
-//        request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQxMjEzM2ZjMDEwNzAwMTc5MDU0YjQiLCJpYXQiOjE2MDc1NDEwNDR9.MZcgLRBucDV6_Vw5_XspuG0SJjMBejzpvYGMUmQYmA4", forHTTPHeaderField: "auth-token")
-        request.addValue(signUpViewController.authKey, forHTTPHeaderField: "auth-token")
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-          guard let data = data else {
-            print(String(describing: error))
-            
-            return
-          }
+            guard let data = data else {
+                print(String(describing: error))
+                
+                return
+            }
             
             if let response = response as? HTTPURLResponse{
                 guard (200 ... 299) ~= response.statusCode else {
@@ -85,48 +102,43 @@ extension ManagementQuizVC{
             
             do{
                 if error == nil{
-                self.quesArr = try JSONDecoder().decode([managementQues].self, from: data)
-                for mainarr in self.quesArr{
-                    print(mainarr.description)
-                    self.qid.append(mainarr.id)
-                    
-                }
-                    
-                    DispatchQueue.main.async {
-                        self.updateUI()
+                    let result = try JSONDecoder().decode([managementModel].self, from: data)
+                    for mainarr in result{
+                        self.questions.append(mainarr.Description)
+                        self.qid.append(mainarr.id)
                     }
+                }
+                
+                DispatchQueue.main.async {
+                    self.updateUI()
+                }
+                
+            }catch{
+                print("Error found")
             }
-        }catch{
-            print(error.localizedDescription)
-        }
-          
-           print(String(data: data, encoding: .utf8)!)
+            print(self.qid)
+            //print(String(data: data, encoding: .utf8)!) //to print the whole JSON fetch
         }
         task.resume()
-
+        
     }
     
-    func updateUI(){
-        self.questionLabel.text = quesArr.randomElement()?.description
-    }
-    //MARK:-POST Answers
-    func setupPostMethod(){
-        guard let answer = self.answerTextView.text else { return }
-        
-        if let url = URL(string: "https://adgrecruitments.herokuapp.com/user/management/submit"){
-            var request = URLRequest(url: url)
-            request.httpMethod = "POST"
-            
-            request.addValue(signUpViewController.authKey, forHTTPHeaderField: "auth-token")
-//           request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQxMjEzM2ZjMDEwNzAwMTc5MDU0YjQiLCJpYXQiOjE2MDc1NDEwNDR9.MZcgLRBucDV6_Vw5_XspuG0SJjMBejzpvYGMUmQYmA4", forHTTPHeaderField: "auth-token")
-            let parameters: [String : Any] = [
-                "qid": qid,
-                "response": answer
-            ]
+}
 
-           request.httpBody = parameters.percentEscaped().data(using: .utf8)
-//            let postData = try! JSONSerialization.data(withJSONObject: parameters,options: [])
-//            request.httpBody = postData
+//MARK:- POST Method
+
+extension ManagementQuizVC {
+    
+    func setupPOSTMethod(){
+        
+        if let url = URL(string: "https://adgrecruitments.herokuapp.com/user/management/submit") {
+            var request = URLRequest(url: url)
+            request.addValue(signUpViewController.authKey, forHTTPHeaderField: "auth-token")
+           request.httpMethod = "POST"
+
+            let parameters = "[{ \"qid\":\(qid[0]),\"response\":\(answer1.text ?? "nil")}, {\"qid\":\(qid[1]),\"response\":\(answer2.text ?? "nil")},{\"qid\":\(qid[2]),\"response\":\(answer3.text ?? "nil" )},{\"qid\":\(qid[3]),\"response\":\(answer4.text ?? "nil" )},{\"qid\":\(qid[4]),\"response\":\(answer5.text ?? "nil" )},{\"qid\":\(qid[5]),\"response\":\(answer6.text ?? "nil" )}]"
+            let postData = parameters.data(using: .utf8)
+           request.httpBody = postData
             URLSession.shared.dataTask(with: request){(data, response, error) in
                 guard let data = data else{
                     if error == nil{
@@ -145,31 +157,36 @@ extension ManagementQuizVC{
                 do{
                     let json = try JSONSerialization.jsonObject(with: data, options: [])
                     print(json)
-//                    self.token.append(json)
-//                    print(self.token)
-//                    print(self.token[1])
-                    self.parseJSON(data)
-                   
+
+                    //As soon as the data is fetched segue will be performed :)
+                    DispatchQueue.main.async {
+                                //self.performSegue(withIdentifier: "completed", sender: nil)
+                            }
                 }catch let error{
                     print(error.localizedDescription)
                 }
             }.resume()
         }
     }
-    func parseJSON(_ data: Data){
-        
-        let decoder = JSONDecoder()
-        do {
-            let decodedData = try decoder.decode(submission.self, from: data)
-            
-            let message = decodedData.message
-            print(message)
-            print(self.qid)
-         
-            
-        }catch{
-            print(error.localizedDescription)
-        }
-    }
     
+    
+}
+
+//MARK:- UI implementation
+   
+extension ManagementQuizVC {
+ 
+    @objc func updateUI(){
+        self.question1.text = questions[0]
+        self.question2.text = questions[1]
+        self.question3.text = questions[2]
+        self.question4.text = questions[3]
+        self.question5.text = questions[4]
+        self.question6.text = questions[5]
+        self.question7.text = questions[6]
+        self.question8.text = questions[7]
+        self.question9.text = questions[8]
+        self.question10.text = questions[9]
+        
+    }
 }
