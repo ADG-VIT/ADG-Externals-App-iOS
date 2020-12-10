@@ -77,7 +77,12 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             present(vc, animated: true)
         }
     }
-
+    
+    @IBAction func adgIconBtn(_ sender: Any) {
+        self.performSegue(withIdentifier: "about", sender: nil)
+    }
+    
+   
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
