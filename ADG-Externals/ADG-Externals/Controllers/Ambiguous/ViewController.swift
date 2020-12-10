@@ -20,7 +20,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var askQuestionBtn: UIButton!
     @IBAction func askQuestionPressed(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Coming Soon", message: "Chat room to share your doubts", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Coming Soon...", message: "Chat room to share your doubts", preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alert.addAction(defaultAction)
         self.present(alert, animated: true, completion: nil)
@@ -32,6 +32,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     var dates:[String] = ["25","26","27"]
     var events:[String] = ["Recruitments Quiz","Hackgrid","iOS Fusion"]
+    @IBAction func seeAllBtn(_ sender: UIButton) {
+        if let url = URL(string: "https://adgvit.com"){
+            UIApplication.shared.open(url)}
+    }
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -58,13 +62,16 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         collectionView.backgroundColor = .white
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 170).isActive = true
+        collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 130).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
         collectionView.heightAnchor.constraint(equalToConstant: view.frame.width/2).isActive = true
         
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.layer.cornerRadius = 5
+        tableView.layer.borderWidth = 1
+        tableView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
         bottomView.layer.cornerRadius = 15
         askQuestionBtn.layer.cornerRadius = 5

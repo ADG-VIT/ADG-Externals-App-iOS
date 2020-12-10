@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DaK-ar-rkN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ykg-u0-hoO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -1932,6 +1932,9 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                                     <constraint firstAttribute="height" constant="20" id="PxJ-T1-7qa"/>
                                 </constraints>
                                 <state key="normal" title="See All"/>
+                                <connections>
+                                    <action selector="seeAllBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tpp-0F-hN6"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHS-Lp-RJh">
                                 <rect key="frame" x="10" y="357" width="374" height="36"/>
@@ -1986,6 +1989,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVh-ql-dIU">
                                                     <rect key="frame" x="324" y="10" width="30" height="87"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <color key="tintColor" red="0.023827899247407913" green="0.033127438277006149" blue="0.033192478120326996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Button" image="chevron.right.2" catalog="system"/>
                                                     <connections>
                                                         <action selector="redirectBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zui-UB-j2A"/>
