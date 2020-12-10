@@ -1912,30 +1912,20 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Playground" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIi-TU-r6x">
-                                <rect key="frame" x="10" y="49" width="374" height="36"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="10" y="49" width="374" height="51"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="37"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Documentation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URh-kf-CUj">
-                                <rect key="frame" x="10" y="93" width="204" height="22"/>
+                                <rect key="frame" x="10" y="99" width="204" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="956-2J-1xo"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="24"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0j-NF-o3g">
-                                <rect key="frame" x="347" y="93" width="47" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="PxJ-T1-7qa"/>
-                                </constraints>
-                                <state key="normal" title="See All"/>
-                                <connections>
-                                    <action selector="seeAllBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tpp-0F-hN6"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHS-Lp-RJh">
                                 <rect key="frame" x="10" y="357" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
@@ -1943,7 +1933,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="32680633" translatesAutoresizingMaskIntoConstraints="NO" id="dtb-bE-ihZ">
-                                <rect key="frame" x="342" y="46" width="56" height="42"/>
+                                <rect key="frame" x="342" y="53" width="56" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="Ujf-QQ-UHl"/>
                                 </constraints>
@@ -1964,20 +1954,20 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="107"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUd-sn-fln">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUd-sn-fln">
                                                     <rect key="frame" x="17" y="21" width="36" height="36"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="28"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2Y-fI-ZLS">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2Y-fI-ZLS">
                                                     <rect key="frame" x="17" y="55" width="40" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="QO3-CX-bMX"/>
                                                         <constraint firstAttribute="width" constant="40" id="tKL-lr-da5"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|                 |            |             |" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBO-zC-EoV">
@@ -1997,8 +1987,8 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recruitments Quiz" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cy7-sV-HOO">
                                                     <rect key="frame" x="100" y="29" width="216" height="43"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="21"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -2080,19 +2070,17 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="URh-kf-CUj" secondAttribute="trailing" constant="200" id="1lN-AI-zgX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="T9w-nA-Q9I" secondAttribute="bottom" constant="15" id="6u3-Dp-EGh"/>
                             <constraint firstItem="T9w-nA-Q9I" firstAttribute="top" secondItem="eTw-ML-JqN" secondAttribute="bottom" constant="25" id="GsJ-wm-t1J"/>
                             <constraint firstItem="eTw-ML-JqN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HdJ-6J-1DM"/>
-                            <constraint firstItem="q0j-NF-o3g" firstAttribute="top" secondItem="dtb-bE-ihZ" secondAttribute="bottom" constant="5" id="Kdj-us-zen"/>
                             <constraint firstItem="T9w-nA-Q9I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LHc-0r-EPh"/>
-                            <constraint firstItem="dtb-bE-ihZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="2" id="Oc7-s7-tq4"/>
-                            <constraint firstItem="URh-kf-CUj" firstAttribute="top" secondItem="kIi-TU-r6x" secondAttribute="bottom" constant="8" symbolic="YES" id="U15-s7-CeQ"/>
+                            <constraint firstItem="dtb-bE-ihZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="Oc7-s7-tq4"/>
+                            <constraint firstItem="URh-kf-CUj" firstAttribute="top" secondItem="kIi-TU-r6x" secondAttribute="bottom" constant="-1" id="U15-s7-CeQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WHS-Lp-RJh" secondAttribute="bottom" constant="420" id="XGb-5a-mja"/>
                             <constraint firstItem="dtb-bE-ihZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="342" id="fS2-WV-juj"/>
-                            <constraint firstItem="q0j-NF-o3g" firstAttribute="top" secondItem="kIi-TU-r6x" secondAttribute="bottom" constant="8" symbolic="YES" id="giv-XW-tXB"/>
                             <constraint firstItem="WHS-Lp-RJh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="grl-Xl-gNL"/>
                             <constraint firstItem="kIi-TU-r6x" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="mLZ-fp-JoE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dtb-bE-ihZ" secondAttribute="trailing" constant="16" id="mPO-E1-Qzo"/>
@@ -2101,7 +2089,6 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WHS-Lp-RJh" secondAttribute="trailing" constant="30" id="skx-is-hBu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eTw-ML-JqN" secondAttribute="trailing" constant="20" id="u4m-7l-PT4"/>
                             <constraint firstItem="eTw-ML-JqN" firstAttribute="top" secondItem="WHS-Lp-RJh" secondAttribute="bottom" constant="15" id="u9o-GS-qj3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q0j-NF-o3g" secondAttribute="trailing" constant="20" id="uoe-5d-OQO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T9w-nA-Q9I" secondAttribute="trailing" constant="20" id="yWS-oW-hlO"/>
                             <constraint firstItem="kIi-TU-r6x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="zA9-U2-SRV"/>
                         </constraints>

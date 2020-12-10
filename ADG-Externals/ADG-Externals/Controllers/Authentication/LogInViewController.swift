@@ -46,7 +46,7 @@ extension LogInViewController{
         if let url = URL(string: "https://adgrecruitments.herokuapp.com/user/login"){
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
-//            request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmJmODQ0OGVmZWM4NzNjMzA5NTNjOGQiLCJpYXQiOjE2MDY3MzIzMDF9.ktJmM_bWMl_Qb9kkCi3zNq2uxo9-to4F4PZxYNSzL5c", forHTTPHeaderField: "auth-key")
+            
             let parameters: [String : Any] = [
                 "regno": regNumber,
                 "password": password
@@ -80,7 +80,7 @@ extension LogInViewController{
 //                    print(self.token[1])
                     self.parseJSON(data)
                     DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "logInToRecruitmentVC", sender: self)
+                        //self.performSegue(withIdentifier: "logInToRecruitmentVC", sender: self)
                     }
                     
                 }catch let error{
@@ -93,15 +93,17 @@ extension LogInViewController{
         
         let decoder = JSONDecoder()
         do {
-            let decodedData = try decoder.decode(AuthKey.self, from: data)
+            let decodedData = try decoder.decode(loginModel.self, from: data)
             
-            let key = decodedData.token
+            let key = decodedData.Token
             let message = decodedData.message
-          
-            LogInViewController.token.append(key)
             print(key)
             print(message)
-            
+            signUpViewController.authKey.append(key)
+           
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "logInToRecruitmentVC", sender: self)
+            }
             
         }catch{
             print(error.localizedDescription)

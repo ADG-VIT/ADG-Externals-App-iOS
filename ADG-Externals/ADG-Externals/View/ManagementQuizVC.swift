@@ -83,7 +83,7 @@ extension ManagementQuizVC{
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/management/get-quiz-questions")!,timeoutInterval: Double.infinity)
         
-        request.addValue(signUpViewController.authKey, forHTTPHeaderField: "auth-token")
+        request.addValue(signUpViewController.authKey[0], forHTTPHeaderField: "auth-token")
         
         request.httpMethod = "GET"
         
@@ -136,7 +136,7 @@ extension ManagementQuizVC {
         
         if let url = URL(string: "https://adgrecruitments.herokuapp.com/user/management/submit") {
             var request = URLRequest(url: url)
-            request.addValue(signUpViewController.authKey, forHTTPHeaderField: "auth-token")
+            request.addValue(signUpViewController.authKey[0], forHTTPHeaderField: "auth-token")
            request.httpMethod = "POST"
 
             let parameters = "[{ \"qid\":\(qid[0]),\"response\":\(answer1.text ?? "nil")}, {\"qid\":\(qid[1]),\"response\":\(answer2.text ?? "nil")},{\"qid\":\(qid[2]),\"response\":\(answer3.text ?? "nil" )},{\"qid\":\(qid[3]),\"response\":\(answer4.text ?? "nil" )},{\"qid\":\(qid[4]),\"response\":\(answer5.text ?? "nil" )},{\"qid\":\(qid[5]),\"response\":\(answer6.text ?? "nil" )}]"

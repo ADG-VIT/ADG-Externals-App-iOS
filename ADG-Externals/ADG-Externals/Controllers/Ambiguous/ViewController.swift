@@ -119,6 +119,8 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeTableViewCell
         cell.dateLabel.text = dates[indexPath.row]
         cell.eventLabel.text = events[indexPath.row]
+        
+        cell.selectionStyle = .none
         return cell
         
     }
