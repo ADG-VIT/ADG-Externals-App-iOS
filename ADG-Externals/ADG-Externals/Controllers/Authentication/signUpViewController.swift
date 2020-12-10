@@ -26,6 +26,7 @@ class signUpViewController: UIViewController {
          self.emailField.text?.removeAll()
          self.passwordField.text?.removeAll()
      }
+
     //MARK:- IBConnections
     
     @IBOutlet weak var fullNameField: UITextField!
@@ -38,12 +39,26 @@ class signUpViewController: UIViewController {
     @IBAction func continueButton(_ sender: UIButton) {
         //self.performSegue(withIdentifier: "signUpToRecruitmentVC", sender: self)
         self.setupPostMethod()
+        self.validateFields()
     }
     
     @IBOutlet weak var continueButtonLabel: UIButton!
-    //MARK:- Miscelleaneous
+
     
-    
+    func validateFields() {
+        if fullNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            passwordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            regNumberField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            yearOfStudyField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+        {
+            let alert = UIAlertController(title: "Error", message: "Please fill in all the fields.", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(defaultAction)
+            self.present(alert, animated: true, completion: nil)
+        }
+
+    }
 
 
 
@@ -72,8 +87,12 @@ extension signUpViewController{
            request.httpBody = parameters.percentEscaped().data(using: .utf8)
             URLSession.shared.dataTask(with: request){(data, response, error) in
                 guard let data = data else{
-                    if error == nil{
+                    if error != nil{
                         print(error?.localizedDescription ?? "Unknown Error")
+                        let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                        alert.addAction(defaultAction)
+                        self.present(alert, animated: true, completion: nil)
                     }
                     return
                 }
@@ -81,6 +100,10 @@ extension signUpViewController{
                     guard (200 ... 299) ~= response.statusCode else {
                         print("Status code :- \(response.statusCode)")
                         //print(response)
+                        let alert = UIAlertController(title: "Error", message: "Authentication error", preferredStyle: .alert)
+                        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                        alert.addAction(defaultAction)
+                        self.present(alert, animated: true, completion: nil)
                         return
                     }
                 }
@@ -95,6 +118,10 @@ extension signUpViewController{
                     
                 }catch let error{
                     print(error.localizedDescription)
+                    let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alert.addAction(defaultAction)
+                    self.present(alert, animated: true, completion: nil)
                 }
             }.resume()
         }
@@ -119,6 +146,7 @@ extension signUpViewController{
             print(error.localizedDescription)
         }
     }
+    
 
 }
 
