@@ -7,36 +7,15 @@
 
 import Foundation
 
-struct submission:Decodable{
-    let message:String
-}
-struct managementQuesArr:Decodable{
-    var ques:[managementQues]
-}
-struct managementQues:Decodable{
-    var id:String
-    var description:String
-    var questionImage:String?
-    var v:Int?
-    
-     enum CodingKeys: String, CodingKey {
+struct managementModel: Decodable {
+    let id, Description, questionImage: String
+    let v: Int?
 
-         case id = "_id"
-         case description
-         case questionImage
-
-
-     }
-    
-    
-    
-   
-//    init(from decoder: Decoder) throws {
-//        let container = try decoder.container(keyedBy: CodingKeys.self)
-//        qid = try container.decode(String.self, forKey: .qid)
-//        question = try container.decode(String.self, forKey: .question)
-//        quesImage = try? container.decode(String?.self, forKey: .quesImage)
-//
-//    }
-   
+    enum CodingKeys: String, CodingKey {
+        case id = "_id"
+        case Description = "description"
+        case questionImage
+        case v = "__v"
+    }
 }
+

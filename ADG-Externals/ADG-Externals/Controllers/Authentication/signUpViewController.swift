@@ -11,7 +11,7 @@ import Foundation
 class signUpViewController: UIViewController {
     
 //    var token:[String] = []
-    var authKey:String = ""
+   static var authKey:String = ""
 
     //MARK:- ViewLifeCycle
     override func viewDidLoad() {
@@ -54,6 +54,7 @@ extension signUpViewController{
         guard let regNumber = self.regNumberField.text else { return }
         guard let email = self.emailField.text else { return }
         guard let password = self.passwordField.text else { return }
+        guard let githubLink = self.githubLinkField.text else { return }
         guard let yos = self.yearOfStudyField.text else { return }
         
         if let url = URL(string: "https://adgrecruitments.herokuapp.com/user/signup"){
@@ -63,13 +64,12 @@ extension signUpViewController{
                 "name": fullName,
                 "regno": regNumber,
                 "email": email,
+                "githubLink":githubLink,
                 "password": password,
                 "yearofstudy": yos
             ]
 
            request.httpBody = parameters.percentEscaped().data(using: .utf8)
-//            let postData = try! JSONSerialization.data(withJSONObject: parameters,options: [])
-//            request.httpBody = postData
             URLSession.shared.dataTask(with: request){(data, response, error) in
                 guard let data = data else{
                     if error == nil{
@@ -111,10 +111,10 @@ extension signUpViewController{
             let key = decodedData.token
             let message = decodedData.message
           
-            authKey.append(key)
+            signUpViewController.authKey.append(key)
             print(key)
             print(message)
-            print("TRIAL \(authKey)")
+            print("TRIAL \(signUpViewController.authKey)")
             
          
             
