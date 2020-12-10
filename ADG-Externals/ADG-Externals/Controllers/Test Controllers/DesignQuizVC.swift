@@ -103,6 +103,7 @@ class DesignQuizVC: UIViewController {
             perform(#selector(startTimer), with: nil, afterDelay: 1.0)
         }else{
             self.performSegue(withIdentifier: "completed", sender: nil)
+            self.count = 0
             self.progressBar.progress = 0
             print("test completed")
         }
@@ -123,7 +124,7 @@ extension DesignQuizVC{
             var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/technical/get-quiz-questions/1")!,timeoutInterval: Double.infinity)
             //Change technical to design as it is design test VC as well as dont mention 1 and 2 year in design
             
-            request.addValue(signUpViewController.authKey, forHTTPHeaderField: "auth-token")
+            request.addValue(signUpViewController.authKey[0], forHTTPHeaderField: "auth-token")
             
             request.httpMethod = "GET"
             
@@ -203,6 +204,7 @@ extension DesignQuizVC{
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "completed", sender: nil)
                 self.setupPOSTMethod()
+                self.count = 0
                 self.progressBar.progress = 0
             }
             print("here")
@@ -219,7 +221,7 @@ extension DesignQuizVC{
         
         if let url = URL(string: "https://adgrecruitments.herokuapp.com/user/design/submit") {
             var request = URLRequest(url: url)
-            request.addValue(signUpViewController.authKey, forHTTPHeaderField: "auth-token")
+            request.addValue(signUpViewController.authKey[0], forHTTPHeaderField: "auth-token")
            request.httpMethod = "POST"
 
             let parameters = "[{ \"qid\":\(qid[0]),\"response\":\(selectedAnswer[0])}, {\"qid\":\(qid[1]),\"response\":\(selectedAnswer[1] )},{\"qid\":\(qid[2]),\"response\":\(selectedAnswer[2] )},{\"qid\":\(qid[3]),\"response\":\(selectedAnswer[3] )},{\"qid\":\(qid[4]),\"response\":\(selectedAnswer[4] )},{\"qid\":\(qid[5]),\"response\":\(selectedAnswer[5] )}]"

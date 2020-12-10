@@ -12,7 +12,7 @@ class signUpViewController: UIViewController {
     
 //    var token:[String] = []
     
-    static var authKey:String = ""
+    static var authKey:[String] = []
     //MARK:- ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,9 +88,6 @@ extension signUpViewController{
                 do{
                     let json = try JSONSerialization.jsonObject(with: data, options: [])
                     print(json)
-//                    self.token.append(json)
-//                    print(self.token)
-//                    print(self.token[1])
                     self.parseJSON(data)
                     DispatchQueue.main.async {
                         self.performSegue(withIdentifier: "signUpToRecruitmentVC", sender: self)
