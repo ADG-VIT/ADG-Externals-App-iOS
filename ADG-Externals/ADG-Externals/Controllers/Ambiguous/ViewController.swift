@@ -15,7 +15,23 @@ struct CustomData {
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
+    //MARK:-
+    
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var askQuestionBtn: UIButton!
+    @IBAction func askQuestionPressed(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Coming Soon", message: "Chat room to share your doubts", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(defaultAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func redirectBtn(_ sender: UIButton) {
+        if let url = URL(string: "https://adgvit.com"){
+            UIApplication.shared.open(url)}
+    }
     var dates:[String] = ["25","26","27"]
+    var events:[String] = ["Recruitments Quiz","Hackgrid","iOS Fusion"]
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -50,6 +66,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView.dataSource = self
         tableView.delegate = self
         
+        bottomView.layer.cornerRadius = 15
+        askQuestionBtn.layer.cornerRadius = 5
+        askQuestionBtn.layer.borderWidth = 3
+        askQuestionBtn.layer.borderColor = #colorLiteral(red: 0.0732402429, green: 0.2858043909, blue: 0.761880219, alpha: 1)
+        
         //MARK:- Onboarding Stuffs
         if core.shared.isNewUser() {
             let vc = storyboard?.instantiateViewController(identifier: "onboarding") as! OnboardingViewController
@@ -60,8 +81,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    //MARK:-CollectionView methods
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width/1.3, height: collectionView.frame.width/1.3)
+        return CGSize(width: collectionView.frame.width/1.5, height: collectionView.frame.width/1.5)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
@@ -84,6 +106,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeTableViewCell
         cell.dateLabel.text = dates[indexPath.row]
+        cell.eventLabel.text = events[indexPath.row]
         return cell
         
     }

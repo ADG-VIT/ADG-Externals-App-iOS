@@ -82,9 +82,6 @@ extension ManagementQuizVC{
     
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/management/get-quiz-questions")!,timeoutInterval: Double.infinity)
-        
-        request.addValue(signUpViewController.authKey, forHTTPHeaderField: "auth-token")
-        
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -140,10 +137,7 @@ extension ManagementQuizVC {
            request.httpMethod = "POST"
 
             let parameters = "[{ \"qid\":\(qid[0]),\"response\":\(answer1.text ?? "nil")}, {\"qid\":\(qid[1]),\"response\":\(answer2.text ?? "nil")},{\"qid\":\(qid[2]),\"response\":\(answer3.text ?? "nil" )},{\"qid\":\(qid[3]),\"response\":\(answer4.text ?? "nil" )},{\"qid\":\(qid[4]),\"response\":\(answer5.text ?? "nil" )},{\"qid\":\(qid[5]),\"response\":\(answer6.text ?? "nil" )}]"
-            
             let postData = parameters.data(using: .utf8)
-
-
            request.httpBody = postData
             URLSession.shared.dataTask(with: request){(data, response, error) in
                 guard let data = data else{
