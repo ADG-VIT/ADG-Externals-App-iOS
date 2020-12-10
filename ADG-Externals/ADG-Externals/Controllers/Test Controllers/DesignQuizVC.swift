@@ -193,8 +193,6 @@ extension DesignQuizVC{
         }
         else{
             testOver = true
-            //checkCompleted()
-            print("done")
         }
     }
     
