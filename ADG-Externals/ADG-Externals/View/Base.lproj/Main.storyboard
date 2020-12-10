@@ -382,7 +382,7 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="3g6-yP-dc8" customClass="AboutUsViewController" customModule="ADG_Externals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4rl-fP-vdo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1250"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLS-yJ-Oaj">
@@ -406,10 +406,10 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5U-p9-6iI">
-                                <rect key="frame" x="0.0" y="129" width="414" height="1038"/>
+                                <rect key="frame" x="0.0" y="129" width="414" height="788"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIV-ah-M0H">
-                                        <rect key="frame" x="0.0" y="8" width="406" height="1033"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dIV-ah-M0H">
+                                        <rect key="frame" x="0.0" y="8" width="406" height="800"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hbt-Xw-Xb2">
                                                 <rect key="frame" x="10" y="8" width="184" height="239"/>
@@ -433,17 +433,26 @@
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="6pf-O0-4IE">
+                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="6pf-O0-4IE">
                                                         <rect key="frame" x="22" y="177" width="31" height="33"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="Ajb-JR-WX2" appends="YES" id="Dqo-rc-nQl"/>
+                                                        </connections>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="Zi3-eb-ghe">
+                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="Zi3-eb-ghe">
                                                         <rect key="frame" x="72" y="177" width="28" height="33"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="2RE-zU-cZy" appends="YES" id="1Nu-zN-dBD"/>
+                                                        </connections>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Gmail-logo" translatesAutoresizingMaskIntoConstraints="NO" id="8ME-PU-N0o">
+                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Gmail-logo" translatesAutoresizingMaskIntoConstraints="NO" id="8ME-PU-N0o">
                                                         <rect key="frame" x="113" y="176" width="49" height="36"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="1hS-jG-NoT" appends="YES" id="a10-t5-ivG"/>
+                                                        </connections>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -521,58 +530,30 @@
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KWs-Se-Q5z">
-                                                <rect key="frame" x="8" y="525" width="184" height="239"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Abhimanyu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0O8-wc-h4s">
-                                                        <rect key="frame" x="39" y="105" width="106" height="28"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="Ok1-av-n4u">
-                                                        <rect key="frame" x="22" y="173" width="31" height="33"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="bWT-2z-UHI">
-                                                        <rect key="frame" x="72" y="173" width="28" height="33"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Gmail-logo" translatesAutoresizingMaskIntoConstraints="NO" id="dwf-Z4-ppC">
-                                                        <rect key="frame" x="113" y="172" width="49" height="36"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </imageView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_6903" translatesAutoresizingMaskIntoConstraints="NO" id="zZi-yQ-7R6">
-                                                <rect key="frame" x="58" y="535" width="79" height="76"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iOS App Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dl1-vO-P1W">
-                                                <rect key="frame" x="36" y="664" width="133" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
-                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QgG-68-jpu">
                                                 <rect key="frame" x="212" y="525" width="184" height="239"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="5EI-9A-GdF">
+                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="5EI-9A-GdF">
                                                         <rect key="frame" x="22" y="170" width="31" height="33"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="Xeu-F6-Ncx" appends="YES" id="nOZ-Sn-YsX"/>
+                                                        </connections>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="Khc-B0-Ywi">
+                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="Khc-B0-Ywi">
                                                         <rect key="frame" x="72" y="170" width="28" height="33"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="pfh-yw-aZs" appends="YES" id="i1V-eV-Id6"/>
+                                                        </connections>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Gmail-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Pmx-Zq-y7G">
+                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Gmail-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Pmx-Zq-y7G">
                                                         <rect key="frame" x="113" y="169" width="49" height="36"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="fyA-Qc-pD6" appends="YES" id="27g-OG-1gJ"/>
+                                                        </connections>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -595,122 +576,75 @@
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zzs-zd-nPv">
-                                                <rect key="frame" x="8" y="782" width="184" height="239"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Android App Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oph-x5-H4o">
-                                                        <rect key="frame" x="10" y="137" width="164" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_6903" translatesAutoresizingMaskIntoConstraints="NO" id="KeD-af-Lgm">
-                                                <rect key="frame" x="58" y="792" width="79" height="76"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Siddarth Agarwal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ti2-ae-fcd">
-                                                <rect key="frame" x="20" y="893" width="164" height="28"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oam-cV-eQt">
-                                                <rect key="frame" x="212" y="782" width="184" height="239"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Android App Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMe-Tr-39l">
-                                                        <rect key="frame" x="10" y="137" width="164" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_6903" translatesAutoresizingMaskIntoConstraints="NO" id="SZO-tn-QHT">
-                                                <rect key="frame" x="262" y="792" width="79" height="76"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Arupam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMz-ur-axk">
-                                                <rect key="frame" x="265" y="893" width="75" height="28"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Developed By ADG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htQ-Ki-n44">
-                                                <rect key="frame" x="155" y="1014" width="97" height="16"/>
+                                                <rect key="frame" x="155" y="764" width="97" height="15"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="11"/>
                                                 <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="LJb-pq-jTe">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="LJb-pq-jTe">
                                                 <rect key="frame" x="234" y="182" width="31" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="m4f-GE-LVT" appends="YES" id="q8a-qD-kfh"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="i9R-B5-8jn">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="i9R-B5-8jn">
                                                 <rect key="frame" x="284" y="182" width="28" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="NTc-eQ-Sxs" appends="YES" id="dcn-kY-jfR"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Gmail-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ca1-Ha-Wrs">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Gmail-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ca1-Ha-Wrs">
                                                 <rect key="frame" x="325" y="181" width="49" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="j71-S8-y5h" appends="YES" id="qA4-jk-DDS"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="bOg-fr-3st">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="bOg-fr-3st">
                                                 <rect key="frame" x="32" y="444" width="31" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="3Oj-xY-GYA" appends="YES" id="zQ4-3T-yrz"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="AG6-z9-5cP">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="AG6-z9-5cP">
                                                 <rect key="frame" x="82" y="444" width="28" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="jSV-Rw-PFd" appends="YES" id="RY9-Wc-hoq"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Gmail-logo" translatesAutoresizingMaskIntoConstraints="NO" id="f96-QJ-KRR">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Gmail-logo" translatesAutoresizingMaskIntoConstraints="NO" id="f96-QJ-KRR">
                                                 <rect key="frame" x="123" y="443" width="49" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="ILD-Je-McU" appends="YES" id="YJh-R7-8FJ"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="LrM-PW-7Oi">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="LrM-PW-7Oi">
                                                 <rect key="frame" x="236" y="444" width="31" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Uhb-Un-A9X" appends="YES" id="TGM-da-qfD"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="7Sq-Sa-Azw">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="7Sq-Sa-Azw">
                                                 <rect key="frame" x="286" y="444" width="28" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="ogF-nx-WR9" appends="YES" id="SRQ-EU-LQd"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Gmail-logo" translatesAutoresizingMaskIntoConstraints="NO" id="nPN-oR-Qk8">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Gmail-logo" translatesAutoresizingMaskIntoConstraints="NO" id="nPN-oR-Qk8">
                                                 <rect key="frame" x="327" y="443" width="49" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="OwT-PZ-h15">
-                                                <rect key="frame" x="27" y="961" width="31" height="33"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="0e0-rP-7lH">
-                                                <rect key="frame" x="77" y="961" width="28" height="33"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Gmail-logo" translatesAutoresizingMaskIntoConstraints="NO" id="0eF-vM-FuX">
-                                                <rect key="frame" x="118" y="960" width="49" height="36"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="8QZ-ah-FEp">
-                                                <rect key="frame" x="232" y="961" width="31" height="33"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="OPV-9U-pv1">
-                                                <rect key="frame" x="282" y="961" width="28" height="33"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Gmail-logo" translatesAutoresizingMaskIntoConstraints="NO" id="EPX-jZ-Jiu">
-                                                <rect key="frame" x="323" y="960" width="49" height="36"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Ivt-t6-dOb" appends="YES" id="lFm-8j-Rd0"/>
+                                                </connections>
                                             </imageView>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rZR-eN-Ova">
                                                 <rect key="frame" x="0.0" y="246" width="406" height="1"/>
@@ -727,19 +661,65 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="0.1194523691" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oam-cV-eQt">
+                                                <rect key="frame" x="20" y="514" width="184" height="239"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Android App Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMe-Tr-39l">
+                                                        <rect key="frame" x="10" y="150" width="164" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_6903" translatesAutoresizingMaskIntoConstraints="NO" id="SZO-tn-QHT">
+                                                <rect key="frame" x="70" y="535" width="79" height="76"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Arupam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMz-ur-axk">
+                                                <rect key="frame" x="73" y="634" width="75" height="28"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="8QZ-ah-FEp">
+                                                <rect key="frame" x="40" y="702" width="31" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="hpK-Bb-nrV" appends="YES" id="gVe-IC-mAz"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="OPV-9U-pv1">
+                                                <rect key="frame" x="90" y="702" width="28" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="S6T-dD-XeC" appends="YES" id="aRU-hT-nAu"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Gmail-logo" translatesAutoresizingMaskIntoConstraints="NO" id="EPX-jZ-Jiu">
+                                                <rect key="frame" x="131" y="701" width="49" height="36"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="wWC-Bt-Nlv" appends="YES" id="nZL-BV-8gw"/>
+                                                </connections>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1033" id="8hF-Ec-KC6"/>
+                                            <constraint firstAttribute="height" constant="800" id="8hF-Ec-KC6"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="dIV-ah-M0H" secondAttribute="bottom" constant="-3" id="J6S-Qj-Knk"/>
+                                    <constraint firstAttribute="bottom" secondItem="dIV-ah-M0H" secondAttribute="bottom" constant="-12" id="J6S-Qj-Knk"/>
                                     <constraint firstAttribute="trailing" secondItem="dIV-ah-M0H" secondAttribute="trailing" constant="8" id="KsE-VQ-DKy"/>
                                     <constraint firstItem="dIV-ah-M0H" firstAttribute="leading" secondItem="I5U-p9-6iI" secondAttribute="leading" id="T1s-s2-idA"/>
-                                    <constraint firstAttribute="bottom" secondItem="dIV-ah-M0H" secondAttribute="bottom" constant="-3" id="THg-dp-AUB"/>
-                                    <constraint firstItem="dIV-ah-M0H" firstAttribute="top" secondItem="I5U-p9-6iI" secondAttribute="top" constant="8" id="x2y-VU-Uqs"/>
+                                    <constraint firstAttribute="bottom" secondItem="dIV-ah-M0H" secondAttribute="bottom" constant="-12" id="THg-dp-AUB"/>
+                                    <constraint firstItem="dIV-ah-M0H" firstAttribute="top" secondItem="I5U-p9-6iI" secondAttribute="top" id="x2y-VU-Uqs"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -760,27 +740,113 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qkf-Fy-1Vm"/>
-                    <size key="freeformSize" width="414" height="1250"/>
+                    <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="image1" destination="WH8-4g-Yms" id="BU0-oH-UU1"/>
                         <outlet property="image2" destination="w3P-IL-DYG" id="Omm-yB-g40"/>
                         <outlet property="image3" destination="xV1-0g-wxv" id="DzS-bO-09c"/>
                         <outlet property="image4" destination="go2-Ei-Wve" id="HJW-d2-jL6"/>
-                        <outlet property="image5" destination="zZi-yQ-7R6" id="Ltl-eo-Xpb"/>
                         <outlet property="image6" destination="i2r-SQ-Sv9" id="Hi6-f3-Rfj"/>
-                        <outlet property="image7" destination="KeD-af-Lgm" id="BW0-gh-Bm9"/>
                         <outlet property="image8" destination="SZO-tn-QHT" id="jkC-1F-4JB"/>
                         <outlet property="view1" destination="hbt-Xw-Xb2" id="yiY-4K-RQp"/>
                         <outlet property="view2" destination="6Wp-Nv-Aci" id="2kG-U7-y0j"/>
                         <outlet property="view3" destination="5J2-mv-VAX" id="YQn-y9-ql7"/>
                         <outlet property="view4" destination="8nv-tT-OtC" id="0EG-hI-vug"/>
-                        <outlet property="view5" destination="KWs-Se-Q5z" id="GXG-v5-iXD"/>
                         <outlet property="view6" destination="QgG-68-jpu" id="TiF-Gj-s5c"/>
-                        <outlet property="view7" destination="Zzs-zd-nPv" id="OTs-jo-Rmy"/>
                         <outlet property="view8" destination="Oam-cV-eQt" id="f3V-CQ-Csx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hGb-uV-cE2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Ajb-JR-WX2">
+                    <connections>
+                        <action selector="gitRitik:" destination="3g6-yP-dc8" id="Nec-rF-3Wy"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="2RE-zU-cZy">
+                    <connections>
+                        <action selector="linkRitik:" destination="3g6-yP-dc8" id="yHf-h9-Icm"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="1hS-jG-NoT">
+                    <connections>
+                        <action selector="mailRitik:" destination="3g6-yP-dc8" id="UID-0D-PHb"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="m4f-GE-LVT">
+                    <connections>
+                        <action selector="gitKrishna:" destination="3g6-yP-dc8" id="Gev-jp-odC"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="NTc-eQ-Sxs">
+                    <connections>
+                        <action selector="linkkrishna:" destination="3g6-yP-dc8" id="H7X-zf-fks"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="j71-S8-y5h">
+                    <connections>
+                        <action selector="mailKrishna:" destination="3g6-yP-dc8" id="e8P-lH-d9w"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="3Oj-xY-GYA">
+                    <connections>
+                        <action selector="gitgokul:" destination="3g6-yP-dc8" id="xsA-pl-BxW"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="jSV-Rw-PFd">
+                    <connections>
+                        <action selector="linkGokul:" destination="3g6-yP-dc8" id="lfF-ao-J00"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ILD-Je-McU">
+                    <connections>
+                        <action selector="mailGokul:" destination="3g6-yP-dc8" id="wmQ-RU-iaJ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Uhb-Un-A9X">
+                    <connections>
+                        <action selector="gitPrabal:" destination="3g6-yP-dc8" id="gfD-OV-mEY"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ogF-nx-WR9">
+                    <connections>
+                        <action selector="linkPrabal:" destination="3g6-yP-dc8" id="ZLy-8u-l6D"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Ivt-t6-dOb">
+                    <connections>
+                        <action selector="mailPrabal:" destination="3g6-yP-dc8" id="5bc-7x-2sb"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Xeu-F6-Ncx">
+                    <connections>
+                        <action selector="gitPanshul:" destination="3g6-yP-dc8" id="HUr-gD-8Zx"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="pfh-yw-aZs">
+                    <connections>
+                        <action selector="linkPanshul:" destination="3g6-yP-dc8" id="6hQ-zD-q2z"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="fyA-Qc-pD6">
+                    <connections>
+                        <action selector="mailPanshul:" destination="3g6-yP-dc8" id="8Sr-O5-1sX"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="hpK-Bb-nrV">
+                    <connections>
+                        <action selector="gitArupam:" destination="3g6-yP-dc8" id="4m8-qx-zdA"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="S6T-dD-XeC">
+                    <connections>
+                        <action selector="linkArupam:" destination="3g6-yP-dc8" id="bHl-Fv-C7O"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="wWC-Bt-Nlv">
+                    <connections>
+                        <action selector="mailArupam:" destination="3g6-yP-dc8" id="aUM-vZ-Krv"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-2833.3333333333335" y="3841.7410714285711"/>
         </scene>
@@ -1767,6 +1833,92 @@
             </objects>
             <point key="canvasLocation" x="900" y="-1197"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Nuu-qJ-ZkT">
+            <objects>
+                <viewController id="rsH-bB-7xN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ksa-Lg-99R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot 2020-12-10 at 5.13.23 PM" translatesAutoresizingMaskIntoConstraints="NO" id="MY0-Gd-Nx6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot 2020-12-10 at 5.31.57 PM" translatesAutoresizingMaskIntoConstraints="NO" id="xeu-3W-cnE">
+                                <rect key="frame" x="65" y="154" width="283" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="6T4-UE-hBf"/>
+                                    <constraint firstAttribute="width" constant="283" id="k3O-9Z-M83"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple Developers Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUE-6g-QYC">
+                                <rect key="frame" x="89" y="326" width="141" height="21"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="17" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mk7-rl-MGo">
+                                <rect key="frame" x="87" y="357" width="264" height="257"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="264" id="Th7-8O-FMF"/>
+                                    <constraint firstAttribute="height" constant="257" id="TzC-MX-Kpv"/>
+                                </constraints>
+                                <string key="text">Apple Developers Group (ADG) is a name synonymous with excellence, simplicity and dedication. It is a registered student community at VIT, Vellore established under the Apple University program. A coterie of talented minds seeking not just success but perfection.
+
+We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</string>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="W0J-v4-ubh">
+                                <rect key="frame" x="79" y="622" width="43" height="29"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="4lN-EA-Oar"/>
+                                    <constraint firstAttribute="height" constant="30" id="qVj-5E-PQF"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create | Ideate | Innovate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iS-Xs-Ngt">
+                                <rect key="frame" x="123" y="624" width="213" height="25"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xBZ-UG-MGp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mk7-rl-MGo" firstAttribute="top" secondItem="eUE-6g-QYC" secondAttribute="bottom" constant="10" id="4gu-8i-Rfr"/>
+                            <constraint firstItem="xBZ-UG-MGp" firstAttribute="trailing" secondItem="eUE-6g-QYC" secondAttribute="trailing" constant="184" id="5Px-YW-Oxj"/>
+                            <constraint firstItem="MY0-Gd-Nx6" firstAttribute="top" secondItem="Ksa-Lg-99R" secondAttribute="top" id="6Kc-g7-Xh9"/>
+                            <constraint firstItem="7iS-Xs-Ngt" firstAttribute="top" secondItem="mk7-rl-MGo" secondAttribute="bottom" constant="10" id="6fx-YP-cmz"/>
+                            <constraint firstItem="7iS-Xs-Ngt" firstAttribute="leading" secondItem="W0J-v4-ubh" secondAttribute="trailing" constant="1" id="Bg7-QR-Cxd"/>
+                            <constraint firstItem="xBZ-UG-MGp" firstAttribute="bottom" secondItem="W0J-v4-ubh" secondAttribute="bottom" constant="161.5" id="CrE-8m-kqX"/>
+                            <constraint firstItem="eUE-6g-QYC" firstAttribute="leading" secondItem="xBZ-UG-MGp" secondAttribute="leading" constant="89" id="Gcl-9V-NSQ"/>
+                            <constraint firstItem="7iS-Xs-Ngt" firstAttribute="leading" secondItem="W0J-v4-ubh" secondAttribute="trailing" constant="1" id="K4W-8l-3ue"/>
+                            <constraint firstItem="W0J-v4-ubh" firstAttribute="top" secondItem="mk7-rl-MGo" secondAttribute="bottom" constant="9.5" id="NfY-yv-cyc"/>
+                            <constraint firstItem="eUE-6g-QYC" firstAttribute="top" secondItem="xeu-3W-cnE" secondAttribute="bottom" constant="44" id="QeQ-ai-20q"/>
+                            <constraint firstItem="W0J-v4-ubh" firstAttribute="top" secondItem="mk7-rl-MGo" secondAttribute="bottom" constant="7.5" id="Rxi-Ps-4HB"/>
+                            <constraint firstItem="xBZ-UG-MGp" firstAttribute="trailing" secondItem="mk7-rl-MGo" secondAttribute="trailing" constant="63" id="Zfm-UN-9UV"/>
+                            <constraint firstItem="xeu-3W-cnE" firstAttribute="top" secondItem="xBZ-UG-MGp" secondAttribute="top" constant="110" id="d0A-Bb-Etd"/>
+                            <constraint firstItem="xeu-3W-cnE" firstAttribute="leading" secondItem="xBZ-UG-MGp" secondAttribute="leading" constant="65" id="dyD-Th-fdz"/>
+                            <constraint firstItem="xBZ-UG-MGp" firstAttribute="trailing" secondItem="xeu-3W-cnE" secondAttribute="trailing" constant="66" id="gsh-Xs-sEx"/>
+                            <constraint firstItem="MY0-Gd-Nx6" firstAttribute="trailing" secondItem="xBZ-UG-MGp" secondAttribute="trailing" id="hCJ-X2-PYE"/>
+                            <constraint firstAttribute="bottom" secondItem="MY0-Gd-Nx6" secondAttribute="bottom" id="kpB-Fn-7Ms"/>
+                            <constraint firstItem="mk7-rl-MGo" firstAttribute="leading" secondItem="xBZ-UG-MGp" secondAttribute="leading" constant="87" id="n8S-a8-tWT"/>
+                            <constraint firstItem="MY0-Gd-Nx6" firstAttribute="leading" secondItem="xBZ-UG-MGp" secondAttribute="leading" id="nQB-Wr-tEe"/>
+                            <constraint firstItem="xBZ-UG-MGp" firstAttribute="trailing" secondItem="7iS-Xs-Ngt" secondAttribute="trailing" constant="78" id="sRy-NN-t7v"/>
+                            <constraint firstItem="W0J-v4-ubh" firstAttribute="leading" secondItem="xBZ-UG-MGp" secondAttribute="leading" constant="79" id="xAY-3O-4c5"/>
+                            <constraint firstItem="xBZ-UG-MGp" firstAttribute="bottom" secondItem="7iS-Xs-Ngt" secondAttribute="bottom" constant="164" id="xND-zj-9ot"/>
+                            <constraint firstItem="mk7-rl-MGo" firstAttribute="top" secondItem="eUE-6g-QYC" secondAttribute="bottom" constant="10" id="ykk-ul-3nV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sg5-jB-bLa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D0y-98-B0p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1981.1594202898552" y="-1210.7142857142856"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hDy-1C-THz">
             <objects>
@@ -1826,11 +1978,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="32680633" translatesAutoresizingMaskIntoConstraints="NO" id="dtb-bE-ihZ">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="32680633" translatesAutoresizingMaskIntoConstraints="NO" id="dtb-bE-ihZ">
                                 <rect key="frame" x="342" y="46" width="56" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="Ujf-QQ-UHl"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="BZj-xo-i6V" appends="YES" id="J2G-GO-D1l"/>
+                                </connections>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eTw-ML-JqN">
                                 <rect key="frame" x="20" y="408" width="374" height="252"/>
@@ -1993,9 +2148,15 @@
                         <outlet property="bottomView" destination="T9w-nA-Q9I" id="cHb-at-ULW"/>
                         <outlet property="tableView" destination="eTw-ML-JqN" id="rmf-zw-SS2"/>
                         <segue destination="UwO-TR-Awf" kind="show" id="Qik-ld-SAK"/>
+                        <segue destination="rsH-bB-7xN" kind="show" identifier="about" id="mgb-gH-5gR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="BZj-xo-i6V">
+                    <connections>
+                        <action selector="adgIconBtn:" destination="BYZ-38-t0r" id="xKq-8G-wOr"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="900.00000000000011" y="-500.22321428571428"/>
         </scene>
@@ -2378,11 +2539,11 @@
             </objects>
             <point key="canvasLocation" x="2705.7971014492755" y="866.51785714285711"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="PMu-eb-lMU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="iIU-Zv-EsI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="house.fill" catalog="system" selectedImage="house.fill" id="r6z-EG-goU"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" selectedImage="house.fill" id="r6z-EG-goU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8ww-Hy-fux">
                         <autoresizingMask key="autoresizingMask"/>
@@ -2877,10 +3038,13 @@
         <image name="Screenshot 2020-11-30 at 10.12.18 PM" width="318" height="276"/>
         <image name="Screenshot 2020-12-04 at 12.46.18 PM" width="564" height="426"/>
         <image name="Screenshot 2020-12-10 at 12.08.27 PM" width="393" height="350"/>
+        <image name="Screenshot 2020-12-10 at 5.13.23 PM" width="534" height="1126"/>
+        <image name="Screenshot 2020-12-10 at 5.31.57 PM" width="574" height="262"/>
         <image name="applelogo" catalog="system" width="103" height="128"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="book" catalog="system" width="128" height="102"/>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="chevron.down" catalog="system" width="128" height="72"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right.2" catalog="system" width="128" height="105"/>
