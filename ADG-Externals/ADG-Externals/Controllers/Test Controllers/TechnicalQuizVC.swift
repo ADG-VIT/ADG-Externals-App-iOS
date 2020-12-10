@@ -187,7 +187,6 @@ extension TechnicalQuizVC{
         }
         else{
             testOver = true
-            checkCompleted()
         }
     }
     
