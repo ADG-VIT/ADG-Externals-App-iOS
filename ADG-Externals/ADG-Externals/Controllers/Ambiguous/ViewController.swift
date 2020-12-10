@@ -20,9 +20,18 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var askQuestionBtn: UIButton!
     @IBAction func askQuestionPressed(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Coming Soon", message: "Chat room to share your doubts", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(defaultAction)
+        self.present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func redirectBtn(_ sender: UIButton) {
+        if let url = URL(string: "https://adgvit.com"){
+            UIApplication.shared.open(url)}
+    }
     var dates:[String] = ["25","26","27"]
+    var events:[String] = ["Recruitments Quiz","Hackgrid","iOS Fusion"]
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -72,6 +81,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    //MARK:-CollectionView methods
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width/1.5, height: collectionView.frame.width/1.5)
     }
@@ -96,6 +106,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeTableViewCell
         cell.dateLabel.text = dates[indexPath.row]
+        cell.eventLabel.text = events[indexPath.row]
         return cell
         
     }

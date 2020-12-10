@@ -1752,24 +1752,47 @@
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVh-ql-dIU">
+                                                    <rect key="frame" x="324" y="10" width="30" height="87"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <state key="normal" title="Button" image="chevron.right.2" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="redirectBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zui-UB-j2A"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recruitments Quiz" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cy7-sV-HOO">
+                                                    <rect key="frame" x="100" y="29" width="216" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="sBO-zC-EoV" firstAttribute="leading" secondItem="H2Y-fI-ZLS" secondAttribute="trailing" constant="21" id="0WK-Dc-agQ"/>
+                                                <constraint firstItem="TVh-ql-dIU" firstAttribute="leading" secondItem="sBO-zC-EoV" secondAttribute="trailing" constant="232" id="8sy-FS-h06"/>
                                                 <constraint firstItem="H2Y-fI-ZLS" firstAttribute="leading" secondItem="0gr-aD-Wpi" secondAttribute="leading" constant="17" id="IJq-Nc-bLt"/>
                                                 <constraint firstItem="vUd-sn-fln" firstAttribute="leading" secondItem="0gr-aD-Wpi" secondAttribute="leading" constant="17" id="Iom-98-v8y"/>
                                                 <constraint firstAttribute="bottom" secondItem="vUd-sn-fln" secondAttribute="bottom" constant="50" id="JK7-cF-fcq"/>
                                                 <constraint firstItem="sBO-zC-EoV" firstAttribute="leading" secondItem="vUd-sn-fln" secondAttribute="trailing" constant="25" id="MVE-1h-pym"/>
+                                                <constraint firstAttribute="bottom" secondItem="TVh-ql-dIU" secondAttribute="bottom" constant="10" id="PtK-wS-8XE"/>
+                                                <constraint firstItem="TVh-ql-dIU" firstAttribute="leading" secondItem="cy7-sV-HOO" secondAttribute="trailing" constant="8" symbolic="YES" id="SGd-PN-Wmv"/>
                                                 <constraint firstAttribute="trailing" secondItem="sBO-zC-EoV" secondAttribute="trailing" constant="282" id="Wpg-ZH-iTn"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="cy7-sV-HOO" secondAttribute="bottom" constant="24" id="Wyn-QP-yqr"/>
+                                                <constraint firstItem="cy7-sV-HOO" firstAttribute="leading" secondItem="sBO-zC-EoV" secondAttribute="trailing" constant="8" symbolic="YES" id="Zv9-yF-Adr"/>
                                                 <constraint firstAttribute="bottom" secondItem="sBO-zC-EoV" secondAttribute="bottom" id="dcW-Fe-gqg"/>
                                                 <constraint firstItem="sBO-zC-EoV" firstAttribute="top" secondItem="0gr-aD-Wpi" secondAttribute="top" id="fLX-yp-PiL"/>
+                                                <constraint firstItem="TVh-ql-dIU" firstAttribute="top" secondItem="0gr-aD-Wpi" secondAttribute="top" constant="10" id="iR0-HG-joD"/>
+                                                <constraint firstItem="cy7-sV-HOO" firstAttribute="top" secondItem="0gr-aD-Wpi" secondAttribute="topMargin" constant="18" id="njO-fk-LJn"/>
                                                 <constraint firstAttribute="bottom" secondItem="H2Y-fI-ZLS" secondAttribute="bottom" constant="28" id="o2z-xS-oYd"/>
                                                 <constraint firstItem="H2Y-fI-ZLS" firstAttribute="top" secondItem="0gr-aD-Wpi" secondAttribute="top" constant="55" id="rEM-Pk-zbH"/>
                                                 <constraint firstItem="vUd-sn-fln" firstAttribute="top" secondItem="0gr-aD-Wpi" secondAttribute="top" constant="21" id="uh8-f8-pfJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="TVh-ql-dIU" secondAttribute="trailing" constant="20" symbolic="YES" id="x3P-tL-f8T"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dateLabel" destination="vUd-sn-fln" id="R6L-u3-GbY"/>
                                             <outlet property="dateMonthLabel" destination="H2Y-fI-ZLS" id="Nyx-mj-bXW"/>
+                                            <outlet property="eventLabel" destination="cy7-sV-HOO" id="2mg-gQ-2EA"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -2469,6 +2492,7 @@
         <image name="book" catalog="system" width="128" height="102"/>
         <image name="chevron.down" catalog="system" width="128" height="72"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.right.2" catalog="system" width="128" height="105"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="github" width="512" height="512"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
