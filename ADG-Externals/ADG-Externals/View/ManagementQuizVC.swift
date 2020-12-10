@@ -63,8 +63,8 @@ extension ManagementQuizVC{
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/management/get-quiz-questions")!,timeoutInterval: Double.infinity)
        
-        request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQxMWE5NDZmYWZhMjAwMTdkNWRmM2MiLCJpYXQiOjE2MDc1MzkzNDh9.xS7nly-3gtNPHsnf4fAFkx86b7ALS5IGdzMRNQLr_h0", forHTTPHeaderField: "auth-token")
-//        request.addValue(signUpInst.authKey, forHTTPHeaderField: "auth-token")
+//        request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQxMjEzM2ZjMDEwNzAwMTc5MDU0YjQiLCJpYXQiOjE2MDc1NDEwNDR9.MZcgLRBucDV6_Vw5_XspuG0SJjMBejzpvYGMUmQYmA4", forHTTPHeaderField: "auth-token")
+        request.addValue(signUpViewController.authKey, forHTTPHeaderField: "auth-token")
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -117,8 +117,8 @@ extension ManagementQuizVC{
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
             
-//           request.addValue(signUpInst.authKey, forHTTPHeaderField: "auth-token")
-           request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQxMWE5NDZmYWZhMjAwMTdkNWRmM2MiLCJpYXQiOjE2MDc1MzkzNDh9.xS7nly-3gtNPHsnf4fAFkx86b7ALS5IGdzMRNQLr_h0", forHTTPHeaderField: "auth-token")
+            request.addValue(signUpViewController.authKey, forHTTPHeaderField: "auth-token")
+//           request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQxMjEzM2ZjMDEwNzAwMTc5MDU0YjQiLCJpYXQiOjE2MDc1NDEwNDR9.MZcgLRBucDV6_Vw5_XspuG0SJjMBejzpvYGMUmQYmA4", forHTTPHeaderField: "auth-token")
             let parameters: [String : Any] = [
                 "qid": qid,
                 "response": answer

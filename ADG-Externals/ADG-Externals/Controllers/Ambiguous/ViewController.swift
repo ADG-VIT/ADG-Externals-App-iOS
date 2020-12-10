@@ -15,6 +15,13 @@ struct CustomData {
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
+    //MARK:-
+    
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var askQuestionBtn: UIButton!
+    @IBAction func askQuestionPressed(_ sender: UIButton) {
+    }
+    
     var dates:[String] = ["25","26","27"]
     
     @IBOutlet weak var tableView: UITableView!
@@ -50,6 +57,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView.dataSource = self
         tableView.delegate = self
         
+        bottomView.layer.cornerRadius = 15
+        askQuestionBtn.layer.cornerRadius = 5
+        askQuestionBtn.layer.borderWidth = 3
+        askQuestionBtn.layer.borderColor = #colorLiteral(red: 0.0732402429, green: 0.2858043909, blue: 0.761880219, alpha: 1)
+        
         //MARK:- Onboarding Stuffs
         if core.shared.isNewUser() {
             let vc = storyboard?.instantiateViewController(identifier: "onboarding") as! OnboardingViewController
@@ -61,7 +73,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
 extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width/1.3, height: collectionView.frame.width/1.3)
+        return CGSize(width: collectionView.frame.width/1.5, height: collectionView.frame.width/1.5)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
