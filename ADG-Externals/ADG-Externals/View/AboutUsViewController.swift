@@ -24,10 +24,11 @@ class AboutUsViewController: UIViewController {
     @IBOutlet weak var view6: UIView!
     @IBOutlet weak var view8: UIView!
     
-    var gitLink:[String] = ["https://github.com/rajritik2607","krish","https://github.com/gokulnair2001","https://github.com/prabal4546", "https://github.com/panshuljindal","https://github.com/arupam"]
+    var gitLink:[String] = ["https://github.com/rajritik2607","https://github.com/krishnakhanikar","https://github.com/gokulnair2001","https://github.com/prabal4546", "https://github.com/panshuljindal","https://github.com/arupam"]
     var LinkedInLink:[String] = ["https://www.linkedin.com/in/ritik-suryawanshi-7075441a6","krish","https://www.linkedin.com/in/gokul-r-nair/","https://www.linkedin.com/in/prabaljit-walia-5800571a0", "https://www.linkedin.com/in/panshul-jindal-392746199"," https://www.linkedin.com/in/arupam-kumar-saha-310653191/"]
-    var name:[String] = ["ritik","krish","gokul","prabal","panshul","arupam"]
-    var emailID:[String] = ["ritik","krish","gokul","prabal","panshul","arupam"]
+    var name:[String] = ["Ritik Suryawanshi","Krishna Khanikar","Gokul Nair","Prabaljit Walia","Panshul Jindal","Arupam Saha"]
+    var emailID:[String] = ["ritik.suryawanshi@gmail.com","krish","gokulnair.2001@gmail.com","prabaljit.walia2019@vitstudent.ac.in","panshuljindal@gmail.com","sahaarupam37@gmail.com"]
+    
  override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -63,9 +64,7 @@ class AboutUsViewController: UIViewController {
     }
     
     @IBAction func mailRitik(_ sender: Any) {
-        if let url = URL(string: mailID[0]) {
-            UIApplication.shared.open(url)
-        }
+        MailDeveloper(mailID: emailID[0], developer: name[0])
     }
     
     @IBAction func gitKrishna(_ sender: Any) {
@@ -80,7 +79,7 @@ class AboutUsViewController: UIViewController {
         }
     }
     @IBAction func mailKrishna(_ sender: Any) {
-       
+        MailDeveloper(mailID: emailID[1], developer: name[1])
     }
     @IBAction func gitgokul(_ sender: Any) {
         if let url = URL(string: gitLink[2]) {
@@ -93,7 +92,7 @@ class AboutUsViewController: UIViewController {
         }
     }
     @IBAction func mailGokul(_ sender: Any) {
-       
+        MailDeveloper(mailID: emailID[2], developer: name[2])
     }
     @IBAction func gitPrabal(_ sender: Any) {
         if let url = URL(string: gitLink[3]) {
@@ -106,7 +105,7 @@ class AboutUsViewController: UIViewController {
         }
     }
     @IBAction func mailPrabal(_ sender: Any) {
-        
+        MailDeveloper(mailID: emailID[3], developer: name[3])
     }
     @IBAction func gitPanshul(_ sender: Any) {
         if let url = URL(string: gitLink[4]) {
@@ -119,7 +118,7 @@ class AboutUsViewController: UIViewController {
         }
     }
     @IBAction func mailPanshul(_ sender: Any) {
-        
+        MailDeveloper(mailID: emailID[4], developer: name[4])
     }
     
     @IBAction func gitArupam(_ sender: Any) {
@@ -133,7 +132,7 @@ class AboutUsViewController: UIViewController {
         }
     }
     @IBAction func mailArupam(_ sender: Any) {
-        
+        MailDeveloper(mailID: emailID[5], developer: name[5])
     }
     
 }
