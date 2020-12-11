@@ -10,6 +10,9 @@ import UIKit
 class RecruitmentViewController: UIViewController {
 
     var yos:Int = 0
+    var managementApplied:Bool = false
+    var techApplied:Bool = false
+    var designAppled:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,22 +26,32 @@ class RecruitmentViewController: UIViewController {
     }
     @IBAction func technicalCardView(_ sender: Any) {
         
-        if yos == 1 {
-            self.performSegue(withIdentifier: "firstYearTech", sender: nil)
-        }else if yos == 2{
-            self.performSegue(withIdentifier: "secondYearTech", sender: nil)
-        }else if yos == 0{
-            print("0000")
+       if techApplied == false {
+            if yos == 1 {
+                self.performSegue(withIdentifier: "firstYearTech", sender: nil)
+            }else if yos == 2{
+                self.performSegue(withIdentifier: "secondYearTech", sender: nil)
+            }
+
+        }else{
+            extraTrial()
         }
-        print("hello")
         
     }
     @IBAction func managementCardView(_ sender: Any) {
+        if managementApplied == false {
         self.performSegue(withIdentifier: "recruitmentToManagementQuiz", sender: nil)
+        }else{
+            extraTrial()
+        }
     }
     
     @IBAction func designCardView(_ sender: Any) {
+        if designAppled == false {
         self.performSegue(withIdentifier: "DesignTest", sender: nil)
+        }else{
+            extraTrial()
+        }
     }
     
 
@@ -99,7 +112,9 @@ extension RecruitmentViewController{
                 let result = try JSONDecoder().decode(model.self, from: data)
                 LogInViewController.authkey.append(result.userDetails.id)
                 self.yos = result.userDetails.yearofstudy
-                
+                self.designAppled = result.userDetails.attemptedDesign
+                self.techApplied = result.userDetails.attemptedTechnical
+                self.managementApplied = result.userDetails.attemptedManagement
                 print(result.userDetails.name)
        
              }

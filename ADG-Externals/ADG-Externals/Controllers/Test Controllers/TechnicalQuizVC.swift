@@ -214,7 +214,7 @@ extension TechnicalQuizVC{
     func  checkCompleted(){
         if testOver == true{
             DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "completed", sender: nil)
+              //  self.performSegue(withIdentifier: "completed", sender: nil)
                 self.setupPOSTMethod()
                 self.count = 0
             }
@@ -261,7 +261,7 @@ extension TechnicalQuizVC{
 
                     //As soon as the data is fetched segue will be performed :)
                     DispatchQueue.main.async {
-                                //self.performSegue(withIdentifier: "completed", sender: nil)
+                            self.performSegue(withIdentifier: "completed", sender: nil)
                             }
                 }catch let error{
                     print(error.localizedDescription)
@@ -279,9 +279,7 @@ extension TechnicalQuizVC{
     }
     func extraTrial() {
     let alert = UIAlertController(title: "Error", message: "Only one attempt possible", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-          self.navigationController?.popToRootViewController(animated: true)
-        }))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler:nil))
         present(alert, animated: true, completion: nil)
     }
     
