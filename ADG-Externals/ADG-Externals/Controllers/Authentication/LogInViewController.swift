@@ -9,7 +9,7 @@ import UIKit
 
 class LogInViewController: UIViewController {
     
-    static var token:String = ""
+    static var authkey:[String] = [""]
     
     //MARK:- IBConnections
     
@@ -53,8 +53,6 @@ extension LogInViewController{
             ]
 
            request.httpBody = parameters.percentEscaped().data(using: .utf8)
-//            let postData = try! JSONSerialization.data(withJSONObject: parameters,options: [])
-//            request.httpBody = postData
             URLSession.shared.dataTask(with: request){(data, response, error) in
                 guard let data = data else{
                     if error == nil{
@@ -75,9 +73,6 @@ extension LogInViewController{
                 do{
                     let json = try JSONSerialization.jsonObject(with: data, options: [])
                     print(json)
-//                    self.token.append(json)
-//                    print(self.token)
-//                    print(self.token[1])
                     self.parseJSON(data)
                     DispatchQueue.main.async {
                         //self.performSegue(withIdentifier: "logInToRecruitmentVC", sender: self)
@@ -99,7 +94,7 @@ extension LogInViewController{
             let message = decodedData.message
             print(key)
             print(message)
-            signUpViewController.authKey.append(key)
+            LogInViewController.authkey[0].append(key)
            
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "logInToRecruitmentVC", sender: self)

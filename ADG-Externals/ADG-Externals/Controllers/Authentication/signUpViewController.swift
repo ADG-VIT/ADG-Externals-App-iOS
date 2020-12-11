@@ -12,7 +12,7 @@ class signUpViewController: UIViewController {
     
 //    var token:[String] = []
     
-    static var authKey:[String] = []
+   // static var authKey:[String] = []
     //MARK:- ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,7 +113,7 @@ extension signUpViewController{
                     print(json)
                     self.parseJSON(data)
                     DispatchQueue.main.async {
-                       self.performSegue(withIdentifier: "signUpToRecruitmentVC", sender: self)
+                        //self.navigationController?.popToRootViewController(animated: true)
                     }
                     
                 }catch let error{
@@ -132,14 +132,11 @@ extension signUpViewController{
         do {
             let decodedData = try decoder.decode(AuthKey.self, from: data)
             
-            let key = decodedData.token
+//            let key = decodedData.token
             let message = decodedData.message
-          
-            signUpViewController.authKey.append(key)
-            print(key)
             print(message)
             DispatchQueue.main.async {
-               // self.performSegue(withIdentifier: "signUpToRecruitmentVC", sender: self)
+                self.navigationController?.popToRootViewController(animated: true)
             }
          
             
