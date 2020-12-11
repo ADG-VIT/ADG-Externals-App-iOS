@@ -14,6 +14,7 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var dateMonthLabel: UILabel!
     @IBOutlet weak var eventLabel: UILabel!
+    @IBOutlet weak var venueLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

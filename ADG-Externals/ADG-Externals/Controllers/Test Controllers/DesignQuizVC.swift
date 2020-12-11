@@ -54,26 +54,26 @@ class DesignQuizVC: UIViewController {
     }
     
     @IBAction func choiceA(_ sender: Any) {
-        selectedAnswer[count-1].append("a")
+        selectedAnswer[count-1].append("1")
         checkCompleted()
         choice1.backgroundColor = UIColor.link
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
     @IBAction func choiceB(_ sender: Any) {
-        selectedAnswer[count-1].append("a")
+        selectedAnswer[count-1].append("2")
         checkCompleted()
         choice2.backgroundColor = UIColor.link
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
     @IBAction func ChoiceC(_ sender: Any) {
-        selectedAnswer[count-1].append("a")
+        selectedAnswer[count-1].append("3")
         checkCompleted()
         choice3.backgroundColor = UIColor.link
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
     
     @IBAction func ChoiceD(_ sender: Any) {
-        selectedAnswer[count-1].append("a")
+        selectedAnswer[count-1].append("4")
         checkCompleted()
         choice4.backgroundColor = UIColor.link
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)

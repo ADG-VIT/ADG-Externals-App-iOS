@@ -19,6 +19,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var askQuestionBtn: UIButton!
+    
     @IBAction func askQuestionPressed(_ sender: UIButton) {
         let alert = UIAlertController(title: "Coming Soon...", message: "Chat room to share your doubts", preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -26,17 +27,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.present(alert, animated: true, completion: nil)
     }
     
-    @IBAction func redirectBtn(_ sender: UIButton) {
-        if let url = URL(string: "https://adgvit.com"){
-            UIApplication.shared.open(url)}
-    }
+    
     var dates:[String] = ["25","26","27"]
     var events:[String] = ["Recruitments Quiz","Hackgrid","iOS Fusion"]
-    @IBAction func seeAllBtn(_ sender: UIButton) {
-        if let url = URL(string: "https://adgvit.com"){
-            UIApplication.shared.open(url)}
-    }
-    
+    var venue:[String] = ["Venue: Online","Venue: Online","Venue: Online"]    
     @IBOutlet weak var tableView: UITableView!
     
         fileprivate let data = [
@@ -73,10 +67,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView.layer.borderWidth = 1
         tableView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
-        bottomView.layer.cornerRadius = 15
+        bottomView.layer.cornerRadius = 10
         askQuestionBtn.layer.cornerRadius = 5
-        askQuestionBtn.layer.borderWidth = 3
-        askQuestionBtn.layer.borderColor = #colorLiteral(red: 0.0732402429, green: 0.2858043909, blue: 0.761880219, alpha: 1)
+        askQuestionBtn.layer.borderWidth = 2
+        askQuestionBtn.layer.borderColor = #colorLiteral(red: 0, green: 0.2925035655, blue: 0.7826288342, alpha: 1)
         
         //MARK:- Onboarding Stuffs
         if core.shared.isNewUser() {
@@ -93,7 +87,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+   
     //MARK:-CollectionView methods
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width/1.5, height: collectionView.frame.width/1.5)
     }
@@ -111,7 +107,9 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
     func buttonTappedInCollectionViewCell(sender: UIButton) {
            self.performSegue(withIdentifier: "toStoreFromMyDiscounts", sender: nil)
        }
+    
     //MARK:-TableView methods
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dates.count
     }
@@ -119,10 +117,16 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeTableViewCell
         cell.dateLabel.text = dates[indexPath.row]
         cell.eventLabel.text = events[indexPath.row]
-        
+        cell.venueLabel.text = venue[indexPath.row]
         cell.selectionStyle = .none
+        cell.layer.cornerRadius = 5
+//        cell.layer.borderColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+//        cell.layer.borderWidth = 1
         return cell
-        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }
 
