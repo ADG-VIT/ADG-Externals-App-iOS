@@ -30,11 +30,20 @@ class AuthenticationViewController: UIViewController {
         logInLabel.layer.borderWidth = 2
         logInLabel.layer.borderColor = UIColor.systemOrange.cgColor
         // Do any additional setup after loading the view.
+        
+        coreData.fetchTokenFromCore()
     }
     
     
     
-
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if LogInViewController.Token != "" {
+            self.performSegue(withIdentifier: "currentUser", sender: nil)
+        }else{
+            print("new user")
+        }
+    }
 
 
 }

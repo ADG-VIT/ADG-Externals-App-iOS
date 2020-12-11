@@ -22,7 +22,7 @@ class RecruitmentViewController: UIViewController {
         managementView.layer.cornerRadius = 20
         designView.layer.cornerRadius = 20
         
-        get()
+        //get()
     }
     @IBAction func technicalCardView(_ sender: Any) {
         
@@ -54,6 +54,15 @@ class RecruitmentViewController: UIViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if LogInViewController.Token != ""{
+            get()
+            coreData.fetchTokenFromCore()
+        }else if LogInViewController.Token == ""{
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+    }
+    
 
    //MARK:-
     
@@ -70,7 +79,7 @@ extension RecruitmentViewController{
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/user/getuser")!,timeoutInterval: Double.infinity)
        
-        request.addValue(LogInViewController.authkey[0], forHTTPHeaderField: "auth-token")
+        request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -110,7 +119,7 @@ extension RecruitmentViewController{
             do{
               if error == nil{
                 let result = try JSONDecoder().decode(model.self, from: data)
-                LogInViewController.authkey.append(result.userDetails.id)
+               // LogInViewController.authkey.append(result.userDetails.id)
                 self.yos = result.userDetails.yearofstudy
                 self.designAppled = result.userDetails.attemptedDesign
                 self.techApplied = result.userDetails.attemptedTechnical
