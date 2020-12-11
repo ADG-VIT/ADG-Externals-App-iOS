@@ -65,7 +65,24 @@ extension LogInViewController{
                 if let response = response as? HTTPURLResponse{
                     guard (200 ... 299) ~= response.statusCode else {
                         print("Status code :- \(response.statusCode)")
-                        //print(response)
+                        if response.statusCode == 400 {
+                            DispatchQueue.main.async {
+                            self.alertView()
+                            }
+                        }else if response.statusCode == 401{
+                            DispatchQueue.main.async {
+                            self.alertView()
+                            }
+                        }else if response.statusCode == 403{
+                            DispatchQueue.main.async {
+                                self.detailError()
+                            }
+                            
+                        }else if response.statusCode == 503{
+                            DispatchQueue.main.async {
+                                self.alertView()
+                            }
+                        }
                         return
                     }
                 }
@@ -107,3 +124,17 @@ extension LogInViewController{
 
 }
 
+extension LogInViewController{
+    
+    func alertView() {
+    let alert = UIAlertController(title: "Error", message: "close the app", preferredStyle: .alert)
+        //alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+
+    func detailError(){
+        let alert = UIAlertController(title: "Error", message: "Reg No/Password is incorrect", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+    }
+}

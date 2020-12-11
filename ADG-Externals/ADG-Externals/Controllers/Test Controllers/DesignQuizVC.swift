@@ -121,7 +121,7 @@ extension DesignQuizVC{
     //MARK:- UI Implementation Methods
         
         func get(){
-            var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/technical/get-quiz-questions/1")!,timeoutInterval: Double.infinity)
+            var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/design/get-quiz-questions")!,timeoutInterval: Double.infinity)
             //Change technical to design as it is design test VC as well as dont mention 1 and 2 year in design
             
             request.addValue(LogInViewController.authkey[0], forHTTPHeaderField: "auth-token")
@@ -139,7 +139,24 @@ extension DesignQuizVC{
                     guard (200 ... 299) ~= response.statusCode else {
                         print("Status code :- \(response.statusCode)")
                         
-                        //if error == 400 then applied for test again
+                        if response.statusCode == 400 {
+                            DispatchQueue.main.async {
+                            self.extraTrial()
+                            }
+                        }else if response.statusCode == 401{
+                            DispatchQueue.main.async {
+                            self.alertView()
+                            }
+                        }else if response.statusCode == 403{
+                            DispatchQueue.main.async {
+                                self.serverError()
+                            }
+                            
+                        }else if response.statusCode == 503{
+                            DispatchQueue.main.async {
+                                self.serverError()
+                            }
+                    }
                         return
                     }
                 }
@@ -224,7 +241,8 @@ extension DesignQuizVC{
             request.addValue(LogInViewController.authkey[0], forHTTPHeaderField: "auth-token")
            request.httpMethod = "POST"
 
-            let parameters = "[{ \"qid\":\(qid[0]),\"response\":\(selectedAnswer[0])}, {\"qid\":\(qid[1]),\"response\":\(selectedAnswer[1] )},{\"qid\":\(qid[2]),\"response\":\(selectedAnswer[2] )},{\"qid\":\(qid[3]),\"response\":\(selectedAnswer[3] )},{\"qid\":\(qid[4]),\"response\":\(selectedAnswer[4] )},{\"qid\":\(qid[5]),\"response\":\(selectedAnswer[5] )}]"
+            let parameters = "[{ \"qid\":\(qid[0]),\"response\":\(selectedAnswer[0])}, {\"qid\":\(qid[1]),\"response\":\(selectedAnswer[1] )}]"
+               // ,{\"qid\":\(qid[2]),\"response\":\(selectedAnswer[2] )},{\"qid\":\(qid[3]),\"response\":\(selectedAnswer[3] )},{\"qid\":\(qid[4]),\"response\":\(selectedAnswer[4] )},{\"qid\":\(qid[5]),\"response\":\(selectedAnswer[5] )},{\"qid\":\(qid[6]),\"response\":\(selectedAnswer[6] )}]"
             let postData = parameters.data(using: .utf8)
 
 
@@ -261,3 +279,21 @@ extension DesignQuizVC{
     
 }
 
+extension DesignQuizVC{
+    func alertView() {
+    let alert = UIAlertController(title: "Error", message: "close the app!(Open again and Login)", preferredStyle: .alert)
+        present(alert, animated: true, completion: nil)
+    }
+    func extraTrial() {
+    let alert = UIAlertController(title: "Error", message: "Only one attempt possible", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+          self.navigationController?.popToRootViewController(animated: true)
+        }))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func serverError() {
+    let alert = UIAlertController(title: "Server Error", message: "close the app!(Open again and Login)", preferredStyle: .alert)
+        present(alert, animated: true, completion: nil)
+    }
+}
