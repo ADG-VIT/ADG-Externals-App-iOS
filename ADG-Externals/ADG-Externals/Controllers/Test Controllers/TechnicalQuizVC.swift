@@ -135,7 +135,25 @@ extension TechnicalQuizVC{
                 guard (200 ... 299) ~= response.statusCode else {
                     print("Status code :- \(response.statusCode)")
                     
-                    //if error == 400 then applied for test again
+                    if response.statusCode == 400 {
+                        DispatchQueue.main.async {
+                        self.extraTrial()
+                        }
+                    }else if response.statusCode == 401{
+                        DispatchQueue.main.async {
+                        self.alertView()
+                        }
+                    }else if response.statusCode == 403{
+                        DispatchQueue.main.async {
+                            self.serverError()
+                        }
+                        
+                    }else if response.statusCode == 503{
+                        DispatchQueue.main.async {
+                            self.serverError()
+                        }
+                }
+                    
                     return
                 }
             }
@@ -254,3 +272,22 @@ extension TechnicalQuizVC{
     
 }
 
+extension TechnicalQuizVC{
+    func alertView() {
+    let alert = UIAlertController(title: "Error", message: "close the app!(Open again and Login)", preferredStyle: .alert)
+        present(alert, animated: true, completion: nil)
+    }
+    func extraTrial() {
+    let alert = UIAlertController(title: "Error", message: "Only one attempt possible", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+          self.navigationController?.popToRootViewController(animated: true)
+        }))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func serverError() {
+    let alert = UIAlertController(title: "Server Error", message: "close the app!(Open again and Login)", preferredStyle: .alert)
+        present(alert, animated: true, completion: nil)
+    }
+  
+}

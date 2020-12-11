@@ -37,7 +37,6 @@ class signUpViewController: UIViewController {
     @IBOutlet weak var yearOfStudyField: UITextField!
     
     @IBAction func continueButton(_ sender: UIButton) {
-        //self.performSegue(withIdentifier: "signUpToRecruitmentVC", sender: self)
         self.setupPostMethod()
         self.validateFields()
     }
@@ -135,6 +134,7 @@ extension signUpViewController{
 //            let key = decodedData.token
             let message = decodedData.message
             print(message)
+            
             DispatchQueue.main.async {
                 self.navigationController?.popToRootViewController(animated: true)
             }
@@ -168,4 +168,14 @@ extension CharacterSet {
         allowed.remove(charactersIn: "\(generalDelimitersToEncode)\(subDelimitersToEncode)")
         return allowed
     }()
+}
+
+extension signUpViewController{
+    
+    func alertView() {
+    let alert = UIAlertController(title: "Registered Sucessfully", message: "Login to appear for test!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+
 }
