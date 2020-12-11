@@ -30,8 +30,7 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
         profileImageView.layer.cornerRadius = profileImageView.frame.size.height/2
          profileImageView.clipsToBounds = true
         
-        get()
-        
+        checkSignup()
         editBtn.isHidden = true
     }
     
@@ -52,11 +51,9 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
     
     
     //Necessary because if user gets into profile first then performs signin thus profile view have no auth token previously. So the page crashes. thus to avoid it added this function such that as soon as the screen apperas it have to perform this functions
-    override func viewDidAppear(_ animated: Bool) {
-        get()
-    }
+    
     override func viewWillAppear(_ animated: Bool) {
-        get()
+        checkSignup()
     }
     
 }
@@ -106,7 +103,7 @@ extension ProfileViewController{
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/user/getuser")!,timeoutInterval: Double.infinity)
        
-        request.addValue(signUpViewController.authKey[0], forHTTPHeaderField: "auth-token")
+            request.addValue(signUpViewController.authKey[0], forHTTPHeaderField: "auth-token")
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -157,7 +154,7 @@ extension ProfileViewController{
 
 extension ProfileViewController{
     @IBAction func shareAppBtn(_ sender: Any) {
-        let activityController = UIActivityViewController(activityItems: ["hello", UIImage(imageLiteralResourceName:"claudia-lam-BPy_w7rG6bk-unsplash")], applicationActivities: nil)
+        let activityController = UIActivityViewController(activityItems: ["Apple Developers Group (ADG) is a name synonymous with excellence, simplicity and dedication. It is a registered student community at VIT, Vellore established under the Apple University program. A coterie of talented minds seeking not just success but perfection.We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.", UIImage(imageLiteralResourceName:"claudia-lam-BPy_w7rG6bk-unsplash")], applicationActivities: nil)
            
         present(activityController, animated: true, completion: nil)
     }
@@ -167,4 +164,16 @@ extension ProfileViewController{
         self.userEmailLabel.text = emailID
     }
     
+    func checkSignup() {
+        if signUpViewController.authKey.count != 0 {
+            get()
+        }else{
+            print("SignUpRemaining")
+            let alert = UIAlertController(title: "Signup/Login Remaining", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
 }
+

@@ -39,13 +39,7 @@ class RecruitmentViewController: UIViewController {
     }
     
     @IBAction func designCardView(_ sender: Any) {
-        if yos == "1" {
-            self.performSegue(withIdentifier: "firstYearDesign", sender: nil)
-        }else if yos == "2"{
-            self.performSegue(withIdentifier: "secondYearDesign", sender: nil)
-        }else{
-            
-        }
+        self.performSegue(withIdentifier: "DesignTest", sender: nil)
     }
     
 

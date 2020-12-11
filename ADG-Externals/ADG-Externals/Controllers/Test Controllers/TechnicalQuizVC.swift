@@ -53,25 +53,25 @@ class TechnicalQuizVC: UIViewController {
     
     
     @IBAction func ChoiceA(_ sender: Any) {
-        selectedAnswer[count-1].append("a")
+        selectedAnswer[count-1].append("1")
         checkCompleted()
         choice1.backgroundColor = UIColor.link
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
     @IBAction func ChoiceB(_ sender: Any) {
-        selectedAnswer[count-1].append("b")
+        selectedAnswer[count-1].append("2")
         checkCompleted()
         choice2.backgroundColor = UIColor.link
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
     @IBAction func ChoiceC(_ sender: Any) {
-        selectedAnswer[count-1].append("c")
+        selectedAnswer[count-1].append("3")
         checkCompleted()
         choice3.backgroundColor = UIColor.link
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
     @IBAction func Choice4(_ sender: Any) {
-        selectedAnswer[count-1].append("d")
+        selectedAnswer[count-1].append("4")
         checkCompleted()
         choice4.backgroundColor = UIColor.link
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)

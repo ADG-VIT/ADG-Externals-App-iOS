@@ -90,7 +90,7 @@ extension signUpViewController{
                     print(json)
                     self.parseJSON(data)
                     DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "signUpToRecruitmentVC", sender: self)
+                       self.performSegue(withIdentifier: "signUpToRecruitmentVC", sender: self)
                     }
                     
                 }catch let error{
@@ -111,8 +111,9 @@ extension signUpViewController{
             signUpViewController.authKey.append(key)
             print(key)
             print(message)
-            print("TRIAL \(signUpViewController.authKey)")
-            
+            DispatchQueue.main.async {
+               // self.performSegue(withIdentifier: "signUpToRecruitmentVC", sender: self)
+            }
          
             
         }catch{
