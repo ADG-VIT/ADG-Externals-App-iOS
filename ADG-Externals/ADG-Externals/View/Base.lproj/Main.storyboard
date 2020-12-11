@@ -1973,10 +1973,10 @@
             </objects>
             <point key="canvasLocation" x="207" y="-2196"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="Nuu-qJ-ZkT">
             <objects>
-                <viewController id="rsH-bB-7xN" sceneMemberID="viewController">
+                <viewController id="rsH-bB-7xN" customClass="ADGInfoViewController" customModule="ADG_Externals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ksa-Lg-99R">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2024,6 +2024,52 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7z-PL-voG">
+                                <rect key="frame" x="327" y="83" width="34" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="xmark.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="29"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissButton:" destination="rsH-bB-7xN" eventType="touchUpInside" id="CHC-Po-fRJ"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linkedin-1" translatesAutoresizingMaskIntoConstraints="NO" id="fll-XU-Fz6">
+                                <rect key="frame" x="107" y="741" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="XG6-oc-nwy" appends="YES" id="fvF-BQ-oFa"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fb" translatesAutoresizingMaskIntoConstraints="NO" id="p1V-Mw-C5m">
+                                <rect key="frame" x="161" y="741" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hZb-sJ-eGL" appends="YES" id="7ss-7i-q6L"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="insta" translatesAutoresizingMaskIntoConstraints="NO" id="Vid-gx-v6v">
+                                <rect key="frame" x="215" y="741" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="rp8-Gp-7yu" appends="YES" id="eVN-wj-5uc"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="yKb-B7-Arn">
+                                <rect key="frame" x="269" y="741" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ZYv-MW-XJM" appends="YES" id="qfo-KG-CtO"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SOCIAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgs-7i-l0k">
+                                <rect key="frame" x="136" y="700" width="141" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xBZ-UG-MGp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2056,8 +2102,29 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                     <navigationItem key="navigationItem" id="sg5-jB-bLa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D0y-98-B0p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="XG6-oc-nwy">
+                    <connections>
+                        <action selector="linkedIn:" destination="rsH-bB-7xN" id="TSh-Iu-jDj"/>
+                        <outlet property="delegate" destination="fll-XU-Fz6" id="5UW-Bm-dAo"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="hZb-sJ-eGL">
+                    <connections>
+                        <action selector="faceBook:" destination="rsH-bB-7xN" id="iVc-4P-wJh"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="rp8-Gp-7yu">
+                    <connections>
+                        <action selector="insta:" destination="rsH-bB-7xN" id="fVg-53-t0N"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ZYv-MW-XJM">
+                    <connections>
+                        <action selector="twitter:" destination="rsH-bB-7xN" id="sFx-gk-J3v"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1117" y="-2198"/>
+            <point key="canvasLocation" x="1115.9420289855072" y="-2198.4375"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hDy-1C-THz">
@@ -2212,31 +2279,46 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                                 <color key="backgroundColor" red="0.88235294117647056" green="0.9137254901960784" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9sz-yg-gfK">
-                                <rect key="frame" x="10" y="143" width="388" height="230"/>
+                                <rect key="frame" x="10" y="143" width="394" height="230"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GOq-dX-332">
-                                    <size key="itemSize" width="366" height="201"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GOq-dX-332">
+                                    <size key="itemSize" width="387" height="222"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cells" id="NFB-tq-Kbf" customClass="HomeCollectionViewCell" customModule="ADG_Externals" customModuleProvider="target">
-                                        <rect key="frame" x="11" y="0.0" width="366" height="201"/>
+                                        <rect key="frame" x="0.0" y="4" width="387" height="222"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="f85-Jt-PgO">
-                                            <rect key="frame" x="0.0" y="0.0" width="366" height="201"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="387" height="222"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="imS-Mn-lPA">
-                                                    <rect key="frame" x="34" y="17" width="298" height="166"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="imS-Mn-lPA">
+                                                    <rect key="frame" x="8" y="8" width="371" height="206"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="206" id="MH9-Bl-KXV"/>
+                                                        <constraint firstAttribute="width" constant="371" id="fA3-aA-OgA"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="imS-Mn-lPA" secondAttribute="bottom" constant="8" id="2ss-r1-mGd"/>
+                                                <constraint firstItem="imS-Mn-lPA" firstAttribute="top" secondItem="f85-Jt-PgO" secondAttribute="top" constant="8" id="5n2-TP-XE4"/>
+                                                <constraint firstAttribute="bottom" secondItem="imS-Mn-lPA" secondAttribute="bottom" constant="8" id="9J0-fl-N8T"/>
+                                                <constraint firstItem="imS-Mn-lPA" firstAttribute="leading" secondItem="f85-Jt-PgO" secondAttribute="leading" constant="8" id="AhT-o0-ChB"/>
+                                                <constraint firstAttribute="trailing" secondItem="imS-Mn-lPA" secondAttribute="trailing" constant="8" id="Isb-gL-Jbl"/>
+                                                <constraint firstItem="imS-Mn-lPA" firstAttribute="leading" secondItem="f85-Jt-PgO" secondAttribute="leading" constant="8" id="Oka-nN-3qK"/>
+                                                <constraint firstItem="imS-Mn-lPA" firstAttribute="top" secondItem="f85-Jt-PgO" secondAttribute="top" constant="8" id="T8U-Y0-9rR"/>
+                                                <constraint firstAttribute="trailing" secondItem="imS-Mn-lPA" secondAttribute="trailing" constant="8" id="WLX-vv-2Pe"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <size key="customSize" width="366" height="201"/>
+                                        <size key="customSize" width="387" height="222"/>
+                                        <connections>
+                                            <outlet property="imageViews" destination="imS-Mn-lPA" id="DnT-gy-0Db"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -2265,7 +2347,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1117" y="-1438"/>
+            <point key="canvasLocation" x="1114.4927536231885" y="-1438.3928571428571"/>
         </scene>
         <!--TechnialVC-->
         <scene sceneID="1KO-fK-7u8">
@@ -3421,21 +3503,26 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="doc.text.fill" catalog="system" width="115" height="128"/>
+        <image name="fb" width="400" height="400"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="github" width="512" height="512"/>
         <image name="homeBtn" width="170" height="520"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="imageedit_1_4550241672" width="175" height="116.5"/>
+        <image name="insta" width="400" height="400"/>
         <image name="keyboard" catalog="system" width="128" height="79"/>
         <image name="krishna" width="960" height="960"/>
         <image name="laptopcomputer" catalog="system" width="128" height="73"/>
         <image name="linkedin" width="512" height="512"/>
+        <image name="linkedin-1" width="400" height="400"/>
         <image name="macpro.gen1" catalog="system" width="125" height="128"/>
         <image name="management" width="324" height="276"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="prabal" width="330" height="330"/>
         <image name="star" catalog="system" width="128" height="116"/>
+        <image name="twitter" width="400" height="400"/>
+        <image name="xmark.circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -3447,9 +3534,6 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

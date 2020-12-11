@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5511F840258427D50008CA0A /* ADGInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5511F83F258427D50008CA0A /* ADGInfoViewController.swift */; };
 		551B4352257BD7AC00E0BC52 /* TechnicalQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551B4351257BD7AC00E0BC52 /* TechnicalQuizVC.swift */; };
 		551B4359257BD80600E0BC52 /* DesignQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551B4358257BD80600E0BC52 /* DesignQuizVC.swift */; };
 		552C365D25760FD3004CE028 /* QandAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552C365C25760FD3004CE028 /* QandAViewController.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5511F83F258427D50008CA0A /* ADGInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ADGInfoViewController.swift; path = "ADG-Externals/Controllers/HomePage/ADGInfoViewController.swift"; sourceTree = SOURCE_ROOT; };
 		551B4351257BD7AC00E0BC52 /* TechnicalQuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TechnicalQuizVC.swift; path = "ADG-Externals/Controllers/Test Controllers/TechnicalQuizVC.swift"; sourceTree = SOURCE_ROOT; };
 		551B4358257BD80600E0BC52 /* DesignQuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignQuizVC.swift; sourceTree = "<group>"; };
 		552C365C25760FD3004CE028 /* QandAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QandAViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,15 @@
 			path = "CollectionView Cells";
 			sourceTree = "<group>";
 		};
+		5511F842258427F00008CA0A /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				910B3DB7257133E900BD0F29 /* ViewController.swift */,
+				5511F83F258427D50008CA0A /* ADGInfoViewController.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
 		551B4354257BD7BD00E0BC52 /* Test Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +157,7 @@
 		552C36942576578E004CE028 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5511F842258427F00008CA0A /* HomePage */,
 				555D4C2A258400FC009E6E3E /* Instruction */,
 				55062B6A2583D2480062B7FC /* CollectionView Cells */,
 				551B4354257BD7BD00E0BC52 /* Test Controllers */,
@@ -277,7 +289,6 @@
 			children = (
 				553B59B0257540EE004A9C64 /* IntroViewController.swift */,
 				55C457C125791DB000D7CB88 /* RecruitmentViewController.swift */,
-				910B3DB7257133E900BD0F29 /* ViewController.swift */,
 			);
 			path = Ambiguous;
 			sourceTree = "<group>";
@@ -379,6 +390,7 @@
 				552C365D25760FD3004CE028 /* QandAViewController.swift in Sources */,
 				55A9F531258218AD00A91CDA /* TestEndViewController.swift in Sources */,
 				552C369125765777004CE028 /* GeneralTopicTableViewCell.swift in Sources */,
+				5511F840258427D50008CA0A /* ADGInfoViewController.swift in Sources */,
 				552C368825764D23004CE028 /* TechnialVC.swift in Sources */,
 				914C7979257E3A8E003AD8F0 /* Auth-Key.swift in Sources */,
 				55C53E552576C9F0009CABFD /* EditProfileViewController.swift in Sources */,

@@ -8,9 +8,8 @@
 import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
-    @IBOutlet var imageView:UIImage!
-    
+    @IBOutlet weak var imageViews: UIImageView!
     override func awakeFromNib() {
-       // imageView.layer.cornerRadius = 10
+       imageViews.layer.cornerRadius = 10
     }
 }
