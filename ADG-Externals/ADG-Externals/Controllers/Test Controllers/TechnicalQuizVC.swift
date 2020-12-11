@@ -120,7 +120,7 @@ extension TechnicalQuizVC{
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/technical/get-quiz-questions/1")!,timeoutInterval: Double.infinity)
         
-        request.addValue(signUpViewController.authKey[0], forHTTPHeaderField: "auth-token")
+        request.addValue(LogInViewController.authkey[0], forHTTPHeaderField: "auth-token")
         
         request.httpMethod = "GET"
         
@@ -214,7 +214,7 @@ extension TechnicalQuizVC{
         
         if let url = URL(string: "https://adgrecruitments.herokuapp.com/user/technical/submit") {
             var request = URLRequest(url: url)
-            request.addValue(signUpViewController.authKey[0], forHTTPHeaderField: "auth-token")
+            request.addValue(LogInViewController.authkey[0], forHTTPHeaderField: "auth-token")
            request.httpMethod = "POST"
 
             let parameters = "[{ \"qid\":\(qid[0]),\"response\":\(selectedAnswer[0])}, {\"qid\":\(qid[1]),\"response\":\(selectedAnswer[1] )},{\"qid\":\(qid[2]),\"response\":\(selectedAnswer[2] )},{\"qid\":\(qid[3]),\"response\":\(selectedAnswer[3] )},{\"qid\":\(qid[4]),\"response\":\(selectedAnswer[4] )},{\"qid\":\(qid[5]),\"response\":\(selectedAnswer[5] )},{\"qid\":\(qid[6]),\"response\":\(selectedAnswer[6] )}]"

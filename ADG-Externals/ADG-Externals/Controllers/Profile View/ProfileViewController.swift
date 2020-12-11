@@ -103,7 +103,7 @@ extension ProfileViewController{
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/user/getuser")!,timeoutInterval: Double.infinity)
        
-            request.addValue(signUpViewController.authKey[0], forHTTPHeaderField: "auth-token")
+        request.addValue(LogInViewController.authkey[0], forHTTPHeaderField: "auth-token")
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -165,7 +165,7 @@ extension ProfileViewController{
     }
     
     func checkSignup() {
-        if signUpViewController.authKey.count != 0 {
+        if LogInViewController.authkey.count != 0 {
             get()
         }else{
             print("SignUpRemaining")

@@ -9,9 +9,7 @@ import UIKit
 
 class RecruitmentViewController: UIViewController {
 
-    
-    var signUpInst = signUpViewController()
-    var yos:String = ""
+    var yos:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +23,14 @@ class RecruitmentViewController: UIViewController {
     }
     @IBAction func technicalCardView(_ sender: Any) {
         
-        if yos == "1" {
+        if yos == 1 {
             self.performSegue(withIdentifier: "firstYearTech", sender: nil)
-        }else if yos == "2"{
+        }else if yos == 2{
             self.performSegue(withIdentifier: "secondYearTech", sender: nil)
-        }else{
-            
+        }else if yos == 0{
+            print("0000")
         }
+        print("hello")
         
     }
     @IBAction func managementCardView(_ sender: Any) {
@@ -58,7 +57,7 @@ extension RecruitmentViewController{
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/user/getuser")!,timeoutInterval: Double.infinity)
        
-        request.addValue(signUpViewController.authKey[0], forHTTPHeaderField: "auth-token")
+        request.addValue(LogInViewController.authkey[0], forHTTPHeaderField: "auth-token")
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -80,7 +79,8 @@ extension RecruitmentViewController{
             do{
               if error == nil{
                 let result = try JSONDecoder().decode(model.self, from: data)
-                self.yos = String(result.userDetails.yearofstudy)
+                LogInViewController.authkey.append(result.userDetails.id)
+                self.yos = result.userDetails.yearofstudy
                 
                 print(result.userDetails.name)
        
