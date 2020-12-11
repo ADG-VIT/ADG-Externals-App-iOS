@@ -13,7 +13,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     var events:[String] = ["Recruitments Quiz","Hackgrid","iOS Fusion"]
     var venue:[String] = ["Venue: Online","Venue: Online","Venue: Online"]
     
-    var images = [""]
+    var arrImgData = [UIImage]()
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var bottomView: UIView!
@@ -46,6 +46,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         askQuestionBtn.layer.cornerRadius = 5
         askQuestionBtn.layer.borderWidth = 2
         askQuestionBtn.layer.borderColor = #colorLiteral(red: 0, green: 0.2925035655, blue: 0.7826288342, alpha: 1)
+        
+        arrImgData = [#imageLiteral(resourceName: "Domain"),#imageLiteral(resourceName: "project"),#imageLiteral(resourceName: "events"),#imageLiteral(resourceName: "team")]
         
         //MARK:- Onboarding Stuffs
         if core.shared.isNewUser() {
@@ -86,15 +88,37 @@ extension ViewController {
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return arrImgData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cells = collectionView.dequeueReusableCell(withReuseIdentifier: "cells", for: indexPath) as! HomeCollectionViewCell
+        cells.imageViews.image = arrImgData[indexPath.row]
+        
+        cells.layer.masksToBounds = false;
+        cells.layer.shadowOffset = CGSize(width: 0,height: 1)
+        cells.layer.shadowRadius = 5.0;
+        cells.layer.shadowColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        cells.layer.shadowOpacity = 0.75;
+        
         return cells
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if indexPath.item == 0 {
+            self.performSegue(withIdentifier: "domain", sender: nil)
+        }
+        else  if indexPath.item == 1 {
+            self.performSegue(withIdentifier: "project", sender: nil)
+        }
+        else  if indexPath.item == 2 {
+            self.performSegue(withIdentifier: "events", sender: nil)
+        }
+        else  if indexPath.item == 3 {
+            self.performSegue(withIdentifier: "team", sender: nil)
+        }
+      }
 }
 
 //MARK:-  Onboarding Code
