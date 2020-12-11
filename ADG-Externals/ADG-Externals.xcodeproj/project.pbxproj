@@ -24,12 +24,15 @@
 		553F9528258387380018CC09 /* coreAuthKey.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 553F9526258387380018CC09 /* coreAuthKey.xcdatamodeld */; };
 		553F952D258387980018CC09 /* coreDataAuthKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F952C258387980018CC09 /* coreDataAuthKey.swift */; };
 		5551F6F42577BCC6003C28AE /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551F6F32577BCC6003C28AE /* AboutUsViewController.swift */; };
+		555D4C182583D558009E6E3E /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D4C172583D558009E6E3E /* HomeCollectionViewCell.swift */; };
+		555D4C22258400D3009E6E3E /* InstructionTechVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D4C21258400D3009E6E3E /* InstructionTechVC.swift */; };
+		555D4C25258400E3009E6E3E /* InstructionDesignVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D4C24258400E2009E6E3E /* InstructionDesignVC.swift */; };
+		555D4C28258400F0009E6E3E /* InstructionManagementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D4C27258400F0009E6E3E /* InstructionManagementVC.swift */; };
 		5578C1DB2582991D001649E3 /* loginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578C1DA2582991D001649E3 /* loginModel.swift */; };
 		558EEF6C2576845A0052DE9E /* TechnicalVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EEF6B2576845A0052DE9E /* TechnicalVCTableViewCell.swift */; };
 		558EEF6F257686200052DE9E /* DesignVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EEF6E257686200052DE9E /* DesignVCTableViewCell.swift */; };
 		558EEF72257686290052DE9E /* editorialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EEF71257686290052DE9E /* editorialTableViewCell.swift */; };
 		55A9F5232581614B00A91CDA /* SecondYearTechQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A9F5222581614B00A91CDA /* SecondYearTechQuizVC.swift */; };
-		55A9F5262581615F00A91CDA /* SecondYearDesignQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A9F5252581615F00A91CDA /* SecondYearDesignQuizVC.swift */; };
 		55A9F529258161D700A91CDA /* TechQuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A9F528258161D700A91CDA /* TechQuizModel.swift */; };
 		55A9F52D2582011C00A91CDA /* ManagementQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A9F52C2582011C00A91CDA /* ManagementQuizVC.swift */; };
 		55A9F531258218AD00A91CDA /* TestEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A9F530258218AD00A91CDA /* TestEndViewController.swift */; };
@@ -67,12 +70,15 @@
 		553F9527258387380018CC09 /* coreAuthKey.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = coreAuthKey.xcdatamodel; sourceTree = "<group>"; };
 		553F952C258387980018CC09 /* coreDataAuthKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreDataAuthKey.swift; sourceTree = "<group>"; };
 		5551F6F32577BCC6003C28AE /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AboutUsViewController.swift; path = "ADG-Externals/View/AboutUsViewController.swift"; sourceTree = SOURCE_ROOT; };
+		555D4C172583D558009E6E3E /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeCollectionViewCell.swift; path = "ADG-Externals/View/HomeCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		555D4C21258400D3009E6E3E /* InstructionTechVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InstructionTechVC.swift; path = "ADG-Externals/Controllers/Instruction/InstructionTechVC.swift"; sourceTree = SOURCE_ROOT; };
+		555D4C24258400E2009E6E3E /* InstructionDesignVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionDesignVC.swift; sourceTree = "<group>"; };
+		555D4C27258400F0009E6E3E /* InstructionManagementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionManagementVC.swift; sourceTree = "<group>"; };
 		5578C1DA2582991D001649E3 /* loginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginModel.swift; sourceTree = "<group>"; };
 		558EEF6B2576845A0052DE9E /* TechnicalVCTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnicalVCTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		558EEF6E257686200052DE9E /* DesignVCTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DesignVCTableViewCell.swift; path = "ADG-Externals/View/DesignVCTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		558EEF71257686290052DE9E /* editorialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editorialTableViewCell.swift; sourceTree = "<group>"; };
 		55A9F5222581614B00A91CDA /* SecondYearTechQuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SecondYearTechQuizVC.swift; path = "ADG-Externals/View/SecondYearTechQuizVC.swift"; sourceTree = SOURCE_ROOT; };
-		55A9F5252581615F00A91CDA /* SecondYearDesignQuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondYearDesignQuizVC.swift; sourceTree = "<group>"; };
 		55A9F528258161D700A91CDA /* TechQuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechQuizModel.swift; sourceTree = "<group>"; };
 		55A9F52C2582011C00A91CDA /* ManagementQuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagementQuizVC.swift; path = "ADG-Externals/View/ManagementQuizVC.swift"; sourceTree = SOURCE_ROOT; };
 		55A9F530258218AD00A91CDA /* TestEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestEndViewController.swift; path = "ADG-Externals/View/TestEndViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -105,13 +111,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55062B6A2583D2480062B7FC /* CollectionView Cells */ = {
+			isa = PBXGroup;
+			children = (
+				555D4C172583D558009E6E3E /* HomeCollectionViewCell.swift */,
+			);
+			path = "CollectionView Cells";
+			sourceTree = "<group>";
+		};
 		551B4354257BD7BD00E0BC52 /* Test Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				55A9F530258218AD00A91CDA /* TestEndViewController.swift */,
 				55A9F52C2582011C00A91CDA /* ManagementQuizVC.swift */,
 				55A9F5222581614B00A91CDA /* SecondYearTechQuizVC.swift */,
-				55A9F5252581615F00A91CDA /* SecondYearDesignQuizVC.swift */,
 				551B4358257BD80600E0BC52 /* DesignQuizVC.swift */,
 				551B4351257BD7AC00E0BC52 /* TechnicalQuizVC.swift */,
 			);
@@ -133,6 +146,8 @@
 		552C36942576578E004CE028 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				555D4C2A258400FC009E6E3E /* Instruction */,
+				55062B6A2583D2480062B7FC /* CollectionView Cells */,
 				551B4354257BD7BD00E0BC52 /* Test Controllers */,
 				914C79812580AE61003AD8F0 /* Ambiguous */,
 				55C457BC2579184600D7CB88 /* OnBoarding */,
@@ -193,6 +208,16 @@
 				553F952C258387980018CC09 /* coreDataAuthKey.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		555D4C2A258400FC009E6E3E /* Instruction */ = {
+			isa = PBXGroup;
+			children = (
+				555D4C21258400D3009E6E3E /* InstructionTechVC.swift */,
+				555D4C24258400E2009E6E3E /* InstructionDesignVC.swift */,
+				555D4C27258400F0009E6E3E /* InstructionManagementVC.swift */,
+			);
+			path = Instruction;
 			sourceTree = "<group>";
 		};
 		55C457BC2579184600D7CB88 /* OnBoarding */ = {
@@ -330,10 +355,12 @@
 				5551F6F42577BCC6003C28AE /* AboutUsViewController.swift in Sources */,
 				551B4359257BD80600E0BC52 /* DesignQuizVC.swift in Sources */,
 				558EEF6C2576845A0052DE9E /* TechnicalVCTableViewCell.swift in Sources */,
+				555D4C182583D558009E6E3E /* HomeCollectionViewCell.swift in Sources */,
 				552C368B25764D2F004CE028 /* DesignVC.swift in Sources */,
 				553B59B4257540FD004A9C64 /* signUpViewController.swift in Sources */,
 				5578C1DB2582991D001649E3 /* loginModel.swift in Sources */,
 				55C457BA2579183E00D7CB88 /* OnboardingViewController.swift in Sources */,
+				555D4C28258400F0009E6E3E /* InstructionManagementVC.swift in Sources */,
 				552C368E25764D43004CE028 /* EditorialVC.swift in Sources */,
 				55C457BF25791BE600D7CB88 /* AuthenticationViewController.swift in Sources */,
 				55A9F5232581614B00A91CDA /* SecondYearTechQuizVC.swift in Sources */,
@@ -343,13 +370,13 @@
 				558EEF72257686290052DE9E /* editorialTableViewCell.swift in Sources */,
 				551B4352257BD7AC00E0BC52 /* TechnicalQuizVC.swift in Sources */,
 				91C12465257A4467008117F6 /* HomeTableViewCell.swift in Sources */,
+				555D4C22258400D3009E6E3E /* InstructionTechVC.swift in Sources */,
 				910B3DB4257133E900BD0F29 /* AppDelegate.swift in Sources */,
 				910C7E232580CC73003FF973 /* UserProfile.swift in Sources */,
 				553B59BA25756973004A9C64 /* removedVC.swift in Sources */,
 				910B3DB6257133E900BD0F29 /* SceneDelegate.swift in Sources */,
 				553F9528258387380018CC09 /* coreAuthKey.xcdatamodeld in Sources */,
 				552C365D25760FD3004CE028 /* QandAViewController.swift in Sources */,
-				55A9F5262581615F00A91CDA /* SecondYearDesignQuizVC.swift in Sources */,
 				55A9F531258218AD00A91CDA /* TestEndViewController.swift in Sources */,
 				552C369125765777004CE028 /* GeneralTopicTableViewCell.swift in Sources */,
 				552C368825764D23004CE028 /* TechnialVC.swift in Sources */,
@@ -358,6 +385,7 @@
 				558EEF6F257686200052DE9E /* DesignVCTableViewCell.swift in Sources */,
 				553B59BD25756B8F004A9C64 /* ProfileViewController.swift in Sources */,
 				914C797D257F5BA9003AD8F0 /* managementQues.swift in Sources */,
+				555D4C25258400E3009E6E3E /* InstructionDesignVC.swift in Sources */,
 				55C457C225791DB000D7CB88 /* RecruitmentViewController.swift in Sources */,
 				552C366125761171004CE028 /* chatSectionViewController.swift in Sources */,
 				553F952D258387980018CC09 /* coreDataAuthKey.swift in Sources */,

@@ -13,6 +13,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     var events:[String] = ["Recruitments Quiz","Hackgrid","iOS Fusion"]
     var venue:[String] = ["Venue: Online","Venue: Online","Venue: Online"]
     
+    var images = [""]
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var askQuestionBtn: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -23,6 +26,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         alert.addAction(defaultAction)
         self.present(alert, animated: true, completion: nil)
     }
+   
     
 
     override func viewDidLoad() {
@@ -34,6 +38,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView.layer.cornerRadius = 5
         tableView.layer.borderWidth = 1
         tableView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
         
         bottomView.layer.cornerRadius = 10
         askQuestionBtn.layer.cornerRadius = 5
@@ -75,6 +82,20 @@ extension ViewController {
     }
 }
 
+
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cells = collectionView.dequeueReusableCell(withReuseIdentifier: "cells", for: indexPath) as! HomeCollectionViewCell
+        return cells
+    }
+    
+    
+}
 
 //MARK:-  Onboarding Code
 

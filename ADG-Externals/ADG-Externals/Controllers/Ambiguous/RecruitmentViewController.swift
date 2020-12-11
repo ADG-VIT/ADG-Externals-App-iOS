@@ -28,7 +28,7 @@ class RecruitmentViewController: UIViewController {
         
        if techApplied == false {
             if yos == 1 {
-                self.performSegue(withIdentifier: "firstYearTech", sender: nil)
+                self.performSegue(withIdentifier: "instructionTech", sender: nil)
             }else if yos == 2{
                 self.performSegue(withIdentifier: "secondYearTech", sender: nil)
             }
@@ -40,7 +40,7 @@ class RecruitmentViewController: UIViewController {
     }
     @IBAction func managementCardView(_ sender: Any) {
         if managementApplied == false {
-        self.performSegue(withIdentifier: "recruitmentToManagementQuiz", sender: nil)
+        self.performSegue(withIdentifier: "managementInstruction", sender: nil)
         }else{
             extraTrial()
         }
@@ -48,7 +48,7 @@ class RecruitmentViewController: UIViewController {
     
     @IBAction func designCardView(_ sender: Any) {
         if designAppled == false {
-        self.performSegue(withIdentifier: "DesignTest", sender: nil)
+        self.performSegue(withIdentifier: "designInstruction", sender: nil)
         }else{
             extraTrial()
         }

@@ -38,6 +38,7 @@ class TechnicalQuizVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         get()
         
         coreData.fetchTokenFromCore()
@@ -118,9 +119,79 @@ class TechnicalQuizVC: UIViewController {
 
 extension TechnicalQuizVC{
     
-    
+//
+//    func get(){
+//        var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/technical/get-quiz-questions/1")!,timeoutInterval: Double.infinity)
+//
+//        request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
+//
+//        request.httpMethod = "GET"
+//
+//        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+//            guard let data = data else {
+//                print(String(describing: error))
+//
+//                return
+//            }
+//
+//            if let response = response as? HTTPURLResponse{
+//                guard (200 ... 299) ~= response.statusCode else {
+//                    print("Status code :- \(response.statusCode)")
+//
+//                    if response.statusCode == 400 {
+//                        DispatchQueue.main.async {
+//                        self.extraTrial()
+//                        }
+//                    }else if response.statusCode == 401{
+//                        DispatchQueue.main.async {
+//                        self.alertView()
+//                        }
+//                    }else if response.statusCode == 403{
+//                        DispatchQueue.main.async {
+//                            self.serverError()
+//                        }
+//
+//                    }else if response.statusCode == 503{
+//                        DispatchQueue.main.async {
+//                            self.serverError()
+//                        }
+//                }
+//
+//                    return
+//                }
+//            }
+//
+//            do{
+//                if error == nil{
+//                    let result = try JSONDecoder().decode([jsonModel].self, from: data)
+//                    for mainarr in result{
+//                        self.questions.append(mainarr.questionDescription)
+//                        self.qid.append(mainarr.id)
+//                        self.optionA.append(mainarr.options.a)
+//                        self.optionB.append(mainarr.options.b)
+//                        self.optionC.append(mainarr.options.c)
+//                        self.optionD.append(mainarr.options.d)
+//
+//                    }
+//                }
+//
+//                DispatchQueue.main.async {
+//                    self.updateUI()
+//                }
+//
+//            }catch{
+//                print("Error found")
+//            }
+//            print(self.qid)
+//            //print(String(data: data, encoding: .utf8)!) //to print the whole JSON fetch
+//        }
+//        task.resume()
+//
+//    }
+
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/technical/get-quiz-questions/1")!,timeoutInterval: Double.infinity)
+        //Change technical to design as it is design test VC as well as dont mention 1 and 2 year in design
         
         request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
         
@@ -129,7 +200,7 @@ extension TechnicalQuizVC{
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data else {
                 print(String(describing: error))
-                
+            
                 return
             }
             
@@ -155,7 +226,6 @@ extension TechnicalQuizVC{
                             self.serverError()
                         }
                 }
-                    
                     return
                 }
             }
@@ -187,6 +257,7 @@ extension TechnicalQuizVC{
         task.resume()
         
     }
+
 }
 
 extension TechnicalQuizVC{
