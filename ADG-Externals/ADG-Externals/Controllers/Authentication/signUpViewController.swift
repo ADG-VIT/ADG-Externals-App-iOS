@@ -136,7 +136,7 @@ extension signUpViewController{
             print(message)
             
             DispatchQueue.main.async {
-                self.navigationController?.popToRootViewController(animated: true)
+                self.performSegue(withIdentifier: "logInpage", sender: nil)
             }
          
             

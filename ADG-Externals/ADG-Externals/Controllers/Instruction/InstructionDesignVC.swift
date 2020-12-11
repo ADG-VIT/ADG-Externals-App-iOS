@@ -1,13 +1,13 @@
 //
-//  SecondYearDesignQuizVC.swift
+//  InstructionDesignVC.swift
 //  ADG-Externals
 //
-//  Created by Gokul Nair on 10/12/20.
+//  Created by Gokul Nair on 12/12/20.
 //
 
 import UIKit
 
-class SecondYearDesignQuizVC: UIViewController {
+class InstructionDesignVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +15,10 @@ class SecondYearDesignQuizVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func startButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "startDesignTest", sender: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

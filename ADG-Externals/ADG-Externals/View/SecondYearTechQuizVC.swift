@@ -13,6 +13,7 @@ class SecondYearTechQuizVC: UIViewController {
     @IBOutlet weak var textArea2: UITextView!
     
     var answers:[String] = []
+    var quest:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,15 +41,16 @@ extension SecondYearTechQuizVC{
     
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/technical/get-quiz-questions/2")!,timeoutInterval: Double.infinity)
+        //Change technical to design as it is design test VC as well as dont mention 1 and 2 year in design
         
         request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
         
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard data != nil else {
+            guard let data = data else {
                 print(String(describing: error))
-                
+            
                 return
             }
             
@@ -58,11 +60,11 @@ extension SecondYearTechQuizVC{
                     
                     if response.statusCode == 400 {
                         DispatchQueue.main.async {
-                            self.extraTrial()
+                        self.extraTrial()
                         }
                     }else if response.statusCode == 401{
                         DispatchQueue.main.async {
-                            self.alertView()
+                        self.alertView()
                         }
                     }else if response.statusCode == 403{
                         DispatchQueue.main.async {
@@ -73,14 +75,32 @@ extension SecondYearTechQuizVC{
                         DispatchQueue.main.async {
                             self.serverError()
                         }
-                    }
-                    
+                }
                     return
                 }
             }
-        }.resume()
+            
+            do{
+                if error == nil{
+                    let result = try JSONDecoder().decode([jsonModel].self, from: data)
+                    for mainarr in result{
+                        self.quest.append(mainarr.questionDescription)
+                    }
+                }
+                
+                DispatchQueue.main.async {
+                   
+                }
+                
+            }catch{
+                print("Error found")
+            }
+            //print(String(data: data, encoding: .utf8)!)
+        }
+        task.resume()
         
     }
+
 }
 
 extension SecondYearTechQuizVC{
