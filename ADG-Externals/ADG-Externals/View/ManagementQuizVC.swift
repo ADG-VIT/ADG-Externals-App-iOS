@@ -41,6 +41,8 @@ class ManagementQuizVC: UIViewController, UITextViewDelegate {
         
         get()
     
+        coreData.fetchTokenFromCore()
+        
         applyBorder(submitBtn!, 5, 2, UIColor.systemOrange.cgColor)
         applyBorder(answer1!, 5, 1, #colorLiteral(red: 0.2458204627, green: 0.2760057449, blue: 0.3021731377, alpha: 1))
         applyBorder(answer2!, 5, 1, #colorLiteral(red: 0.2458204627, green: 0.2760057449, blue: 0.3021731377, alpha: 1))
@@ -83,7 +85,7 @@ extension ManagementQuizVC{
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/management/get-quiz-questions")!,timeoutInterval: Double.infinity)
         
-        request.addValue(LogInViewController.authkey[0], forHTTPHeaderField: "auth-token")
+        request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
         
         request.httpMethod = "GET"
         
@@ -153,7 +155,7 @@ extension ManagementQuizVC {
         
         if let url = URL(string: "https://adgrecruitments.herokuapp.com/user/management/submit") {
             var request = URLRequest(url: url)
-            request.addValue(LogInViewController.authkey[0], forHTTPHeaderField: "auth-token")
+            request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
            request.httpMethod = "POST"
 
             let parameters = "[{ \"qid\":\(qid[0]),\"response\":\(answer1.text ?? "nil")}, {\"qid\":\(qid[1]),\"response\":\(answer2.text ?? "nil")},{\"qid\":\(qid[2]),\"response\":\(answer3.text ?? "nil" )},{\"qid\":\(qid[3]),\"response\":\(answer4.text ?? "nil" )},{\"qid\":\(qid[4]),\"response\":\(answer5.text ?? "nil" )},{\"qid\":\(qid[5]),\"response\":\(answer6.text ?? "nil" )}]"

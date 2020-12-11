@@ -9,7 +9,9 @@ import UIKit
 
 class LogInViewController: UIViewController {
     
-    static var authkey:[String] = [""]
+    //static var authkey:[String] = [""]
+    
+    static var Token:String = ""
     
     //MARK:- IBConnections
     
@@ -111,8 +113,12 @@ extension LogInViewController{
             let message = decodedData.message
             print(key)
             print(message)
-            LogInViewController.authkey[0].append(key)
-           
+         //   LogInViewController.to.append(key)
+            LogInViewController.Token.append(key)
+            coreData.saveTokenInCore()
+            coreData.fetchTokenFromCore()
+            print(LogInViewController.Token)
+            print("core data!!!!!!!1")
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "logInToRecruitmentVC", sender: self)
             }

@@ -21,6 +21,8 @@
 		553B59B72575410F004A9C64 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B59B62575410F004A9C64 /* LogInViewController.swift */; };
 		553B59BA25756973004A9C64 /* removedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B59B925756973004A9C64 /* removedVC.swift */; };
 		553B59BD25756B8F004A9C64 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B59BC25756B8F004A9C64 /* ProfileViewController.swift */; };
+		553F9528258387380018CC09 /* coreAuthKey.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 553F9526258387380018CC09 /* coreAuthKey.xcdatamodeld */; };
+		553F952D258387980018CC09 /* coreDataAuthKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F952C258387980018CC09 /* coreDataAuthKey.swift */; };
 		5551F6F42577BCC6003C28AE /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551F6F32577BCC6003C28AE /* AboutUsViewController.swift */; };
 		5578C1DB2582991D001649E3 /* loginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578C1DA2582991D001649E3 /* loginModel.swift */; };
 		558EEF6C2576845A0052DE9E /* TechnicalVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EEF6B2576845A0052DE9E /* TechnicalVCTableViewCell.swift */; };
@@ -62,6 +64,8 @@
 		553B59B62575410F004A9C64 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		553B59B925756973004A9C64 /* removedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = removedVC.swift; sourceTree = "<group>"; };
 		553B59BC25756B8F004A9C64 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		553F9527258387380018CC09 /* coreAuthKey.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = coreAuthKey.xcdatamodel; sourceTree = "<group>"; };
+		553F952C258387980018CC09 /* coreDataAuthKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreDataAuthKey.swift; sourceTree = "<group>"; };
 		5551F6F32577BCC6003C28AE /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AboutUsViewController.swift; path = "ADG-Externals/View/AboutUsViewController.swift"; sourceTree = SOURCE_ROOT; };
 		5578C1DA2582991D001649E3 /* loginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginModel.swift; sourceTree = "<group>"; };
 		558EEF6B2576845A0052DE9E /* TechnicalVCTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnicalVCTableViewCell.swift; sourceTree = SOURCE_ROOT; };
@@ -183,6 +187,14 @@
 			path = "QandA Section";
 			sourceTree = "<group>";
 		};
+		553F952B258387770018CC09 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				553F952C258387980018CC09 /* coreDataAuthKey.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		55C457BC2579184600D7CB88 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +222,7 @@
 		910B3DB2257133E900BD0F29 /* ADG-Externals */ = {
 			isa = PBXGroup;
 			children = (
+				553F952B258387770018CC09 /* CoreData */,
 				914C796C257CB6D9003AD8F0 /* Model */,
 				910B3DB3257133E900BD0F29 /* AppDelegate.swift */,
 				910B3DB5257133E900BD0F29 /* SceneDelegate.swift */,
@@ -217,6 +230,7 @@
 				552C3695257657A4004CE028 /* View */,
 				910B3DBC257133F100BD0F29 /* Assets.xcassets */,
 				910B3DC1257133F100BD0F29 /* Info.plist */,
+				553F9526258387380018CC09 /* coreAuthKey.xcdatamodeld */,
 			);
 			path = "ADG-Externals";
 			sourceTree = "<group>";
@@ -333,6 +347,7 @@
 				910C7E232580CC73003FF973 /* UserProfile.swift in Sources */,
 				553B59BA25756973004A9C64 /* removedVC.swift in Sources */,
 				910B3DB6257133E900BD0F29 /* SceneDelegate.swift in Sources */,
+				553F9528258387380018CC09 /* coreAuthKey.xcdatamodeld in Sources */,
 				552C365D25760FD3004CE028 /* QandAViewController.swift in Sources */,
 				55A9F5262581615F00A91CDA /* SecondYearDesignQuizVC.swift in Sources */,
 				55A9F531258218AD00A91CDA /* TestEndViewController.swift in Sources */,
@@ -345,6 +360,7 @@
 				914C797D257F5BA9003AD8F0 /* managementQues.swift in Sources */,
 				55C457C225791DB000D7CB88 /* RecruitmentViewController.swift in Sources */,
 				552C366125761171004CE028 /* chatSectionViewController.swift in Sources */,
+				553F952D258387980018CC09 /* coreDataAuthKey.swift in Sources */,
 				55A9F529258161D700A91CDA /* TechQuizModel.swift in Sources */,
 				55A9F52D2582011C00A91CDA /* ManagementQuizVC.swift in Sources */,
 				553B59B1257540EE004A9C64 /* IntroViewController.swift in Sources */,
@@ -551,6 +567,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		553F9526258387380018CC09 /* coreAuthKey.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				553F9527258387380018CC09 /* coreAuthKey.xcdatamodel */,
+			);
+			currentVersion = 553F9527258387380018CC09 /* coreAuthKey.xcdatamodel */;
+			name = coreAuthKey.xcdatamodeld;
+			path = View/coreAuthKey.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 910B3DA8257133E900BD0F29 /* Project object */;
 }

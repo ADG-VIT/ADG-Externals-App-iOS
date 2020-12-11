@@ -355,6 +355,18 @@
                                 <rect key="frame" x="342" y="70" width="52" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZC-tP-U8v">
+                                <rect key="frame" x="59" y="739" width="295" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.22352941179999999" green="0.35294117650000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="LogOut">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutButton:" destination="RFy-gP-DSB" eventType="touchUpInside" id="Ej8-Gl-Ipe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cIQ-i6-gy2"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -362,6 +374,7 @@
                     <navigationItem key="navigationItem" id="yWy-fO-gBv"/>
                     <connections>
                         <outlet property="editBtn" destination="Xey-jg-hKN" id="Aeb-oU-4t3"/>
+                        <outlet property="logOutBtn" destination="pZC-tP-U8v" id="mGG-Q7-ST4"/>
                         <outlet property="nameLabel" destination="NV2-q5-hcl" id="N6A-Ia-u1x"/>
                         <outlet property="profileImageView" destination="Atb-kD-1EX" id="r1l-CM-1NX"/>
                         <outlet property="userEmailLabel" destination="egi-Nx-iNp" id="o8r-78-H8T"/>
@@ -1135,6 +1148,7 @@
                         <outlet property="signUpLabel" destination="kn9-XB-umV" id="vsG-Pk-U33"/>
                         <segue destination="Xpg-aj-AXd" kind="show" identifier="introToLoginSegue" id="xUC-EQ-hLZ"/>
                         <segue destination="KbQ-wJ-cdR" kind="show" identifier="introToSignUpSegue" id="cjd-Bg-bWL"/>
+                        <segue destination="ODO-wU-aVi" kind="show" identifier="currentUser" id="mPj-LE-hgm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D40-HP-akO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2922,6 +2936,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="rzM-xM-hG4"/>
+        <segue reference="mPj-LE-hgm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1Image" width="628" height="278"/>

@@ -19,6 +19,7 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var userEmailLabel: UILabel!
+    @IBOutlet weak var logOutBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,8 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
         
         profileImageView.layer.cornerRadius = profileImageView.frame.size.height/2
          profileImageView.clipsToBounds = true
+        
+        logOutBtn.layer.cornerRadius = 10
         
         checkSignup()
         editBtn.isHidden = true
@@ -49,6 +52,9 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
         self.performSegue(withIdentifier: "aboutUS", sender: nil)
     }
     
+    @IBAction func logOutButton(_ sender: Any) {
+        
+    }
     
     //Necessary because if user gets into profile first then performs signin thus profile view have no auth token previously. So the page crashes. thus to avoid it added this function such that as soon as the screen apperas it have to perform this functions
     
@@ -103,7 +109,7 @@ extension ProfileViewController{
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/user/getuser")!,timeoutInterval: Double.infinity)
        
-        request.addValue(LogInViewController.authkey[0], forHTTPHeaderField: "auth-token")
+        request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -165,7 +171,7 @@ extension ProfileViewController{
     }
     
     func checkSignup() {
-        if LogInViewController.authkey.count != 0 {
+        if LogInViewController.Token != ""{
             get()
         }else{
             print("SignUpRemaining")

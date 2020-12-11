@@ -17,6 +17,8 @@ class SecondYearTechQuizVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        coreData.fetchTokenFromCore()
+        
         textArea1.layer.borderWidth = 1
         textArea1.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         textArea1.layer.cornerRadius = 5
@@ -40,7 +42,7 @@ extension SecondYearTechQuizVC{
         
         if let url = URL(string: "https://adgrecruitments.herokuapp.com/user/technical2/submit") {
             var request = URLRequest(url: url)
-            request.addValue(LogInViewController.authkey[0], forHTTPHeaderField: "auth-token")
+            request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
            request.httpMethod = "POST"
 
             let parameters = "{\r\n    \"projects\":\"\(textArea1.text ?? "nil")\",\r\n    \"brief\":\"\(textArea2.text ?? "nil")\"\r\n}"
