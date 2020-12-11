@@ -216,9 +216,7 @@ extension ManagementQuizVC {
     }
     func extraTrial() {
     let alert = UIAlertController(title: "Error", message: "Only one attempt possible", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-          self.navigationController?.popToRootViewController(animated: true)
-        }))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     
