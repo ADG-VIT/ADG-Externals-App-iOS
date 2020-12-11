@@ -9,7 +9,7 @@ import UIKit
 
 class LogInViewController: UIViewController {
     
-    var token:String = ""
+    static var token:String = ""
     
     //MARK:- IBConnections
     
@@ -97,7 +97,6 @@ extension LogInViewController{
             
             let key = decodedData.Token
             let message = decodedData.message
-          
             print(key)
             print(message)
             signUpViewController.authKey.append(key)
