@@ -1520,7 +1520,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YPJ-O5-mgP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1848" y="-1258"/>
+            <point key="canvasLocation" x="2406" y="-2158"/>
         </scene>
         <!--Technical QuizVC-->
         <scene sceneID="kO0-yy-Zlo">
@@ -1921,7 +1921,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ja3-tI-aYB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10" y="-1257"/>
+            <point key="canvasLocation" x="207" y="-2196"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Nuu-qJ-ZkT">
@@ -2007,7 +2007,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D0y-98-B0p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="900" y="-1258"/>
+            <point key="canvasLocation" x="1117" y="-2198"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hDy-1C-THz">
@@ -2203,6 +2203,9 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                         <segue destination="UwO-TR-Awf" kind="show" id="Qik-ld-SAK"/>
                         <segue destination="rsH-bB-7xN" kind="show" identifier="about" id="mgb-gH-5gR"/>
                         <segue destination="3ce-R9-JhN" kind="show" identifier="project" id="8GO-0z-hky"/>
+                        <segue destination="Dw9-gy-Bss" kind="show" identifier="domain" id="ifQ-nm-1hz"/>
+                        <segue destination="Bsb-0d-m3z" kind="show" identifier="events" id="FCE-EV-hMk"/>
+                        <segue destination="QVC-Ta-gFj" kind="show" identifier="team" id="Pii-yU-ZGh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -2212,7 +2215,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="900.00000000000011" y="-500.22321428571428"/>
+            <point key="canvasLocation" x="1117" y="-1438"/>
         </scene>
         <!--TechnialVC-->
         <scene sceneID="1KO-fK-7u8">
@@ -2514,7 +2517,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="llllgjhsdh@vitstudent.ac.in" borderStyle="roundedRect" placeholder="Email ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c4P-Vq-pcM">
                                         <rect key="frame" x="0.0" y="204" width="374" height="40"/>
@@ -2559,7 +2562,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                                     <action selector="continueButton:" destination="KbQ-wJ-cdR" eventType="touchUpInside" id="Jfx-Vv-ubW"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2" borderStyle="roundedRect" placeholder="Year of Study" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hYq-dQ-8Vy">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" placeholder="Year of Study" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hYq-dQ-8Vy">
                                 <rect key="frame" x="20" y="674" width="374" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -2626,7 +2629,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0kV-x8-QnU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10.144927536231885" y="-500.22321428571428"/>
+            <point key="canvasLocation" x="207" y="-1438"/>
         </scene>
         <!--Management QuizVC-->
         <scene sceneID="fX1-Q1-LId">
@@ -3287,10 +3290,58 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
             </objects>
             <point key="canvasLocation" x="5105.7971014492759" y="1515.4017857142856"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="XE2-Iv-Mpw">
+            <objects>
+                <viewController id="Bsb-0d-m3z" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nwT-wk-htw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="q7a-9x-ISd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JP0-Gx-qFv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rZC-ci-haO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2406" y="-1438"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vrc-k7-Ehs">
+            <objects>
+                <viewController id="QVC-Ta-gFj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gyq-Oe-RyP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="T8w-hy-YQP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ez6-Fz-b4R"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FeK-iL-90U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1825" y="-696"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sK2-r3-ZS2">
+            <objects>
+                <viewController id="Dw9-gy-Bss" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ncj-xl-TUB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WXz-48-Xqe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hhz-C9-lks"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eQU-um-ASn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1825" y="-2794"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5vd-xG-PxZ"/>
-        <segue reference="Hi2-W6-QiA"/>
+        <segue reference="wvJ-Or-ppZ"/>
+        <segue reference="mPj-LE-hgm"/>
         <segue reference="E9Z-J2-260"/>
     </inferredMetricsTieBreakers>
     <resources>

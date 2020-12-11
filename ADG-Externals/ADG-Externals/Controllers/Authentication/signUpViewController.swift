@@ -10,23 +10,23 @@ import Foundation
 
 class signUpViewController: UIViewController {
     
-//    var token:[String] = []
-    
-   // static var authKey:[String] = []
     //MARK:- ViewLifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         continueButtonLabel.layer.cornerRadius = 10
         continueButtonLabel.layer.borderWidth = 2
         continueButtonLabel.layer.borderColor = UIColor.systemOrange.cgColor
+        
+        yearOfStudyField.isEnabled = false
     }
     func clear() {
-         self.emailField.text?.removeAll()
-         self.passwordField.text?.removeAll()
-     }
-
+        self.emailField.text?.removeAll()
+        self.passwordField.text?.removeAll()
+    }
+    
     //MARK:- IBConnections
     
     @IBOutlet weak var fullNameField: UITextField!
@@ -37,30 +37,54 @@ class signUpViewController: UIViewController {
     @IBOutlet weak var yearOfStudyField: UITextField!
     
     @IBAction func continueButton(_ sender: UIButton) {
-        self.setupPostMethod()
+        
         self.validateFields()
+       // self.setupPostMethod()
     }
     
     @IBOutlet weak var continueButtonLabel: UIButton!
-
+    
     
     func validateFields() {
-        if fullNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            passwordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            regNumberField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            yearOfStudyField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+        if fullNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != "" ||
+            passwordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != "" ||
+            regNumberField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != "" ||
+            emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != ""
         {
+            guard let regNumber = self.regNumberField.text else { return }
+            if regNumber.count == 9 {
+                print(regNumber.prefix(1),regNumber.prefix(2))
+                if regNumber.prefix(1) == "1"{
+                    if regNumber.prefix(2) == "19"{
+                        yearOfStudyField.text = "2"
+                        self.setupPostMethod()
+                    }else{
+                        alertRegNoIncorrect()
+                    }
+                }else if regNumber.prefix(1) == "2"{
+                    if regNumber.prefix(2) == "20" {
+                        yearOfStudyField.text = "1"
+                        githubLinkField.text = "https://github.com/ADG-VIT"
+                        self.setupPostMethod()
+                    }else{
+                        alertRegNoIncorrect()
+                    }
+                }
+            }else{
+                alertRegNoIncorrect()
+            }
+            
+        }else{
             let alert = UIAlertController(title: "Error", message: "Please fill in all the fields.", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alert.addAction(defaultAction)
             self.present(alert, animated: true, completion: nil)
         }
-
+        
     }
-
-
-
+    
+   
+    
 }
 extension signUpViewController{
     func setupPostMethod(){
@@ -82,8 +106,8 @@ extension signUpViewController{
                 "password": password,
                 "yearofstudy": yos
             ]
-
-           request.httpBody = parameters.percentEscaped().data(using: .utf8)
+            
+            request.httpBody = parameters.percentEscaped().data(using: .utf8)
             URLSession.shared.dataTask(with: request){(data, response, error) in
                 guard let data = data else{
                     if error != nil{
@@ -98,11 +122,24 @@ extension signUpViewController{
                 if let response = response as? HTTPURLResponse{
                     guard (200 ... 299) ~= response.statusCode else {
                         print("Status code :- \(response.statusCode)")
-                        //print(response)
-                        let alert = UIAlertController(title: "Error", message: "Authentication error", preferredStyle: .alert)
-                        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                        alert.addAction(defaultAction)
-                        self.present(alert, animated: true, completion: nil)
+                        if response.statusCode == 400 {
+                            DispatchQueue.main.async {
+                                self.duplicateEntry()
+                            }
+                        }else if response.statusCode == 401{
+                            DispatchQueue.main.async {
+                                self.duplicateEntry()
+                            }
+                        }else if response.statusCode == 403{
+                            DispatchQueue.main.async {
+                                self.serverError()
+                            }
+                            
+                        }else if response.statusCode == 503{
+                            DispatchQueue.main.async {
+                                self.serverError()
+                            }
+                        }
                         return
                     }
                 }
@@ -131,21 +168,21 @@ extension signUpViewController{
         do {
             let decodedData = try decoder.decode(AuthKey.self, from: data)
             
-//            let key = decodedData.token
+            //            let key = decodedData.token
             let message = decodedData.message
             print(message)
             
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "logInpage", sender: nil)
             }
-         
+            
             
         }catch{
             print(error.localizedDescription)
         }
     }
     
-
+    
 }
 
 extension Dictionary {
@@ -163,7 +200,7 @@ extension CharacterSet {
     static let urlQueryValueAllowed: CharacterSet = {
         let generalDelimitersToEncode = ":#[]@" // does not include "?" or "/" due to RFC 3986 - Section 3.4
         let subDelimitersToEncode = "!$&'()*+,;="
-
+        
         var allowed = CharacterSet.urlQueryAllowed
         allowed.remove(charactersIn: "\(generalDelimitersToEncode)\(subDelimitersToEncode)")
         return allowed
@@ -173,9 +210,26 @@ extension CharacterSet {
 extension signUpViewController{
     
     func alertView() {
-    let alert = UIAlertController(title: "Registered Sucessfully", message: "Login to appear for test!", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Registered Sucessfully", message: "Login to appear for test!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
+    }
+    func duplicateEntry() {
+        let alert = UIAlertController(title: "Warning!", message: "Duplicate Entries!(Try Again)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler:nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func serverError() {
+        let alert = UIAlertController(title: "Server Error", message: "close the app!(Open again and Login)", preferredStyle: .alert)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func alertRegNoIncorrect(){
+        let alert = UIAlertController(title: "Incorrect", message: "Check your Registration Number", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(defaultAction)
+        self.present(alert, animated: true, completion: nil)
     }
 
 }
