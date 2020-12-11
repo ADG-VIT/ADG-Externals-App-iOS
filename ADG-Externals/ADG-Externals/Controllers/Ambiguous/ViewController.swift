@@ -7,18 +7,15 @@
 
 import UIKit
 
-struct CustomData {
-    var title: String
-    var url: String
-    var backgroundImage: UIImage
-}
-
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-    
-    //MARK:-
+        
+    var dates:[String] = ["25","26","27"]
+    var events:[String] = ["Recruitments Quiz","Hackgrid","iOS Fusion"]
+    var venue:[String] = ["Venue: Online","Venue: Online","Venue: Online"]
     
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var askQuestionBtn: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     
     @IBAction func askQuestionPressed(_ sender: UIButton) {
         let alert = UIAlertController(title: "Coming Soon...", message: "Chat room to share your doubts", preferredStyle: .alert)
@@ -27,39 +24,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.present(alert, animated: true, completion: nil)
     }
     
-    
-    var dates:[String] = ["25","26","27"]
-    var events:[String] = ["Recruitments Quiz","Hackgrid","iOS Fusion"]
-    var venue:[String] = ["Venue: Online","Venue: Online","Venue: Online"]    
-    @IBOutlet weak var tableView: UITableView!
-    
-        fileprivate let data = [
-            CustomData(title: "Basics of ML", url: "https://www.udemy.com", backgroundImage:#imageLiteral(resourceName: "juan-carlos-gomez-rt2_-5PI2UU-unsplash")),
-            CustomData(title: "Basics of Swift", url: "https://www.udemy.com", backgroundImage:#imageLiteral(resourceName: "kathy-symonds-DuoMpJ1P8bc-unsplash") ),
-            CustomData(title: "Basics of Java", url: "https://www.udemy.com", backgroundImage:#imageLiteral(resourceName: "lance-asper-jUDyzB7idz8-unsplash") ),
-            CustomData(title: "Collection Views!", url: "https://www.udemy.com", backgroundImage: #imageLiteral(resourceName: "claudia-lam-BPy_w7rG6bk-unsplash"))
-        ]
-    
-    fileprivate let collectionView:UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.translatesAutoresizingMaskIntoConstraints = false
-        cv.register(CustomCell.self, forCellWithReuseIdentifier: "cell")
-        return cv
-    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(collectionView)
-        collectionView.backgroundColor = .white
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 130).isActive = true
-        collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
-        collectionView.heightAnchor.constraint(equalToConstant: view.frame.width/2).isActive = true
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -85,30 +53,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
    
 }
+//MARK:-TableView methods
 
-extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
-   
-    //MARK:-CollectionView methods
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width/1.5, height: collectionView.frame.width/1.5)
-    }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CustomCell
-        cell.data = self.data[indexPath.item]
-        
-        return cell
-    }
-    
-    func buttonTappedInCollectionViewCell(sender: UIButton) {
-           self.performSegue(withIdentifier: "toStoreFromMyDiscounts", sender: nil)
-       }
-    
-    //MARK:-TableView methods
+extension ViewController {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dates.count
@@ -120,8 +67,6 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
         cell.venueLabel.text = venue[indexPath.row]
         cell.selectionStyle = .none
         cell.layer.cornerRadius = 5
-//        cell.layer.borderColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
-//        cell.layer.borderWidth = 1
         return cell
     }
     
@@ -130,45 +75,6 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
     }
 }
 
-
-class CustomCell: UICollectionViewCell {
-    
-    var data: CustomData? {
-        didSet {
-            guard let data = data else { return }
-            bg.image = data.backgroundImage
-            
-        }
-    }
-    
-    fileprivate let bg: UIImageView = {
-       let iv = UIImageView()
-        iv.translatesAutoresizingMaskIntoConstraints = false
-        iv.contentMode = .scaleAspectFill
-        iv.clipsToBounds = true
-        iv.layer.cornerRadius = 25
-        return iv
-    }()
-    
-    override init(frame: CGRect) {
-        super.init(frame: .zero)
-        
-
-
-        
-        contentView.addSubview(bg)
-
-        bg.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        bg.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
-        bg.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
-        bg.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
-
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
 
 //MARK:-  Onboarding Code
 
