@@ -11,6 +11,7 @@ class QandAViewController: UIViewController {
 
     @IBOutlet weak var askBtn: UIButton!
     
+    @IBOutlet weak var recruitmentBtn: UIButton!
     @IBOutlet weak var allTopicsBtn: UIButton!
     @IBOutlet weak var TechnicalBtn: UIButton!
     @IBOutlet weak var designBtn: UIButton!
@@ -24,6 +25,9 @@ class QandAViewController: UIViewController {
         applyBorder(button: TechnicalBtn, RadiusSize: 10, widthSize: 0.5, color: UIColor.gray.cgColor)
         applyBorder(button: designBtn, RadiusSize: 10, widthSize: 0.5, color: UIColor.gray.cgColor)
         applyBorder(button: editorial, RadiusSize: 10, widthSize: 0.5, color: UIColor.gray.cgColor)
+        applyBorder(button: recruitmentBtn, RadiusSize: 10, widthSize: 0.5, color: UIColor.gray.cgColor)
+        
+        askBtn.isEnabled = false
     }
     
 
@@ -31,6 +35,9 @@ class QandAViewController: UIViewController {
         self.performSegue(withIdentifier: "QandAZone", sender: nil)
     }
     
+    @IBAction func recruitmentButton(_ sender: Any) {
+        
+    }
     @IBAction func generalTopicButton(_ sender: Any) {
         self.performSegue(withIdentifier: "generalTopic", sender: nil)
     }
