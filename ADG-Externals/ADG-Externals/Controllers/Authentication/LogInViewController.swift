@@ -118,7 +118,6 @@ extension LogInViewController{
             coreData.saveTokenInCore()
             coreData.fetchTokenFromCore()
             print(LogInViewController.Token)
-            print("core data!!!!!!!1")
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "logInToRecruitmentVC", sender: self)
             }

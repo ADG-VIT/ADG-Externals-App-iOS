@@ -33,8 +33,11 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
         
         logOutBtn.layer.cornerRadius = 10
         
-        checkSignup()
-        editBtn.isHidden = true
+        coreData.fetchTokenFromCore()
+        print(LogInViewController.Token)
+        DispatchQueue.main.async {
+            self.checkSignup()
+       }
     }
     
     @IBAction func editProfileBtn(_ sender: Any) {
@@ -54,14 +57,22 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
     
     @IBAction func logOutButton(_ sender: Any) {
         
+        if LogInViewController.Token != "" {
+        
+        let alert = UIAlertController(title: "SignOut!", message: "Are you sure, you want to signout", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+            coreData.deleteAllData()
+            self.nameLabel.text = "Name"
+            self.userEmailLabel.text = "EmailID"
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+        }else{
+            let alert = UIAlertController(title: "SignIn/Login please!", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
     }
-    
-    //Necessary because if user gets into profile first then performs signin thus profile view have no auth token previously. So the page crashes. thus to avoid it added this function such that as soon as the screen apperas it have to perform this functions
-    
-    override func viewWillAppear(_ animated: Bool) {
-        checkSignup()
-    }
-    
 }
 
 //MARK:- Mail Setup Methods
@@ -129,20 +140,14 @@ extension ProfileViewController{
             }
             
             do{
-//                if error == nil{
                 let result = try JSONDecoder().decode(model.self, from: data)
                 self.name.append(result.userDetails.name)
                 self.emailID.append(result.userDetails.email)
                 
                 print(result.userDetails.name)
-//                print("HELLO \(decodedData.userProfile)")
-                    
                     DispatchQueue.main.async{
                         self.updateUI()
-                        
                     }
-       
-//                }
         }catch{
             print(error.localizedDescription)
         }
@@ -173,6 +178,7 @@ extension ProfileViewController{
     func checkSignup() {
         if LogInViewController.Token != ""{
             get()
+            
         }else{
             print("SignUpRemaining")
             let alert = UIAlertController(title: "Signup/Login Remaining", message: nil, preferredStyle: .alert)

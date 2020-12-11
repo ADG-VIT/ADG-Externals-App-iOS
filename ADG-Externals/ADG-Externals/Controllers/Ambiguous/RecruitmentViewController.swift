@@ -22,8 +22,7 @@ class RecruitmentViewController: UIViewController {
         managementView.layer.cornerRadius = 20
         designView.layer.cornerRadius = 20
         
-        get()
-        coreData.fetchTokenFromCore()
+        //get()
     }
     @IBAction func technicalCardView(_ sender: Any) {
         
@@ -52,6 +51,15 @@ class RecruitmentViewController: UIViewController {
         self.performSegue(withIdentifier: "DesignTest", sender: nil)
         }else{
             extraTrial()
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if LogInViewController.Token != ""{
+            get()
+            coreData.fetchTokenFromCore()
+        }else if LogInViewController.Token == ""{
+            self.navigationController?.popToRootViewController(animated: true)
         }
     }
     

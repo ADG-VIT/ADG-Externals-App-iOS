@@ -28,17 +28,35 @@ class coreData {
         }
     }
     
-   static func fetchTokenFromCore() {
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Entity")
-    request.returnsObjectsAsFaults = false
-    do{
-        let result = try context.fetch(request)
-        for data in result as! [NSManagedObject]{
-            LogInViewController.Token = data.value(forKey: "token") as! String
+    static func fetchTokenFromCore() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Entity")
+        request.returnsObjectsAsFaults = false
+        do{
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject]{
+                LogInViewController.Token = data.value(forKey: "token") as! String
+            }
+        }catch{
+            print("failed to fetch in CoreData")
         }
-    }catch{
-        print("failed to fetch in CoreData")
     }
-    }
+    
+    static func deleteAllData() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Entity")
+    request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            for usrObj in result as! [NSManagedObject] {
+                context.delete(usrObj)
+            }
+           try context.save() //don't forget
+            LogInViewController.Token = ""
+            print(LogInViewController.Token)
+            }
+        catch let error as NSError {
+            print("delete fail--",error)
+          }
+   }
 }
