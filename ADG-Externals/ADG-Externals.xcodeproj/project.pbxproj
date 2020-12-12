@@ -39,6 +39,7 @@
 		55A9F531258218AD00A91CDA /* TestEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A9F530258218AD00A91CDA /* TestEndViewController.swift */; };
 		55AC45C625849B3E004374F2 /* FAQRecruitmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC45C525849B3E004374F2 /* FAQRecruitmentViewController.swift */; };
 		55AC45C925849D04004374F2 /* RecruitmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC45C825849D04004374F2 /* RecruitmentTableViewCell.swift */; };
+		55AC45CD2584E3C3004374F2 /* TeamsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC45CC2584E3C3004374F2 /* TeamsInfoViewController.swift */; };
 		55C457BA2579183E00D7CB88 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C457B92579183E00D7CB88 /* OnboardingViewController.swift */; };
 		55C457BF25791BE600D7CB88 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C457BE25791BE600D7CB88 /* AuthenticationViewController.swift */; };
 		55C457C225791DB000D7CB88 /* RecruitmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C457C125791DB000D7CB88 /* RecruitmentViewController.swift */; };
@@ -88,6 +89,7 @@
 		55A9F530258218AD00A91CDA /* TestEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestEndViewController.swift; path = "ADG-Externals/View/TestEndViewController.swift"; sourceTree = SOURCE_ROOT; };
 		55AC45C525849B3E004374F2 /* FAQRecruitmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FAQRecruitmentViewController.swift; path = "ADG-Externals/View/FAQRecruitmentViewController.swift"; sourceTree = SOURCE_ROOT; };
 		55AC45C825849D04004374F2 /* RecruitmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecruitmentTableViewCell.swift; path = "ADG-Externals/Controllers/TableView Cells/RecruitmentTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		55AC45CC2584E3C3004374F2 /* TeamsInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TeamsInfoViewController.swift; path = "ADG-Externals/View/TeamsInfoViewController.swift"; sourceTree = SOURCE_ROOT; };
 		55C457B92579183E00D7CB88 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = "ADG-Externals/Controllers/OnBoarding/OnboardingViewController.swift"; sourceTree = SOURCE_ROOT; };
 		55C457BE25791BE600D7CB88 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationViewController.swift; path = "ADG-Externals/View/AuthenticationViewController.swift"; sourceTree = SOURCE_ROOT; };
 		55C457C125791DB000D7CB88 /* RecruitmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecruitmentViewController.swift; path = "ADG-Externals/Controllers/Ambiguous/RecruitmentViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -128,6 +130,7 @@
 		5511F842258427F00008CA0A /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				55AC45CC2584E3C3004374F2 /* TeamsInfoViewController.swift */,
 				910B3DB7257133E900BD0F29 /* ViewController.swift */,
 				5511F83F258427D50008CA0A /* ADGInfoViewController.swift */,
 			);
@@ -406,6 +409,7 @@
 				553B59BD25756B8F004A9C64 /* ProfileViewController.swift in Sources */,
 				914C797D257F5BA9003AD8F0 /* managementQues.swift in Sources */,
 				555D4C25258400E3009E6E3E /* InstructionDesignVC.swift in Sources */,
+				55AC45CD2584E3C3004374F2 /* TeamsInfoViewController.swift in Sources */,
 				55C457C225791DB000D7CB88 /* RecruitmentViewController.swift in Sources */,
 				552C366125761171004CE028 /* chatSectionViewController.swift in Sources */,
 				553F952D258387980018CC09 /* coreDataAuthKey.swift in Sources */,
