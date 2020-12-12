@@ -731,7 +731,7 @@
                                                             <outletCollection property="gestureRecognizers" destination="fyA-Qc-pD6" appends="YES" id="27g-OG-1gJ"/>
                                                         </connections>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="panshul" translatesAutoresizingMaskIntoConstraints="NO" id="i2r-SQ-Sv9">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Panshul-1" translatesAutoresizingMaskIntoConstraints="NO" id="i2r-SQ-Sv9">
                                                         <rect key="frame" x="53" y="27" width="79" height="76"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
@@ -3543,6 +3543,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
         <image name="32680633" width="280" height="280"/>
         <image name="Gmail-logo" width="1400" height="1055"/>
         <image name="Gokul" width="630" height="652"/>
+        <image name="Panshul-1" width="1134" height="1272"/>
         <image name="Ritik" width="1242" height="1232"/>
         <image name="Screenshot 2020-12-04 at 12.46.18 PM" width="564" height="426"/>
         <image name="Screenshot 2020-12-10 at 12.08.27 PM" width="393" height="350"/>
@@ -3572,7 +3573,6 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
         <image name="linkedin-1" width="400" height="400"/>
         <image name="macpro.gen1" catalog="system" width="125" height="128"/>
         <image name="management" width="324" height="276"/>
-        <image name="panshul" width="960" height="1280"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="prabal" width="330" height="330"/>
