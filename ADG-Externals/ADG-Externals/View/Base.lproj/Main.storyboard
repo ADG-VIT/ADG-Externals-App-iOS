@@ -3536,21 +3536,190 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
             </objects>
             <point key="canvasLocation" x="5105.7971014492759" y="1515.4017857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Events Info View Controller-->
         <scene sceneID="XE2-Iv-Mpw">
             <objects>
-                <viewController id="Bsb-0d-m3z" sceneMemberID="viewController">
+                <viewController id="Bsb-0d-m3z" customClass="EventsInfoViewController" customModule="ADG_Externals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nwT-wk-htw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIx-Yc-MLj">
+                                <rect key="frame" x="0.0" y="62" width="55" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="chevron.left" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="31" weight="medium"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="Bsb-0d-m3z" eventType="touchUpInside" id="0Od-FM-CrM"/>
+                                    <action selector="dismissButton:" destination="11N-d4-l7Z" eventType="touchUpInside" id="MHX-Vj-CBk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBt-nO-nRI">
+                                <rect key="frame" x="47" y="52" width="173" height="52"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="38"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cy7-2D-oiP">
+                                <rect key="frame" x="0.0" y="111.5" width="414" height="1305.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4U-6g-tLj">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iOS Fusion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWT-vZ-Uoe">
+                                                <rect key="frame" x="21" y="8" width="150" height="41"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUy-Kx-1gl">
+                                                <rect key="frame" x="21" y="57" width="372" height="159"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">iOS Fusion is a premium workshop conducted by Apple Developers Group, VIT. Participants in our workshop are taught to create apps for iOS devices. It's great opportunity for the beginners as it gives them a chance to experience what it takes to be an iOS Developer. A plethora of topics are taught and an overall insight about development process is provided.</string>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ioFusion" translatesAutoresizingMaskIntoConstraints="NO" id="bau-Z9-zsp">
+                                                <rect key="frame" x="21" y="225" width="372" height="237"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UniDev" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxn-dc-yyX">
+                                                <rect key="frame" x="21" y="496" width="103" height="41"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mks-ED-NTJ">
+                                                <rect key="frame" x="21" y="545" width="372" height="159"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">UNIDEV, a one-day workshop for both novices and experts, that gives a chance to explore tricks and tweaks of using Unity Software along with the powerful SDK Vuforia in order to build something as cool as Pokémon Go!</string>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="unidev" translatesAutoresizingMaskIntoConstraints="NO" id="gHF-h2-Skc">
+                                                <rect key="frame" x="21" y="713" width="372" height="237"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HackGrid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lev-pF-jhB">
+                                                <rect key="frame" x="21" y="988" width="131" height="41"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dW-oH-pLq">
+                                                <rect key="frame" x="21" y="1037" width="372" height="159"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Apple Developers Group conducts a 48 hour long hackathon that encourages young developers to come up with scintillating technical solutions to real world problems.</string>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hackgrid" translatesAutoresizingMaskIntoConstraints="NO" id="Rhu-fM-oEC">
+                                                <rect key="frame" x="21" y="1205" width="372" height="237"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1500" id="a1u-gq-MoC"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="P4U-6g-tLj" firstAttribute="leading" secondItem="cy7-2D-oiP" secondAttribute="leading" id="1SN-7n-vbF"/>
+                                    <constraint firstAttribute="trailing" secondItem="P4U-6g-tLj" secondAttribute="trailing" id="B1g-1j-i93"/>
+                                    <constraint firstAttribute="bottom" secondItem="P4U-6g-tLj" secondAttribute="bottom" id="BBu-vQ-gci"/>
+                                    <constraint firstItem="P4U-6g-tLj" firstAttribute="top" secondItem="cy7-2D-oiP" secondAttribute="top" id="Kh3-ZP-A7E"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="q7a-9x-ISd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kBt-nO-nRI" firstAttribute="leading" secondItem="q7a-9x-ISd" secondAttribute="leading" constant="47" id="DoU-d5-MBP"/>
+                            <constraint firstItem="cy7-2D-oiP" firstAttribute="bottom" secondItem="q7a-9x-ISd" secondAttribute="bottom" id="L3K-ia-EVs"/>
+                            <constraint firstItem="kBt-nO-nRI" firstAttribute="top" secondItem="q7a-9x-ISd" secondAttribute="top" constant="8" id="ReY-uL-gil"/>
+                            <constraint firstItem="cy7-2D-oiP" firstAttribute="top" secondItem="kBt-nO-nRI" secondAttribute="bottom" constant="7.5" id="bMV-zi-5Rp"/>
+                            <constraint firstItem="cy7-2D-oiP" firstAttribute="trailing" secondItem="q7a-9x-ISd" secondAttribute="trailing" id="eu4-NE-9Bn"/>
+                            <constraint firstItem="P4U-6g-tLj" firstAttribute="width" secondItem="nwT-wk-htw" secondAttribute="width" id="n2w-yg-7Nl"/>
+                            <constraint firstItem="cy7-2D-oiP" firstAttribute="leading" secondItem="q7a-9x-ISd" secondAttribute="leading" id="uIx-yg-HEU"/>
+                            <constraint firstItem="q7a-9x-ISd" firstAttribute="trailing" secondItem="kBt-nO-nRI" secondAttribute="trailing" constant="194" id="wAP-nj-2Oc"/>
+                            <constraint firstItem="cy7-2D-oiP" firstAttribute="top" secondItem="kBt-nO-nRI" secondAttribute="bottom" constant="7.5" id="zpr-wB-rdP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JP0-Gx-qFv"/>
+                    <size key="freeformSize" width="414" height="1500"/>
+                    <connections>
+                        <outlet property="image1" destination="bau-Z9-zsp" id="BMz-EJ-HiI"/>
+                        <outlet property="image2" destination="gHF-h2-Skc" id="N1i-hQ-Q8Y"/>
+                        <outlet property="image3" destination="Rhu-fM-oEC" id="uv4-GZ-czB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZC-ci-haO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2406" y="-1367"/>
+            <point key="canvasLocation" x="2547.826086956522" y="-1014.5089285714286"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mYt-EL-TIo">
+            <objects>
+                <viewController id="Vnn-w7-77C" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="glD-wi-mvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJ4-sR-Un2">
+                                <rect key="frame" x="22" y="103" width="55" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="chevron.left" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="31" weight="medium"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="Bsb-0d-m3z" eventType="touchUpInside" id="3Z0-SN-wMi"/>
+                                    <action selector="dismissButton:" destination="11N-d4-l7Z" eventType="touchUpInside" id="gbs-wR-i26"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQe-b8-nlC">
+                                <rect key="frame" x="69" y="98" width="173" height="40.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="38"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iOS Fusion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlF-vi-etH">
+                                <rect key="frame" x="30" y="225" width="150" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSE-H5-8pJ">
+                                <rect key="frame" x="30" y="274" width="372" height="159"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">iOS Fusion is a premium workshop conducted by Apple Developers Group, VIT. Participants in our workshop are taught to create apps for iOS devices. It's great opportunity for the beginners as it gives them a chance to experience what it takes to be an iOS Developer. A plethora of topics are taught and an overall insight about development process is provided.</string>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LAo-Bi-ifS">
+                                <rect key="frame" x="30" y="442" width="372" height="237"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6MQ-qh-3wJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RLK-kr-5LJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3488" y="-823"/>
         </scene>
         <!--Teams Info View Controller-->
         <scene sceneID="vrc-k7-Ehs">
@@ -3561,8 +3730,8 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3Q-df-0zL">
-                                <rect key="frame" x="53" y="39.5" width="173" height="40.5"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="36"/>
+                                <rect key="frame" x="53" y="35" width="173" height="49.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="36"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -3573,11 +3742,12 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="31" weight="medium"/>
                                 </state>
                                 <connections>
+                                    <action selector="backButton:" destination="QVC-Ta-gFj" eventType="touchUpInside" id="vHW-Fw-s6u"/>
                                     <action selector="dismissButton:" destination="11N-d4-l7Z" eventType="touchUpInside" id="caN-H3-KJA"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4K-RW-Nzu">
-                                <rect key="frame" x="0.0" y="87.5" width="414" height="1829.5"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="1825"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmH-hO-meq">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
@@ -3918,10 +4088,12 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
         <image name="fb" width="400" height="400"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="github" width="512" height="512"/>
+        <image name="hackgrid" width="1522" height="970"/>
         <image name="homeBtn" width="170" height="520"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="imageedit_1_4550241672" width="175" height="116.5"/>
         <image name="insta" width="400" height="400"/>
+        <image name="ioFusion" width="1522" height="970"/>
         <image name="keyboard" catalog="system" width="128" height="79"/>
         <image name="krishna" width="960" height="960"/>
         <image name="laptopcomputer" catalog="system" width="128" height="73"/>
@@ -3937,6 +4109,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
         <image name="ritik suryawanshi" width="1398" height="1416"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="twitter" width="400" height="400"/>
+        <image name="unidev" width="1522" height="970"/>
         <image name="wrong" width="400" height="400"/>
         <image name="xmark.circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">

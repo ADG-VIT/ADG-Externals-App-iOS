@@ -41,6 +41,9 @@ class TeamsInfoViewController: UIViewController {
         applyImageUI(image: image12)
         
     }
+    @IBAction func backButton(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     
 }
 
