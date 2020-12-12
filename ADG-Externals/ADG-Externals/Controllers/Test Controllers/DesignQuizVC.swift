@@ -79,36 +79,56 @@ class DesignQuizVC: UIViewController {
     }
     
     @IBAction func choiceA(_ sender: Any) {
+        if choice1.currentTitle == "Choice A"{
+            print("data loading")
+        }else{
         selectedAnswer[count-1].append("1")
         checkCompleted()
         choice1.backgroundColor = UIColor.link
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        }
     }
     @IBAction func choiceB(_ sender: Any) {
+        if choice2.currentTitle == "Choice B"{
+            print("data loading")
+        }else{
         selectedAnswer[count-1].append("2")
         checkCompleted()
         choice2.backgroundColor = UIColor.link
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        }
     }
     @IBAction func ChoiceC(_ sender: Any) {
+        if choice3.currentTitle == "Choice C"{
+            print("data loading")
+        }else{
         selectedAnswer[count-1].append("3")
         checkCompleted()
         choice3.backgroundColor = UIColor.link
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        }
     }
     
     @IBAction func ChoiceD(_ sender: Any) {
+        if choice4.currentTitle == "Choice D"{
+            print("data loading")
+        }else{
         selectedAnswer[count-1].append("4")
         checkCompleted()
         choice4.backgroundColor = UIColor.link
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        }
     }
     
     @IBAction func skipBtn(_ sender: Any) {
+        if skipButton.currentTitle == "Skip"{
+        print("data loading")
+        }else{
         selectedAnswer.append("")
         checkCompleted()
         self.updateUI()
         print(selectedAnswer)
+        }
     }
     
     func applyBorder(button: UIButton, RadiusSize: CGFloat,widthSize: CGFloat, color: CGColor){
