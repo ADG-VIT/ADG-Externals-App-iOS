@@ -16,7 +16,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     var arrImgData = [UIImage]()
     
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var askPageImage: UIImageView!
     @IBOutlet weak var askQuestionBtn: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
@@ -35,19 +35,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.layer.cornerRadius = 5
-        tableView.layer.borderWidth = 1
-        tableView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        bottomView.layer.cornerRadius = 10
-        askQuestionBtn.layer.cornerRadius = 5
-        askQuestionBtn.layer.borderWidth = 2
-        askQuestionBtn.layer.borderColor = #colorLiteral(red: 0, green: 0.2925035655, blue: 0.7826288342, alpha: 1)
+       askPageImage.layer.cornerRadius = 10
         
-        arrImgData = [#imageLiteral(resourceName: "Domain"),#imageLiteral(resourceName: "project"),#imageLiteral(resourceName: "events"),#imageLiteral(resourceName: "team")]
+        arrImgData = [#imageLiteral(resourceName: "domains"),#imageLiteral(resourceName: "projects"),#imageLiteral(resourceName: "events"),#imageLiteral(resourceName: "teams")]
         
         //MARK:- Onboarding Stuffs
         if core.shared.isNewUser() {
@@ -95,11 +89,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         let cells = collectionView.dequeueReusableCell(withReuseIdentifier: "cells", for: indexPath) as! HomeCollectionViewCell
         cells.imageViews.image = arrImgData[indexPath.row]
         
-        cells.layer.masksToBounds = false;
-        cells.layer.shadowOffset = CGSize(width: 0,height: 1)
-        cells.layer.shadowRadius = 5.0;
-        cells.layer.shadowColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-        cells.layer.shadowOpacity = 0.75;
+//        cells.layer.masksToBounds = false;
+//        cells.layer.shadowOffset = CGSize(width: 0,height: 1)
+//        cells.layer.shadowRadius = 5.0;
+//        cells.layer.shadowColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+//        cells.layer.shadowOpacity = 0.75;
         
         return cells
     }

@@ -79,37 +79,58 @@ class TechnicalQuizVC: UIViewController {
     
     
     @IBAction func ChoiceA(_ sender: Any) {
+        if choice1.currentTitle == "Choice A" {
+            print("data loading")
+        }else{
         selectedAnswer[count-1].append("1")
         checkCompleted()
-        choice1.backgroundColor = UIColor.link
+        choice1.backgroundColor = UIColor.green
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        }
     }
     @IBAction func ChoiceB(_ sender: Any) {
+        
+        if choice2.currentTitle == "Choice B"{
+            print("data loading")
+        }else{
         selectedAnswer[count-1].append("2")
         checkCompleted()
-        choice2.backgroundColor = UIColor.link
+        choice2.backgroundColor = UIColor.green
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        }
     }
     @IBAction func ChoiceC(_ sender: Any) {
+        if choice3.currentTitle == "Choice C"{
+            print("data loading")
+        }else{
         selectedAnswer[count-1].append("3")
         checkCompleted()
-        choice3.backgroundColor = UIColor.link
+        choice3.backgroundColor = UIColor.green
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        }
     }
     @IBAction func Choice4(_ sender: Any) {
+        if choice4.currentTitle == "Choice D"{
+            print("data loading")
+        }else{
         selectedAnswer[count-1].append("4")
         checkCompleted()
-        choice4.backgroundColor = UIColor.link
+        choice4.backgroundColor = UIColor.green
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        }
     }
     
     
     @IBAction func skipButton(_ sender: Any) {
         
+        if skipButton.currentTitle == "Skip"{
+            print("data loading")
+        }else{
         selectedAnswer.append("")
         checkCompleted()
         self.updateUI()
         print(selectedAnswer)
+        }
     }
     
     
