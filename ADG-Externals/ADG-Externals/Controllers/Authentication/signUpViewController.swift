@@ -39,7 +39,7 @@ class signUpViewController: UIViewController {
     @IBAction func continueButton(_ sender: UIButton) {
         
         self.validateFields()
-       // self.setupPostMethod()
+        // self.setupPostMethod()
     }
     
     @IBOutlet weak var continueButtonLabel: UIButton!
@@ -57,7 +57,12 @@ class signUpViewController: UIViewController {
                 if regNumber.prefix(1) == "1"{
                     if regNumber.prefix(2) == "19"{
                         yearOfStudyField.text = "2"
-                        self.setupPostMethod()
+                        if githubLinkField.text != "" {
+                            self.setupPostMethod()
+                        }else{
+                            self.gitIDAlert()
+                        }
+                        
                     }else{
                         alertRegNoIncorrect()
                     }
@@ -83,7 +88,7 @@ class signUpViewController: UIViewController {
         
     }
     
-   
+    
     
 }
 extension signUpViewController{
@@ -215,7 +220,7 @@ extension signUpViewController{
         present(alert, animated: true, completion: nil)
     }
     func duplicateEntry() {
-        let alert = UIAlertController(title: "Warning!", message: "Duplicate Entries!(Try Again)", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Duplicate/inappropriate Entries!", message: "Check all the fields.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler:nil))
         present(alert, animated: true, completion: nil)
     }
@@ -231,5 +236,11 @@ extension signUpViewController{
         alert.addAction(defaultAction)
         self.present(alert, animated: true, completion: nil)
     }
-
+    
+    func gitIDAlert(){
+        let alert = UIAlertController(title: "Github Username!", message: "Mandatory for second year students.", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(defaultAction)
+        self.present(alert, animated: true, completion: nil)
+    }
 }
