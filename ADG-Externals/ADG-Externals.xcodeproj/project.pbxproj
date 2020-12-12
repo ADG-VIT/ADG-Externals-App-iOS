@@ -37,6 +37,8 @@
 		55A9F529258161D700A91CDA /* TechQuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A9F528258161D700A91CDA /* TechQuizModel.swift */; };
 		55A9F52D2582011C00A91CDA /* ManagementQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A9F52C2582011C00A91CDA /* ManagementQuizVC.swift */; };
 		55A9F531258218AD00A91CDA /* TestEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A9F530258218AD00A91CDA /* TestEndViewController.swift */; };
+		55AC45C625849B3E004374F2 /* FAQRecruitmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC45C525849B3E004374F2 /* FAQRecruitmentViewController.swift */; };
+		55AC45C925849D04004374F2 /* RecruitmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC45C825849D04004374F2 /* RecruitmentTableViewCell.swift */; };
 		55C457BA2579183E00D7CB88 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C457B92579183E00D7CB88 /* OnboardingViewController.swift */; };
 		55C457BF25791BE600D7CB88 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C457BE25791BE600D7CB88 /* AuthenticationViewController.swift */; };
 		55C457C225791DB000D7CB88 /* RecruitmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C457C125791DB000D7CB88 /* RecruitmentViewController.swift */; };
@@ -84,6 +86,8 @@
 		55A9F528258161D700A91CDA /* TechQuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechQuizModel.swift; sourceTree = "<group>"; };
 		55A9F52C2582011C00A91CDA /* ManagementQuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagementQuizVC.swift; path = "ADG-Externals/View/ManagementQuizVC.swift"; sourceTree = SOURCE_ROOT; };
 		55A9F530258218AD00A91CDA /* TestEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestEndViewController.swift; path = "ADG-Externals/View/TestEndViewController.swift"; sourceTree = SOURCE_ROOT; };
+		55AC45C525849B3E004374F2 /* FAQRecruitmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FAQRecruitmentViewController.swift; path = "ADG-Externals/View/FAQRecruitmentViewController.swift"; sourceTree = SOURCE_ROOT; };
+		55AC45C825849D04004374F2 /* RecruitmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecruitmentTableViewCell.swift; path = "ADG-Externals/Controllers/TableView Cells/RecruitmentTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		55C457B92579183E00D7CB88 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = "ADG-Externals/Controllers/OnBoarding/OnboardingViewController.swift"; sourceTree = SOURCE_ROOT; };
 		55C457BE25791BE600D7CB88 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationViewController.swift; path = "ADG-Externals/View/AuthenticationViewController.swift"; sourceTree = SOURCE_ROOT; };
 		55C457C125791DB000D7CB88 /* RecruitmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecruitmentViewController.swift; path = "ADG-Externals/Controllers/Ambiguous/RecruitmentViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -145,6 +149,7 @@
 		552C369325765780004CE028 /* TableView Cells */ = {
 			isa = PBXGroup;
 			children = (
+				55AC45C825849D04004374F2 /* RecruitmentTableViewCell.swift */,
 				558EEF6E257686200052DE9E /* DesignVCTableViewCell.swift */,
 				558EEF71257686290052DE9E /* editorialTableViewCell.swift */,
 				558EEF6B2576845A0052DE9E /* TechnicalVCTableViewCell.swift */,
@@ -204,6 +209,7 @@
 		552C369825765818004CE028 /* QandA Section */ = {
 			isa = PBXGroup;
 			children = (
+				55AC45C525849B3E004374F2 /* FAQRecruitmentViewController.swift */,
 				552C368D25764D43004CE028 /* EditorialVC.swift */,
 				552C368725764D23004CE028 /* TechnialVC.swift */,
 				552C368A25764D2F004CE028 /* DesignVC.swift */,
@@ -365,6 +371,7 @@
 			files = (
 				5551F6F42577BCC6003C28AE /* AboutUsViewController.swift in Sources */,
 				551B4359257BD80600E0BC52 /* DesignQuizVC.swift in Sources */,
+				55AC45C925849D04004374F2 /* RecruitmentTableViewCell.swift in Sources */,
 				558EEF6C2576845A0052DE9E /* TechnicalVCTableViewCell.swift in Sources */,
 				555D4C182583D558009E6E3E /* HomeCollectionViewCell.swift in Sources */,
 				552C368B25764D2F004CE028 /* DesignVC.swift in Sources */,
@@ -391,6 +398,7 @@
 				55A9F531258218AD00A91CDA /* TestEndViewController.swift in Sources */,
 				552C369125765777004CE028 /* GeneralTopicTableViewCell.swift in Sources */,
 				5511F840258427D50008CA0A /* ADGInfoViewController.swift in Sources */,
+				55AC45C625849B3E004374F2 /* FAQRecruitmentViewController.swift in Sources */,
 				552C368825764D23004CE028 /* TechnialVC.swift in Sources */,
 				914C7979257E3A8E003AD8F0 /* Auth-Key.swift in Sources */,
 				55C53E552576C9F0009CABFD /* EditProfileViewController.swift in Sources */,

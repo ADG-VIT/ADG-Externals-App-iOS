@@ -29,5 +29,9 @@ class InstructionTechVC: UIViewController {
     }
     
    
-
+    @IBAction func backButton(_ sender: Any) {
+//        self.navigationController?.popToRootViewController(animated: true)
+        self.performSegue(withIdentifier: "backfromTech", sender: nil)
+    }
+    
 }

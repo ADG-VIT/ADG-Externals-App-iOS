@@ -26,5 +26,8 @@ class InstructionManagementVC: UIViewController {
         self.performSegue(withIdentifier: "managementTest", sender: nil)
     }
     
-
+    @IBAction func backButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "backFromManage", sender: nil)
+    }
+    
 }
