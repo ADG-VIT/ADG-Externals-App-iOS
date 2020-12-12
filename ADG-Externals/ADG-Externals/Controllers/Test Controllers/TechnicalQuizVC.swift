@@ -20,6 +20,8 @@ class TechnicalQuizVC: UIViewController {
     var testOver:Bool = false
     
     var selectedAnswer:[String] = ["","","","","","","","","",""]
+    
+    var bgCounter = 0
 
     let maxtime:Float = 600.0 //600(10 min)
     var currentTime:Float = 0.0
@@ -52,6 +54,27 @@ class TechnicalQuizVC: UIViewController {
     
         progressBar.setProgress(currentTime, animated: true)
         perform(#selector(startTimer), with: nil, afterDelay: 0.0)
+        
+        
+        let notificationCenter = NotificationCenter.default
+           notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
+    }
+    
+    @objc func appMovedToBackground() {
+        print("App moved to background!")
+        self.bgCounter += 1
+        if self.bgCounter == 1 {
+            let alert = UIAlertController(title: "Warning!", message: "Don't run app on background,If did again test will get submitted automatically", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }else if bgCounter == 2 {
+            print("test over")
+            self.bgCounter = 0
+            self.setupPOSTMethod()
+        }else{
+            print("error")
+        }
+            
     }
     
     
@@ -119,79 +142,9 @@ class TechnicalQuizVC: UIViewController {
 
 extension TechnicalQuizVC{
     
-//
-//    func get(){
-//        var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/technical/get-quiz-questions/1")!,timeoutInterval: Double.infinity)
-//
-//        request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
-//
-//        request.httpMethod = "GET"
-//
-//        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-//            guard let data = data else {
-//                print(String(describing: error))
-//
-//                return
-//            }
-//
-//            if let response = response as? HTTPURLResponse{
-//                guard (200 ... 299) ~= response.statusCode else {
-//                    print("Status code :- \(response.statusCode)")
-//
-//                    if response.statusCode == 400 {
-//                        DispatchQueue.main.async {
-//                        self.extraTrial()
-//                        }
-//                    }else if response.statusCode == 401{
-//                        DispatchQueue.main.async {
-//                        self.alertView()
-//                        }
-//                    }else if response.statusCode == 403{
-//                        DispatchQueue.main.async {
-//                            self.serverError()
-//                        }
-//
-//                    }else if response.statusCode == 503{
-//                        DispatchQueue.main.async {
-//                            self.serverError()
-//                        }
-//                }
-//
-//                    return
-//                }
-//            }
-//
-//            do{
-//                if error == nil{
-//                    let result = try JSONDecoder().decode([jsonModel].self, from: data)
-//                    for mainarr in result{
-//                        self.questions.append(mainarr.questionDescription)
-//                        self.qid.append(mainarr.id)
-//                        self.optionA.append(mainarr.options.a)
-//                        self.optionB.append(mainarr.options.b)
-//                        self.optionC.append(mainarr.options.c)
-//                        self.optionD.append(mainarr.options.d)
-//
-//                    }
-//                }
-//
-//                DispatchQueue.main.async {
-//                    self.updateUI()
-//                }
-//
-//            }catch{
-//                print("Error found")
-//            }
-//            print(self.qid)
-//            //print(String(data: data, encoding: .utf8)!) //to print the whole JSON fetch
-//        }
-//        task.resume()
-//
-//    }
 
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/technical/get-quiz-questions/1")!,timeoutInterval: Double.infinity)
-        //Change technical to design as it is design test VC as well as dont mention 1 and 2 year in design
         
         request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
         

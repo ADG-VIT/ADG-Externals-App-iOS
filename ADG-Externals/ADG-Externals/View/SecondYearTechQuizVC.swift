@@ -15,6 +15,8 @@ class SecondYearTechQuizVC: UIViewController {
     var answers:[String] = []
     var quest:[String] = []
     
+    var bgCounter = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         get()
@@ -27,8 +29,29 @@ class SecondYearTechQuizVC: UIViewController {
         textArea2.layer.borderWidth = 1
         textArea2.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         textArea2.layer.cornerRadius = 5
+        
+        //MARK:- Method to check app is running on bg
+        
+        let notificationCenter = NotificationCenter.default
+           notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
     }
     
+    @objc func appMovedToBackground() {
+        print("App moved to background!")
+        self.bgCounter += 1
+        if self.bgCounter == 1 {
+            let alert = UIAlertController(title: "Warning!", message: "Don't run app on background,If did again test will get submitted automatically", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }else if bgCounter == 2 {
+            print("test over")
+            self.bgCounter = 0
+            self.setupPOSTMethod()
+        }else{
+            print("error")
+        }
+            
+    }
     @IBAction func subMitButton(_ sender: Any) {
         setupPOSTMethod()
     }

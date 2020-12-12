@@ -36,6 +36,8 @@ class ManagementQuizVC: UIViewController, UITextViewDelegate {
     var qid:[String] = []
     var answers:[String] = []
     
+    var bgCounter = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,6 +60,26 @@ class ManagementQuizVC: UIViewController, UITextViewDelegate {
         let tap = UITapGestureRecognizer(target: self, action: #selector(ManagementQuizVC.keyBoardDismiss))
         
         view.addGestureRecognizer(tap)
+        
+        let notificationCenter = NotificationCenter.default
+           notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
+    }
+    
+    @objc func appMovedToBackground() {
+        print("App moved to background!")
+        self.bgCounter += 1
+        if self.bgCounter == 1 {
+            let alert = UIAlertController(title: "Warning!", message: "Don't run app on background,If did again test will get submitted automatically", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }else if bgCounter == 2 {
+            print("test over")
+            self.bgCounter = 0
+            self.setupPOSTMethod()
+        }else{
+            print("error")
+        }
+            
     }
     
     @objc func keyBoardDismiss(){
@@ -72,7 +94,7 @@ class ManagementQuizVC: UIViewController, UITextViewDelegate {
     }
     @IBAction func submitButton(_ sender: Any) {
         setupPOSTMethod()
-        self.performSegue(withIdentifier: "completed", sender: nil)
+        //self.performSegue(withIdentifier: "completed", sender: nil)
     }
 }
 
@@ -182,7 +204,7 @@ extension ManagementQuizVC {
 
                     //As soon as the data is fetched segue will be performed :)
                     DispatchQueue.main.async {
-                                //self.performSegue(withIdentifier: "completed", sender: nil)
+                                self.performSegue(withIdentifier: "completed", sender: nil)
                             }
                 }catch let error{
                     print(error.localizedDescription)
