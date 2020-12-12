@@ -56,6 +56,10 @@ class TechnicalQuizVC: UIViewController {
     
     
     @IBAction func ChoiceA(_ sender: Any) {
+//        if count-1 >= 0 && count-1 < selectedAnswer.count {
+//            //print(array[index])
+//            selectedAnswer[count-1].append("1")
+//        }
         selectedAnswer[count-1].append("1")
         checkCompleted()
         choice1.backgroundColor = UIColor.link
