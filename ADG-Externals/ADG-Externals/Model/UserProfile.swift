@@ -12,17 +12,18 @@ struct model: Decodable {
 }
 struct  UserDetails:Decodable {
     let attemptedTechnical, attemptedManagement, attemptedDesign: Bool
-        let yearofstudy: Int
-        let id, name, regno, email: String
-        let createdAt, updatedAt: String
-        let v: Int
-
-        enum CodingKeys: String, CodingKey {
-            case attemptedTechnical, attemptedManagement, attemptedDesign, yearofstudy
-            case id = "_id"
-            case name, regno, email, createdAt, updatedAt
-            case v = "__v"
-        }
+    let yearofstudy: Int
+    let id, name, regno, email: String
+    let createdAt, updatedAt: String
+    let githubLink: String
+    let v: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case attemptedTechnical, attemptedManagement, attemptedDesign, yearofstudy
+        case id = "_id"
+        case name, regno, githubLink, email, createdAt, updatedAt
+        case v = "__v"
+    }
 }
 
 

@@ -21,6 +21,8 @@ class DesignQuizVC: UIViewController {
     
     var selectedAnswer:[String] = ["","","","","","","","","",""]
     
+    var bgCounter = 0
+    
     let maxtime:Float = 600.0 //600(10 min)
     var currentTime:Float = 0.0
 
@@ -53,6 +55,27 @@ class DesignQuizVC: UIViewController {
         
         progressBar.setProgress(currentTime, animated: true)
         perform(#selector(startTimer), with: nil, afterDelay: 0.0)
+        
+        let notificationCenter = NotificationCenter.default
+           notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
+    }
+    
+    
+    @objc func appMovedToBackground() {
+        print("App moved to background!")
+        self.bgCounter += 1
+        if self.bgCounter == 1 {
+            let alert = UIAlertController(title: "Warning!", message: "Don't run app on background,If did again test will get submitted automatically", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }else if bgCounter == 2 {
+            print("test over")
+            self.bgCounter = 0
+            self.setupPOSTMethod()
+        }else{
+            print("error")
+        }
+            
     }
     
     @IBAction func choiceA(_ sender: Any) {
@@ -221,7 +244,7 @@ extension DesignQuizVC{
     func  checkCompleted(){
         if testOver == true{
             DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "completed", sender: nil)
+                //self.performSegue(withIdentifier: "completed", sender: nil)
                 self.setupPOSTMethod()
                 self.count = 0
                 self.progressBar.progress = 0
@@ -270,7 +293,7 @@ extension DesignQuizVC{
 
                     //As soon as the data is fetched segue will be performed :)
                     DispatchQueue.main.async {
-                                //self.performSegue(withIdentifier: "completed", sender: nil)
+                                self.performSegue(withIdentifier: "completed", sender: nil)
                             }
                 }catch let error{
                     print(error.localizedDescription)

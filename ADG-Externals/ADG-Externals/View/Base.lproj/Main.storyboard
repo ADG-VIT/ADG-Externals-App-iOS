@@ -1750,10 +1750,9 @@
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skS-6p-gvO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Questions are getting loaded! . Dont touch any option." lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skS-6p-gvO">
                                 <rect key="frame" x="20" y="169" width="374" height="173"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</string>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                 <color key="textColor" red="0.22352941176470587" green="0.3529411764705882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -4106,7 +4105,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rzM-xM-hG4"/>
+        <segue reference="wvJ-Or-ppZ"/>
         <segue reference="EOe-Ze-uPu"/>
         <segue reference="E9Z-J2-260"/>
     </inferredMetricsTieBreakers>

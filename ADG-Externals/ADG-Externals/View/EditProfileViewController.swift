@@ -72,6 +72,7 @@ extension EditProfileViewController{
             self.name = ""
             self.regNo = ""
             self.emailID = ""
+            self.gitHubID = ""
             self.tectStatus = false
             self.managementStatus = false
             self.designStatus = false
@@ -81,7 +82,7 @@ extension EditProfileViewController{
                 self.name.append(result.userDetails.name)
                 self.emailID.append(result.userDetails.email)
                 self.regNo.append(result.userDetails.regno)
-              //  self.gitHubID.append(result.userDetails.)
+                self.gitHubID.append(result.userDetails.githubLink)
                 self.tectStatus = result.userDetails.attemptedTechnical
                 self.managementStatus = result.userDetails.attemptedManagement
                 self.designStatus = result.userDetails.attemptedDesign
