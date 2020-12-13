@@ -9,9 +9,10 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
-    var dates:[String] = ["25","26","27"]
+    var dates:[String] = ["25","23","27"]
     var events:[String] = ["Recruitments Quiz","Hackgrid","iOS Fusion"]
     var venue:[String] = ["Venue: Online","Venue: Online","Venue: Online"]
+    var month:[String] = ["JAN","MAR","SEP"]
     
     var arrImgData = [UIImage]()
     
@@ -68,6 +69,7 @@ extension ViewController {
         cell.dateLabel.text = dates[indexPath.row]
         cell.eventLabel.text = events[indexPath.row]
         cell.venueLabel.text = venue[indexPath.row]
+        cell.monthLabel.text = month[indexPath.row]
         cell.selectionStyle = .none
         cell.layer.cornerRadius = 5
         return cell

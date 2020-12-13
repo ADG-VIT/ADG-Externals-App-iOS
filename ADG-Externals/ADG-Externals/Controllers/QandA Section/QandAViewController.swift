@@ -27,7 +27,7 @@ class QandAViewController: UIViewController {
         applyBorder(button: editorial, RadiusSize: 10, widthSize: 0.5, color: UIColor.gray.cgColor)
         applyBorder(button: recruitmentBtn, RadiusSize: 10, widthSize: 0.5, color: UIColor.gray.cgColor)
         
-        askBtn.isEnabled = false
+        askBtn.isHidden = true
     }
     
 

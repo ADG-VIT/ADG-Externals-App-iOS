@@ -26,7 +26,7 @@ class TeamsInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        applyImageUI(image: teamImage)
+       // applyImageUI(image: teamImage)
         applyImageUI(image: image1)
         applyImageUI(image: image2)
         applyImageUI(image: image3)

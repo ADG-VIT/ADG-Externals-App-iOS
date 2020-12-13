@@ -15,10 +15,6 @@ class ADGInfoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func dismissButton(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
-    }
-    
     @IBAction func linkedIn(_ sender: Any) {
         if let url = URL(string: "https://www.linkedin.com/company/adgvit/") {
             UIApplication.shared.open(url)
@@ -34,9 +30,5 @@ class ADGInfoViewController: UIViewController {
             UIApplication.shared.open(url)
         }
     }
-    @IBAction func twitter(_ sender: Any) {
-        if let url = URL(string: "") {
-            UIApplication.shared.open(url)
-        }
-    }
+
 }

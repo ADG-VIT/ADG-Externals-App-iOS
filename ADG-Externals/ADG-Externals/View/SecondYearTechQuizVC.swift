@@ -54,6 +54,7 @@ class SecondYearTechQuizVC: UIViewController {
 //        }
 //
 //    }
+    
     @IBAction func subMitButton(_ sender: Any) {
         let alert = UIAlertController(title: "Submit!", message: "Are you sure?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
@@ -70,7 +71,7 @@ class SecondYearTechQuizVC: UIViewController {
 extension SecondYearTechQuizVC{
     
     func get(){
-        var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/technical/get-quiz-questions/2")!,timeoutInterval: Double.infinity)
+        var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/technical/get-quiz-questions/2/mobile")!,timeoutInterval: Double.infinity)
         //Change technical to design as it is design test VC as well as dont mention 1 and 2 year in design
         
         request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
@@ -116,6 +117,7 @@ extension SecondYearTechQuizVC{
                     for mainarr in result{
                         self.quest.append(mainarr.questionDescription)
                     }
+                    print(self.quest)
                 }
                 
                 DispatchQueue.main.async {
