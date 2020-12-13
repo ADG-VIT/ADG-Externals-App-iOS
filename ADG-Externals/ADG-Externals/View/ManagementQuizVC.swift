@@ -93,8 +93,14 @@ class ManagementQuizVC: UIViewController, UITextViewDelegate {
         (button as AnyObject).layer.borderColor = color
     }
     @IBAction func submitButton(_ sender: Any) {
-        setupPOSTMethod()
-        //self.performSegue(withIdentifier: "completed", sender: nil)
+        
+        let alert = UIAlertController(title: "Submit!", message: "Are you sure?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+            self.setupPOSTMethod()
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+        
     }
 }
 
@@ -105,7 +111,7 @@ extension ManagementQuizVC{
     
     
     func get(){
-        var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/management/get-quiz-questions")!,timeoutInterval: Double.infinity)
+        var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/management/get-quiz-questions/mobile")!,timeoutInterval: Double.infinity)
         
         request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
         

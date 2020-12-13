@@ -62,6 +62,7 @@ class TechnicalQuizVC: UIViewController {
     
     @objc func appMovedToBackground() {
         print("App moved to background!")
+        
         self.bgCounter += 1
         if self.bgCounter == 1 {
             let alert = UIAlertController(title: "Warning!", message: "Don't run app on background,If did again test will get submitted automatically", preferredStyle: .alert)
@@ -70,11 +71,14 @@ class TechnicalQuizVC: UIViewController {
         }else if bgCounter == 2 {
             print("test over")
             self.bgCounter = 0
-            self.setupPOSTMethod()
+            if self.skipButton.currentTitle == "Skip" {
+                self.setupPOSTMethod()
+            }else{
+                print("still loading")
+            }
         }else{
             print("error")
         }
-            
     }
     
     
@@ -165,7 +169,7 @@ extension TechnicalQuizVC{
     
 
     func get(){
-        var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/technical/get-quiz-questions/1")!,timeoutInterval: Double.infinity)
+        var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/technical/get-quiz-questions/1/mobile")!,timeoutInterval: Double.infinity)
         
         request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
         
@@ -242,6 +246,7 @@ extension TechnicalQuizVC{
         self.choice3.setTitle(self.optionC[self.count], for: .normal)
         self.choice4.setTitle(self.optionD[self.count], for: .normal)
         self.questionNumberLbl.text = ("Question Numer :\(self.count+1)")
+        self.skipButton.setTitle("Skip", for: .normal)
         
         choice1.backgroundColor = #colorLiteral(red: 0.9466984868, green: 0.9468342662, blue: 0.9466686845, alpha: 1)
         choice2.backgroundColor = #colorLiteral(red: 0.9466984868, green: 0.9468342662, blue: 0.9466686845, alpha: 1)
@@ -282,7 +287,8 @@ extension TechnicalQuizVC{
             request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
            request.httpMethod = "POST"
 
-            let parameters = "[{ \"qid\":\(qid[0]),\"response\":\(selectedAnswer[0])}, {\"qid\":\(qid[1]),\"response\":\(selectedAnswer[1] )},{\"qid\":\(qid[2]),\"response\":\(selectedAnswer[2] )},{\"qid\":\(qid[3]),\"response\":\(selectedAnswer[3] )},{\"qid\":\(qid[4]),\"response\":\(selectedAnswer[4] )},{\"qid\":\(qid[5]),\"response\":\(selectedAnswer[5] )},{\"qid\":\(qid[6]),\"response\":\(selectedAnswer[6] )}]"
+            let parameters = "[{ \"qid\":\(qid[0]),\"response\":\(selectedAnswer[0])}, {\"qid\":\(qid[1]),\"response\":\(selectedAnswer[1] )},{\"qid\":\(qid[2]),\"response\":\(selectedAnswer[2] )},{\"qid\":\(qid[3]),\"response\":\(selectedAnswer[3] )}]"
+            //{\"qid\":\(qid[4]),\"response\":\(selectedAnswer[4] )},{\"qid\":\(qid[5]),\"response\":\(selectedAnswer[5] )},{\"qid\":\(qid[6]),\"response\":\(selectedAnswer[6] )}]"
             let postData = parameters.data(using: .utf8)
 
 

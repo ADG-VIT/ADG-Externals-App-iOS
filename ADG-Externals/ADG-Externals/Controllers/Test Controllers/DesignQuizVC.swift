@@ -121,7 +121,7 @@ class DesignQuizVC: UIViewController {
     }
     
     @IBAction func skipBtn(_ sender: Any) {
-        if skipButton.currentTitle == "Skip"{
+        if skipButton.currentTitle == "skip"{
         print("data loading")
         }else{
         selectedAnswer.append("")
@@ -166,7 +166,7 @@ extension DesignQuizVC{
     //MARK:- UI Implementation Methods
         
         func get(){
-            var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/design/get-quiz-questions")!,timeoutInterval: Double.infinity)
+            var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/design/get-quiz-questions/mobile")!,timeoutInterval: Double.infinity)
             //Change technical to design as it is design test VC as well as dont mention 1 and 2 year in design
             
             request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
@@ -245,6 +245,7 @@ extension DesignQuizVC{
         self.choice3.setTitle(self.optionC[self.count], for: .normal)
         self.choice4.setTitle(self.optionD[self.count], for: .normal)
         self.questionNumber.text = ("Question Numer :\(self.count+1)")
+        self.skipButton.setTitle("Skip", for: .normal)
         
         choice1.backgroundColor = #colorLiteral(red: 0.9466984868, green: 0.9468342662, blue: 0.9466686845, alpha: 1)
         choice2.backgroundColor = #colorLiteral(red: 0.9466984868, green: 0.9468342662, blue: 0.9466686845, alpha: 1)

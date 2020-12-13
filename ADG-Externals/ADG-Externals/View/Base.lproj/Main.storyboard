@@ -1849,7 +1849,7 @@
                                 <rect key="frame" x="145" y="758" width="125" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
-                                <state key="normal" title="Skip">
+                                <state key="normal" title="skip">
                                     <color key="titleColor" systemColor="systemOrangeColor"/>
                                 </state>
                                 <connections>
@@ -3357,7 +3357,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                                 <rect key="frame" x="130" y="758" width="152" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
-                                <state key="normal" title="Skip">
+                                <state key="normal" title="skip">
                                     <color key="titleColor" systemColor="systemOrangeColor"/>
                                 </state>
                                 <connections>
@@ -4546,7 +4546,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wvJ-Or-ppZ"/>
+        <segue reference="rzM-xM-hG4"/>
         <segue reference="Hi2-W6-QiA"/>
         <segue reference="E9Z-J2-260"/>
     </inferredMetricsTieBreakers>

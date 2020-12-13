@@ -32,28 +32,35 @@ class SecondYearTechQuizVC: UIViewController {
         
         //MARK:- Method to check app is running on bg
         
-        let notificationCenter = NotificationCenter.default
-           notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
+//        let notificationCenter = NotificationCenter.default
+//           notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
     }
     
-    @objc func appMovedToBackground() {
-        print("App moved to background!")
-        self.bgCounter += 1
-        if self.bgCounter == 1 {
-            let alert = UIAlertController(title: "Warning!", message: "Don't run app on background,If did again test will get submitted automatically", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
-        }else if bgCounter == 2 {
-            print("test over")
-            self.bgCounter = 0
-            self.setupPOSTMethod()
-        }else{
-            print("error")
-        }
-            
-    }
+    //MARK:- BG run check method
+    
+//    @objc func appMovedToBackground() {
+//        print("App moved to background!")
+//        self.bgCounter += 1
+//        if self.bgCounter == 1 {
+//            let alert = UIAlertController(title: "Warning!", message: "Don't run app on background,If did again test will get submitted automatically", preferredStyle: .alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//            present(alert, animated: true, completion: nil)
+//        }else if bgCounter == 2 {
+//            print("test over")
+//            self.bgCounter = 0
+//            self.setupPOSTMethod()
+//        }else{
+//            print("error")
+//        }
+//
+//    }
     @IBAction func subMitButton(_ sender: Any) {
-        setupPOSTMethod()
+        let alert = UIAlertController(title: "Submit!", message: "Are you sure?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+            self.setupPOSTMethod()
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
     
