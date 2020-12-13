@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -45,6 +45,8 @@
 		55C457BF25791BE600D7CB88 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C457BE25791BE600D7CB88 /* AuthenticationViewController.swift */; };
 		55C457C225791DB000D7CB88 /* RecruitmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C457C125791DB000D7CB88 /* RecruitmentViewController.swift */; };
 		55C53E552576C9F0009CABFD /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C53E542576C9F0009CABFD /* EditProfileViewController.swift */; };
+		55F56B802585F5C000787089 /* domaiInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F56B7F2585F5C000787089 /* domaiInfoViewController.swift */; };
+		55F56B842586568F00787089 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 55F56B832586568F00787089 /* IQKeyboardManagerSwift */; };
 		910B3DB4257133E900BD0F29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B3DB3257133E900BD0F29 /* AppDelegate.swift */; };
 		910B3DB6257133E900BD0F29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B3DB5257133E900BD0F29 /* SceneDelegate.swift */; };
 		910B3DB8257133E900BD0F29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B3DB7257133E900BD0F29 /* ViewController.swift */; };
@@ -96,6 +98,7 @@
 		55C457BE25791BE600D7CB88 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationViewController.swift; path = "ADG-Externals/View/AuthenticationViewController.swift"; sourceTree = SOURCE_ROOT; };
 		55C457C125791DB000D7CB88 /* RecruitmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecruitmentViewController.swift; path = "ADG-Externals/Controllers/Ambiguous/RecruitmentViewController.swift"; sourceTree = SOURCE_ROOT; };
 		55C53E542576C9F0009CABFD /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditProfileViewController.swift; path = "ADG-Externals/View/EditProfileViewController.swift"; sourceTree = SOURCE_ROOT; };
+		55F56B7F2585F5C000787089 /* domaiInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = domaiInfoViewController.swift; path = "ADG-Externals/View/domaiInfoViewController.swift"; sourceTree = SOURCE_ROOT; };
 		910B3DB0257133E900BD0F29 /* ADG-Externals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ADG-Externals.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		910B3DB3257133E900BD0F29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		910B3DB5257133E900BD0F29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55F56B842586568F00787089 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +136,7 @@
 		5511F842258427F00008CA0A /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				55F56B7F2585F5C000787089 /* domaiInfoViewController.swift */,
 				55AC45CF25850906004374F2 /* EventsInfoViewController.swift */,
 				55AC45CC2584E3C3004374F2 /* TeamsInfoViewController.swift */,
 				910B3DB7257133E900BD0F29 /* ViewController.swift */,
@@ -321,6 +326,9 @@
 			dependencies = (
 			);
 			name = "ADG-Externals";
+			packageProductDependencies = (
+				55F56B832586568F00787089 /* IQKeyboardManagerSwift */,
+			);
 			productName = "ADG-Externals";
 			productReference = 910B3DB0257133E900BD0F29 /* ADG-Externals.app */;
 			productType = "com.apple.product-type.application";
@@ -348,6 +356,9 @@
 				Base,
 			);
 			mainGroup = 910B3DA7257133E900BD0F29;
+			packageReferences = (
+				55F56B822586568F00787089 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 910B3DB1257133E900BD0F29 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -404,6 +415,7 @@
 				55A9F531258218AD00A91CDA /* TestEndViewController.swift in Sources */,
 				552C369125765777004CE028 /* GeneralTopicTableViewCell.swift in Sources */,
 				5511F840258427D50008CA0A /* ADGInfoViewController.swift in Sources */,
+				55F56B802585F5C000787089 /* domaiInfoViewController.swift in Sources */,
 				55AC45C625849B3E004374F2 /* FAQRecruitmentViewController.swift in Sources */,
 				552C368825764D23004CE028 /* TechnialVC.swift in Sources */,
 				914C7979257E3A8E003AD8F0 /* Auth-Key.swift in Sources */,
@@ -623,6 +635,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		55F56B822586568F00787089 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		55F56B832586568F00787089 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55F56B822586568F00787089 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		553F9526258387380018CC09 /* coreAuthKey.xcdatamodeld */ = {

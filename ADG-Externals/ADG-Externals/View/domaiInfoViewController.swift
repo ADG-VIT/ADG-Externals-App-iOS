@@ -1,42 +1,39 @@
 //
-//  EventsInfoViewController.swift
+//  domaiInfoViewController.swift
 //  ADG-Externals
 //
-//  Created by Gokul Nair on 12/12/20.
+//  Created by Gokul Nair on 13/12/20.
 //
 
 import UIKit
 
-class EventsInfoViewController: UIViewController {
-
+class domaiInfoViewController: UIViewController {
+    
     @IBOutlet weak var view1: UIView!
     @IBOutlet weak var view2: UIView!
     @IBOutlet weak var view3: UIView!
-    @IBOutlet weak var image1: UIImageView!
-    @IBOutlet weak var image2: UIImageView!
-    @IBOutlet weak var image3: UIImageView!
+    @IBOutlet weak var view4: UIView!
+    @IBOutlet weak var view5: UIView!
+    @IBOutlet weak var view6: UIView!
+    @IBOutlet weak var view7: UIView!
+    @IBOutlet weak var view8: UIView!
+    @IBOutlet weak var view9: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        applyImageUI(image: image1)
-        applyImageUI(image: image2)
-        applyImageUI(image: image3)
-        
         applyShadow(view: view1)
         applyShadow(view: view2)
         applyShadow(view: view3)
-       
+        applyShadow(view: view4)
+        applyShadow(view: view5)
+        applyShadow(view: view6)
+        applyShadow(view: view7)
+        applyShadow(view: view8)
+        applyShadow(view: view9)
     }
     @IBAction func backButton(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
-    }
-    
-    func applyImageUI(image:UIImageView){
-     
-        image.layer.cornerRadius = 10
-        image.layer.borderColor = #colorLiteral(red: 0.1298420429, green: 0.1298461258, blue: 0.1298439503, alpha: 1)
-        image.layer.borderWidth = 0.5
     }
     
     func applyShadow(view:UIView){
@@ -46,5 +43,6 @@ class EventsInfoViewController: UIViewController {
         view.layer.shadowRadius = 1
         view.layer.shadowOpacity = 0.5
     }
+    
     
 }
