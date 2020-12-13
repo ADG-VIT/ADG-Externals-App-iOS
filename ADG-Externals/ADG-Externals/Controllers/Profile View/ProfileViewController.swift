@@ -23,7 +23,7 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         editBtn.layer.cornerRadius = 15
         editBtn.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         editBtn.layer.borderWidth = 0.5
@@ -34,23 +34,27 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
         logOutBtn.layer.cornerRadius = 10
         
         coreData.fetchTokenFromCore()
-        print(LogInViewController.Token)
-        DispatchQueue.main.async {
-            self.checkSignup()
-       }
+        
     }
     
     @IBAction func editProfileBtn(_ sender: Any) {
+        if LogInViewController.Token != "" {
         self.performSegue(withIdentifier: "editProfile", sender: nil)
+        }else{
+            let alert = UIAlertController(title: "Signup/Login Remaining", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func sendFeedbackBtn(_ sender: Any) {
         feedbackMail()
     }
     
-    @IBAction func bugReportBtn(_ sender: Any) {
-       
+    @IBAction func helpBtn(_ sender: Any) {
+       helpMail()
     }
+    
     @IBAction func aboutUsButton(_ sender: Any) {
         self.performSegue(withIdentifier: "aboutUS", sender: nil)
     }
@@ -64,13 +68,24 @@ class ProfileViewController: UIViewController, MFMailComposeViewControllerDelega
             coreData.deleteAllData()
             self.nameLabel.text = "Name"
             self.userEmailLabel.text = "EmailID"
+            self.name = ""  //Much important
+            self.emailID = ""  //Much important
         }))
+            
         alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
         }else{
             let alert = UIAlertController(title: "SignIn/Login please!", message: nil, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if nameLabel.text == "Name"{
+            checkSignup()
+        }else{
+
         }
     }
 }
@@ -91,6 +106,20 @@ extension ProfileViewController{
         composer.setToRecipients(["gokulnair.2001@gmail.com"])
         composer.setSubject("Suggestion For ADG Recruitment App")
         composer.setMessageBody("To whomsoever it concern, I want to give you a suggestion ", isHTML: false)
+        
+        present(composer, animated: true)
+    }
+    
+    func helpMail() {
+        guard MFMailComposeViewController.canSendMail() else {
+            
+            return
+        }
+        let composer = MFMailComposeViewController()
+        composer.mailComposeDelegate = self
+        composer.setToRecipients(["gokulnair.2001@gmail.com"])
+        composer.setSubject("Need some help: ADG Recruitment")
+        composer.setMessageBody("To whomsoever it concern, ", isHTML: false)
         
         present(composer, animated: true)
     }
@@ -165,7 +194,7 @@ extension ProfileViewController{
 
 extension ProfileViewController{
     @IBAction func shareAppBtn(_ sender: Any) {
-        let activityController = UIActivityViewController(activityItems: ["Apple Developers Group (ADG) is a name synonymous with excellence, simplicity and dedication. It is a registered student community at VIT, Vellore established under the Apple University program. A coterie of talented minds seeking not just success but perfection.We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.", UIImage(imageLiteralResourceName:"claudia-lam-BPy_w7rG6bk-unsplash")], applicationActivities: nil)
+        let activityController = UIActivityViewController(activityItems: ["Apple Developers Group (ADG) is a name synonymous with excellence, simplicity and dedication. It is a registered student community at VIT, Vellore established under the Apple University program. A coterie of talented minds seeking not just success but perfection.We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.", UIImage(imageLiteralResourceName: "adgBig")], applicationActivities: nil)
            
         present(activityController, animated: true, completion: nil)
     }

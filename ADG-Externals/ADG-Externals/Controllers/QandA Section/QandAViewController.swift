@@ -36,6 +36,7 @@ class QandAViewController: UIViewController {
     }
     
     @IBAction func recruitmentButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "recruitment", sender: nil)
         
     }
     @IBAction func generalTopicButton(_ sender: Any) {

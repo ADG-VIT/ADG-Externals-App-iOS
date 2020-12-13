@@ -21,6 +21,8 @@ class DesignQuizVC: UIViewController {
     
     var selectedAnswer:[String] = ["","","","","","","","","",""]
     
+    var bgCounter = 0
+    
     let maxtime:Float = 600.0 //600(10 min)
     var currentTime:Float = 0.0
 
@@ -53,39 +55,80 @@ class DesignQuizVC: UIViewController {
         
         progressBar.setProgress(currentTime, animated: true)
         perform(#selector(startTimer), with: nil, afterDelay: 0.0)
+        
+        let notificationCenter = NotificationCenter.default
+           notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
+    }
+    
+    
+    @objc func appMovedToBackground() {
+        print("App moved to background!")
+        self.bgCounter += 1
+        if self.bgCounter == 1 {
+            let alert = UIAlertController(title: "Warning!", message: "Don't run app on background,If did again test will get submitted automatically", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }else if bgCounter == 2 {
+            print("test over")
+            self.bgCounter = 0
+            self.setupPOSTMethod()
+        }else{
+            print("error")
+        }
+            
     }
     
     @IBAction func choiceA(_ sender: Any) {
+        if choice1.currentTitle == "Choice A"{
+            print("data loading")
+        }else{
         selectedAnswer[count-1].append("1")
         checkCompleted()
         choice1.backgroundColor = UIColor.link
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        }
     }
     @IBAction func choiceB(_ sender: Any) {
+        if choice2.currentTitle == "Choice B"{
+            print("data loading")
+        }else{
         selectedAnswer[count-1].append("2")
         checkCompleted()
         choice2.backgroundColor = UIColor.link
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        }
     }
     @IBAction func ChoiceC(_ sender: Any) {
+        if choice3.currentTitle == "Choice C"{
+            print("data loading")
+        }else{
         selectedAnswer[count-1].append("3")
         checkCompleted()
         choice3.backgroundColor = UIColor.link
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        }
     }
     
     @IBAction func ChoiceD(_ sender: Any) {
+        if choice4.currentTitle == "Choice D"{
+            print("data loading")
+        }else{
         selectedAnswer[count-1].append("4")
         checkCompleted()
         choice4.backgroundColor = UIColor.link
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        }
     }
     
     @IBAction func skipBtn(_ sender: Any) {
+        if skipButton.currentTitle == "Skip"{
+        print("data loading")
+        }else{
         selectedAnswer.append("")
         checkCompleted()
         self.updateUI()
         print(selectedAnswer)
+        }
     }
     
     func applyBorder(button: UIButton, RadiusSize: CGFloat,widthSize: CGFloat, color: CGColor){
@@ -221,7 +264,7 @@ extension DesignQuizVC{
     func  checkCompleted(){
         if testOver == true{
             DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "completed", sender: nil)
+                //self.performSegue(withIdentifier: "completed", sender: nil)
                 self.setupPOSTMethod()
                 self.count = 0
                 self.progressBar.progress = 0
@@ -270,7 +313,7 @@ extension DesignQuizVC{
 
                     //As soon as the data is fetched segue will be performed :)
                     DispatchQueue.main.async {
-                                //self.performSegue(withIdentifier: "completed", sender: nil)
+                                self.performSegue(withIdentifier: "completed", sender: nil)
                             }
                 }catch let error{
                     print(error.localizedDescription)
