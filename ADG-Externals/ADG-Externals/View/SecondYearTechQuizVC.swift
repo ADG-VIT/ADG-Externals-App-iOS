@@ -29,12 +29,12 @@ class SecondYearTechQuizVC: UIViewController {
         textArea2.layer.borderWidth = 1
         textArea2.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         textArea2.layer.cornerRadius = 5
-        
         //MARK:- Method to check app is running on bg
         
 //        let notificationCenter = NotificationCenter.default
 //           notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
     }
+  
     
     //MARK:- BG run check method
     
