@@ -123,7 +123,7 @@ class TechnicalQuizVC: UIViewController {
     
     @IBAction func skipButton(_ sender: Any) {
         
-        if skipButton.currentTitle == "Skip"{
+        if skipButton.currentTitle == "skip"{
             print("data loading")
         }else{
         selectedAnswer.append("")
