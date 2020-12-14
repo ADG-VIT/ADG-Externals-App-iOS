@@ -11,6 +11,7 @@ class SecondYearTechQuizVC: UIViewController {
     
     @IBOutlet weak var textArea1: UITextView!
     @IBOutlet weak var textArea2: UITextView!
+    @IBOutlet weak var subMitBtn: UIButton!
     
     var answers:[String] = []
     var quest:[String] = []
@@ -30,30 +31,11 @@ class SecondYearTechQuizVC: UIViewController {
         textArea2.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         textArea2.layer.cornerRadius = 5
         
-        //MARK:- Method to check app is running on bg
+        subMitBtn.layer.cornerRadius = 5
+        subMitBtn.layer.borderWidth = 2
+        subMitBtn.layer.borderColor = UIColor.systemOrange.cgColor
         
-//        let notificationCenter = NotificationCenter.default
-//           notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
     }
-    
-    //MARK:- BG run check method
-    
-//    @objc func appMovedToBackground() {
-//        print("App moved to background!")
-//        self.bgCounter += 1
-//        if self.bgCounter == 1 {
-//            let alert = UIAlertController(title: "Warning!", message: "Don't run app on background,If did again test will get submitted automatically", preferredStyle: .alert)
-//            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//            present(alert, animated: true, completion: nil)
-//        }else if bgCounter == 2 {
-//            print("test over")
-//            self.bgCounter = 0
-//            self.setupPOSTMethod()
-//        }else{
-//            print("error")
-//        }
-//
-//    }
     
     @IBAction func subMitButton(_ sender: Any) {
         let alert = UIAlertController(title: "Submit!", message: "Are you sure?", preferredStyle: .alert)
@@ -72,8 +54,7 @@ extension SecondYearTechQuizVC{
     
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/technical/get-quiz-questions/2/mobile")!,timeoutInterval: Double.infinity)
-        //Change technical to design as it is design test VC as well as dont mention 1 and 2 year in design
-        
+       
         request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
         
         request.httpMethod = "GET"

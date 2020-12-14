@@ -28,6 +28,9 @@ class LogInViewController: UIViewController {
     
     @IBAction func passwordField(_ sender: UITextField) {
     }
+    @IBAction func backButton(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
