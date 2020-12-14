@@ -25,7 +25,7 @@ class AboutUsViewController: UIViewController {
     @IBOutlet weak var view8: UIView!
     
     var gitLink:[String] = ["https://github.com/rajritik2607","https://github.com/krishnakhanikar","https://github.com/gokulnair2001","https://github.com/prabal4546", "https://github.com/panshuljindal","https://github.com/arupam"]
-    var LinkedInLink:[String] = ["https://www.linkedin.com/in/ritik-suryawanshi-7075441a6","krish","https://www.linkedin.com/in/gokul-r-nair/","https://www.linkedin.com/in/prabaljit-walia-5800571a0", "https://www.linkedin.com/in/panshul-jindal-392746199"," https://www.linkedin.com/in/arupam-kumar-saha-310653191/"]
+    var LinkedInLink:[String] = ["https://www.linkedin.com/in/ritik-suryawanshi-7075441a6","krish","https://www.linkedin.com/in/gokul-r-nair/","https://www.linkedin.com/in/prabaljit-walia-5800571a0", "https://www.linkedin.com/in/panshul-jindal-392746199", "https://www.linkedin.com/in/arupam-kumar-saha-310653191/"]
     var name:[String] = ["Ritik Suryawanshi","Krishna Khanikar","Gokul Nair","Prabaljit Walia","Panshul Jindal","Arupam Saha"]
     var emailID:[String] = ["ritik.suryawanshi@gmail.com","krish","gokulnair.2001@gmail.com","prabaljit.walia2019@vitstudent.ac.in","panshuljindal@gmail.com","sahaarupam37@gmail.com"]
     

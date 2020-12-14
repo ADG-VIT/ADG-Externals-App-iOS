@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DaK-ar-rkN">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="F.A.Q" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGe-Ly-tcd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="F.A.Q.s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGe-Ly-tcd">
                                 <rect key="frame" x="20" y="69" width="294" height="41.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="37"/>
@@ -456,7 +456,7 @@
                                                         <rect key="frame" x="10" y="117" width="164" height="28"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Project Supervisor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nnd-fc-6R0">
@@ -512,7 +512,7 @@
                                                 <rect key="frame" x="221" y="125" width="158" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5J2-mv-VAX">
@@ -530,7 +530,7 @@
                                                 <rect key="frame" x="42" y="376" width="120" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iOS App Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Sp-Sy-gwO">
@@ -548,7 +548,7 @@
                                                         <rect key="frame" x="25" y="113" width="135" height="28"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -672,25 +672,25 @@
                                                 <rect key="frame" x="234" y="632" width="125" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="8QZ-ah-FEp">
-                                                <rect key="frame" x="227" y="700" width="31" height="33"/>
+                                                <rect key="frame" x="236" y="700" width="31" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="hpK-Bb-nrV" appends="YES" id="gVe-IC-mAz"/>
                                                 </connections>
                                             </imageView>
                                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="OPV-9U-pv1">
-                                                <rect key="frame" x="277" y="700" width="28" height="33"/>
+                                                <rect key="frame" x="289" y="700" width="28" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="S6T-dD-XeC" appends="YES" id="aRU-hT-nAu"/>
                                                 </connections>
                                             </imageView>
                                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Gmail-logo" translatesAutoresizingMaskIntoConstraints="NO" id="EPX-jZ-Jiu">
-                                                <rect key="frame" x="318" y="699" width="49" height="36"/>
+                                                <rect key="frame" x="327" y="699" width="49" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="wWC-Bt-Nlv" appends="YES" id="nZL-BV-8gw"/>
@@ -729,7 +729,7 @@
                                                         <rect key="frame" x="29" y="122" width="133" height="28"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Android App Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0en-kv-Sx6">
@@ -743,7 +743,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="800" id="8hF-Ec-KC6"/>
                                         </constraints>
@@ -759,7 +759,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="L0T-G2-c5t"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dIV-ah-M0H" firstAttribute="width" secondItem="4rl-fP-vdo" secondAttribute="width" constant="-8" id="0Jm-1o-jK2"/>
                             <constraint firstItem="DLS-yJ-Oaj" firstAttribute="top" secondItem="4rl-fP-vdo" secondAttribute="top" constant="90" id="9Ud-xY-QNj"/>
@@ -914,7 +914,8 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2dy-jf-dNM">
                                 <rect key="frame" x="0.0" y="109" width="414" height="753"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="170" id="e5v-IY-LgJ" customClass="RecruitmentTableViewCell" customModule="ADG_Externals" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="170"/>
@@ -926,6 +927,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="Z4H-Wg-I1v">
                                                     <rect key="frame" x="10" y="11" width="394" height="49"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                                     <color key="textColor" red="0.29141956569999999" green="0.50326919560000005" blue="0.96637171509999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -933,12 +935,14 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Answer" textAlignment="natural" selectable="NO" id="vH7-Wq-XuY">
                                                     <rect key="frame" x="10" y="57" width="394" height="102"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="answerView" destination="vH7-Wq-XuY" id="FOz-BC-rfw"/>
                                             <outlet property="questionLabel" destination="Z4H-Wg-I1v" id="oAM-79-L4k"/>
@@ -952,7 +956,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BIk-Hw-PBb"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="i3G-S3-zrn"/>
                     <connections>
@@ -1713,7 +1717,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="c77-Vd-4wI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="riK-Ml-YFo"/>
                     <connections>
@@ -1843,7 +1847,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z1v-dC-y7h"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8cZ-Gp-81t" firstAttribute="width" secondItem="NUT-lX-cXi" secondAttribute="width" id="6kH-GV-oDI"/>
                             <constraint firstItem="ojG-Kl-yhc" firstAttribute="top" secondItem="Z1v-dC-y7h" secondAttribute="top" constant="9" id="6nS-2E-qQq"/>
@@ -1971,7 +1975,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZbY-3C-stC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="6HF-gR-1cB"/>
                     <connections>
@@ -2023,16 +2027,16 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Link" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kzD-al-Blq">
                                 <rect key="frame" x="20" y="207" width="374" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Link" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CN8-1d-Knm">
                                 <rect key="frame" x="20" y="411" width="374" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -2210,7 +2214,7 @@
                             </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="a3l-nU-CKF"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9ou-iB-VSK" firstAttribute="top" secondItem="a3l-nU-CKF" secondAttribute="top" constant="40" id="2bi-Yj-BPP"/>
                             <constraint firstItem="29T-xd-aDP" firstAttribute="top" secondItem="9ou-iB-VSK" secondAttribute="bottom" constant="200" id="AwZ-Cn-tvD"/>
@@ -2276,7 +2280,7 @@
                                 </constraints>
                                 <string key="text">Apple Developers Group (ADG) is a name synonymous with excellence, simplicity and dedication. It is a registered student community at VIT, Vellore established under the Apple University program. A coterie of talented minds seeking not just success but perfection.
 
-We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</string>
+We are blessed to be guided by our faculty co-ordinator Dr. Rajkumar R.</string>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -2506,7 +2510,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9sz-yg-gfK">
                                 <rect key="frame" x="10" y="142" width="394" height="231"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GOq-dX-332">
                                     <size key="itemSize" width="220" height="185"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -3567,7 +3571,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MOQ-th-HPO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="YmC-pl-Exd"/>
                     <connections>
@@ -3692,7 +3696,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sfJ-B9-gmH"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="s8h-Jv-8ov"/>
                     <connections>
@@ -3762,7 +3766,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BGR-rM-up4">
                                                 <rect key="frame" x="8" y="542" width="398" height="496"/>
@@ -3788,7 +3792,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U1M-QF-mZM">
                                                 <rect key="frame" x="8" y="1046" width="398" height="446"/>
@@ -3814,7 +3818,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3832,7 +3836,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="q7a-9x-ISd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="kBt-nO-nRI" firstAttribute="leading" secondItem="q7a-9x-ISd" secondAttribute="leading" constant="47" id="DoU-d5-MBP"/>
                             <constraint firstItem="cy7-2D-oiP" firstAttribute="bottom" secondItem="q7a-9x-ISd" secondAttribute="bottom" id="L3K-ia-EVs"/>
@@ -4119,7 +4123,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2000" id="MJc-fm-Tc1"/>
                                         </constraints>
@@ -4134,7 +4138,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T8w-hy-YQP"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="T8w-hy-YQP" firstAttribute="trailing" secondItem="tuL-PW-ee8" secondAttribute="trailing" constant="359" id="1EI-ZT-sOx"/>
                             <constraint firstItem="h3Q-df-0zL" firstAttribute="leading" secondItem="T8w-hy-YQP" secondAttribute="leading" constant="53" id="5aD-xw-9fy"/>
@@ -4233,7 +4237,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SW0-Qe-a2M">
                                                 <rect key="frame" x="8" y="254" width="398" height="216"/>
@@ -4252,12 +4256,13 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The enabling centerpiece of digital convergence. The easiest portal into your digital self." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9f8-0t-Kzu">
                                                         <rect key="frame" x="16" y="132" width="366" height="73"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZ3-VB-UMs">
                                                 <rect key="frame" x="8" y="500" width="398" height="216"/>
@@ -4281,7 +4286,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="398" id="Ecq-Ve-heN"/>
                                                     <constraint firstAttribute="height" constant="216" id="gur-J8-xlV"/>
@@ -4309,7 +4314,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="398" id="TDh-Ii-oeI"/>
                                                     <constraint firstAttribute="height" constant="216" id="eTq-eQ-4Z8"/>
@@ -4337,7 +4342,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="398" id="5Fz-cZ-bQg"/>
                                                     <constraint firstAttribute="height" constant="216" id="Kfp-YK-UwF"/>
@@ -4365,7 +4370,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="216" id="2Mw-yd-OaU"/>
                                                     <constraint firstAttribute="width" constant="398" id="v0T-Z4-ccu"/>
@@ -4393,7 +4398,7 @@ We are blessed to be guided by our faculty co-ordinator Prof. Rajkumar R.</strin
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="398" id="C1a-Ss-wQB"/>
                                                     <constraint firstAttribute="height" constant="216" id="wFp-0G-Cgj"/>
@@ -4423,7 +4428,7 @@ Without Appealing Designs, everything seems incomplete.</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="216" id="MsX-Pw-35y"/>
                                                     <constraint firstAttribute="width" constant="398" id="XgX-7j-iIN"/>
@@ -4451,7 +4456,7 @@ Without Appealing Designs, everything seems incomplete.</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="216" id="1X0-gt-osO"/>
                                                     <constraint firstAttribute="width" constant="398" id="gIm-S2-Xq3"/>
@@ -4465,7 +4470,7 @@ Without Appealing Designs, everything seems incomplete.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="SW0-Qe-a2M" firstAttribute="trailing" secondItem="QZ3-VB-UMs" secondAttribute="trailing" id="3fK-pc-Qxj"/>
                                             <constraint firstAttribute="trailing" secondItem="vRb-Ev-6Qc" secondAttribute="trailing" constant="8" id="44f-r0-QBy"/>
@@ -4510,7 +4515,7 @@ Without Appealing Designs, everything seems incomplete.</string>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WXz-48-Xqe"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="tME-iJ-ZGz" firstAttribute="leading" secondItem="WXz-48-Xqe" secondAttribute="leading" id="3UC-c6-q3T"/>
                             <constraint firstItem="tME-iJ-ZGz" firstAttribute="top" secondItem="WXz-48-Xqe" secondAttribute="top" constant="10" id="M4K-vn-ErU"/>
@@ -4542,7 +4547,7 @@ Without Appealing Designs, everything seems incomplete.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rzM-xM-hG4"/>
+        <segue reference="wvJ-Or-ppZ"/>
         <segue reference="mPj-LE-hgm"/>
         <segue reference="xUC-EQ-hLZ"/>
     </inferredMetricsTieBreakers>
@@ -4615,9 +4620,6 @@ Without Appealing Designs, everything seems incomplete.</string>
         <image name="video" width="634" height="600"/>
         <image name="web" width="400" height="400"/>
         <image name="wrong" width="400" height="400"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
