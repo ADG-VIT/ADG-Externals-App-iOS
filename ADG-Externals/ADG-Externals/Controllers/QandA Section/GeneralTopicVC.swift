@@ -19,6 +19,7 @@ class GeneralTopicVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tableFooterView = UIView()
     }
     
     @IBAction func dismissButton(_ sender: Any) {

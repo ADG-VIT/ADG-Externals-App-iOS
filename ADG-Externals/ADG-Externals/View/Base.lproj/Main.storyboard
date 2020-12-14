@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DaK-ar-rkN">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -1352,7 +1353,7 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="VIT Registration Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3wY-iX-Hsp">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="VIT Registration Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3wY-iX-Hsp">
                                 <rect key="frame" x="25" y="592" width="364" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1365,7 +1366,7 @@
                                     <action selector="regNumberField:" destination="Xpg-aj-AXd" eventType="editingDidEnd" id="cdL-Sr-e3p"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bsI-z7-z1v">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bsI-z7-z1v">
                                 <rect key="frame" x="25" y="675" width="364" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1394,6 +1395,18 @@
                                     <constraint firstAttribute="height" constant="444" id="c3W-M9-fNl"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gw-eT-EyF">
+                                <rect key="frame" x="25" y="45" width="26" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
+                                <state key="normal" image="chevron.left" catalog="system">
+                                    <color key="titleColor" name="AccentColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="medium"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="Xpg-aj-AXd" eventType="touchUpInside" id="IKo-DD-kf7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b6L-hl-XaI"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2139,7 +2152,7 @@
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="7"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fap-Xa-qua">
-                                <rect key="frame" x="148" y="650" width="119" height="45"/>
+                                <rect key="frame" x="148" y="739" width="119" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -2149,6 +2162,26 @@
                                 <connections>
                                     <action selector="homeButton:" destination="twa-xP-bBa" eventType="touchUpInside" id="TFC-9l-LYQ"/>
                                     <action selector="startButton:" destination="mHF-wE-MxY" eventType="touchUpInside" id="h9f-Gs-I9f"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="If you suffered any problem during test or any fallacious error you can mail us. [Send Mail]" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVu-Zh-IHD">
+                                <rect key="frame" x="37" y="636" width="359" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EGV-0G-Xle">
+                                <rect key="frame" x="14" y="670" width="8" height="8"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="7"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYN-I7-mbw">
+                                <rect key="frame" x="37" y="636" width="357" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sendMail:" destination="twa-xP-bBa" eventType="touchUpInside" id="YAx-Ya-6pw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2409,42 +2442,39 @@ We are blessed to be guided by our faculty co-ordinator Dr. Rajkumar R.</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeAsk" translatesAutoresizingMaskIntoConstraints="NO" id="B3Q-yX-Qxd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeAsk" translatesAutoresizingMaskIntoConstraints="NO" id="B3Q-yX-Qxd">
                                 <rect key="frame" x="20" y="673" width="374" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="Luw-c9-Do8"/>
+                                    <constraint firstAttribute="height" constant="128" id="jzX-Wf-R6V"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Playground" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIi-TU-r6x">
-                                <rect key="frame" x="10" y="55" width="374" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIi-TU-r6x">
+                                <rect key="frame" x="14" y="63" width="384" height="71"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="50"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Documentation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URh-kf-CUj">
-                                <rect key="frame" x="10" y="112" width="204" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="24"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upcoming Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHS-Lp-RJh">
-                                <rect key="frame" x="10" y="395" width="374" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHS-Lp-RJh">
+                                <rect key="frame" x="14" y="390" width="374" height="41"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="32680633" translatesAutoresizingMaskIntoConstraints="NO" id="dtb-bE-ihZ">
-                                <rect key="frame" x="342" y="59" width="56" height="42"/>
+                                <rect key="frame" x="342" y="78" width="56" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="BZj-xo-i6V" appends="YES" id="J2G-GO-D1l"/>
                                 </connections>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eTw-ML-JqN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eTw-ML-JqN">
                                 <rect key="frame" x="20" y="451" width="374" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="SPn-ND-Ynw"/>
+                                    <constraint firstAttribute="width" constant="374" id="Usa-1M-TYd"/>
+                                </constraints>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -2507,10 +2537,12 @@ We are blessed to be guided by our faculty co-ordinator Dr. Rajkumar R.</string>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9sz-yg-gfK">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9sz-yg-gfK">
                                 <rect key="frame" x="10" y="142" width="394" height="231"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="231" id="X6f-MF-jON"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GOq-dX-332">
                                     <size key="itemSize" width="220" height="185"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -2528,16 +2560,16 @@ We are blessed to be guided by our faculty co-ordinator Dr. Rajkumar R.</string>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="domains" translatesAutoresizingMaskIntoConstraints="NO" id="imS-Mn-lPA">
                                                     <rect key="frame" x="0.0" y="8" width="220" height="169"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="220" id="Vce-j0-Q47"/>
-                                                        <constraint firstAttribute="height" constant="169" id="h3y-oT-t1P"/>
+                                                        <constraint firstAttribute="height" constant="169" id="CWA-MT-96B"/>
+                                                        <constraint firstAttribute="width" constant="220" id="m6P-sg-Y0c"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="imS-Mn-lPA" firstAttribute="top" secondItem="f85-Jt-PgO" secondAttribute="top" constant="8" id="FZc-33-wQh"/>
-                                                <constraint firstItem="imS-Mn-lPA" firstAttribute="leading" secondItem="f85-Jt-PgO" secondAttribute="leading" id="Fx3-aX-MtP"/>
-                                                <constraint firstAttribute="trailing" secondItem="imS-Mn-lPA" secondAttribute="trailing" id="HZh-Gx-Kka"/>
-                                                <constraint firstAttribute="bottom" secondItem="imS-Mn-lPA" secondAttribute="bottom" constant="8" id="wfA-Q8-A0y"/>
+                                                <constraint firstItem="imS-Mn-lPA" firstAttribute="top" secondItem="f85-Jt-PgO" secondAttribute="top" constant="8" id="LH4-BL-CWj"/>
+                                                <constraint firstAttribute="bottom" secondItem="imS-Mn-lPA" secondAttribute="bottom" constant="8" id="QV7-vC-PXg"/>
+                                                <constraint firstAttribute="trailing" secondItem="imS-Mn-lPA" secondAttribute="trailing" id="Xtw-da-lwc"/>
+                                                <constraint firstItem="imS-Mn-lPA" firstAttribute="leading" secondItem="f85-Jt-PgO" secondAttribute="leading" id="wCM-vJ-eNO"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="220" height="185"/>
@@ -2561,6 +2593,22 @@ We are blessed to be guided by our faculty co-ordinator Dr. Rajkumar R.</string>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9sz-yg-gfK" firstAttribute="top" secondItem="kIi-TU-r6x" secondAttribute="bottom" constant="8" symbolic="YES" id="5dV-sW-iKb"/>
+                            <constraint firstItem="9sz-yg-gfK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="9Ub-DV-Skn"/>
+                            <constraint firstItem="WHS-Lp-RJh" firstAttribute="leading" secondItem="kIi-TU-r6x" secondAttribute="leading" id="BGc-tf-Qb4"/>
+                            <constraint firstItem="9sz-yg-gfK" firstAttribute="centerX" secondItem="eTw-ML-JqN" secondAttribute="centerX" id="FJc-hI-9b8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eTw-ML-JqN" secondAttribute="trailing" constant="20" id="Ih1-4K-EhT"/>
+                            <constraint firstItem="eTw-ML-JqN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LKi-n3-LRp"/>
+                            <constraint firstItem="B3Q-yX-Qxd" firstAttribute="top" secondItem="eTw-ML-JqN" secondAttribute="bottom" constant="22" id="MiL-oR-hwR"/>
+                            <constraint firstItem="WHS-Lp-RJh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="U5y-7I-jXe"/>
+                            <constraint firstItem="WHS-Lp-RJh" firstAttribute="top" secondItem="9sz-yg-gfK" secondAttribute="bottom" constant="17" id="UGC-Dx-v7g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="B3Q-yX-Qxd" secondAttribute="bottom" constant="12" id="UX3-QO-dpS"/>
+                            <constraint firstItem="eTw-ML-JqN" firstAttribute="top" secondItem="WHS-Lp-RJh" secondAttribute="bottom" constant="20" id="WUs-oT-v90"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B3Q-yX-Qxd" secondAttribute="trailing" constant="20" id="cg1-sl-srX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WHS-Lp-RJh" secondAttribute="trailing" constant="26" id="ec9-El-U8j"/>
+                            <constraint firstItem="B3Q-yX-Qxd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="u3n-Ha-d1v"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4CL-x9-BbS"/>
                     <connections>
@@ -2877,7 +2925,7 @@ We are blessed to be guided by our faculty co-ordinator Dr. Rajkumar R.</string>
                                     <action selector="continueButton:" destination="KbQ-wJ-cdR" eventType="touchUpInside" id="Jfx-Vv-ubW"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" placeholder="Year of Study" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hYq-dQ-8Vy">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="line" placeholder="Year of Study" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hYq-dQ-8Vy">
                                 <rect key="frame" x="20" y="567" width="374" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -2896,7 +2944,7 @@ We are blessed to be guided by our faculty co-ordinator Dr. Rajkumar R.</string>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4Jo-qq-FBm">
                                 <rect key="frame" x="20" y="217" width="374" height="320"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ahg-3m-jMD">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ahg-3m-jMD">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -2906,28 +2954,28 @@ We are blessed to be guided by our faculty co-ordinator Dr. Rajkumar R.</string>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="VIT Registration Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bFk-ul-enS">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="VIT Registration Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bFk-ul-enS">
                                         <rect key="frame" x="0.0" y="70" width="374" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ritik@vitstudent.ac.in" borderStyle="roundedRect" placeholder="Email ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c4P-Vq-pcM">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ritik@vitstudent.ac.in" borderStyle="line" placeholder="Email ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c4P-Vq-pcM">
                                         <rect key="frame" x="0.0" y="140" width="374" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://github.com/ADG-VIT" borderStyle="roundedRect" placeholder="https://github.com/ADG-VIT" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jHd-B6-z6f">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://github.com/ADG-VIT" borderStyle="line" placeholder="https://github.com/ADG-VIT" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jHd-B6-z6f">
                                         <rect key="frame" x="0.0" y="210" width="374" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZaJ-ns-Eg9">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZaJ-ns-Eg9">
                                         <rect key="frame" x="0.0" y="280" width="374" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2943,6 +2991,19 @@ We are blessed to be guided by our faculty co-ordinator Dr. Rajkumar R.</string>
                                     <constraint firstItem="bFk-ul-enS" firstAttribute="height" secondItem="Ahg-3m-jMD" secondAttribute="height" id="mSO-gj-Rch"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHH-dA-lii">
+                                <rect key="frame" x="20" y="38" width="22" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
+                                <state key="normal" image="chevron.left" catalog="system">
+                                    <color key="titleColor" name="AccentColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="29" weight="regular"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="KbQ-wJ-cdR" eventType="touchUpInside" id="W4D-Mf-qTD"/>
+                                    <action selector="backButton:" destination="Xpg-aj-AXd" eventType="touchUpInside" id="rbo-wa-hmd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gTr-NC-ILL"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3872,14 +3933,14 @@ We are blessed to be guided by our faculty co-ordinator Dr. Rajkumar R.</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3Q-df-0zL">
-                                <rect key="frame" x="53" y="30.5" width="173" height="56.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3Q-df-0zL">
+                                <rect key="frame" x="53" y="38.5" width="173" height="56.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="41"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuL-PW-ee8">
-                                <rect key="frame" x="10" y="44" width="45" height="29"/>
+                                <rect key="frame" x="10" y="53" width="45" height="29"/>
                                 <color key="tintColor" systemColor="linkColor"/>
                                 <state key="normal" image="chevron.left" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="28" weight="medium"/>
@@ -3890,7 +3951,7 @@ We are blessed to be guided by our faculty co-ordinator Dr. Rajkumar R.</string>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4K-RW-Nzu">
-                                <rect key="frame" x="0.0" y="94.5" width="414" height="1822.5"/>
+                                <rect key="frame" x="0.0" y="95.5" width="414" height="1821.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmH-hO-meq">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
@@ -3971,57 +4032,21 @@ We are blessed to be guided by our faculty co-ordinator Dr. Rajkumar R.</string>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="navya" translatesAutoresizingMaskIntoConstraints="NO" id="Eff-BJ-wig">
-                                                <rect key="frame" x="19" y="828" width="173" height="174"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mihir Khare" translatesAutoresizingMaskIntoConstraints="NO" id="O7v-Q7-uxP">
-                                                <rect key="frame" x="222" y="828" width="173" height="174"/>
+                                                <rect key="frame" x="19" y="1120" width="173" height="174"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Technical Advisor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgS-g8-fn5">
-                                                <rect key="frame" x="19" y="1010" width="173" height="69"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Navya Saxena" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PL9-5C-Ngy">
-                                                <rect key="frame" x="19" y="1071" width="173" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mihir Khare" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ke2-dA-qHe">
-                                                <rect key="frame" x="222" y="1071" width="173" height="35"/>
+                                                <rect key="frame" x="19" y="1362" width="173" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Shubhankar Shankar" translatesAutoresizingMaskIntoConstraints="NO" id="9TW-WZ-3CX">
-                                                <rect key="frame" x="19" y="1121" width="173" height="174"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Abhishek Dhall" translatesAutoresizingMaskIntoConstraints="NO" id="LP6-vj-cd1">
                                                 <rect key="frame" x="222" y="1120" width="173" height="174"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="R&amp;D Head" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hO8-gq-hDW">
-                                                <rect key="frame" x="19" y="1303" width="173" height="40"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shubhankar Shankar" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAe-vC-Lze">
-                                                <rect key="frame" x="19" y="1335" width="173" height="70"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Abhishek Dhall" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bln-1K-mSM">
                                                 <rect key="frame" x="222" y="1357" width="173" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -4040,7 +4065,7 @@ We are blessed to be guided by our faculty co-ordinator Dr. Rajkumar R.</string>
                                                 <rect key="frame" x="19" y="1413" width="173" height="174"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ISHIKA DUBEY" translatesAutoresizingMaskIntoConstraints="NO" id="IU5-xM-s63">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ISHIKA DUBEY" translatesAutoresizingMaskIntoConstraints="NO" id="IU5-xM-s63">
                                                 <rect key="frame" x="222" y="1413" width="173" height="174"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -4116,9 +4141,45 @@ We are blessed to be guided by our faculty co-ordinator Dr. Rajkumar R.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Technical Advisor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHv-Ud-ujl">
-                                                <rect key="frame" x="222" y="1010" width="173" height="69"/>
+                                                <rect key="frame" x="19" y="1301" width="173" height="69"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Shubhankar Shankar" translatesAutoresizingMaskIntoConstraints="NO" id="9TW-WZ-3CX">
+                                                <rect key="frame" x="19" y="818" width="173" height="174"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="R&amp;D Head" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hO8-gq-hDW">
+                                                <rect key="frame" x="19" y="1000" width="173" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shubhankar Shankar" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAe-vC-Lze">
+                                                <rect key="frame" x="19" y="1032" width="173" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="navya" translatesAutoresizingMaskIntoConstraints="NO" id="Eff-BJ-wig">
+                                                <rect key="frame" x="222" y="818" width="173" height="174"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Technical Advisor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgS-g8-fn5">
+                                                <rect key="frame" x="222" y="1000" width="173" height="69"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Navya Saxena" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PL9-5C-Ngy">
+                                                <rect key="frame" x="222" y="1061" width="173" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -4144,13 +4205,13 @@ We are blessed to be guided by our faculty co-ordinator Dr. Rajkumar R.</string>
                             <constraint firstItem="h3Q-df-0zL" firstAttribute="leading" secondItem="T8w-hy-YQP" secondAttribute="leading" constant="53" id="5aD-xw-9fy"/>
                             <constraint firstItem="o4K-RW-Nzu" firstAttribute="trailing" secondItem="T8w-hy-YQP" secondAttribute="trailing" id="CIf-17-Hwb"/>
                             <constraint firstItem="tuL-PW-ee8" firstAttribute="leading" secondItem="T8w-hy-YQP" secondAttribute="leading" constant="10" id="R6h-k3-T3M"/>
-                            <constraint firstItem="o4K-RW-Nzu" firstAttribute="top" secondItem="h3Q-df-0zL" secondAttribute="bottom" constant="7.5" id="TBs-eD-ol1"/>
+                            <constraint firstItem="o4K-RW-Nzu" firstAttribute="top" secondItem="h3Q-df-0zL" secondAttribute="bottom" constant="-0.5" id="TBs-eD-ol1"/>
                             <constraint firstItem="lmH-hO-meq" firstAttribute="width" secondItem="Gyq-Oe-RyP" secondAttribute="width" id="Ybl-rv-6zT"/>
                             <constraint firstItem="T8w-hy-YQP" firstAttribute="trailing" secondItem="h3Q-df-0zL" secondAttribute="trailing" constant="188" id="eJC-e1-0OI"/>
                             <constraint firstItem="o4K-RW-Nzu" firstAttribute="leading" secondItem="T8w-hy-YQP" secondAttribute="leading" id="gkb-vb-t7Y"/>
                             <constraint firstItem="tuL-PW-ee8" firstAttribute="centerY" secondItem="h3Q-df-0zL" secondAttribute="centerY" id="jyE-fw-JSB"/>
                             <constraint firstItem="o4K-RW-Nzu" firstAttribute="bottom" secondItem="T8w-hy-YQP" secondAttribute="bottom" id="vKn-ZI-Pf9"/>
-                            <constraint firstItem="tuL-PW-ee8" firstAttribute="top" secondItem="T8w-hy-YQP" secondAttribute="top" id="y3i-oW-Hju"/>
+                            <constraint firstItem="tuL-PW-ee8" firstAttribute="top" secondItem="T8w-hy-YQP" secondAttribute="top" constant="9" id="y3i-oW-Hju"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ez6-Fz-b4R"/>
@@ -4562,7 +4623,7 @@ Without Appealing Designs, everything seems incomplete.</string>
         <image name="Divya Jyoti" width="1198" height="1188"/>
         <image name="Gmail-logo" width="1400" height="1055"/>
         <image name="Gokul" width="630" height="652"/>
-        <image name="ISHIKA DUBEY" width="1236" height="1252"/>
+        <image name="ISHIKA DUBEY" width="802" height="876"/>
         <image name="Ishaan Ohri" width="1950" height="1950"/>
         <image name="Keshav Periwal" width="2049" height="2046"/>
         <image name="Mihir Khare" width="2012" height="2012"/>
@@ -4620,6 +4681,9 @@ Without Appealing Designs, everything seems incomplete.</string>
         <image name="video" width="634" height="600"/>
         <image name="web" width="400" height="400"/>
         <image name="wrong" width="400" height="400"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

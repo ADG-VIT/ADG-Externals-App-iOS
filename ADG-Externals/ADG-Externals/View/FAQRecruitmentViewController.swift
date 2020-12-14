@@ -19,6 +19,7 @@ class FAQRecruitmentViewController: UIViewController, UITableViewDelegate, UITab
 
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tableFooterView = UIView()
     }
     
     @IBAction func closeBtn(_ sender: Any) {

@@ -244,7 +244,7 @@ extension DesignQuizVC{
         self.choice2.setTitle(self.optionB[self.count], for: .normal)
         self.choice3.setTitle(self.optionC[self.count], for: .normal)
         self.choice4.setTitle(self.optionD[self.count], for: .normal)
-        self.questionNumber.text = ("Question Numer :\(self.count+1)'/'\(self.questions.count)")
+        self.questionNumber.text = ("Question Numer :\(self.count+1)/\(self.questions.count)")
         self.skipButton.setTitle("Skip", for: .normal)
         
         choice1.backgroundColor = #colorLiteral(red: 0.9466984868, green: 0.9468342662, blue: 0.9466686845, alpha: 1)

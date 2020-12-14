@@ -19,6 +19,7 @@ class EditorialVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
 
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tableFooterView = UIView()
     }
     
     @IBAction func dismissButton(_ sender: Any) {

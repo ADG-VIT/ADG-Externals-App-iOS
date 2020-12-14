@@ -30,10 +30,10 @@ class AuthenticationViewController: UIViewController {
         super.viewDidLoad()
         
         get()
-        
+
         self.signUpLabel.isEnabled = false
         self.logInLabel.isEnabled = false
-        
+
         signUpLabel.layer.cornerRadius = 10
         logInLabel.layer.cornerRadius = 10
         logInLabel.layer.borderWidth = 2
