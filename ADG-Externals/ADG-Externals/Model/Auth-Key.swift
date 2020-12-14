@@ -11,3 +11,6 @@ struct AuthKey :Decodable {
     let message: String
 }
 
+struct recruitment:Decodable {
+    let status: Bool    //App status, to check recruitment live or not
+}
