@@ -15,6 +15,7 @@ class AuthenticationViewController: UIViewController {
     //MARK:-IBConnections
     @IBOutlet weak var signUpLabel: UIButton!
     @IBOutlet weak var logInLabel: UIButton!
+    @IBOutlet weak var statuslabel: UILabel!
     
     
     @IBAction func logInButton(_ sender: UIButton) {
@@ -31,8 +32,8 @@ class AuthenticationViewController: UIViewController {
         
         get()
 
-        self.signUpLabel.isEnabled = false
-        self.logInLabel.isEnabled = false
+        self.signUpLabel.isHidden = true
+        self.logInLabel.isHidden = true
 
         signUpLabel.layer.cornerRadius = 10
         logInLabel.layer.cornerRadius = 10
@@ -102,8 +103,9 @@ extension AuthenticationViewController{
     
     func updateUI(){
         if recruitmentStatus == true{
-            self.signUpLabel.isEnabled = true
-            self.logInLabel.isEnabled = true
+            self.signUpLabel.isHidden = false
+            self.logInLabel.isHidden = false
+            self.statuslabel.isHidden = true
         }else{
             let alert = UIAlertController(title: "Coming Soon!", message: "Recruitments had not started..Will inform you soon", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
