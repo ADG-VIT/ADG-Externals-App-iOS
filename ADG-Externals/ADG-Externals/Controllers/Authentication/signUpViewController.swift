@@ -12,6 +12,8 @@ class signUpViewController: UIViewController {
     
     //MARK:- ViewLifeCycle
     
+    var yos:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,7 +22,6 @@ class signUpViewController: UIViewController {
         continueButtonLabel.layer.borderWidth = 2
         continueButtonLabel.layer.borderColor = UIColor.systemOrange.cgColor
         
-        yearOfStudyField.isEnabled = false
     }
     func clear() {
         self.emailField.text?.removeAll()
@@ -34,7 +35,7 @@ class signUpViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var githubLinkField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var yearOfStudyField: UITextField!
+    @IBOutlet weak var phoneNumberField: UITextField!
     
     @IBAction func continueButton(_ sender: UIButton) {
         
@@ -54,12 +55,16 @@ class signUpViewController: UIViewController {
             regNumberField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != "" ||
             emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != ""
         {
-            guard let regNumber = self.regNumberField.text else { return }
+            guard let regNumber = self.regNumberField.text
+            else { return }
+            
+            self.yos = 0
+            
             if regNumber.count == 9 {
                 print(regNumber.prefix(1),regNumber.prefix(2))
                 if regNumber.prefix(1) == "1"{
                     if regNumber.prefix(2) == "19"{
-                        yearOfStudyField.text = "2"
+                        self.yos = 2
                         if githubLinkField.text != "" {
                             self.setupPostMethod()
                         }else{
@@ -71,7 +76,7 @@ class signUpViewController: UIViewController {
                     }
                 }else if regNumber.prefix(1) == "2"{
                     if regNumber.prefix(2) == "20" {
-                        yearOfStudyField.text = "1"
+                        self.yos = 1
                         githubLinkField.text = "https://github.com/ADG-VIT"
                         self.setupPostMethod()
                     }else{
@@ -101,7 +106,8 @@ extension signUpViewController{
         guard let email = self.emailField.text else { return }
         guard let password = self.passwordField.text else { return }
         guard let githubLink = self.githubLinkField.text else { return }
-        guard let yos = self.yearOfStudyField.text else { return }
+        guard let phoneNo = self.phoneNumberField.text else { return }
+        //guard let yos = self.mobNo else{return}
         
         if let url = URL(string: "https://adgrecruitments.herokuapp.com/user/signup"){
             var request = URLRequest(url: url)
@@ -112,7 +118,8 @@ extension signUpViewController{
                 "email": email,
                 "githubLink":githubLink,
                 "password": password,
-                "yearofstudy": yos
+                "phone": phoneNo,
+                "yearofstudy":yos
             ]
             
             request.httpBody = parameters.percentEscaped().data(using: .utf8)

@@ -13,6 +13,7 @@ class EditProfileViewController: UIViewController {
     var regNo:String = ""
     var emailID:String = ""
     var gitHubID:String = ""
+    var mobileNumber:String = ""
     var tectStatus:Bool = false
     var managementStatus:Bool = false
     var designStatus:Bool = false
@@ -25,18 +26,12 @@ class EditProfileViewController: UIViewController {
     @IBOutlet weak var techImgStatus: UIImageView!
     @IBOutlet weak var manageImgStatus: UIImageView!
     @IBOutlet weak var designImgStatus: UIImageView!
+    @IBOutlet weak var mobileNumberField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         statusView.layer.cornerRadius = 10
-        
-//        statusView.layer.masksToBounds = false;
-//        statusView.layer.shadowOffset = CGSize(width: -1,height: 1)
-//        statusView.layer.shadowRadius = 5.0;
-//        statusView.layer.shadowColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-//        statusView.layer.shadowOpacity = 0.5;
-        
         get()
     }
     @IBAction func backButton(_ sender: Any) {
@@ -73,6 +68,7 @@ extension EditProfileViewController{
             self.regNo = ""
             self.emailID = ""
             self.gitHubID = ""
+            self.mobileNumber = ""
             self.tectStatus = false
             self.managementStatus = false
             self.designStatus = false
@@ -83,6 +79,7 @@ extension EditProfileViewController{
                 self.emailID.append(result.userDetails.email)
                 self.regNo.append(result.userDetails.regno)
                 self.gitHubID.append(result.userDetails.githubLink)
+                self.mobileNumber.append(result.userDetails.phone)
                 self.tectStatus = result.userDetails.attemptedTechnical
                 self.managementStatus = result.userDetails.attemptedManagement
                 self.designStatus = result.userDetails.attemptedDesign
@@ -108,7 +105,7 @@ extension EditProfileViewController{
         self.regNoField.text = regNo
         self.emailIDField.text = emailID
         self.githubIDField.text = gitHubID
-        
+        self.mobileNumberField.text = mobileNumber
         
         
         if tectStatus == true {
