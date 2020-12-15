@@ -20,8 +20,13 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var continueBtnLabel: UIButton!
     
     @IBAction func continueButton(_ sender: UIButton) {
-        //self.performSegue(withIdentifier: "logInToRecruitmentVC", sender: self)
+        if regNumberFieldOutlet.text != "" && passwordFieldOutlet.text != "" {
         self.setupPostMethod()
+        }else{
+            let alert = UIAlertController(title: "Empty!", message: "Fields are empty.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                present(alert, animated: true, completion: nil)
+        }
     }
     @IBAction func regNumberField(_ sender: UITextField) {
     }
