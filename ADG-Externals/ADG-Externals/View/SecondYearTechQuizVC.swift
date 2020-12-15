@@ -13,6 +13,7 @@ class SecondYearTechQuizVC: UIViewController {
     @IBOutlet weak var textArea2: UITextView!
     @IBOutlet weak var subMitBtn: UIButton!
     
+    
     var answers:[String] = []
     var quest:[String] = []
     

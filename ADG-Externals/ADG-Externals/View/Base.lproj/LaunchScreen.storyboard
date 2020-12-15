@@ -16,16 +16,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="1Image" translatesAutoresizingMaskIntoConstraints="NO" id="BaY-A9-8zb">
-                                <rect key="frame" x="40" y="253" width="334" height="193"/>
+                                <rect key="frame" x="10" y="274" width="394" height="348"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="BaY-A9-8zb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="SwZ-Mp-3Qw"/>
-                            <constraint firstItem="BaY-A9-8zb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="209" id="c6t-mE-UxD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BaY-A9-8zb" secondAttribute="bottom" constant="416" id="cl2-fy-G59"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BaY-A9-8zb" secondAttribute="trailing" constant="40" id="tTm-ny-48R"/>
+                            <constraint firstItem="BaY-A9-8zb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="I38-uV-R07"/>
+                            <constraint firstAttribute="trailing" secondItem="BaY-A9-8zb" secondAttribute="trailing" constant="10" id="JEa-cu-KsD"/>
+                            <constraint firstItem="BaY-A9-8zb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="230" id="Vpg-R6-d5u"/>
+                            <constraint firstItem="BaY-A9-8zb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="10" id="kcf-Ap-e1F"/>
+                            <constraint firstItem="BaY-A9-8zb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="qm9-eE-RT2"/>
                         </constraints>
                     </view>
                 </viewController>
