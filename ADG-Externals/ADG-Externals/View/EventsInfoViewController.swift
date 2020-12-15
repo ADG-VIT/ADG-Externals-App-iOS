@@ -42,7 +42,7 @@ class EventsInfoViewController: UIViewController {
     func applyShadow(view:UIView){
         view.layer.cornerRadius = 10
         view.layer.masksToBounds = false
-        view.layer.shadowOffset = CGSize(width: -3, height: 3)
+        view.layer.shadowOffset = CGSize(width: -1, height: 1)
         view.layer.shadowRadius = 1
         view.layer.shadowOpacity = 0.5
     }

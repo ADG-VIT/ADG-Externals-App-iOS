@@ -41,6 +41,9 @@ class signUpViewController: UIViewController {
         self.validateFields()
         // self.setupPostMethod()
     }
+    @IBAction func backButton(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     
     @IBOutlet weak var continueButtonLabel: UIButton!
     

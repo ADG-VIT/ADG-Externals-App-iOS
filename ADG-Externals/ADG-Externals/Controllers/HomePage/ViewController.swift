@@ -9,9 +9,10 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
-    var dates:[String] = ["25","26","27"]
+    var dates:[String] = ["14","23","27"]
     var events:[String] = ["Recruitments Quiz","Hackgrid","iOS Fusion"]
     var venue:[String] = ["Venue: Online","Venue: Online","Venue: Online"]
+    var month:[String] = ["JAN","MAR","SEP"]
     
     var arrImgData = [UIImage]()
     
@@ -35,6 +36,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.tableFooterView = UIView()
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -68,6 +70,7 @@ extension ViewController {
         cell.dateLabel.text = dates[indexPath.row]
         cell.eventLabel.text = events[indexPath.row]
         cell.venueLabel.text = venue[indexPath.row]
+        cell.monthLabel.text = month[indexPath.row]
         cell.selectionStyle = .none
         cell.layer.cornerRadius = 5
         return cell
@@ -76,6 +79,7 @@ extension ViewController {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
 }
 
 
@@ -88,13 +92,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cells = collectionView.dequeueReusableCell(withReuseIdentifier: "cells", for: indexPath) as! HomeCollectionViewCell
         cells.imageViews.image = arrImgData[indexPath.row]
-        
-//        cells.layer.masksToBounds = false;
-//        cells.layer.shadowOffset = CGSize(width: 0,height: 1)
-//        cells.layer.shadowRadius = 5.0;
-//        cells.layer.shadowColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-//        cells.layer.shadowOpacity = 0.75;
-        
         return cells
     }
     

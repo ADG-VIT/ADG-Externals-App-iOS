@@ -97,8 +97,12 @@ class ManagementQuizVC: UIViewController, UITextViewDelegate {
         
         let alert = UIAlertController(title: "Submit!", message: "Are you sure?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+            if self.submitBtn.currentTitle == "submit"{
+                print("data loading")
+            }else{
             self.setupPOSTMethod()
-        }))
+            }
+            }))
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
         
@@ -238,6 +242,8 @@ extension ManagementQuizVC {
         self.question8.text = questions[7]
         self.question9.text = questions[8]
         self.question10.text = questions[9]
+        
+        self.submitBtn.setTitle("Submit", for: .normal)
         
     }
     
