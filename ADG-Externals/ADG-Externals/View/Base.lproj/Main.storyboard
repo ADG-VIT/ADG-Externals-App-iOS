@@ -2359,7 +2359,6 @@
                                         </connections>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Vid-gx-v6v" secondAttribute="bottom" constant="8" id="0Ip-m8-8qo"/>
                                     <constraint firstItem="fll-XU-Fz6" firstAttribute="centerX" secondItem="bOw-fg-gzV" secondAttribute="centerX" id="43P-l9-ka1"/>
