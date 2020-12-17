@@ -8,8 +8,6 @@
 import UIKit
 
 class QandAViewController: UIViewController {
-
-    @IBOutlet weak var askBtn: UIButton!
     
     @IBOutlet weak var recruitmentBtn: UIButton!
     @IBOutlet weak var allTopicsBtn: UIButton!
@@ -20,20 +18,13 @@ class QandAViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        applyBorder(button: askBtn, RadiusSize: 10, widthSize: 0.5, color: UIColor.gray.cgColor)
         applyBorder(button: allTopicsBtn, RadiusSize: 10, widthSize: 0.5, color: UIColor.gray.cgColor)
         applyBorder(button: TechnicalBtn, RadiusSize: 10, widthSize: 0.5, color: UIColor.gray.cgColor)
         applyBorder(button: designBtn, RadiusSize: 10, widthSize: 0.5, color: UIColor.gray.cgColor)
         applyBorder(button: editorial, RadiusSize: 10, widthSize: 0.5, color: UIColor.gray.cgColor)
         applyBorder(button: recruitmentBtn, RadiusSize: 10, widthSize: 0.5, color: UIColor.gray.cgColor)
-        
-        askBtn.isHidden = true
     }
     
-
-    @IBAction func askButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "QandAZone", sender: nil)
-    }
     
     @IBAction func recruitmentButton(_ sender: Any) {
         self.performSegue(withIdentifier: "recruitment", sender: nil)
