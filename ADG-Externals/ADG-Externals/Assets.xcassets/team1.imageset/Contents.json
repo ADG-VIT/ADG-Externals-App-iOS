@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Screenshot 2020-12-18 at 8.08.38 PM.png",
+      "filename" : "Screenshot 2020-12-18 at 8.05.04 PM.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Screenshot 2020-12-18 at 8.05.04 PM@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Screenshot 2020-12-18 at 8.05.04 PM@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
