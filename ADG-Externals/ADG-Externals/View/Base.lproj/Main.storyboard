@@ -2728,7 +2728,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9sz-yg-gfK">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9sz-yg-gfK">
                                 <rect key="frame" x="10" y="141" width="394" height="231"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -4965,9 +4965,9 @@ Without Appealing Designs, everything seems incomplete.</string>
         <image name="social" width="158.33332824707031" height="150"/>
         <image name="sponsor" width="158.33332824707031" height="150"/>
         <image name="star" catalog="system" width="128" height="116"/>
-        <image name="team1" width="822" height="1098"/>
-        <image name="team2" width="822" height="1188"/>
-        <image name="team3" width="822" height="1180"/>
+        <image name="team1" width="205.33332824707031" height="274.33334350585938"/>
+        <image name="team2" width="205.33332824707031" height="297"/>
+        <image name="team3" width="205.33332824707031" height="295"/>
         <image name="unidev" width="380.33334350585938" height="242.33332824707031"/>
         <image name="video" width="158.33332824707031" height="150"/>
         <image name="web" width="100" height="100"/>
