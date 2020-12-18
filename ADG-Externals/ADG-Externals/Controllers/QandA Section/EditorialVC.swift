@@ -9,8 +9,8 @@ import UIKit
 
 class EditorialVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var questionArray:[String] = ["Q1. How to start iOS App Developement"]
-    var answerArray:[String] = ["1.Get a Mac,2.Install Xcode, 3.Learn basics of Swift, 4.Watch online tutorials, 5.Try to make your custom app and work on it."]
+    var questionArray:[String] = ["Q1. What do I do for the club as part of the Editorial team?","Q2. Do I get to be a part of any technical domain as well?","Q3. What skills do I require to be apply for a place in the Editorial Commitee?","Q4. How will I be benefitted if become part of the editorial team?","Q5. Can I be part of other management groups if I am in editorial?"]
+    var answerArray:[String] = ["Being a part of the editorial team includes working on social media posts and marketing for upcoming events.","Yes, along with being a member of the Editorial Team, you also get to choose a Technical Domain offered by the club.","As long as you're able to put yourself in event managing scenarios and work with team members, you're most welcome to this committee.Any past experiences definitely help here.","Good writing skills are very important and will always come handy be it applying for jobs or further studies!","Ofcourse you can! As long as you can manage , you’re most welcome to be part of other teams and gain as much as you can!"]
 
     @IBOutlet weak var tableView: UITableView!
     
