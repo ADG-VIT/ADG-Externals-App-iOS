@@ -190,7 +190,7 @@ extension ManagementQuizVC {
             request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
            request.httpMethod = "POST"
 
-            let parameters = "[{ \"qid\":\(qid[0]),\"response\":\(answer1.text ?? "nil")}, {\"qid\":\(qid[1]),\"response\":\(answer2.text ?? "nil")},{\"qid\":\(qid[2]),\"response\":\(answer3.text ?? "nil" )},{\"qid\":\(qid[3]),\"response\":\(answer4.text ?? "nil" )},{\"qid\":\(qid[4]),\"response\":\(answer5.text ?? "nil" )},{\"qid\":\(qid[5]),\"response\":\(answer6.text ?? "nil" )}]"
+            let parameters = "[{ \"qid\":\(qid[0]),\"response\":\(answer1.text ?? "nil")}, {\"qid\":\(qid[1]),\"response\":\(answer2.text ?? "nil")},{\"qid\":\(qid[2]),\"response\":\(answer3.text ?? "nil" )},{\"qid\":\(qid[3]),\"response\":\(answer4.text ?? "nil" )},{\"qid\":\(qid[4]),\"response\":\(answer5.text ?? "nil" )},{\"qid\":\(qid[5]),\"response\":\(answer6.text ?? "nil" )},{\"qid\":\(qid[6]),\"response\":\(answer7.text ?? "nil" )},{\"qid\":\(qid[7]),\"response\":\(answer8.text ?? "nil" )},{\"qid\":\(qid[8]),\"response\":\(answer9.text ?? "nil" )},{\"qid\":\(qid[9]),\"response\":\(answer10.text ?? "nil" )}]"
             let postData = parameters.data(using: .utf8)
            request.httpBody = postData
             URLSession.shared.dataTask(with: request){(data, response, error) in

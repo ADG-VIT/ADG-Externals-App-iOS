@@ -287,8 +287,7 @@ extension TechnicalQuizVC{
             request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
            request.httpMethod = "POST"
 
-            let parameters = "[{ \"qid\":\(qid[0]),\"response\":\(selectedAnswer[0])}, {\"qid\":\(qid[1]),\"response\":\(selectedAnswer[1] )},{\"qid\":\(qid[2]),\"response\":\(selectedAnswer[2] )},{\"qid\":\(qid[3]),\"response\":\(selectedAnswer[3] )}]"
-            //{\"qid\":\(qid[4]),\"response\":\(selectedAnswer[4] )},{\"qid\":\(qid[5]),\"response\":\(selectedAnswer[5] )},{\"qid\":\(qid[6]),\"response\":\(selectedAnswer[6] )}]"
+            let parameters = "[{ \"qid\":\(qid[0]),\"response\":\(selectedAnswer[0])}, {\"qid\":\(qid[1]),\"response\":\(selectedAnswer[1] )},{\"qid\":\(qid[2]),\"response\":\(selectedAnswer[2] )},{\"qid\":\(qid[3]),\"response\":\(selectedAnswer[3] )},{\"qid\":\(qid[4]),\"response\":\(selectedAnswer[4] )},{\"qid\":\(qid[5]),\"response\":\(selectedAnswer[5] )},{\"qid\":\(qid[6]),\"response\":\(selectedAnswer[6]),{\"qid\":\(qid[7]),\"response\":\(selectedAnswer[7]),{\"qid\":\(qid[8]),\"response\":\(selectedAnswer[8]),{\"qid\":\(qid[9]),\"response\":\(selectedAnswer[9])]"
             let postData = parameters.data(using: .utf8)
 
 
