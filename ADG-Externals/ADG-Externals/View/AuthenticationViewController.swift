@@ -30,10 +30,10 @@ class AuthenticationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        get()
-//
-//        self.signUpLabel.isHidden = true
-//        self.logInLabel.isHidden = true
+        get()
+
+        self.signUpLabel.isHidden = true
+        self.logInLabel.isHidden = true
 
         signUpLabel.layer.cornerRadius = 10
         logInLabel.layer.cornerRadius = 10
