@@ -58,6 +58,11 @@ class TechnicalQuizVC: UIViewController {
         
         let notificationCenter = NotificationCenter.default
            notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
+        
+        choice1.titleLabel?.adjustsFontForContentSizeCategory = true
+        choice2.titleLabel?.adjustsFontForContentSizeCategory = true
+        choice3.titleLabel?.adjustsFontForContentSizeCategory = true
+        choice4.titleLabel?.adjustsFontForContentSizeCategory = true
     }
     
     @objc func appMovedToBackground() {
