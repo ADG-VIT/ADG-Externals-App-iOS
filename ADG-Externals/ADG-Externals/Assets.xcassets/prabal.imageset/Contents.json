@@ -6,10 +6,12 @@
       "scale" : "1x"
     },
     {
+      "filename" : "circle-cropped@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "circle-cropped@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
