@@ -103,7 +103,7 @@ extension ProfileViewController{
         }
         let composer = MFMailComposeViewController()
         composer.mailComposeDelegate = self
-        composer.setToRecipients(["gokulnair.2001@gmail.com"])
+        composer.setToRecipients(["gokulnair.2001@gmail.com","prabaljitwalia4546@gmail.com"])
         composer.setSubject("Suggestion For ADG Recruitment App")
         composer.setMessageBody("To whomsoever it concern, I want to give you a suggestion ", isHTML: false)
         
@@ -117,7 +117,7 @@ extension ProfileViewController{
         }
         let composer = MFMailComposeViewController()
         composer.mailComposeDelegate = self
-        composer.setToRecipients(["gokulnair.2001@gmail.com"])
+        composer.setToRecipients(["gokulnair.2001@gmail.com","prabaljitwalia4546@gmail.com"])
         composer.setSubject("Need some help: ADG Recruitment")
         composer.setMessageBody("To whomsoever it concern, ", isHTML: false)
         
