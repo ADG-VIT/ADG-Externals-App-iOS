@@ -83,6 +83,7 @@ class DesignQuizVC: UIViewController {
             
     }
     
+    @available(iOS 13.0, *)
     @IBAction func choiceA(_ sender: Any) {
         if choice1.currentTitle == "Choice A"{
             print("data loading")
@@ -93,6 +94,7 @@ class DesignQuizVC: UIViewController {
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
         }
     }
+    @available(iOS 13.0, *)
     @IBAction func choiceB(_ sender: Any) {
         if choice2.currentTitle == "Choice B"{
             print("data loading")
@@ -103,6 +105,7 @@ class DesignQuizVC: UIViewController {
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
         }
     }
+    @available(iOS 13.0, *)
     @IBAction func ChoiceC(_ sender: Any) {
         if choice3.currentTitle == "Choice C"{
             print("data loading")
@@ -114,6 +117,7 @@ class DesignQuizVC: UIViewController {
         }
     }
     
+    @available(iOS 13.0, *)
     @IBAction func ChoiceD(_ sender: Any) {
         if choice4.currentTitle == "Choice D"{
             print("data loading")
