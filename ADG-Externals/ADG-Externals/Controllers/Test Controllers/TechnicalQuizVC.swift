@@ -41,7 +41,7 @@ class TechnicalQuizVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        get()
+       get()
         
         coreData.fetchTokenFromCore()
         
