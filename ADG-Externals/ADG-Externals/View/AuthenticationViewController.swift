@@ -104,7 +104,7 @@ extension AuthenticationViewController{
     }
     
     func updateUI(){
-        if recruitmentStatus == false{
+        if recruitmentStatus == true{
             self.signUpLabel.isHidden = false
             self.logInLabel.isHidden = false
             self.statuslabel.isHidden = true
