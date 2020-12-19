@@ -2244,7 +2244,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiP-L0-bUg">
-                                <rect key="frame" x="140" y="524.5" width="134" height="187.5"/>
+                                <rect key="frame" x="140" y="676" width="134" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
@@ -2270,7 +2270,6 @@
                             <constraint firstItem="QPS-Yu-dTn" firstAttribute="leading" secondItem="c77-Vd-4wI" secondAttribute="leading" constant="15" id="W5J-dT-yFh"/>
                             <constraint firstItem="c77-Vd-4wI" firstAttribute="bottom" secondItem="BiP-L0-bUg" secondAttribute="bottom" constant="150" id="Yha-9u-CEy"/>
                             <constraint firstItem="fsV-YH-d9c" firstAttribute="top" secondItem="Ebb-wY-NnC" secondAttribute="bottom" constant="30" id="Zpt-Cg-TfT"/>
-                            <constraint firstItem="BiP-L0-bUg" firstAttribute="top" secondItem="SRq-sC-a8a" secondAttribute="bottom" constant="14" id="adi-Sr-0Xg"/>
                             <constraint firstItem="c77-Vd-4wI" firstAttribute="trailing" secondItem="QPS-Yu-dTn" secondAttribute="trailing" constant="155" id="bNH-oY-pNa"/>
                             <constraint firstItem="c77-Vd-4wI" firstAttribute="trailing" secondItem="W97-TG-bOF" secondAttribute="trailing" constant="100" id="bTR-x6-SOH"/>
                             <constraint firstItem="Qy5-zf-MI4" firstAttribute="leading" secondItem="c77-Vd-4wI" secondAttribute="leading" constant="20" id="bfp-wf-Ohz"/>
@@ -3963,6 +3962,10 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOO-iu-FZf">
                                                 <rect key="frame" x="150" y="1798" width="114" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="37" id="Yjq-RY-1JN"/>
+                                                    <constraint firstAttribute="width" constant="114" id="zbT-9k-fbN"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                                 <state key="normal" title="submit">
                                                     <color key="titleColor" systemColor="systemOrangeColor"/>
