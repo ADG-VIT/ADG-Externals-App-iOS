@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class OnboardingViewController: UIViewController {
 
     @IBOutlet weak var startBtn: UIButton!

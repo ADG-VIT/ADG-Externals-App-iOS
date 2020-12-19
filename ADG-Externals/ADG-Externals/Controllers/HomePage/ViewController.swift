@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
     var dates:[String] = ["14","23","27"]
@@ -30,6 +31,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
    
     
 
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,7 +50,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         //MARK:- Onboarding Stuffs
         if core.shared.isNewUser() {
-            let vc = storyboard?.instantiateViewController(identifier: "onboarding") as! OnboardingViewController
+            
+                let vc = storyboard?.instantiateViewController(identifier: "onboarding") as! OnboardingViewController
+            
             present(vc, animated: true)
         }
     }
@@ -60,6 +65,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 }
 //MARK:-TableView methods
 
+@available(iOS 13.0, *)
 extension ViewController {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -83,6 +89,7 @@ extension ViewController {
 }
 
 
+@available(iOS 13.0, *)
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -114,6 +121,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
 
 //MARK:-  Onboarding Code
 
+@available(iOS 13.0, *)
 extension ViewController {
     
     class core{

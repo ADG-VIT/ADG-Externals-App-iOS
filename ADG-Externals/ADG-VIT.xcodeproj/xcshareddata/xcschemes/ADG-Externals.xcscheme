@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "910B3DAF257133E900BD0F29"
-               BuildableName = "ADG-Externals.app"
-               BlueprintName = "ADG-Externals"
-               ReferencedContainer = "container:ADG-Externals.xcodeproj">
+               BuildableName = "ADG-VIT.app"
+               BlueprintName = "ADG-VIT"
+               ReferencedContainer = "container:ADG-VIT.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "910B3DAF257133E900BD0F29"
-            BuildableName = "ADG-Externals.app"
-            BlueprintName = "ADG-Externals"
-            ReferencedContainer = "container:ADG-Externals.xcodeproj">
+            BuildableName = "ADG-VIT.app"
+            BlueprintName = "ADG-VIT"
+            ReferencedContainer = "container:ADG-VIT.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "910B3DAF257133E900BD0F29"
-            BuildableName = "ADG-Externals.app"
-            BlueprintName = "ADG-Externals"
-            ReferencedContainer = "container:ADG-Externals.xcodeproj">
+            BuildableName = "ADG-VIT.app"
+            BlueprintName = "ADG-VIT"
+            ReferencedContainer = "container:ADG-VIT.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
