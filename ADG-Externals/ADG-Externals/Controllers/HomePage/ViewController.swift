@@ -55,6 +55,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             
             present(vc, animated: true)
         }
+        
+        UIApplication.shared.windows.forEach { window in
+                        window.overrideUserInterfaceStyle = .light
+                    }
     }
     
     @IBAction func adgIconBtn(_ sender: Any) {
