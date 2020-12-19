@@ -14,22 +14,14 @@ class ManagementQuizVC: UIViewController, UITextViewDelegate {
     @IBOutlet weak var question3: UILabel!
     @IBOutlet weak var question4: UILabel!
     @IBOutlet weak var question5: UILabel!
-    @IBOutlet weak var question6: UILabel!
-    @IBOutlet weak var question7: UILabel!
-    @IBOutlet weak var question8: UILabel!
-    @IBOutlet weak var question9: UILabel!
-    @IBOutlet weak var question10: UILabel!
+
     
     @IBOutlet weak var answer1: UITextView!
     @IBOutlet weak var answer2: UITextView!
     @IBOutlet weak var answer3: UITextView!
     @IBOutlet weak var answer4: UITextView!
     @IBOutlet weak var answer5: UITextView!
-    @IBOutlet weak var answer6: UITextView!
-    @IBOutlet weak var answer7: UITextView!
-    @IBOutlet weak var answer8: UITextView!
-    @IBOutlet weak var answer9: UITextView!
-    @IBOutlet weak var answer10: UITextView!
+
     @IBOutlet weak var submitBtn: UIButton!
     
     var questions:[String] = []
@@ -51,11 +43,7 @@ class ManagementQuizVC: UIViewController, UITextViewDelegate {
         applyBorder(answer3!, 5, 1, #colorLiteral(red: 0.2458204627, green: 0.2760057449, blue: 0.3021731377, alpha: 1))
         applyBorder(answer4!, 5, 1, #colorLiteral(red: 0.2458204627, green: 0.2760057449, blue: 0.3021731377, alpha: 1))
         applyBorder(answer5!, 5, 1, #colorLiteral(red: 0.2458204627, green: 0.2760057449, blue: 0.3021731377, alpha: 1))
-        applyBorder(answer6!, 5, 1, #colorLiteral(red: 0.2458204627, green: 0.2760057449, blue: 0.3021731377, alpha: 1))
-        applyBorder(answer7!, 5, 1, #colorLiteral(red: 0.2458204627, green: 0.2760057449, blue: 0.3021731377, alpha: 1))
-        applyBorder(answer8!, 5, 1, #colorLiteral(red: 0.2458204627, green: 0.2760057449, blue: 0.3021731377, alpha: 1))
-        applyBorder(answer9!, 5, 1, #colorLiteral(red: 0.2458204627, green: 0.2760057449, blue: 0.3021731377, alpha: 1))
-        applyBorder(answer10!, 5, 1, #colorLiteral(red: 0.2458204627, green: 0.2760057449, blue: 0.3021731377, alpha: 1))
+
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(ManagementQuizVC.keyBoardDismiss))
         
@@ -190,7 +178,7 @@ extension ManagementQuizVC {
             request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
            request.httpMethod = "POST"
 
-            let parameters = "[{ \"qid\":\(qid[0]),\"response\":\(answer1.text ?? "nil")}, {\"qid\":\(qid[1]),\"response\":\(answer2.text ?? "nil")},{\"qid\":\(qid[2]),\"response\":\(answer3.text ?? "nil" )},{\"qid\":\(qid[3]),\"response\":\(answer4.text ?? "nil" )},{\"qid\":\(qid[4]),\"response\":\(answer5.text ?? "nil" )},{\"qid\":\(qid[5]),\"response\":\(answer6.text ?? "nil" )},{\"qid\":\(qid[6]),\"response\":\(answer7.text ?? "nil" )},{\"qid\":\(qid[7]),\"response\":\(answer8.text ?? "nil" )},{\"qid\":\(qid[8]),\"response\":\(answer9.text ?? "nil" )},{\"qid\":\(qid[9]),\"response\":\(answer10.text ?? "nil" )}]"
+            let parameters = "[{ \"qid\":\(qid[0]),\"response\":\(answer1.text ?? "nil")}, {\"qid\":\(qid[1]),\"response\":\(answer2.text ?? "nil")},{\"qid\":\(qid[2]),\"response\":\(answer3.text ?? "nil" )},{\"qid\":\(qid[3]),\"response\":\(answer4.text ?? "nil" )},{\"qid\":\(qid[4]),\"response\":\(answer5.text ?? "nil" )}]"
             let postData = parameters.data(using: .utf8)
            request.httpBody = postData
             URLSession.shared.dataTask(with: request){(data, response, error) in
@@ -236,11 +224,6 @@ extension ManagementQuizVC {
         self.question3.text = questions[2]
         self.question4.text = questions[3]
         self.question5.text = questions[4]
-        self.question6.text = questions[5]
-        self.question7.text = questions[6]
-        self.question8.text = questions[7]
-        self.question9.text = questions[8]
-        self.question10.text = questions[9]
         
         self.submitBtn.setTitle("Submit", for: .normal)
         
