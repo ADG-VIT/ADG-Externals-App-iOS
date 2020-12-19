@@ -93,6 +93,11 @@ extension LogInViewController{
                                 self.alertView()
                             }
                         }
+                        else if response.statusCode == 402{
+                            DispatchQueue.main.async {
+                                self.verificationAlert()
+                            }
+                        }
                         return
                     }
                 }
@@ -142,6 +147,12 @@ extension LogInViewController{
     func alertView() {
     let alert = UIAlertController(title: "Error", message: "close the app", preferredStyle: .alert)
         //alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func verificationAlert() {
+    let alert = UIAlertController(title: "Verification remaining!", message: "Verify your account.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
 
