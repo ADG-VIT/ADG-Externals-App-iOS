@@ -31,4 +31,7 @@ class ADGInfoViewController: UIViewController {
         }
     }
 
+    @IBAction func backToHome(_ sender: UIButton) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
 }
