@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -3031,6 +3032,21 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="H3I-0t-qEV">
                                 <rect key="frame" x="20" y="84" width="374" height="663"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKG-6u-sfV">
+                                <rect key="frame" x="384" y="44" width="25" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="45" id="R4q-L1-gIg"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="ehm-NO-lex"/>
+                                </constraints>
+                                <color key="tintColor" red="0.88235294119999996" green="0.91372549020000005" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <imageReference key="image" image="arrowshape.turn.up.left.circle" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToHome:" destination="rsH-bB-7xN" eventType="touchUpInside" id="2ir-ZH-Y6H"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xBZ-UG-MGp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -3042,10 +3058,13 @@
                             <constraint firstItem="xBZ-UG-MGp" firstAttribute="trailing" secondItem="H3I-0t-qEV" secondAttribute="trailing" constant="20" id="Acx-21-MgO"/>
                             <constraint firstItem="H3I-0t-qEV" firstAttribute="top" secondItem="xBZ-UG-MGp" secondAttribute="top" constant="40" id="BXf-Kk-5cd"/>
                             <constraint firstItem="MY0-Gd-Nx6" firstAttribute="trailing" secondItem="xBZ-UG-MGp" secondAttribute="trailing" id="DQW-o6-fjF"/>
+                            <constraint firstItem="rKG-6u-sfV" firstAttribute="top" secondItem="xBZ-UG-MGp" secondAttribute="top" id="F38-Qy-e7W"/>
                             <constraint firstItem="xBZ-UG-MGp" firstAttribute="trailing" secondItem="bOw-fg-gzV" secondAttribute="trailing" constant="20" id="Jmd-s0-qf8"/>
+                            <constraint firstItem="xBZ-UG-MGp" firstAttribute="trailing" secondItem="rKG-6u-sfV" secondAttribute="trailing" constant="5" id="WEy-ox-vhh"/>
                             <constraint firstItem="xBZ-UG-MGp" firstAttribute="bottom" secondItem="bOw-fg-gzV" secondAttribute="bottom" constant="7" id="Zja-Ta-wEY"/>
                             <constraint firstItem="fll-XU-Fz6" firstAttribute="centerX" secondItem="MY0-Gd-Nx6" secondAttribute="centerX" id="gTt-ye-vah"/>
                             <constraint firstItem="H3I-0t-qEV" firstAttribute="leading" secondItem="xBZ-UG-MGp" secondAttribute="leading" constant="20" id="hke-iR-wY3"/>
+                            <constraint firstItem="H3I-0t-qEV" firstAttribute="top" secondItem="rKG-6u-sfV" secondAttribute="bottom" constant="2" id="hnQ-aG-d14"/>
                             <constraint firstItem="MY0-Gd-Nx6" firstAttribute="leading" secondItem="xBZ-UG-MGp" secondAttribute="leading" id="ooH-wY-CCY"/>
                             <constraint firstItem="xBZ-UG-MGp" firstAttribute="bottom" secondItem="H3I-0t-qEV" secondAttribute="bottom" constant="66" id="zZs-Qc-BLl"/>
                         </constraints>
@@ -5304,6 +5323,7 @@
         <image name="android" width="100" height="100"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="arrowshape.turn.up.left.circle" catalog="system" width="128" height="121"/>
         <image name="arupam" width="270" height="270"/>
         <image name="book" catalog="system" width="128" height="102"/>
         <image name="chevron.down" catalog="system" width="128" height="72"/>
