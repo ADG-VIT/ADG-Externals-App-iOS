@@ -146,7 +146,7 @@ extension ManagementQuizVC{
                 if error == nil{
                     let result = try JSONDecoder().decode([managementModel].self, from: data)
                     for mainarr in result{
-                        self.questions.append(mainarr.Description)
+                        self.questions.append(mainarr.questionDescription)
                         self.qid.append(mainarr.id)
                     }
                 }
@@ -158,8 +158,6 @@ extension ManagementQuizVC{
             }catch{
                 print("Error found")
             }
-            print(self.qid)
-            //print(String(data: data, encoding: .utf8)!) //to print the whole JSON fetch
         }
         task.resume()
         

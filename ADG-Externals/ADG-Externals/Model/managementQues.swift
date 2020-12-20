@@ -8,13 +8,12 @@
 import Foundation
 
 struct managementModel: Decodable {
-    let id, Description, questionImage: String
-    let v: Int?
+    let id, questionDescription: String
+    let v: Int
 
     enum CodingKeys: String, CodingKey {
         case id = "_id"
-        case Description = "description"
-        case questionImage
+        case questionDescription = "description"
         case v = "__v"
     }
 }
