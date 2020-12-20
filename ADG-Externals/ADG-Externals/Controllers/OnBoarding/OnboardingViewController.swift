@@ -39,8 +39,8 @@ class OnboardingViewController: UIViewController {
     @IBAction func segmentControl(_ sender: UISegmentedControl) {
         if segmentBar.selectedSegmentIndex == 0 {
             imageView.image = UIImage(imageLiteralResourceName: "1Image")
-            label1.text = "ADG Interview Ground"
-            label2.text = "ADG's official Interview & Roadmap guidance oriented app."
+            label1.text = "ADG-VIT"
+            label2.text = "ADG's official app which will open the doors to endless possibilities, into the realm of unexplored."
             
         }else if segmentBar.selectedSegmentIndex == 1{
             imageView.image = UIImage(imageLiteralResourceName: "2Image")
