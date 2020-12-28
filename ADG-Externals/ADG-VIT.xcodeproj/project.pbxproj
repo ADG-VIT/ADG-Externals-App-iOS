@@ -42,6 +42,7 @@
 		55AC45C925849D04004374F2 /* RecruitmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC45C825849D04004374F2 /* RecruitmentTableViewCell.swift */; };
 		55AC45CD2584E3C3004374F2 /* TeamsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC45CC2584E3C3004374F2 /* TeamsInfoViewController.swift */; };
 		55AC45D025850906004374F2 /* EventsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC45CF25850906004374F2 /* EventsInfoViewController.swift */; };
+		55B3C980259A703500C65235 /* domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B3C97F259A703500C65235 /* domain.swift */; };
 		55C457BA2579183E00D7CB88 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C457B92579183E00D7CB88 /* OnboardingViewController.swift */; };
 		55C457BF25791BE600D7CB88 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C457BE25791BE600D7CB88 /* AuthenticationViewController.swift */; };
 		55C457C225791DB000D7CB88 /* RecruitmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C457C125791DB000D7CB88 /* RecruitmentViewController.swift */; };
@@ -96,6 +97,7 @@
 		55AC45C825849D04004374F2 /* RecruitmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecruitmentTableViewCell.swift; path = "ADG-Externals/Controllers/TableView Cells/RecruitmentTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		55AC45CC2584E3C3004374F2 /* TeamsInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TeamsInfoViewController.swift; path = "ADG-Externals/View/TeamsInfoViewController.swift"; sourceTree = SOURCE_ROOT; };
 		55AC45CF25850906004374F2 /* EventsInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventsInfoViewController.swift; path = "ADG-Externals/View/EventsInfoViewController.swift"; sourceTree = SOURCE_ROOT; };
+		55B3C97F259A703500C65235 /* domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = domain.swift; sourceTree = "<group>"; };
 		55C457B92579183E00D7CB88 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = "ADG-Externals/Controllers/OnBoarding/OnboardingViewController.swift"; sourceTree = SOURCE_ROOT; };
 		55C457BE25791BE600D7CB88 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationViewController.swift; path = "ADG-Externals/View/AuthenticationViewController.swift"; sourceTree = SOURCE_ROOT; };
 		55C457C125791DB000D7CB88 /* RecruitmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecruitmentViewController.swift; path = "ADG-Externals/Controllers/Ambiguous/RecruitmentViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -300,6 +302,7 @@
 				910C7E222580CC73003FF973 /* UserProfile.swift */,
 				55A9F528258161D700A91CDA /* TechQuizModel.swift */,
 				5578C1DA2582991D001649E3 /* loginModel.swift */,
+				55B3C97F259A703500C65235 /* domain.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				55A9F52D2582011C00A91CDA /* ManagementQuizVC.swift in Sources */,
 				55AC45D025850906004374F2 /* EventsInfoViewController.swift in Sources */,
 				553B59B1257540EE004A9C64 /* IntroViewController.swift in Sources */,
+				55B3C980259A703500C65235 /* domain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

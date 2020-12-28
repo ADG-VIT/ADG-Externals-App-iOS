@@ -25,7 +25,7 @@ class DesignQuizVC: UIViewController {
     
     let maxtime:Float = 600.0 //600(10 min)
     var currentTime:Float = 0.0
-
+    
     @IBOutlet weak var questionNumber: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     
@@ -35,13 +35,13 @@ class DesignQuizVC: UIViewController {
     @IBOutlet weak var choice4: UIButton!
     
     @IBOutlet weak var skipButton: UIButton!
-   
+    
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var timeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         get()
         
         coreData.fetchTokenFromCore()
@@ -50,14 +50,14 @@ class DesignQuizVC: UIViewController {
         applyBorder(button: choice2, RadiusSize: 10, widthSize: 0.5, color: #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1))
         applyBorder(button: choice3, RadiusSize: 10, widthSize: 0.5, color: #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1))
         applyBorder(button: choice4, RadiusSize: 10, widthSize: 0.5, color: #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1))
-       
+        
         applyBorder(button: skipButton, RadiusSize: 5, widthSize: 2, color: UIColor.systemOrange.cgColor)
         
         progressBar.setProgress(currentTime, animated: true)
         perform(#selector(startTimer), with: nil, afterDelay: 0.0)
         
         let notificationCenter = NotificationCenter.default
-           notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
         
         choice1.titleLabel?.adjustsFontForContentSizeCategory = true
         choice2.titleLabel?.adjustsFontForContentSizeCategory = true
@@ -80,7 +80,7 @@ class DesignQuizVC: UIViewController {
         }else{
             print("error")
         }
-            
+        
     }
     
     @available(iOS 13.0, *)
@@ -88,10 +88,10 @@ class DesignQuizVC: UIViewController {
         if choice1.currentTitle == "Choice A"{
             print("data loading")
         }else{
-        selectedAnswer[count-1].append("1")
-        checkCompleted()
-        choice1.backgroundColor = UIColor.link
-        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+            selectedAnswer[count-1].append("a")
+            checkCompleted()
+            choice1.backgroundColor = UIColor.link
+            Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
         }
     }
     @available(iOS 13.0, *)
@@ -99,10 +99,10 @@ class DesignQuizVC: UIViewController {
         if choice2.currentTitle == "Choice B"{
             print("data loading")
         }else{
-        selectedAnswer[count-1].append("2")
-        checkCompleted()
-        choice2.backgroundColor = UIColor.link
-        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+            selectedAnswer[count-1].append("b")
+            checkCompleted()
+            choice2.backgroundColor = UIColor.link
+            Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
         }
     }
     @available(iOS 13.0, *)
@@ -110,10 +110,10 @@ class DesignQuizVC: UIViewController {
         if choice3.currentTitle == "Choice C"{
             print("data loading")
         }else{
-        selectedAnswer[count-1].append("3")
-        checkCompleted()
-        choice3.backgroundColor = UIColor.link
-        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+            selectedAnswer[count-1].append("c")
+            checkCompleted()
+            choice3.backgroundColor = UIColor.link
+            Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
         }
     }
     
@@ -122,21 +122,21 @@ class DesignQuizVC: UIViewController {
         if choice4.currentTitle == "Choice D"{
             print("data loading")
         }else{
-        selectedAnswer[count-1].append("4")
-        checkCompleted()
-        choice4.backgroundColor = UIColor.link
-        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+            selectedAnswer[count-1].append("d")
+            checkCompleted()
+            choice4.backgroundColor = UIColor.link
+            Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
         }
     }
     
     @IBAction func skipBtn(_ sender: Any) {
         if skipButton.currentTitle == "skip"{
-        print("data loading")
+            print("data loading")
         }else{
-        selectedAnswer.append("")
-        checkCompleted()
-        self.updateUI()
-        print(selectedAnswer)
+            selectedAnswer.append("")
+            checkCompleted()
+            self.updateUI()
+            print(selectedAnswer)
         }
     }
     
@@ -148,7 +148,7 @@ class DesignQuizVC: UIViewController {
     }
     
     @objc func startTimer() {
-       
+        
         currentTime += 1
         progressBar.progress = currentTime/maxtime
         timeLabel.text = "Timer: \(String(currentTime))s"
@@ -162,7 +162,7 @@ class DesignQuizVC: UIViewController {
             print("test completed")
         }
     }
-  
+    
     
 }
 
@@ -173,76 +173,76 @@ class DesignQuizVC: UIViewController {
 extension DesignQuizVC{
     
     //MARK:- UI Implementation Methods
+    
+    func get(){
+        var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/design/get-quiz-questions/mobile")!,timeoutInterval: Double.infinity)
+        //Change technical to design as it is design test VC as well as dont mention 1 and 2 year in design
         
-        func get(){
-            var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/design/get-quiz-questions/mobile")!,timeoutInterval: Double.infinity)
-            //Change technical to design as it is design test VC as well as dont mention 1 and 2 year in design
+        request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
+        
+        request.httpMethod = "GET"
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data else {
+                print(String(describing: error))
+                
+                return
+            }
             
-            request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
-            
-            request.httpMethod = "GET"
-            
-            let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                guard let data = data else {
-                    print(String(describing: error))
+            if let response = response as? HTTPURLResponse{
+                guard (200 ... 299) ~= response.statusCode else {
+                    print("Status code :- \(response.statusCode)")
                     
-                    return
-                }
-                
-                if let response = response as? HTTPURLResponse{
-                    guard (200 ... 299) ~= response.statusCode else {
-                        print("Status code :- \(response.statusCode)")
-                        
-                        if response.statusCode == 400 {
-                            DispatchQueue.main.async {
+                    if response.statusCode == 400 {
+                        DispatchQueue.main.async {
                             self.extraTrial()
-                            }
-                        }else if response.statusCode == 401{
-                            DispatchQueue.main.async {
+                        }
+                    }else if response.statusCode == 401{
+                        DispatchQueue.main.async {
                             self.alertView()
-                            }
-                        }else if response.statusCode == 403{
-                            DispatchQueue.main.async {
-                                self.serverError()
-                            }
-                            
-                        }else if response.statusCode == 503{
-                            DispatchQueue.main.async {
-                                self.serverError()
-                            }
-                    }
-                        return
-                    }
-                }
-                
-                do{
-                    if error == nil{
-                        let result = try JSONDecoder().decode([jsonModel].self, from: data)
-                        for mainarr in result{
-                            self.questions.append(mainarr.questionDescription)
-                            self.qid.append(mainarr.id)
-                            self.optionA.append(mainarr.options.a)
-                            self.optionB.append(mainarr.options.b)
-                            self.optionC.append(mainarr.options.c)
-                            self.optionD.append(mainarr.options.d)
+                        }
+                    }else if response.statusCode == 403{
+                        DispatchQueue.main.async {
+                            self.serverError()
+                        }
                         
+                    }else if response.statusCode == 503{
+                        DispatchQueue.main.async {
+                            self.serverError()
                         }
                     }
-                    
-                    DispatchQueue.main.async {
-                        self.updateUI()
-                    }
-                    
-                }catch{
-                    print("Error found")
+                    return
                 }
-                print(self.qid)
-                //print(String(data: data, encoding: .utf8)!) //to print the whole JSON fetch
             }
-            task.resume()
             
+            do{
+                if error == nil{
+                    let result = try JSONDecoder().decode([jsonModel].self, from: data)
+                    for mainarr in result{
+                        self.questions.append(mainarr.questionDescription)
+                        self.qid.append(mainarr.id)
+                        self.optionA.append(mainarr.options.a)
+                        self.optionB.append(mainarr.options.b)
+                        self.optionC.append(mainarr.options.c)
+                        self.optionD.append(mainarr.options.d)
+                        
+                    }
+                }
+                
+                DispatchQueue.main.async {
+                    self.updateUI()
+                }
+                
+            }catch{
+                print("Error found")
+            }
+            print(self.qid)
+            //print(String(data: data, encoding: .utf8)!) //to print the whole JSON fetch
         }
+        task.resume()
+        
     }
+}
 
 extension DesignQuizVC{
     
@@ -291,61 +291,60 @@ extension DesignQuizVC{
 extension DesignQuizVC{
     func setupPOSTMethod(){
         
-        if let url = URL(string: "https://adgrecruitments.herokuapp.com/user/design/submit") {
-            var request = URLRequest(url: url)
-            request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
-           request.httpMethod = "POST"
-
-            let parameters = "[{ \"qid\":\(qid[0]),\"response\":\(selectedAnswer[0])}, {\"qid\":\(qid[1]),\"response\":\(selectedAnswer[1] )},{\"qid\":\(qid[2]),\"response\":\(selectedAnswer[2] )},{\"qid\":\(qid[3]),\"response\":\(selectedAnswer[3] )},{\"qid\":\(qid[4]),\"response\":\(selectedAnswer[4] )},{\"qid\":\(qid[5]),\"response\":\(selectedAnswer[5] )},{\"qid\":\(qid[6]),\"response\":\(selectedAnswer[6]),{\"qid\":\(qid[7]),\"response\":\(selectedAnswer[7]),{\"qid\":\(qid[8]),\"response\":\(selectedAnswer[8]),{\"qid\":\(qid[9]),\"response\":\(selectedAnswer[9])]"
-            let postData = parameters.data(using: .utf8)
-
-
-           request.httpBody = postData
-            URLSession.shared.dataTask(with: request){(data, response, error) in
-                guard let data = data else{
-                    if error == nil{
-                        print(error?.localizedDescription ?? "Unknown Error")
-                    }
+        var semaphore = DispatchSemaphore (value: 0)
+        
+        let parameters = "[{ \"qid\":\"\(qid[0])\",\"response\":\"\(selectedAnswer[0])\"}, {\"qid\":\"\(qid[1])\",\"response\":\"\(selectedAnswer[1])\"},{\"qid\":\"\(qid[2])\",\"response\":\"\(selectedAnswer[2] )\"},{\"qid\":\"\(qid[3])\",\"response\":\"\(selectedAnswer[3] )\"},{\"qid\":\"\(qid[4])\",\"response\":\"\(selectedAnswer[4] )\"},{\"qid\":\"\(qid[5])\",\"response\":\"\(selectedAnswer[5] )\"},{\"qid\":\"\(qid[6])\",\"response\":\"\(selectedAnswer[6])\"},{\"qid\":\"\(qid[7])\",\"response\":\"\(selectedAnswer[7])\"},{\"qid\":\"\(qid[8])\",\"response\":\"\(selectedAnswer[8])\"},{\"qid\":\"\(qid[9])\",\"response\":\"\(selectedAnswer[9])\"}]"
+        
+        let postData = parameters.data(using: .utf8)
+        
+        var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/user/design/submit")!,timeoutInterval: Double.infinity)
+        request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        request.httpMethod = "POST"
+        request.httpBody = postData
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data else {
+                print(String(describing: error))
+                semaphore.signal()
+                return
+            }
+            print(String(data: data, encoding: .utf8)!)
+            semaphore.signal()
+            
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "completed", sender: nil)
+            }
+            
+            if let response = response as? HTTPURLResponse{
+                guard (200 ... 299) ~= response.statusCode else {
+                    print("Status code :- \(response.statusCode)")
+                    //print(response)
                     return
                 }
-                if let response = response as? HTTPURLResponse{
-                    guard (200 ... 299) ~= response.statusCode else {
-                        print("Status code :- \(response.statusCode)")
-                        //print(response)
-                        return
-                    }
-                }
-                
-                do{
-                    let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    print(json)
-
-                    //As soon as the data is fetched segue will be performed :)
-                    DispatchQueue.main.async {
-                                self.performSegue(withIdentifier: "completed", sender: nil)
-                            }
-                }catch let error{
-                    print(error.localizedDescription)
-                }
-            }.resume()
+            }
         }
+        
+        task.resume()
+        semaphore.wait()
     }
     
 }
 
 extension DesignQuizVC{
     func alertView() {
-    let alert = UIAlertController(title: "Error", message: "close the app!(Open again and Login)", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Error", message: "close the app!(Open again and Login)", preferredStyle: .alert)
         present(alert, animated: true, completion: nil)
     }
     func extraTrial() {
-    let alert = UIAlertController(title: "Error", message: "Only one attempt possible", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Error", message: "Only one attempt possible", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     
     func serverError() {
-    let alert = UIAlertController(title: "Server Error", message: "close the app!(Open again and Login)", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Server Error", message: "close the app!(Open again and Login)", preferredStyle: .alert)
         present(alert, animated: true, completion: nil)
     }
 }

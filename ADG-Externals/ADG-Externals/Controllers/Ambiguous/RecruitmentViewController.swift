@@ -26,15 +26,21 @@ class RecruitmentViewController: UIViewController {
     }
     @IBAction func technicalCardView(_ sender: Any) {
         
-       if techApplied == false {
+        print("tap")
+        
+       if (techApplied == false){
             if yos == 1 {
                 self.performSegue(withIdentifier: "instructionTech", sender: nil)
             }else if yos == 2{
                 self.performSegue(withIdentifier: "secondYearTech", sender: nil)
             }
+           else if yos == 0{
+            print("zero")
+            }
 
         }else{
             extraTrial()
+            print("no data")
         }
         
     }
@@ -117,16 +123,17 @@ extension RecruitmentViewController{
             }
             
             do{
-              if error == nil{
-                let result = try JSONDecoder().decode(model.self, from: data)
+             // if error == nil{
+                let result = try JSONDecoder().decode(domain.self, from: data)
                // LogInViewController.authkey.append(result.userDetails.id)
                 self.yos = result.userDetails.yearofstudy
                 self.designAppled = result.userDetails.attemptedDesign
                 self.techApplied = result.userDetails.attemptedTechnical
                 self.managementApplied = result.userDetails.attemptedManagement
                 print(result.userDetails.name)
+                print(result.userDetails.yearofstudy)
        
-             }
+            // }
         }catch{
             print(error.localizedDescription)
         }

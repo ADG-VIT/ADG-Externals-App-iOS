@@ -55,7 +55,7 @@ extension SecondYearTechQuizVC{
     
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/technical/get-quiz-questions/2/mobile")!,timeoutInterval: Double.infinity)
-       
+        
         request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
         
         request.httpMethod = "GET"
@@ -63,7 +63,7 @@ extension SecondYearTechQuizVC{
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data else {
                 print(String(describing: error))
-            
+                
                 return
             }
             
@@ -73,11 +73,11 @@ extension SecondYearTechQuizVC{
                     
                     if response.statusCode == 400 {
                         DispatchQueue.main.async {
-                        self.extraTrial()
+                            self.extraTrial()
                         }
                     }else if response.statusCode == 401{
                         DispatchQueue.main.async {
-                        self.alertView()
+                            self.alertView()
                         }
                     }else if response.statusCode == 403{
                         DispatchQueue.main.async {
@@ -88,7 +88,7 @@ extension SecondYearTechQuizVC{
                         DispatchQueue.main.async {
                             self.serverError()
                         }
-                }
+                    }
                     return
                 }
             }
@@ -103,7 +103,7 @@ extension SecondYearTechQuizVC{
                 }
                 
                 DispatchQueue.main.async {
-                   
+                    
                 }
                 
             }catch{
@@ -114,68 +114,124 @@ extension SecondYearTechQuizVC{
         task.resume()
         
     }
-
+    
 }
 
 extension SecondYearTechQuizVC{
     func setupPOSTMethod(){
         
-        if let url = URL(string: "https://adgrecruitments.herokuapp.com/user/technical2/submit") {
-            var request = URLRequest(url: url)
-            request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
-            request.httpMethod = "POST"
+        //        if let url = URL(string: "https://adgrecruitments.herokuapp.com/user/technical2/submit") {
+        //            var request = URLRequest(url: url)
+        //            request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
+        //            request.httpMethod = "POST"
+        //
+        //            let parameters = "{\r\n    \"projects\":\"\(textArea1.text ?? "nil")\",\r\n    \"brief\":\"\(textArea2.text ?? "nil")\"\r\n}"
+        //            let postData = parameters.data(using: .utf8)
+        //
+        //
+        //            request.httpBody = postData
+        //            URLSession.shared.dataTask(with: request){(data, response, error) in
+        //                guard let data = data else{
+        //                    if error == nil{
+        //                        print(error?.localizedDescription ?? "Unknown Error")
+        //                    }
+        //                    return
+        //                }
+        //                if let response = response as? HTTPURLResponse{
+        //                    guard (200 ... 299) ~= response.statusCode else {
+        //                        print("Status code :- \(response.statusCode)")
+        //
+        //                        if response.statusCode == 400 {
+        //                            DispatchQueue.main.async {
+        //                                self.extraTrial()
+        //                            }
+        //                        }else if response.statusCode == 401{
+        //                            DispatchQueue.main.async {
+        //                                self.alertView()
+        //                            }
+        //                        }else if response.statusCode == 403{
+        //                            DispatchQueue.main.async {
+        //                                self.serverError()
+        //                            }
+        //
+        //                        }else if response.statusCode == 503{
+        //                            DispatchQueue.main.async {
+        //                                self.serverError()
+        //                            }
+        //                        }
+        //                        return
+        //                    }
+        //                }
+        //
+        //                do{
+        //                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+        //                    print(json)
+        //
+        //                    //As soon as the data is fetched segue will be performed :)
+        //                    DispatchQueue.main.async {
+        //                        self.performSegue(withIdentifier: "completed", sender: nil)
+        //                    }
+        //                }catch let error{
+        //                    print(error.localizedDescription)
+        //                }
+        //            }.resume()
+        //        }
+        
+        var semaphore = DispatchSemaphore (value: 0)
+        
+        let parameters = "{\r\n    \"projects\":\"\(textArea1.text ?? "nil")\",\r\n    \"brief\":\"\(textArea2.text ?? "nil")\"\r\n}"
+        
+        let postData = parameters.data(using: .utf8)
+        
+        var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/user/technical2/submit")!,timeoutInterval: Double.infinity)
+        request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        request.httpMethod = "POST"
+        request.httpBody = postData
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data else {
+                print(String(describing: error))
+                semaphore.signal()
+                return
+            }
+            print(String(data: data, encoding: .utf8)!)
+            semaphore.signal()
             
-            let parameters = "{\r\n    \"projects\":\"\(textArea1.text ?? "nil")\",\r\n    \"brief\":\"\(textArea2.text ?? "nil")\"\r\n}"
-            let postData = parameters.data(using: .utf8)
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "completed", sender: nil)
+            }
             
-            
-            request.httpBody = postData
-            URLSession.shared.dataTask(with: request){(data, response, error) in
-                guard let data = data else{
-                    if error == nil{
-                        print(error?.localizedDescription ?? "Unknown Error")
+            if let response = response as? HTTPURLResponse{
+                guard (200 ... 299) ~= response.statusCode else {
+                    print("Status code :- \(response.statusCode)")
+                    if response.statusCode == 400 {
+                        DispatchQueue.main.async {
+                            self.extraTrial()
+                        }
+                    }else if response.statusCode == 401{
+                        DispatchQueue.main.async {
+                            self.alertView()
+                        }
+                    }else if response.statusCode == 403{
+                        DispatchQueue.main.async {
+                            self.serverError()
+                        }
+                        
+                    }else if response.statusCode == 503{
+                        DispatchQueue.main.async {
+                            self.serverError()
+                        }
                     }
                     return
                 }
-                if let response = response as? HTTPURLResponse{
-                    guard (200 ... 299) ~= response.statusCode else {
-                        print("Status code :- \(response.statusCode)")
-                        
-                        if response.statusCode == 400 {
-                            DispatchQueue.main.async {
-                                self.extraTrial()
-                            }
-                        }else if response.statusCode == 401{
-                            DispatchQueue.main.async {
-                                self.alertView()
-                            }
-                        }else if response.statusCode == 403{
-                            DispatchQueue.main.async {
-                                self.serverError()
-                            }
-                            
-                        }else if response.statusCode == 503{
-                            DispatchQueue.main.async {
-                                self.serverError()
-                            }
-                        }
-                        return
-                    }
-                }
-                
-                do{
-                    let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    print(json)
-                    
-                    //As soon as the data is fetched segue will be performed :)
-                    DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "completed", sender: nil)
-                    }
-                }catch let error{
-                    print(error.localizedDescription)
-                }
-            }.resume()
+            }
         }
+        
+        task.resume()
+        semaphore.wait()
+        
     }
     
 }

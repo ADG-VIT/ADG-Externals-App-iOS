@@ -17,7 +17,7 @@ struct  UserDetails:Decodable {
     let createdAt, updatedAt: String
     let githubLink: String
     let v: Int
-    
+
     enum CodingKeys: String, CodingKey {
         case attemptedTechnical, attemptedManagement, attemptedDesign, yearofstudy
         case id = "_id"
@@ -25,4 +25,7 @@ struct  UserDetails:Decodable {
         case v = "__v"
     }
 }
+
+
+
 

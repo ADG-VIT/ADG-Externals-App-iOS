@@ -171,42 +171,88 @@ extension ManagementQuizVC {
     
     func setupPOSTMethod(){
         
-        if let url = URL(string: "https://adgrecruitments.herokuapp.com/user/management/submit") {
-            var request = URLRequest(url: url)
-            request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
-           request.httpMethod = "POST"
-
-            let parameters = "[{ \"qid\":\(qid[0]),\"response\":\(answer1.text ?? "nil")}, {\"qid\":\(qid[1]),\"response\":\(answer2.text ?? "nil")},{\"qid\":\(qid[2]),\"response\":\(answer3.text ?? "nil" )},{\"qid\":\(qid[3]),\"response\":\(answer4.text ?? "nil" )},{\"qid\":\(qid[4]),\"response\":\(answer5.text ?? "nil" )}]"
-            let postData = parameters.data(using: .utf8)
-           request.httpBody = postData
-            URLSession.shared.dataTask(with: request){(data, response, error) in
-                guard let data = data else{
-                    if error == nil{
-                        print(error?.localizedDescription ?? "Unknown Error")
-                    }
+//        if let url = URL(string: "https://adgrecruitments.herokuapp.com/user/management/submit") {
+//            var request = URLRequest(url: url)
+//            request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
+//           request.httpMethod = "POST"
+//
+//            let parameters = "[{ \"qid\":\(qid[0]),\"response\":\(answer1.text!)}, {\"qid\":\(qid[1]),\"response\":\(answer2.text!)},{\"qid\":\(qid[2]),\"response\":\(answer3.text!)},{\"qid\":\(qid[3]),\"response\":\(answer4.text!)},{\"qid\":\(qid[4]),\"response\":\(answer5.text!)}]"
+//            print(answer1.text!)
+//            print(answer2.text!)
+//            print(answer3.text!)
+//            print(answer4.text!)
+//            print(answer5.text!)
+//
+//            let postData = parameters.data(using: .utf8)
+//           request.httpBody = postData
+//            URLSession.shared.dataTask(with: request){(data, response, error) in
+//                guard let data = data else{
+//                    if error == nil{
+//                        print(error?.localizedDescription ?? "Unknown Error")
+//                    }
+//                    return
+//                }
+//                if let response = response as? HTTPURLResponse{
+//                    guard (200 ... 299) ~= response.statusCode else {
+//                        print("Status code :- \(response.statusCode)")
+//                        //print(response)
+//                        return
+//                    }
+//                }
+//
+//                do{
+//                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+//                    print(json)
+//
+//                    //As soon as the data is fetched segue will be performed :)
+//                    DispatchQueue.main.async {
+//                                self.performSegue(withIdentifier: "completed", sender: nil)
+//                            }
+//                }catch let error{
+//                    print(error.localizedDescription)
+//                }
+//            }.resume()
+//        }
+        
+        var semaphore = DispatchSemaphore (value: 0)
+        
+        let parameters = "[{ \"qid\":\"\(qid[0])\",\"response\":\"\(answer1.text!)\"}, {\"qid\":\"\(qid[1])\",\"response\":\"\(answer2.text!)\"},{\"qid\":\"\(qid[2])\",\"response\":\"\(answer3.text!)\"},{\"qid\":\"\(qid[3])\",\"response\":\"\(answer4.text!)\"},{\"qid\":\"\(qid[4])\",\"response\":\"\(answer5.text!)\"}]"
+        print(parameters)
+        
+        let postData = parameters.data(using: .utf8)
+        
+        var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/user/management/submit")!,timeoutInterval: Double.infinity)
+        request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        request.httpMethod = "POST"
+        request.httpBody = postData
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data else {
+                print(String(describing: error))
+                semaphore.signal()
+                return
+            }
+            print(String(data: data, encoding: .utf8)!)
+            semaphore.signal()
+            
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "completed", sender: nil)
+            }
+            
+            if let response = response as? HTTPURLResponse{
+                guard (200 ... 299) ~= response.statusCode else {
+                    print("Status code :- \(response.statusCode)")
+                    //print(response)
                     return
                 }
-                if let response = response as? HTTPURLResponse{
-                    guard (200 ... 299) ~= response.statusCode else {
-                        print("Status code :- \(response.statusCode)")
-                        //print(response)
-                        return
-                    }
-                }
-                
-                do{
-                    let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    print(json)
-
-                    //As soon as the data is fetched segue will be performed :)
-                    DispatchQueue.main.async {
-                                self.performSegue(withIdentifier: "completed", sender: nil)
-                            }
-                }catch let error{
-                    print(error.localizedDescription)
-                }
-            }.resume()
+            }
         }
+        
+        task.resume()
+        semaphore.wait()
+        
     }
     
     

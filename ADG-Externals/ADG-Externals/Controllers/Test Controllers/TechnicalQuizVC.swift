@@ -22,7 +22,7 @@ class TechnicalQuizVC: UIViewController {
     var selectedAnswer:[String] = ["","","","","","","","","",""]
     
     var bgCounter = 0
-
+    
     let maxtime:Float = 600.0 //600(10 min)
     var currentTime:Float = 0.0
     
@@ -40,8 +40,8 @@ class TechnicalQuizVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-       get()
+        
+        get()
         
         coreData.fetchTokenFromCore()
         
@@ -49,15 +49,15 @@ class TechnicalQuizVC: UIViewController {
         applyBorder(button: choice2, RadiusSize: 10, widthSize: 0.5, color: #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1))
         applyBorder(button: choice3, RadiusSize: 10, widthSize: 0.5, color: #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1))
         applyBorder(button: choice4, RadiusSize: 10, widthSize: 0.5, color: #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1))
-       
+        
         applyBorder(button: skipButton, RadiusSize: 5, widthSize: 2, color: UIColor.systemOrange.cgColor)
-    
+        
         progressBar.setProgress(currentTime, animated: true)
         perform(#selector(startTimer), with: nil, afterDelay: 0.0)
         
         
         let notificationCenter = NotificationCenter.default
-           notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
         
         choice1.titleLabel?.adjustsFontForContentSizeCategory = true
         choice2.titleLabel?.adjustsFontForContentSizeCategory = true
@@ -91,10 +91,11 @@ class TechnicalQuizVC: UIViewController {
         if choice1.currentTitle == "Choice A" {
             print("data loading")
         }else{
-        selectedAnswer[count-1].append("1")
-        checkCompleted()
-        choice1.backgroundColor = UIColor.green
-        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+            selectedAnswer[count-1].append("a")
+            checkCompleted()
+            choice1.backgroundColor = UIColor.green
+            Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+            print(selectedAnswer)
         }
     }
     @IBAction func ChoiceB(_ sender: Any) {
@@ -102,30 +103,33 @@ class TechnicalQuizVC: UIViewController {
         if choice2.currentTitle == "Choice B"{
             print("data loading")
         }else{
-        selectedAnswer[count-1].append("2")
-        checkCompleted()
-        choice2.backgroundColor = UIColor.green
-        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+            selectedAnswer[count-1].append("b")
+            checkCompleted()
+            choice2.backgroundColor = UIColor.green
+            Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+            print(selectedAnswer)
         }
     }
     @IBAction func ChoiceC(_ sender: Any) {
         if choice3.currentTitle == "Choice C"{
             print("data loading")
         }else{
-        selectedAnswer[count-1].append("3")
-        checkCompleted()
-        choice3.backgroundColor = UIColor.green
-        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+            selectedAnswer[count-1].append("c")
+            checkCompleted()
+            choice3.backgroundColor = UIColor.green
+            Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+            print(selectedAnswer)
         }
     }
     @IBAction func Choice4(_ sender: Any) {
         if choice4.currentTitle == "Choice D"{
             print("data loading")
         }else{
-        selectedAnswer[count-1].append("4")
-        checkCompleted()
-        choice4.backgroundColor = UIColor.green
-        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+            selectedAnswer[count-1].append("d")
+            checkCompleted()
+            choice4.backgroundColor = UIColor.green
+            Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+            print(selectedAnswer)
         }
     }
     
@@ -135,10 +139,10 @@ class TechnicalQuizVC: UIViewController {
         if skipButton.currentTitle == "skip"{
             print("data loading")
         }else{
-        selectedAnswer.append("")
-        checkCompleted()
-        self.updateUI()
-        print(selectedAnswer)
+            selectedAnswer.append("")
+            checkCompleted()
+            self.updateUI()
+            print(selectedAnswer)
         }
     }
     
@@ -151,7 +155,7 @@ class TechnicalQuizVC: UIViewController {
     }
     
     @objc func startTimer() {
-       
+        
         currentTime += 1
         progressBar.progress = currentTime/maxtime
         timeLabel.text = "Timer: \(String(currentTime))s"
@@ -164,7 +168,7 @@ class TechnicalQuizVC: UIViewController {
             self.count = 0
         }
     }
-  
+    
 }
 
 
@@ -172,7 +176,7 @@ class TechnicalQuizVC: UIViewController {
 
 extension TechnicalQuizVC{
     
-
+    
     func get(){
         var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/questions/technical/get-quiz-questions/1/mobile")!,timeoutInterval: Double.infinity)
         
@@ -183,7 +187,7 @@ extension TechnicalQuizVC{
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data else {
                 print(String(describing: error))
-            
+                
                 return
             }
             
@@ -193,11 +197,11 @@ extension TechnicalQuizVC{
                     
                     if response.statusCode == 400 {
                         DispatchQueue.main.async {
-                        self.extraTrial()
+                            self.extraTrial()
                         }
                     }else if response.statusCode == 401{
                         DispatchQueue.main.async {
-                        self.alertView()
+                            self.alertView()
                         }
                     }else if response.statusCode == 403{
                         DispatchQueue.main.async {
@@ -208,7 +212,7 @@ extension TechnicalQuizVC{
                         DispatchQueue.main.async {
                             self.serverError()
                         }
-                }
+                    }
                     return
                 }
             }
@@ -223,7 +227,7 @@ extension TechnicalQuizVC{
                         self.optionB.append(mainarr.options.b)
                         self.optionC.append(mainarr.options.c)
                         self.optionD.append(mainarr.options.d)
-                    
+                        
                     }
                 }
                 
@@ -240,7 +244,7 @@ extension TechnicalQuizVC{
         task.resume()
         
     }
-
+    
 }
 
 extension TechnicalQuizVC{
@@ -271,7 +275,7 @@ extension TechnicalQuizVC{
     func  checkCompleted(){
         if testOver == true{
             DispatchQueue.main.async {
-              //  self.performSegue(withIdentifier: "completed", sender: nil)
+                //  self.performSegue(withIdentifier: "completed", sender: nil)
                 self.setupPOSTMethod()
                 self.count = 0
             }
@@ -287,62 +291,104 @@ extension TechnicalQuizVC{
 extension TechnicalQuizVC{
     func setupPOSTMethod(){
         
-        if let url = URL(string: "https://adgrecruitments.herokuapp.com/user/technical/submit") {
-            var request = URLRequest(url: url)
-            request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
-           request.httpMethod = "POST"
-
-            let parameters = "[{ \"qid\":\(qid[0]),\"response\":\(selectedAnswer[0])}, {\"qid\":\(qid[1]),\"response\":\(selectedAnswer[1] )},{\"qid\":\(qid[2]),\"response\":\(selectedAnswer[2] )},{\"qid\":\(qid[3]),\"response\":\(selectedAnswer[3] )},{\"qid\":\(qid[4]),\"response\":\(selectedAnswer[4] )},{\"qid\":\(qid[5]),\"response\":\(selectedAnswer[5] )},{\"qid\":\(qid[6]),\"response\":\(selectedAnswer[6]),{\"qid\":\(qid[7]),\"response\":\(selectedAnswer[7]),{\"qid\":\(qid[8]),\"response\":\(selectedAnswer[8]),{\"qid\":\(qid[9]),\"response\":\(selectedAnswer[9])]"
-            let postData = parameters.data(using: .utf8)
-
-
-           request.httpBody = postData
-            URLSession.shared.dataTask(with: request){(data, response, error) in
-                guard let data = data else{
-                    if error == nil{
-                        print(error?.localizedDescription ?? "Unknown Error")
-                    }
+        //        if let url = URL(string: "https://adgrecruitments.herokuapp.com/user/technical/submit") {
+        //            var request = URLRequest(url: url)
+        //            request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
+        //           request.httpMethod = "POST"
+        //
+        //
+        //            let parameters = "[{ \"qid\":\"\(qid[0])\",\"response\":\"\(selectedAnswer[0])\"}, {\"qid\":\"\(qid[1])\",\"response\":\"\(selectedAnswer[1])\"},{\"qid\":\"\(qid[2])\",\"response\":\"\(selectedAnswer[2] )\"},{\"qid\":\"\(qid[3])\",\"response\":\"\(selectedAnswer[3] )\"},{\"qid\":\"\(qid[4])\",\"response\":\"\(selectedAnswer[4] )\"},{\"qid\":\"\(qid[5])\",\"response\":\"\(selectedAnswer[5] )\"},{\"qid\":\"\(qid[6])\",\"response\":\"\(selectedAnswer[6])\"},{\"qid\":\"\(qid[7])\",\"response\":\"\(selectedAnswer[7])\"},{\"qid\":\"\(qid[8])\",\"response\":\"\(selectedAnswer[8])\"},{\"qid\":\"\(qid[9])\",\"response\":\"\(selectedAnswer[9])\"}]"
+        //
+        //            let postData = parameters.data(using: .utf8)
+        //
+        //
+        //           request.httpBody = postData
+        //            URLSession.shared.dataTask(with: request){(data, response, error) in
+        //                guard let data = data else{
+        //                    if error == nil{
+        //                        print(error?.localizedDescription ?? "Unknown Error")
+        //                    }
+        //                    return
+        //                }
+        //                if let response = response as? HTTPURLResponse{
+        //                    guard (200 ... 299) ~= response.statusCode else {
+        //                        print("Status code :- \(response.statusCode)")
+        //                        //print(response)
+        //                        return
+        //                    }
+        //                }
+        //
+        //                do{
+        //                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+        //                    print(json)
+        //
+        //                    //As soon as the data is fetched segue will be performed :)
+        //                    DispatchQueue.main.async {
+        //                            self.performSegue(withIdentifier: "completed", sender: nil)
+        //                            }
+        //                }catch let error{
+        //                    print(error.localizedDescription)
+        //                }
+        //            }.resume()
+        //        }
+        //    }
+        
+        
+        var semaphore = DispatchSemaphore (value: 0)
+        
+        let parameters = "[{ \"qid\":\"\(qid[0])\",\"response\":\"\(selectedAnswer[0])\"}, {\"qid\":\"\(qid[1])\",\"response\":\"\(selectedAnswer[1])\"},{\"qid\":\"\(qid[2])\",\"response\":\"\(selectedAnswer[2] )\"},{\"qid\":\"\(qid[3])\",\"response\":\"\(selectedAnswer[3] )\"},{\"qid\":\"\(qid[4])\",\"response\":\"\(selectedAnswer[4] )\"},{\"qid\":\"\(qid[5])\",\"response\":\"\(selectedAnswer[5] )\"},{\"qid\":\"\(qid[6])\",\"response\":\"\(selectedAnswer[6])\"},{\"qid\":\"\(qid[7])\",\"response\":\"\(selectedAnswer[7])\"},{\"qid\":\"\(qid[8])\",\"response\":\"\(selectedAnswer[8])\"},{\"qid\":\"\(qid[9])\",\"response\":\"\(selectedAnswer[9])\"}]"
+        
+        let postData = parameters.data(using: .utf8)
+        
+        var request = URLRequest(url: URL(string: "https://adgrecruitments.herokuapp.com/user/technical/submit")!,timeoutInterval: Double.infinity)
+        request.addValue(LogInViewController.Token, forHTTPHeaderField: "auth-token")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        request.httpMethod = "POST"
+        request.httpBody = postData
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data else {
+                print(String(describing: error))
+                semaphore.signal()
+                return
+            }
+            print(String(data: data, encoding: .utf8)!)
+            semaphore.signal()
+            
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "completed", sender: nil)
+            }
+            if let response = response as? HTTPURLResponse{
+                guard (200 ... 299) ~= response.statusCode else {
+                    print("Status code :- \(response.statusCode)")
+                    //print(response)
                     return
                 }
-                if let response = response as? HTTPURLResponse{
-                    guard (200 ... 299) ~= response.statusCode else {
-                        print("Status code :- \(response.statusCode)")
-                        //print(response)
-                        return
-                    }
-                }
-                
-                do{
-                    let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    print(json)
-
-                    //As soon as the data is fetched segue will be performed :)
-                    DispatchQueue.main.async {
-                            self.performSegue(withIdentifier: "completed", sender: nil)
-                            }
-                }catch let error{
-                    print(error.localizedDescription)
-                }
-            }.resume()
+            }
         }
+        
+        task.resume()
+        semaphore.wait()
+        
     }
     
 }
 
 extension TechnicalQuizVC{
     func alertView() {
-    let alert = UIAlertController(title: "Error", message: "close the app!(Open again and Login)", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Error", message: "close the app!(Open again and Login)", preferredStyle: .alert)
         present(alert, animated: true, completion: nil)
     }
     func extraTrial() {
-    let alert = UIAlertController(title: "Error", message: "Only one attempt possible", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Error", message: "Only one attempt possible", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler:nil))
         present(alert, animated: true, completion: nil)
     }
     
     func serverError() {
-    let alert = UIAlertController(title: "Server Error", message: "close the app!(Open again and Login)", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Server Error", message: "close the app!(Open again and Login)", preferredStyle: .alert)
         present(alert, animated: true, completion: nil)
     }
-  
+    
 }
