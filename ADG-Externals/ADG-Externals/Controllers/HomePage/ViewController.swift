@@ -10,10 +10,10 @@ import UIKit
 @available(iOS 13.0, *)
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
-    var dates:[String] = ["14","23","27"]
+    var dates:[String] = ["TBD","TBD","TBD"]
     var events:[String] = ["Recruitments Quiz","Hackgrid","iOS Fusion"]
     var venue:[String] = ["Venue: Online","Venue: Online","Venue: Online"]
-    var month:[String] = ["JAN","MAR","SEP"]
+    var month:[String] = ["TBD","TBD","TBD"]
     
     var arrImgData = [UIImage]()
     

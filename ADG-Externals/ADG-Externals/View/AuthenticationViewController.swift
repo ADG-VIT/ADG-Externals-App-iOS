@@ -109,7 +109,7 @@ extension AuthenticationViewController{
             self.logInLabel.isHidden = false
             self.statuslabel.isHidden = true
         }else{
-            let alert = UIAlertController(title: "Coming Soon!", message: "Recruitments had not started..Will inform you soon", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Coming Soon!", message: "Recruitments has not started. Will inform you soon", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
         }
