@@ -1,6 +1,9 @@
 # ADG-Externals-App-iOS
 
 ADG-VIT is an application built to give an insight of what this community holds for you. It is one stop app for new recruitments, FAQ, events , projects , various domains and a lot more! Apple developers group aims to provide the best learning experience to its members and believes that creativity comes with collaboration.
+<p align = "centre"><img src = "Assets/IMG_5428_iphone12promaxsilver_portrait.png" width = "20%" height = "20%">
+
+</p>
 
 ## Features
 
