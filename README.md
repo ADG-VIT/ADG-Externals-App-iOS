@@ -25,6 +25,6 @@ ADG-VIT is an application built to give an insight of what this community holds 
 
 - All the latest updates about Apple Developers Group VIT.
 - All information about its domains, projects, events and team.
-- Recruitment made easier with interested candidates participating anytime,anywhere on the go.
+- **Recruitment made easier with interested candidates participating anytime,anywhere on the go.**
 - FAQs that will solve all the doubts you might be having of Apple Developers Group VIT
 - A journey that will cover all your expectations and take you to unexplored realm of possibilities.
