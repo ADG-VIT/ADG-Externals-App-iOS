@@ -1,6 +1,6 @@
 # ADG-Externals-App-iOS
 
-ADG-VIT is an application built to give an insight of what this community holds for you. It is one stop app for new recruitments, FAQ, events , projects , various domains and a lot more! Apple developers group aims to provide the best learning experience to its members and believes that creativity comes with collaboration.
+ADG-VIT is an application built to give an insight of what this community holds for you. It is one stop app for new **recruitments**, FAQ, events , projects , various domains and a lot more! Apple developers group aims to provide the best learning experience to its members and believes that creativity comes with collaboration.
 
 <a href="https://apps.apple.com/in/app/adg-vit/id1545733138">
   <img alt="Download on App Store" src="ADG-Externals/Assets/Download-On-The-App-Store.png" height=60>
