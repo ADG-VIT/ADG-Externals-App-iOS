@@ -32,7 +32,7 @@ ADG-VIT is an application built to give an insight of what this community holds 
 ## Requirements 
 * Xcode 12+
 * iOS 12+
-* * Swift 5+
+*  Swift 5+
 
 ## License ⚖️
 * Read the [License](https://github.com/ADG-VIT/ADG-Externals-App-iOS/blob/rework/LICENSE) 
