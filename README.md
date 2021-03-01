@@ -29,5 +29,10 @@ ADG-VIT is an application built to give an insight of what this community holds 
 - FAQs that will solve all the doubts you might be having of Apple Developers Group VIT
 - A journey that will cover all your expectations and take you to unexplored realm of possibilities.
 
+## Requirements 
+* Xcode 12+
+* iOS 12+
+* * Swift 5+
+
 ## License ⚖️
 * Read the [License](https://github.com/ADG-VIT/ADG-Externals-App-iOS/blob/rework/LICENSE) 
