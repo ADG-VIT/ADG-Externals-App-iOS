@@ -39,9 +39,9 @@ ADG-VIT is an application built to give an insight of what this community holds 
 
 ## Communication
 
-If you found a bug, open an [issue](https://github.com/ADG-VIT/ADG-Externals-App-iOS/issues).
-If you have a feature request, open an [issue](https://github.com/ADG-VIT/ADG-Externals-App-iOS/issues).
-If you want to contribute, submit a [pull request](https://github.com/ADG-VIT/ADG-Externals-App-iOS/pulls).
+* If you found a bug, open an [issue](https://github.com/ADG-VIT/ADG-Externals-App-iOS/issues).
+* If you have a feature request, open an [issue](https://github.com/ADG-VIT/ADG-Externals-App-iOS/issues).
+* If you want to contribute, submit a [pull request](https://github.com/ADG-VIT/ADG-Externals-App-iOS/pulls).
 
 ## License ⚖️
 *  Do Read the [License](https://github.com/ADG-VIT/ADG-Externals-App-iOS/blob/rework/LICENSE) before proceeding.
