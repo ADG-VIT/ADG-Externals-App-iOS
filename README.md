@@ -35,4 +35,4 @@ ADG-VIT is an application built to give an insight of what this community holds 
 *  Swift 5+
 
 ## License ⚖️
-* ``` Do Read the [License](https://github.com/ADG-VIT/ADG-Externals-App-iOS/blob/rework/LICENSE) before proceeding ```
+*  Do Read the [License](https://github.com/ADG-VIT/ADG-Externals-App-iOS/blob/rework/LICENSE) before proceeding.
