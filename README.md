@@ -44,4 +44,5 @@ ADG-VIT is an application built to give an insight of what this community holds 
 * If you want to contribute, submit a [pull request](https://github.com/ADG-VIT/ADG-Externals-App-iOS/pulls).
 
 ## License ⚖️
-*  Do Read the [License](https://github.com/ADG-VIT/ADG-Externals-App-iOS/blob/rework/LICENSE) before proceeding.
+*  This project is licensed under the [MIT license;](https://opensource.org/licenses/MIT) for more details, please see the [LICENSE file](LICENSE).
+
